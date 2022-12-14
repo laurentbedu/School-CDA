@@ -10,6 +10,8 @@ namespace SchoolApp
     {
         public int id_classe;
         public string label;
-        List<Classe> listEleves = new List<Classe>();
+        public Professeur prof;
+        public Niveau niveau;
+        List<Eleve> listEleves = new List<Eleve>();
     }
 }

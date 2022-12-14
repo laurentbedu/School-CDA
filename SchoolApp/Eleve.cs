@@ -10,6 +10,7 @@ namespace SchoolApp
     {
         public int anciennete = 0;
         public int id_eleve;
+        public Classe classe;
 
         List<Note> notes = new List<Note>();
 
@@ -20,6 +21,10 @@ namespace SchoolApp
         public void ajouterNote(Note note)
         {
             this.notes.Add(note);
+        }
+        public override string ToString()
+        {
+            return "Eleve : "+nom+" "+prenom+" - Classe : "+classe;
         }
     }
 }

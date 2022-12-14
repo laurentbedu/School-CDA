@@ -7,9 +7,13 @@ namespace SchoolApp
             InitializeComponent();
         }
 
-        List<Personne> professeurs = new List<Personne>();
+        List<Classe> classes = new List<Classe>();
 
-        List<Personne> eleves = new List<Personne>();
+       
 
+        private void buttonAddEleve_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

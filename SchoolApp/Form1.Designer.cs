@@ -64,6 +64,7 @@
             this.buttonAddEleve.TabIndex = 1;
             this.buttonAddEleve.Text = "Ajouter eleve";
             this.buttonAddEleve.UseVisualStyleBackColor = true;
+            this.buttonAddEleve.Click += new System.EventHandler(this.buttonAddEleve_Click);
             // 
             // textBoxNomEleve
             // 

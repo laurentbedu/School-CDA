@@ -26,5 +26,9 @@ namespace SchoolApp
         {
 
         }
+        public override string ToString()
+        {
+            return "Professeur : "+nom+" "+prenom+" - Classe : "+classe;
+        }
     }
 }
