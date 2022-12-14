@@ -8,17 +8,28 @@ namespace SchoolApp
 {
     internal class Classe
     {
-        public int id_classe;
-        public string label;
-        public Professeur prof;
-        public Niveau niveau;
+        public int id_classe { get; set; }
+        public string label { get; set; }
+        public Professeur prof { get; set; }
+        enum Niveau
+        {
+            id_niveau,
+            label
+        }
         List<Eleve> listEleves = new List<Eleve>();
         public void addProf(Professeur prof)
         {
-
+            if (!Classe.Contains(prof))
+            {
+                Classe.Add(prof);
+            }
         }
         public void removeProf(Professeur prof)
         {
+            if (!Classe.Contains(prof))
+            {
+                Classe.Remove(prof);
+            }
 
         }
         public override string ToString()

@@ -8,15 +8,15 @@ namespace SchoolApp
 {
     internal class Personne
     {
-        public string nom;
-        public string prenom;
-        public int id_personne;
+        public string nom { get; set; }
+        public string prenom { get; set; }
+        public int id_personne { get; set; }
 
-        public void AjouterNom(string nom)
+        public void AddNom(string nom)
         {
             nom = nom.ToLower();
         }
-        public void AjouterPrenom(string prenom)
+        public void AddPrenom(string prenom)
         {
             prenom= prenom.ToLower();
         }

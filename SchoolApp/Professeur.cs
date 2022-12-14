@@ -8,25 +8,26 @@ namespace SchoolApp
 {
     internal class Professeur : Personne
     {
-        public int id_prof;
-        public Classe classe;
-        public string login;
-        public string password;
+        public int id_prof { get; set; }
+        public Classe classe { get; set; }
+        public string login { get; set; }
+        public string password { get; set; }
 
-        public Professeur(string nom, string prenom, Classe classe)
-        {
-            this.nom = nom;
-            this.prenom = prenom;
-            this.classe = classe;
-        }
+
 
         public void addClasse(Classe classe)
         {
-
+            if (!Professeur.Contains(classe))
+            {
+                Professeur.Add(classe);
+            }
         }
         public void removeClasse(Classe classe) 
-        { 
-        
+        {
+            if (!Professeur.Contains(classe))
+            {
+                Professeur.Remove(classe);
+            }
         }
         public void creerPassword() {
 

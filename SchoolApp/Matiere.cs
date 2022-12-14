@@ -8,7 +8,7 @@ namespace SchoolApp
 {
     internal class Matiere
     {
-        public string id_matiere;
-        public string label;
+        public string id_matiere { get; set; }
+        public string label { get; set; }
     }
 }
