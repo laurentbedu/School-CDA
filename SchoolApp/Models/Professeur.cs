@@ -9,7 +9,7 @@ namespace SchoolApp.Models
     internal class Professeur : Personne
     {
 
-        public Classe? Classe { get; private set; }
+        public Classe? Classe { get; set; }
         public string login { get; set; }
         public string password { get; set; }
 

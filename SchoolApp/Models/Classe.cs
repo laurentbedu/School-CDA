@@ -20,7 +20,7 @@ namespace SchoolApp.Models
             cm2
         }
         List<Eleve> listEleves = new List<Eleve>();
-        public Professeur? Professeur { get; private set; }
+        public Professeur? Professeur { get; set; }
 
         public Classe()
         {
