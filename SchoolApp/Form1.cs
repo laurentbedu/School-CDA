@@ -56,5 +56,7 @@ namespace SchoolApp
             classe.RemoveProfesseur(professeur);
             MessageBox.Show(classe + "\n" + classe.Professeur);
         }
+
+
     }
 }

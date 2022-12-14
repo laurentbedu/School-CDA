@@ -6,7 +6,7 @@ namespace SchoolApp.Models
     {
         public Classe()
         {
-            Id = Tools.Id.Create(this);
+            Id = Tools.IdGenerator.Create(this);
         }
 
         public string Id { get; private set; }

@@ -1,13 +1,13 @@
 ﻿namespace SchoolApp.Tools
 {
-    internal static class Id
+    internal static class IdGenerator
     {
         public static string Create(object obj)
         {
             long unixTimestamp = GetElapsedFromEpoch();
             string id = LongToString(unixTimestamp) + LongToString(obj.GetHashCode());
-            return id;
-
+            Guid guid = Guid.NewGuid();
+            return guid.ToString();
         }
 
         private static long GetElapsedFromEpoch(Elapsed elapsed = Elapsed.micro)
