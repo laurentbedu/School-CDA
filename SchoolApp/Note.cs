@@ -29,10 +29,27 @@ namespace SchoolApp
             }
         }
 
+        private Matiere? matiere;
+
+        public Matiere? Matiere
+        {
+            get => matiere;
+            set
+            {
+                if (matiere != value)
+                {
+                    matiere?.RemoveNote(this);
+                    matiere = value;
+                    matiere?.AddNote(this);
+                }
+
+            }
+        }
 
 
 
-      
+
+
 
     }
 }

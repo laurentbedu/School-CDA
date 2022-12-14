@@ -40,9 +40,24 @@ namespace SchoolApp
             }
         }
 
+        private Niveau? niveau;
+
+        public Niveau? Niveau
+        {
+            get => niveau;
+            set
+            {
+                if (niveau != value)
+                {
+                    niveau?.RemoveClasse(this);
+                    niveau = value;
+                    niveau?.AddClasse(this);
+                }
+            }
+        }
 
 
-        
+
 
 
     }

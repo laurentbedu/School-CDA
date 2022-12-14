@@ -41,7 +41,7 @@ namespace SchoolApp
             }
         }
 
-
+        
         public List<Note> NoteList { get; set; } = new List<Note>();
 
         public void AddNote(Note note)

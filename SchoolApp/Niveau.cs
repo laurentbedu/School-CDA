@@ -12,17 +12,37 @@ namespace SchoolApp
 
         public string Label_Niveau { get; set; }
 
+
+
         public List<Classe> ClasseList { get; set; } = new List<Classe>();
 
         public void AddClasse(Classe classe)
-        {
-            ClasseList.Add(classe);
+        {   if (ClasseList.Contains(classe))
+            {
+                ClasseList.Add(classe);
+            }
+            if (classe.Niveau != this)
+            {
+                classe.Niveau = this;
+            }
         }
-
+           
         public void RemoveClasse(Classe classe)
         {
-            ClasseList.Remove(classe);
+            if (classe != null && ClasseList.Contains(classe))
+            {
+                ClasseList.Remove(classe);
+                if (classe.Niveau == this)
+                {
+                    classe.Niveau = null;
+                }
+            }
         }
+
+
+        
+
+
 
     }
 
