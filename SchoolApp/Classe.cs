@@ -40,7 +40,7 @@ namespace SchoolApp
         public override string ToString()
         {
             return  "Classe: " +nom+
-                    "\nProfesseur: " +professeur+ ")"+
+                    "\nProfesseur: " +professeur+
                     "\nListe des eleves: " +ListeEleves+ ")";
         }
     }

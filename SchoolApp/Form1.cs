@@ -11,6 +11,8 @@ namespace SchoolApp
         {
             Eleve newEleve = new Eleve("all", "max","2ans");
             MessageBox.Show(newEleve.ToString());
+            Classe newClasse = new Classe("Alpha");
+            MessageBox.Show(newClasse.ToString());
         }
     }
 }
