@@ -1,6 +1,6 @@
 ﻿namespace SchoolApp
 {
-    partial class Form1
+    partial class test
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,12 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.bttest = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // bttest
+            // 
+            this.bttest.Location = new System.Drawing.Point(117, 59);
+            this.bttest.Name = "bttest";
+            this.bttest.Size = new System.Drawing.Size(75, 23);
+            this.bttest.TabIndex = 0;
+            this.bttest.Text = "Test";
+            this.bttest.UseVisualStyleBackColor = true;
+            this.bttest.Click += new System.EventHandler(this.bttest_Click);
+            // 
+            // test
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bttest);
+            this.Name = "test";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private Button bttest;
     }
 }
