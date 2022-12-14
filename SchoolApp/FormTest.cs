@@ -5,6 +5,10 @@ namespace SchoolApp
 {
     public partial class FormTest : Form
     {
+        List<Eleve>         listeEleves         = new List<Eleve>();
+        List<Professeur>    listeProfesseurs    = new List<Professeur>();
+        List<Matiere>       listeMatiere        = new List<Matiere>();
+
         public FormTest()
         {
             InitializeComponent();
@@ -31,8 +35,9 @@ namespace SchoolApp
 
         private void button4_Click(object sender, EventArgs e)
         {
-            FormGestion newFormGestion = new FormGestion();
+            FormGestion newFormGestion = new FormGestion(listeEleves, listeProfesseurs, listeMatiere);
             newFormGestion.Show();
+            this.Hide();
         }
     }
 }

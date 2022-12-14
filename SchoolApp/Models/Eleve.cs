@@ -15,7 +15,7 @@ namespace SchoolApp.Models
         private List<Note> listeNotes;
 
         // Propriétés :
-        public string Id { get { return id; } }
+        public new string Id { get { return id; } }
         public string Anciennete { get { return anciennete; } set { anciennete = value; } }
         public Classe? Classe { get { return classe; } set { classe = value; } }
         public List<Note> ListeNotes { get { return listeNotes; } }
@@ -25,12 +25,12 @@ namespace SchoolApp.Models
         {
             listeNotes = new List<Note>();
             this.anciennete = anciennete;
-            id = generateId();
+            id = Tools.IdGenerator.generateId(this);
         }
         public Eleve(string nom, string prenom) : base(nom, prenom)
         {
             listeNotes = new List<Note>();
-            id = generateId();
+            id = Tools.IdGenerator.generateId(this);
         }
 
         // Methodes :

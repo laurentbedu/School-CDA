@@ -26,15 +26,10 @@ namespace SchoolApp.Models
         {
             listeEleves = new List<Eleve>();
             nom = nomClasse;
-            id = generateId();
+            id = Tools.IdGenerator.generateId(this);
         }
 
         // Methodes :
-        public string generateId()
-        {
-            Random rnd = new Random();
-            return DateTime.Now.ToString("yyMMddHHmmssff") + "-" + rnd.Next(1, 999);
-        }
         public void ajouterProfesseur(Professeur professeur)
         {
             if (Professeur != professeur)
@@ -46,7 +41,6 @@ namespace SchoolApp.Models
                 }
             }
         }
-
         public void retirerProfesseur(Professeur professeur)
         {
             if (Professeur == professeur)
@@ -62,9 +56,7 @@ namespace SchoolApp.Models
         // ToString Override
         public override string ToString()
         {
-            return "Classe: " + nom +
-                    "\nProfesseur: " + professeur +
-                    "\nListe des eleves: " + ListeEleves + ")";
+            return Tools.UniversalToString.ToStringer(this);
         }
     }
 }

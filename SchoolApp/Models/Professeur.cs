@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolApp.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,13 +12,13 @@ namespace SchoolApp.Models
         // Attributs :
         private string login = "Login non défini";
         private string password = "Password non défini";
-        private Classe? classe;
         private bool isAdmin = false;
+        private Classe? classe;
 
         // Propriétés :
 
-        public string Login { get { return login; } }
-        public string Password { get { return password; } }
+        [NePasIntegrerDansToStringAttribute] public string Login { get { return login; } }
+        [NePasIntegrerDansToStringAttribute] public string Password { get { return password; } }
         public bool IsAdmin { get { return isAdmin; } }
         public Classe? Classe { get { return classe; } set { classe = value; } }
         // Getters Setters :

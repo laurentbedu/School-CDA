@@ -49,6 +49,7 @@
             this.dataGridViewEleve = new System.Windows.Forms.DataGridView();
             this.tabPageProfesseur = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
@@ -81,6 +82,23 @@
             this.button20 = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.tabPageMatiere = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.button23 = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.button24 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -122,24 +140,7 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabControl3 = new System.Windows.Forms.TabControl();
-            this.tabPageMatiere = new System.Windows.Forms.TabPage();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.button23 = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.label21 = new System.Windows.Forms.Label();
+            this.buttonFermer = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageEleve.SuspendLayout();
             this.groupBoxAjoutEleve.SuspendLayout();
@@ -153,6 +154,10 @@
             this.groupBox4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            this.tabPageMatiere.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -160,10 +165,6 @@
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.tabPageMatiere.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -388,6 +389,15 @@
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Ajout d\'un prof";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(292, 79);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(43, 15);
+            this.label21.TabIndex = 13;
+            this.label21.Text = "Login :";
             // 
             // textBox9
             // 
@@ -697,6 +707,178 @@
             this.dataGridView5.RowTemplate.Height = 25;
             this.dataGridView5.Size = new System.Drawing.Size(867, 302);
             this.dataGridView5.TabIndex = 0;
+            // 
+            // tabPageMatiere
+            // 
+            this.tabPageMatiere.Controls.Add(this.groupBox5);
+            this.tabPageMatiere.Controls.Add(this.tableLayoutPanel6);
+            this.tabPageMatiere.Location = new System.Drawing.Point(4, 24);
+            this.tabPageMatiere.Name = "tabPageMatiere";
+            this.tabPageMatiere.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageMatiere.Size = new System.Drawing.Size(879, 458);
+            this.tabPageMatiere.TabIndex = 6;
+            this.tabPageMatiere.Text = "Gestion Matières";
+            this.tabPageMatiere.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.textBox17);
+            this.groupBox5.Controls.Add(this.label17);
+            this.groupBox5.Controls.Add(this.button21);
+            this.groupBox5.Controls.Add(this.button22);
+            this.groupBox5.Controls.Add(this.textBox18);
+            this.groupBox5.Controls.Add(this.label18);
+            this.groupBox5.Controls.Add(this.button23);
+            this.groupBox5.Controls.Add(this.label19);
+            this.groupBox5.Controls.Add(this.textBox19);
+            this.groupBox5.Controls.Add(this.label20);
+            this.groupBox5.Controls.Add(this.textBox20);
+            this.groupBox5.Controls.Add(this.button24);
+            this.groupBox5.Controls.Add(this.button25);
+            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox5.Location = new System.Drawing.Point(3, 338);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(873, 117);
+            this.groupBox5.TabIndex = 6;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Ajout d\'un eleve :";
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(292, 46);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(578, 23);
+            this.textBox17.TabIndex = 12;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(292, 25);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(163, 15);
+            this.label17.TabIndex = 6;
+            this.label17.Text = "Chemin vers la liste en cours :";
+            // 
+            // button21
+            // 
+            this.button21.Location = new System.Drawing.Point(586, 21);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(123, 23);
+            this.button21.TabIndex = 11;
+            this.button21.Text = "Importer une liste ...";
+            this.button21.UseVisualStyleBackColor = true;
+            // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(461, 21);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(119, 23);
+            this.button22.TabIndex = 10;
+            this.button22.Text = "Exporter une liste...";
+            this.button22.UseVisualStyleBackColor = true;
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(186, 74);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(100, 23);
+            this.textBox18.TabIndex = 6;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(107, 78);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(73, 15);
+            this.label18.TabIndex = 8;
+            this.label18.Text = "Anciennété :";
+            // 
+            // button23
+            // 
+            this.button23.Location = new System.Drawing.Point(6, 79);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(93, 23);
+            this.button23.TabIndex = 3;
+            this.button23.Text = "Modifier eleve";
+            this.button23.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(125, 49);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(55, 15);
+            this.label19.TabIndex = 6;
+            this.label19.Text = "Prénom :";
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(186, 45);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(100, 23);
+            this.textBox19.TabIndex = 5;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(140, 20);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(40, 15);
+            this.label20.TabIndex = 5;
+            this.label20.Text = "Nom :";
+            // 
+            // textBox20
+            // 
+            this.textBox20.Location = new System.Drawing.Point(186, 17);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(100, 23);
+            this.textBox20.TabIndex = 4;
+            // 
+            // button24
+            // 
+            this.button24.Location = new System.Drawing.Point(15, 21);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(84, 23);
+            this.button24.TabIndex = 1;
+            this.button24.Text = "Ajouter eleve";
+            this.button24.UseVisualStyleBackColor = true;
+            // 
+            // button25
+            // 
+            this.button25.Location = new System.Drawing.Point(15, 50);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(84, 23);
+            this.button25.TabIndex = 2;
+            this.button25.Text = "Retirer eleve";
+            this.button25.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.AutoSize = true;
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Controls.Add(this.dataGridView6, 0, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 2;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.79646F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.20354F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(873, 452);
+            this.tableLayoutPanel6.TabIndex = 7;
+            // 
+            // dataGridView6
+            // 
+            this.dataGridView6.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView6.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridView6.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.RowTemplate.Height = 25;
+            this.dataGridView6.Size = new System.Drawing.Size(867, 302);
+            this.dataGridView6.TabIndex = 0;
             // 
             // saveFileDialog1
             // 
@@ -1087,192 +1269,22 @@
             this.tabControl3.Size = new System.Drawing.Size(200, 100);
             this.tabControl3.TabIndex = 0;
             // 
-            // tabPageMatiere
+            // buttonFermer
             // 
-            this.tabPageMatiere.Controls.Add(this.groupBox5);
-            this.tabPageMatiere.Controls.Add(this.tableLayoutPanel6);
-            this.tabPageMatiere.Location = new System.Drawing.Point(4, 24);
-            this.tabPageMatiere.Name = "tabPageMatiere";
-            this.tabPageMatiere.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMatiere.Size = new System.Drawing.Size(879, 458);
-            this.tabPageMatiere.TabIndex = 6;
-            this.tabPageMatiere.Text = "Gestion Matières";
-            this.tabPageMatiere.UseVisualStyleBackColor = true;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.textBox17);
-            this.groupBox5.Controls.Add(this.label17);
-            this.groupBox5.Controls.Add(this.button21);
-            this.groupBox5.Controls.Add(this.button22);
-            this.groupBox5.Controls.Add(this.textBox18);
-            this.groupBox5.Controls.Add(this.label18);
-            this.groupBox5.Controls.Add(this.button23);
-            this.groupBox5.Controls.Add(this.label19);
-            this.groupBox5.Controls.Add(this.textBox19);
-            this.groupBox5.Controls.Add(this.label20);
-            this.groupBox5.Controls.Add(this.textBox20);
-            this.groupBox5.Controls.Add(this.button24);
-            this.groupBox5.Controls.Add(this.button25);
-            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox5.Location = new System.Drawing.Point(3, 338);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(873, 117);
-            this.groupBox5.TabIndex = 6;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Ajout d\'un eleve :";
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(292, 46);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(578, 23);
-            this.textBox17.TabIndex = 12;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(292, 25);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(163, 15);
-            this.label17.TabIndex = 6;
-            this.label17.Text = "Chemin vers la liste en cours :";
-            // 
-            // button21
-            // 
-            this.button21.Location = new System.Drawing.Point(586, 21);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(123, 23);
-            this.button21.TabIndex = 11;
-            this.button21.Text = "Importer une liste ...";
-            this.button21.UseVisualStyleBackColor = true;
-            // 
-            // button22
-            // 
-            this.button22.Location = new System.Drawing.Point(461, 21);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(119, 23);
-            this.button22.TabIndex = 10;
-            this.button22.Text = "Exporter une liste...";
-            this.button22.UseVisualStyleBackColor = true;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(186, 74);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(100, 23);
-            this.textBox18.TabIndex = 6;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(107, 78);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(73, 15);
-            this.label18.TabIndex = 8;
-            this.label18.Text = "Anciennété :";
-            // 
-            // button23
-            // 
-            this.button23.Location = new System.Drawing.Point(6, 79);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(93, 23);
-            this.button23.TabIndex = 3;
-            this.button23.Text = "Modifier eleve";
-            this.button23.UseVisualStyleBackColor = true;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(125, 49);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(55, 15);
-            this.label19.TabIndex = 6;
-            this.label19.Text = "Prénom :";
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(186, 45);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(100, 23);
-            this.textBox19.TabIndex = 5;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(140, 20);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(40, 15);
-            this.label20.TabIndex = 5;
-            this.label20.Text = "Nom :";
-            // 
-            // textBox20
-            // 
-            this.textBox20.Location = new System.Drawing.Point(186, 17);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(100, 23);
-            this.textBox20.TabIndex = 4;
-            // 
-            // button24
-            // 
-            this.button24.Location = new System.Drawing.Point(15, 21);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(84, 23);
-            this.button24.TabIndex = 1;
-            this.button24.Text = "Ajouter eleve";
-            this.button24.UseVisualStyleBackColor = true;
-            // 
-            // button25
-            // 
-            this.button25.Location = new System.Drawing.Point(15, 50);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(84, 23);
-            this.button25.TabIndex = 2;
-            this.button25.Text = "Retirer eleve";
-            this.button25.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.AutoSize = true;
-            this.tableLayoutPanel6.ColumnCount = 1;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Controls.Add(this.dataGridView6, 0, 0);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 2;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.79646F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.20354F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(873, 452);
-            this.tableLayoutPanel6.TabIndex = 7;
-            // 
-            // dataGridView6
-            // 
-            this.dataGridView6.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView6.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView6.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.RowTemplate.Height = 25;
-            this.dataGridView6.Size = new System.Drawing.Size(867, 302);
-            this.dataGridView6.TabIndex = 0;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(292, 79);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(43, 15);
-            this.label21.TabIndex = 13;
-            this.label21.Text = "Login :";
+            this.buttonFermer.Location = new System.Drawing.Point(820, 504);
+            this.buttonFermer.Name = "buttonFermer";
+            this.buttonFermer.Size = new System.Drawing.Size(75, 23);
+            this.buttonFermer.TabIndex = 1;
+            this.buttonFermer.Text = "Fermer";
+            this.buttonFermer.UseVisualStyleBackColor = true;
+            this.buttonFermer.Click += new System.EventHandler(this.buttonFermer_Click);
             // 
             // FormGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(909, 515);
+            this.ClientSize = new System.Drawing.Size(909, 534);
+            this.Controls.Add(this.buttonFermer);
             this.Controls.Add(this.tabControl1);
             this.Name = "FormGestion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1296,6 +1308,12 @@
             this.groupBox4.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            this.tabPageMatiere.ResumeLayout(false);
+            this.tabPageMatiere.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1305,12 +1323,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.tabPageMatiere.ResumeLayout(false);
-            this.tabPageMatiere.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.tableLayoutPanel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1428,5 +1440,6 @@
         private Button button25;
         private TableLayoutPanel tableLayoutPanel6;
         private DataGridView dataGridView6;
+        private Button buttonFermer;
     }
 }

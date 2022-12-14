@@ -1,4 +1,5 @@
-﻿using SchoolApp.Models;
+﻿using SchoolApp;
+using SchoolApp.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,9 +16,14 @@ namespace GestionNotes
     {
         List<Eleve> listeEleves = new List<Eleve>();
         List<Professeur> listeProfesseurs = new List<Professeur>();
-        public FormGestion()
+        List<Matiere> listeMatieres = new List<Matiere>();
+        public FormGestion(List<Eleve> newlisteEleves, List<Professeur> newlisteProfesseurs, List<Matiere> newlisteMatieres)
         {
             InitializeComponent();
+            this.listeEleves= newlisteEleves;
+            this.listeProfesseurs = newlisteProfesseurs;
+            this.listeMatieres= newlisteMatieres;
+
         }
         private void majDataGridView()
         {
@@ -78,6 +84,14 @@ namespace GestionNotes
                 listeEleves.Add(new Eleve(newNom, newPrenom, "1an"));
                 majDataGridView();
             }
+        }
+        private void buttonFermer_Click(object sender, EventArgs e)
+        {
+            //open formtest
+            FormTest formTest = new FormTest();
+            formTest.Show();
+            //close formgestion
+            this.Close();
         }
     }
 }
