@@ -44,12 +44,14 @@
             this.comboBoxClasseEleve = new System.Windows.Forms.ComboBox();
             this.numericUpDownAncienneteEleve = new System.Windows.Forms.NumericUpDown();
             this.comboBoxClasseProf = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAncienneteEleve)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonAddProf
             // 
-            this.buttonAddProf.Location = new System.Drawing.Point(418, 122);
+            this.buttonAddProf.Location = new System.Drawing.Point(96, 359);
             this.buttonAddProf.Name = "buttonAddProf";
             this.buttonAddProf.Size = new System.Drawing.Size(132, 34);
             this.buttonAddProf.TabIndex = 0;
@@ -58,7 +60,7 @@
             // 
             // buttonAddEleve
             // 
-            this.buttonAddEleve.Location = new System.Drawing.Point(110, 155);
+            this.buttonAddEleve.Location = new System.Drawing.Point(96, 164);
             this.buttonAddEleve.Name = "buttonAddEleve";
             this.buttonAddEleve.Size = new System.Drawing.Size(132, 34);
             this.buttonAddEleve.TabIndex = 1;
@@ -68,15 +70,15 @@
             // 
             // textBoxNomEleve
             // 
-            this.textBoxNomEleve.Location = new System.Drawing.Point(110, 23);
+            this.textBoxNomEleve.Location = new System.Drawing.Point(80, 32);
             this.textBoxNomEleve.Name = "textBoxNomEleve";
-            this.textBoxNomEleve.Size = new System.Drawing.Size(190, 27);
+            this.textBoxNomEleve.Size = new System.Drawing.Size(148, 27);
             this.textBoxNomEleve.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 30);
+            this.label1.Location = new System.Drawing.Point(25, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 20);
             this.label1.TabIndex = 3;
@@ -85,7 +87,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 63);
+            this.label2.Location = new System.Drawing.Point(7, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 20);
             this.label2.TabIndex = 5;
@@ -93,15 +95,15 @@
             // 
             // textBoxPrenomEleve
             // 
-            this.textBoxPrenomEleve.Location = new System.Drawing.Point(110, 56);
+            this.textBoxPrenomEleve.Location = new System.Drawing.Point(80, 65);
             this.textBoxPrenomEleve.Name = "textBoxPrenomEleve";
-            this.textBoxPrenomEleve.Size = new System.Drawing.Size(190, 27);
+            this.textBoxPrenomEleve.Size = new System.Drawing.Size(148, 27);
             this.textBoxPrenomEleve.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 96);
+            this.label3.Location = new System.Drawing.Point(17, 105);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 20);
             this.label3.TabIndex = 7;
@@ -110,7 +112,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(345, 96);
+            this.label4.Location = new System.Drawing.Point(7, 332);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 20);
             this.label4.TabIndex = 14;
@@ -119,7 +121,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(345, 63);
+            this.label5.Location = new System.Drawing.Point(7, 299);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 20);
             this.label5.TabIndex = 12;
@@ -127,15 +129,15 @@
             // 
             // textBoxPrenomProf
             // 
-            this.textBoxPrenomProf.Location = new System.Drawing.Point(418, 56);
+            this.textBoxPrenomProf.Location = new System.Drawing.Point(80, 292);
             this.textBoxPrenomProf.Name = "textBoxPrenomProf";
-            this.textBoxPrenomProf.Size = new System.Drawing.Size(190, 27);
+            this.textBoxPrenomProf.Size = new System.Drawing.Size(148, 27);
             this.textBoxPrenomProf.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(363, 30);
+            this.label6.Location = new System.Drawing.Point(25, 266);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 20);
             this.label6.TabIndex = 10;
@@ -143,15 +145,15 @@
             // 
             // textBoxNomProf
             // 
-            this.textBoxNomProf.Location = new System.Drawing.Point(418, 23);
+            this.textBoxNomProf.Location = new System.Drawing.Point(80, 259);
             this.textBoxNomProf.Name = "textBoxNomProf";
-            this.textBoxNomProf.Size = new System.Drawing.Size(190, 27);
+            this.textBoxNomProf.Size = new System.Drawing.Size(148, 27);
             this.textBoxNomProf.TabIndex = 9;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(14, 129);
+            this.label7.Location = new System.Drawing.Point(38, 138);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(90, 20);
             this.label7.TabIndex = 16;
@@ -160,36 +162,66 @@
             // comboBoxClasseEleve
             // 
             this.comboBoxClasseEleve.FormattingEnabled = true;
-            this.comboBoxClasseEleve.Location = new System.Drawing.Point(110, 88);
+            this.comboBoxClasseEleve.Location = new System.Drawing.Point(80, 97);
             this.comboBoxClasseEleve.Name = "comboBoxClasseEleve";
-            this.comboBoxClasseEleve.Size = new System.Drawing.Size(190, 28);
+            this.comboBoxClasseEleve.Size = new System.Drawing.Size(148, 28);
             this.comboBoxClasseEleve.TabIndex = 17;
             // 
             // numericUpDownAncienneteEleve
             // 
-            this.numericUpDownAncienneteEleve.Location = new System.Drawing.Point(110, 122);
+            this.numericUpDownAncienneteEleve.Location = new System.Drawing.Point(140, 131);
             this.numericUpDownAncienneteEleve.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
+            this.numericUpDownAncienneteEleve.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDownAncienneteEleve.Name = "numericUpDownAncienneteEleve";
-            this.numericUpDownAncienneteEleve.Size = new System.Drawing.Size(190, 27);
+            this.numericUpDownAncienneteEleve.Size = new System.Drawing.Size(88, 27);
             this.numericUpDownAncienneteEleve.TabIndex = 18;
+            this.numericUpDownAncienneteEleve.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // comboBoxClasseProf
             // 
             this.comboBoxClasseProf.FormattingEnabled = true;
-            this.comboBoxClasseProf.Location = new System.Drawing.Point(418, 88);
+            this.comboBoxClasseProf.Location = new System.Drawing.Point(80, 325);
             this.comboBoxClasseProf.Name = "comboBoxClasseProf";
-            this.comboBoxClasseProf.Size = new System.Drawing.Size(190, 28);
+            this.comboBoxClasseProf.Size = new System.Drawing.Size(148, 28);
             this.comboBoxClasseProf.TabIndex = 19;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(80, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 20);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "ELEVE :";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(80, 236);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(102, 20);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "PROFESSEUR :";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1111, 450);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.comboBoxClasseProf);
             this.Controls.Add(this.numericUpDownAncienneteEleve);
             this.Controls.Add(this.comboBoxClasseEleve);
@@ -232,5 +264,7 @@
         private ComboBox comboBoxClasseEleve;
         private NumericUpDown numericUpDownAncienneteEleve;
         private ComboBox comboBoxClasseProf;
+        private Label label8;
+        private Label label9;
     }
 }

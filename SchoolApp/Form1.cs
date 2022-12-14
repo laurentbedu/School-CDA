@@ -71,6 +71,9 @@ namespace SchoolApp
         {
             string nom = textBoxNomEleve.Text;
             string prenom = textBoxPrenomEleve.Text;
+            Classe classe = classes.GetValueOrDefault(comboBoxClasseEleve.SelectedItem);
+            int anciennete = numericUpDownAncienneteEleve.SelectedItem;
+
         }
     }
 }
