@@ -41,7 +41,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxNomProf = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBoxClasse = new System.Windows.Forms.ComboBox();
+            this.comboBoxClasseEleve = new System.Windows.Forms.ComboBox();
             this.numericUpDownAncienneteEleve = new System.Windows.Forms.NumericUpDown();
             this.comboBoxClasseProf = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAncienneteEleve)).BeginInit();
@@ -157,17 +157,22 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "Anciennete :";
             // 
-            // comboBoxClasse
+            // comboBoxClasseEleve
             // 
-            this.comboBoxClasse.FormattingEnabled = true;
-            this.comboBoxClasse.Location = new System.Drawing.Point(110, 88);
-            this.comboBoxClasse.Name = "comboBoxClasse";
-            this.comboBoxClasse.Size = new System.Drawing.Size(190, 28);
-            this.comboBoxClasse.TabIndex = 17;
+            this.comboBoxClasseEleve.FormattingEnabled = true;
+            this.comboBoxClasseEleve.Location = new System.Drawing.Point(110, 88);
+            this.comboBoxClasseEleve.Name = "comboBoxClasseEleve";
+            this.comboBoxClasseEleve.Size = new System.Drawing.Size(190, 28);
+            this.comboBoxClasseEleve.TabIndex = 17;
             // 
             // numericUpDownAncienneteEleve
             // 
             this.numericUpDownAncienneteEleve.Location = new System.Drawing.Point(110, 122);
+            this.numericUpDownAncienneteEleve.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.numericUpDownAncienneteEleve.Name = "numericUpDownAncienneteEleve";
             this.numericUpDownAncienneteEleve.Size = new System.Drawing.Size(190, 27);
             this.numericUpDownAncienneteEleve.TabIndex = 18;
@@ -187,7 +192,7 @@
             this.ClientSize = new System.Drawing.Size(1111, 450);
             this.Controls.Add(this.comboBoxClasseProf);
             this.Controls.Add(this.numericUpDownAncienneteEleve);
-            this.Controls.Add(this.comboBoxClasse);
+            this.Controls.Add(this.comboBoxClasseEleve);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -224,7 +229,7 @@
         private Label label6;
         private TextBox textBoxNomProf;
         private Label label7;
-        private ComboBox comboBoxClasse;
+        private ComboBox comboBoxClasseEleve;
         private NumericUpDown numericUpDownAncienneteEleve;
         private ComboBox comboBoxClasseProf;
     }
