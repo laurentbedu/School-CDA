@@ -1,4 +1,5 @@
 using System.Runtime.ConstrainedExecution;
+using SchoolApp.Models;
 
 namespace SchoolApp
 {

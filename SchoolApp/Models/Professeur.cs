@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolApp
+namespace SchoolApp.Models
 {
     internal class Professeur : Personne
     {
@@ -36,7 +36,8 @@ namespace SchoolApp
                 }
             }
         }
-        public void creerPassword() {
+        public void creerPassword()
+        {
 
         }
         public void modifierPassword()
@@ -45,7 +46,7 @@ namespace SchoolApp
         }
         public override string ToString()
         {
-            return "Professeur : "+nom+" "+prenom+" - Classe : "+Classe;
+            return "Professeur : " + nom + " " + prenom + " - Classe : " + Classe;
         }
     }
 }

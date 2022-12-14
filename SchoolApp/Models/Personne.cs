@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolApp
+namespace SchoolApp.Models
 {
     internal class Personne
     {
@@ -23,7 +23,7 @@ namespace SchoolApp
         }
         public void AddPrenom(string prenom)
         {
-            prenom= prenom.ToLower();
+            prenom = prenom.ToLower();
         }
     }
 }

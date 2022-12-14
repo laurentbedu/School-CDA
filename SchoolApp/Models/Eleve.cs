@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolApp
+namespace SchoolApp.Models
 {
     internal class Eleve : Personne
     {
@@ -15,11 +15,11 @@ namespace SchoolApp
 
         public void ajouterNote(Note note)
         {
-            this.notes.Add(note);
+            notes.Add(note);
         }
         public override string ToString()
         {
-            return "Eleve : "+nom+" "+prenom+" - Classe : "+classe;
+            return "Eleve : " + nom + " " + prenom + " - Classe : " + classe;
         }
     }
 }
