@@ -26,9 +26,5 @@ namespace SchoolApp.Models
         {
             prenom = prenom.ToLower();
         }
-        public override string ToString()
-        {
-            return id+" "+nom+" "+prenom;
-        }
     }
 }
