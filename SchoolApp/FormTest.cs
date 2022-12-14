@@ -1,5 +1,6 @@
 using GestionNotes;
 using SchoolApp.Models;
+using SchoolApp.UserControls;
 
 namespace SchoolApp
 {
@@ -35,9 +36,15 @@ namespace SchoolApp
 
         private void button4_Click(object sender, EventArgs e)
         {
-            FormGestion newFormGestion = new FormGestion(listeEleves, listeProfesseurs, listeMatiere);
+            //FormGestion newFormGestion = new FormGestion(listeEleves, listeProfesseurs, listeMatiere);
+            FormGestion newFormGestion = new FormGestion();
             newFormGestion.Show();
-            this.Hide();
+        }
+
+        private void buttonGestion2_Click(object sender, EventArgs e)
+        {
+            UserControl1 myUserControl = new UserControl1() { Dock= DockStyle.Fill };
+            panelGestion.Controls.Add(myUserControl);
         }
     }
 }

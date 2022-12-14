@@ -42,6 +42,17 @@ namespace SchoolApp.Models
         {
             ListeNotes.Remove(noteToRemove);
         }
+        public string ToStringPourSave()
+        {
+            if (Classe?.Id != null)
+            {
+                return Nom + " " + Prenom + " " + Anciennete + " " + id + " " + Classe.Id;
+            }
+            else
+            {
+                return Nom + " " + Prenom + " " + Anciennete + " " + id + " " + "PasDeClasseId";
+            }
+        }
 
         // ToString Override
     }

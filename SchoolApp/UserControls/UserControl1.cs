@@ -1,5 +1,4 @@
-﻿using SchoolApp;
-using SchoolApp.Models;
+﻿using SchoolApp.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,14 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GestionNotes
+namespace SchoolApp.UserControls
 {
-    public partial class FormGestion : Form
+    public partial class UserControl1 : UserControl
     {
         List<Eleve> listeEleves = new List<Eleve>();
         List<Professeur> listeProfesseurs = new List<Professeur>();
         List<Matiere> listeMatieres = new List<Matiere>();
-        public FormGestion()
+        public UserControl1()
         {
             InitializeComponent();
         }
@@ -30,16 +29,16 @@ namespace GestionNotes
         }
         private void resetBoxes()
         {
-            textBoxEleveNom.Text            = "";
-            textBoxElevePrenom.Text         = "";
-            textBoxEleveAnciennete.Text     = "";
+            textBoxEleveNom.Text = "";
+            textBoxElevePrenom.Text = "";
+            textBoxEleveAnciennete.Text = "";
         }
         private void buttonAjouterEleve_Click(object sender, EventArgs e)
         {
-            string nom          = textBoxEleveNom.Text;
-            string prenom       = textBoxElevePrenom.Text;
-            string anciennete   = textBoxEleveAnciennete.Text;
-            Eleve nouvelEleve   = new Eleve(nom, prenom, anciennete);
+            string nom = textBoxEleveNom.Text;
+            string prenom = textBoxElevePrenom.Text;
+            string anciennete = textBoxEleveAnciennete.Text;
+            Eleve nouvelEleve = new Eleve(nom, prenom, anciennete);
             listeEleves.Add(nouvelEleve);
             resetBoxes();
             majDataGridView();
@@ -51,7 +50,7 @@ namespace GestionNotes
             {
                 saveFileDialog1.InitialDirectory = textBoxCheminListe.Text;
             }
-            string[] toSave = listeEleves.Select(i => now + "--" + i.ToString()).ToArray(); // merci stackoverflow
+            string[] toSave = listeEleves.Select(i => now + "--" + i.ToStringPourSave()).ToArray(); // merci stackoverflow
             string? cheminFicherExporter = ""; // ? car non nullable.
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -70,24 +69,16 @@ namespace GestionNotes
             }
             string[] toLoad = (File.ReadAllLines(cheminFichierImporter));
 
-            for (int i = 0; i<toLoad.Length; i++)
+            for (int i = 0; i < toLoad.Length; i++)
             {
                 toLoad[i] = toLoad[i].Remove(0, 21); // pour retirer la date et le -- qui prend 21 char.
-                string[] aDecomposer= toLoad[i].Split(' ');
-                string newNom       = aDecomposer[0];
-                string newPrenom    = aDecomposer[1];
-                string newAnciennete= aDecomposer[2];
+                string[] aDecomposer = toLoad[i].Split(' ');
+                string newNom = aDecomposer[0];
+                string newPrenom = aDecomposer[1];
+                string newAnciennete = aDecomposer[2];
                 listeEleves.Add(new Eleve(newNom, newPrenom, "1an"));
                 majDataGridView();
             }
-        }
-        private void buttonFermer_Click(object sender, EventArgs e)
-        {
-            //open formtest
-            FormTest formTest = new FormTest();
-            formTest.Show();
-            //close formgestion
-            this.Close();
         }
     }
 }
