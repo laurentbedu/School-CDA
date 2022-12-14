@@ -7,25 +7,10 @@ namespace SchoolApp
         public Form1()
         {
             InitializeComponent();
-            InitializeNiveaux();
             InitializeClasses();
         }
         List<Classe> classes = new List<Classe>();
-        Niveau cp;
-        Niveau ce1;
-        Niveau ce2;
-        Niveau cm1;
-        Niveau cm2;
-
-        public void InitializeNiveaux()
-        {
-            cp = new Niveau() { id_niveau = "001", label = "CP" };
-            ce1 = new Niveau() { id_niveau = "002", label = "CE1" };
-            ce2 = new Niveau() { id_niveau = "003", label = "CE2" };
-            cm1 = new Niveau() { id_niveau = "004", label = "CM1" };
-            cm2 = new Niveau() { id_niveau = "005", label = "CM2" };
-
-        }
+       
         public void InitializeClasses()
         {
             Classe CP_1 = new Classe() { id_classe = 0011, label = "CP_1", niveau = cp };

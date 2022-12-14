@@ -11,10 +11,13 @@ namespace SchoolApp
         public int id_classe { get; set; }
         public string label { get; set; }
         public Professeur prof { get; set; }
-        enum Niveau
+        enum niveau
         {
-            id_niveau,
-            label
+            cp,
+            ce1,
+            ce2,
+            cm1,
+            cm2
         }
         List<Eleve> listEleves = new List<Eleve>();
         public void addProf(Professeur prof)
