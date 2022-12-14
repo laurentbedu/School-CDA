@@ -10,7 +10,12 @@ namespace SchoolApp
     {
         public string nom { get; set; }
         public string prenom { get; set; }
-        public int id_personne { get; set; }
+        public int id { get; set; }
+
+        public Personne()
+        {
+            id = IdGenerator.Create(this);
+        }
 
         public void AddNom(string nom)
         {

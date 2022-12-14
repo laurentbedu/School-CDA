@@ -9,7 +9,6 @@ namespace SchoolApp
     internal class Eleve : Personne
     {
         public int anciennete { get; set; }
-        public int id_eleve { get; set; }
         public Classe classe { get; set; }
 
         List<Note> notes = new List<Note>();

@@ -13,11 +13,11 @@ namespace SchoolApp
        
         public void InitializeClasses()
         {
-            Classe CP_1 = new Classe() { id_classe = 0011, label = "CP_1", niveau = cp };
+            Classe CP_1 = new Classe() { id_classe = 0011, label = "CP_1" };
             classes.Add(CP_1);
             comboBoxClasseEleve.Items.Add(CP_1.ToString());
             comboBoxClasseProf.Items.Add(CP_1.ToString());
-            Classe CP_2 = new Classe() { id_classe = 0012, label = "CP_2", niveau = cp };
+            Classe CP_2 = new Classe() { id_classe = 0012, label = "CP_2" };
             classes.Add(CP_2);
             comboBoxClasseEleve.Items.Add(CP_2.ToString());
             comboBoxClasseProf.Items.Add(CP_2.ToString());

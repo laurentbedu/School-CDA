@@ -8,8 +8,7 @@ namespace SchoolApp
 {
     internal class Professeur : Personne
     {
-        public int id_prof { get; set; }
-        public Classe classe { get; set; }
+        public Classe? classe { get; set; }
         public string login { get; set; }
         public string password { get; set; }
 

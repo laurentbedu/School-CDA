@@ -8,9 +8,9 @@ namespace SchoolApp
 {
     internal class Classe
     {
-        public int id_classe { get; set; }
+        public string id { get; set; }
         public string label { get; set; }
-        public Professeur prof { get; set; }
+        public Professeur? prof { get; set; }
         enum niveau
         {
             cp,
@@ -20,28 +20,36 @@ namespace SchoolApp
             cm2
         }
         List<Eleve> listEleves = new List<Eleve>();
-        public void AddProfesseur(Professeur prof)
+
+        public Classe()
         {
-            if (Professeur != prof)
+            id = IdGenerator.Create(this);
+        }
+
+        public void AddProfesseur(Professeur professeur)
+        {
+            if (Professeur != professeur)
             {
-                Professeur = prof;
-                if (prof.Classe != this)
+                Professeur = professeur;
+                if (professeur.Classe != this)
                 {
-                    prof.AddClasse(this);
+                    professeur.AddClasse(this);
                 }
             }
         }
-        public void RemoveClasse(Classe classe)
+
+        public void RemoveProfesseur(Professeur professeur)
         {
-            if (Professeur == prof)
+            if (Professeur == professeur)
             {
                 Professeur = null;
-                if (prof.Classe == this)
+                if (professeur.Classe == this)
                 {
-                    prof.RemoveClasse(this);
+                    professeur.RemoveClasse(this);
                 }
             }
         }
+
         public override string ToString()
         {
             return label;
