@@ -1,4 +1,5 @@
 using GestionNotes;
+using SchoolApp.Models;
 
 namespace SchoolApp
 {

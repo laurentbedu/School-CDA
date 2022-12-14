@@ -4,23 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolApp
+namespace SchoolApp.Models
 {
-    internal class Niveau
+    internal class Matiere
     {
         // Attributs :
-        private string id   = "Id non défini";
-        private string nom  = "Nom non défini";
+        private string id = "Id non défini";
+        private string nom = "Nom non défini";
+
 
         // Propriétés :
         public string Id { get { return id; } set { id = value; } }
         public string Nom { get { return nom; } set { nom = value; } }
 
         // Constructeurs :
-        public Niveau(string nomNiveau)
+        public Matiere(string nomMatiere)
         {
-            this.nom = nomNiveau;
-            this.id = generateId();
+            nom = nomMatiere;
+            id = generateId();
         }
 
         // Methodes :

@@ -4,24 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolApp
+namespace SchoolApp.Models
 {
-    internal class Matiere
+    internal class Niveau
     {
         // Attributs :
-        private string id   = "Id non défini";
-        private string nom  = "Nom non défini";
-
+        private string id = "Id non défini";
+        private string nom = "Nom non défini";
 
         // Propriétés :
-        public string Id    {   get { return id;    }   set { id = value;   }   }
-        public string Nom   {   get { return nom;   }   set { nom = value;  }   }
+        public string Id { get { return id; } set { id = value; } }
+        public string Nom { get { return nom; } set { nom = value; } }
 
         // Constructeurs :
-        public Matiere(string nomMatiere)
+        public Niveau(string nomNiveau)
         {
-            this.nom    = nomMatiere;
-            this.id     = generateId();
+            nom = nomNiveau;
+            id = generateId();
         }
 
         // Methodes :
@@ -34,7 +33,7 @@ namespace SchoolApp
         // ToString Override
         public override string ToString()
         {
-            return "Matière: "+nom;
+            return "Matière: " + nom;
         }
     }
 }

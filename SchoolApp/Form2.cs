@@ -1,4 +1,4 @@
-﻿using SchoolApp;
+﻿using SchoolApp.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

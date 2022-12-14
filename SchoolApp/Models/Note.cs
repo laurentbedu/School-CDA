@@ -4,31 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolApp
+namespace SchoolApp.Models
 {
     internal class Note
     {
         // Attributs :
-        private string id       = "Id non défini";
-        private double valeur   = -1;
+        private string id = "Id non défini";
+        private double valeur = -1;
         private Eleve eleve;
         private Matiere matiere;
 
         // Propriétés :
-        public string Id        {   get { return id;      }   set { id = value;         }   }
-        public double Valeur    {   get { return valeur;  }   set { valeur = value;     }   }
-        public Eleve Eleve      {   get { return eleve;   }   set { eleve = value;      }   }
-        public Matiere Matiere  {   get { return matiere; }   set { matiere = value;    }   }
+        public string Id { get { return id; } set { id = value; } }
+        public double Valeur { get { return valeur; } set { valeur = value; } }
+        public Eleve Eleve { get { return eleve; } set { eleve = value; } }
+        public Matiere Matiere { get { return matiere; } set { matiere = value; } }
 
         // Constructeurs :
         public Note(Eleve eleve, Matiere matiere, int valeur)
         {
-            this.matiere    = matiere;
-            this.eleve      = eleve;
-            this.valeur     = valeur;
-            this.id = generateId();
+            this.matiere = matiere;
+            this.eleve = eleve;
+            this.valeur = valeur;
+            id = generateId();
         }
-
         // Methodes :
         public string generateId()
         {
