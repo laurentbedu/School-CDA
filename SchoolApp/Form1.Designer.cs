@@ -28,38 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonAddProf = new System.Windows.Forms.Button();
+            this.buttonCreerProf = new System.Windows.Forms.Button();
             this.buttonAddEleve = new System.Windows.Forms.Button();
             this.textBoxNomEleve = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxPrenomEleve = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.textBoxPrenomProf = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.textBoxNomProf = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBoxClasseEleve = new System.Windows.Forms.ComboBox();
             this.numericUpDownAncienneteEleve = new System.Windows.Forms.NumericUpDown();
-            this.comboBoxClasseProf = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.buttonCreerClasse = new System.Windows.Forms.Button();
+            this.textBoxNomClass = new System.Windows.Forms.TextBox();
+            this.buttonAddClasse = new System.Windows.Forms.Button();
+            this.buttonRemoveClasse = new System.Windows.Forms.Button();
+            this.buttonRemoveProf = new System.Windows.Forms.Button();
+            this.buttonAddProf = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAncienneteEleve)).BeginInit();
             this.SuspendLayout();
             // 
-            // buttonAddProf
+            // buttonCreerProf
             // 
-            this.buttonAddProf.Location = new System.Drawing.Point(96, 359);
-            this.buttonAddProf.Name = "buttonAddProf";
-            this.buttonAddProf.Size = new System.Drawing.Size(132, 34);
-            this.buttonAddProf.TabIndex = 0;
-            this.buttonAddProf.Text = "Ajouter prof";
-            this.buttonAddProf.UseVisualStyleBackColor = true;
+            this.buttonCreerProf.Location = new System.Drawing.Point(607, 39);
+            this.buttonCreerProf.Name = "buttonCreerProf";
+            this.buttonCreerProf.Size = new System.Drawing.Size(132, 27);
+            this.buttonCreerProf.TabIndex = 0;
+            this.buttonCreerProf.Text = "Créer prof";
+            this.buttonCreerProf.UseVisualStyleBackColor = true;
+            this.buttonCreerProf.Click += new System.EventHandler(this.buttonAddProf_Click);
             // 
             // buttonAddEleve
             // 
@@ -69,7 +68,6 @@
             this.buttonAddEleve.TabIndex = 1;
             this.buttonAddEleve.Text = "Ajouter eleve";
             this.buttonAddEleve.UseVisualStyleBackColor = true;
-            this.buttonAddEleve.Click += new System.EventHandler(this.buttonAddEleve_Click);
             // 
             // textBoxNomEleve
             // 
@@ -112,43 +110,16 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Classe :";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 332);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 20);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Classe :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 299);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 20);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Prénom :";
-            // 
             // textBoxPrenomProf
             // 
-            this.textBoxPrenomProf.Location = new System.Drawing.Point(80, 292);
+            this.textBoxPrenomProf.Location = new System.Drawing.Point(453, 39);
             this.textBoxPrenomProf.Name = "textBoxPrenomProf";
             this.textBoxPrenomProf.Size = new System.Drawing.Size(148, 27);
             this.textBoxPrenomProf.TabIndex = 11;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 266);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 20);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Nom :";
-            // 
             // textBoxNomProf
             // 
-            this.textBoxNomProf.Location = new System.Drawing.Point(80, 259);
+            this.textBoxNomProf.Location = new System.Drawing.Point(299, 39);
             this.textBoxNomProf.Name = "textBoxNomProf";
             this.textBoxNomProf.Size = new System.Drawing.Size(148, 27);
             this.textBoxNomProf.TabIndex = 9;
@@ -192,14 +163,6 @@
             0,
             0});
             // 
-            // comboBoxClasseProf
-            // 
-            this.comboBoxClasseProf.FormattingEnabled = true;
-            this.comboBoxClasseProf.Location = new System.Drawing.Point(80, 325);
-            this.comboBoxClasseProf.Name = "comboBoxClasseProf";
-            this.comboBoxClasseProf.Size = new System.Drawing.Size(148, 28);
-            this.comboBoxClasseProf.TabIndex = 19;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -209,56 +172,79 @@
             this.label8.TabIndex = 20;
             this.label8.Text = "ELEVE :";
             // 
-            // label9
+            // buttonCreerClasse
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(80, 236);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(102, 20);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "PROFESSEUR :";
+            this.buttonCreerClasse.Location = new System.Drawing.Point(430, 238);
+            this.buttonCreerClasse.Name = "buttonCreerClasse";
+            this.buttonCreerClasse.Size = new System.Drawing.Size(134, 29);
+            this.buttonCreerClasse.TabIndex = 22;
+            this.buttonCreerClasse.Text = "Créer classe";
+            this.buttonCreerClasse.UseVisualStyleBackColor = true;
+            this.buttonCreerClasse.Click += new System.EventHandler(this.buttonCreerClasse_Click);
             // 
-            // button1
+            // textBoxNomClass
             // 
-            this.button1.Location = new System.Drawing.Point(739, 52);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "add classe";
-            this.button1.UseVisualStyleBackColor = true;
+            this.textBoxNomClass.Location = new System.Drawing.Point(299, 238);
+            this.textBoxNomClass.Name = "textBoxNomClass";
+            this.textBoxNomClass.Size = new System.Drawing.Size(125, 27);
+            this.textBoxNomClass.TabIndex = 24;
             // 
-            // textBox1
+            // buttonAddClasse
             // 
-            this.textBox1.Location = new System.Drawing.Point(608, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
-            this.textBox1.TabIndex = 23;
+            this.buttonAddClasse.Location = new System.Drawing.Point(299, 72);
+            this.buttonAddClasse.Name = "buttonAddClasse";
+            this.buttonAddClasse.Size = new System.Drawing.Size(117, 34);
+            this.buttonAddClasse.TabIndex = 26;
+            this.buttonAddClasse.Text = "Ajouter classe";
+            this.buttonAddClasse.UseVisualStyleBackColor = true;
+            this.buttonAddClasse.Click += new System.EventHandler(this.buttonAddClasse_Click);
             // 
-            // textBox2
+            // buttonRemoveClasse
             // 
-            this.textBox2.Location = new System.Drawing.Point(477, 52);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 27);
-            this.textBox2.TabIndex = 24;
+            this.buttonRemoveClasse.Location = new System.Drawing.Point(422, 72);
+            this.buttonRemoveClasse.Name = "buttonRemoveClasse";
+            this.buttonRemoveClasse.Size = new System.Drawing.Size(117, 34);
+            this.buttonRemoveClasse.TabIndex = 27;
+            this.buttonRemoveClasse.Text = "Enlever classe";
+            this.buttonRemoveClasse.UseVisualStyleBackColor = true;
+            this.buttonRemoveClasse.Click += new System.EventHandler(this.buttonRemoveClasse_Click);
+            // 
+            // buttonRemoveProf
+            // 
+            this.buttonRemoveProf.Location = new System.Drawing.Point(422, 271);
+            this.buttonRemoveProf.Name = "buttonRemoveProf";
+            this.buttonRemoveProf.Size = new System.Drawing.Size(117, 34);
+            this.buttonRemoveProf.TabIndex = 29;
+            this.buttonRemoveProf.Text = "Enlever prof";
+            this.buttonRemoveProf.UseVisualStyleBackColor = true;
+            this.buttonRemoveProf.Click += new System.EventHandler(this.buttonRemoveProf_Click);
+            // 
+            // buttonAddProf
+            // 
+            this.buttonAddProf.Location = new System.Drawing.Point(299, 271);
+            this.buttonAddProf.Name = "buttonAddProf";
+            this.buttonAddProf.Size = new System.Drawing.Size(117, 34);
+            this.buttonAddProf.TabIndex = 28;
+            this.buttonAddProf.Text = "Ajouter prof";
+            this.buttonAddProf.UseVisualStyleBackColor = true;
+            this.buttonAddProf.Click += new System.EventHandler(this.buttonAddProf_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1111, 450);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.buttonRemoveProf);
+            this.Controls.Add(this.buttonAddProf);
+            this.Controls.Add(this.buttonRemoveClasse);
+            this.Controls.Add(this.buttonAddClasse);
+            this.Controls.Add(this.textBoxNomClass);
+            this.Controls.Add(this.buttonCreerClasse);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBoxClasseProf);
             this.Controls.Add(this.numericUpDownAncienneteEleve);
             this.Controls.Add(this.comboBoxClasseEleve);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.textBoxPrenomProf);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxNomProf);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -266,7 +252,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxNomEleve);
             this.Controls.Add(this.buttonAddEleve);
-            this.Controls.Add(this.buttonAddProf);
+            this.Controls.Add(this.buttonCreerProf);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAncienneteEleve)).EndInit();
@@ -277,26 +263,24 @@
 
         #endregion
 
-        private Button buttonAddProf;
+        private Button buttonCreerProf;
         private Button buttonAddEleve;
         private TextBox textBoxNomEleve;
         private Label label1;
         private Label label2;
         private TextBox textBoxPrenomEleve;
         private Label label3;
-        private Label label4;
-        private Label label5;
         private TextBox textBoxPrenomProf;
-        private Label label6;
         private TextBox textBoxNomProf;
         private Label label7;
         private ComboBox comboBoxClasseEleve;
         private NumericUpDown numericUpDownAncienneteEleve;
-        private ComboBox comboBoxClasseProf;
         private Label label8;
-        private Label label9;
-        private Button button1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private Button buttonCreerClasse;
+        private TextBox textBoxNomClass;
+        private Button buttonAddClasse;
+        private Button buttonRemoveClasse;
+        private Button buttonRemoveProf;
+        private Button buttonAddProf;
     }
 }
