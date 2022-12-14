@@ -54,7 +54,7 @@ namespace SchoolApp.Models
 
         public override string ToString()
         {
-            return label;
+            return id +" "+ label +" "+ Professeur;
         }
     }
 }

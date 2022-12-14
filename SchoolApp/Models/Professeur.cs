@@ -46,7 +46,7 @@ namespace SchoolApp.Models
         }
         public override string ToString()
         {
-            return "Professeur : " + nom + " " + prenom + " - Classe : " + Classe;
+            return "Professeur : "+id +" " + nom + " " + prenom + " - Classe : " + Classe;
         }
     }
 }

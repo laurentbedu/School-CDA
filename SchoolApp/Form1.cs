@@ -10,12 +10,12 @@ namespace SchoolApp
             InitializeComponent();
         }
         List<Classe> classes = new List<Classe>();
-       
-        
+
 
         private void buttonAddEleve_Click(object sender, EventArgs e)
         {
 
         }
+
     }
 }
