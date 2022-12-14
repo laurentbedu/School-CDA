@@ -10,13 +10,13 @@ namespace SchoolApp
     {
         // Attributs :
         private string id       = "Id non défini";
-        private int valeur      = -1;
+        private double valeur   = -1;
         private Eleve eleve;
         private Matiere matiere;
 
         // Propriétés :
         public string Id        {   get { return id;      }   set { id = value;         }   }
-        public int Valeur       {   get { return valeur;  }   set { valeur = value;     }   }
+        public double Valeur    {   get { return valeur;  }   set { valeur = value;     }   }
         public Eleve Eleve      {   get { return eleve;   }   set { eleve = value;      }   }
         public Matiere Matiere  {   get { return matiere; }   set { matiere = value;    }   }
 

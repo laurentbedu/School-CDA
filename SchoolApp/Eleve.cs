@@ -26,6 +26,10 @@ namespace SchoolApp
             listeNotes      = new List<Note>();
             this.anciennete = anciennete;
             id              = generateId();
+        }  public Eleve(string nom, string prenom) : base(nom, prenom)
+        {
+            listeNotes      = new List<Note>();
+            id              = generateId();
         }
 
         // Methodes :

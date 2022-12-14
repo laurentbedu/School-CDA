@@ -35,6 +35,22 @@ namespace SchoolApp
             Random rnd = new Random();
             return DateTime.Now.ToString("yyMMddHHmmssff") + "-" + rnd.Next(1, 999);
         }
+        public void ajouterProfesseur(Professeur professeur)
+        {
+            if (Professeur == professeur)
+            {
+                Professeur = null;
+                if (Professeur.Classe == this)
+                {
+                    Classe.supprimerProfesseur(this);
+                }
+            }
+
+        }
+        public void supprimerProfesseur (Professeur professeur)
+        {
+
+        }
 
         // ToString Override
         public override string ToString()

@@ -29,8 +29,7 @@ namespace SchoolApp
         // Methodes :
         public string generateId()
         {
-            Random rnd = new Random();
-            return DateTime.Now.ToString("yyMMddHHmmssff") +"-"+ rnd.Next(1,999);
+            return DateTime.Now.ToString("yyMMddHHmmssff") +"-"+ this.GetHashCode();
         }
 
         // ToString Override

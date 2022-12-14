@@ -13,36 +13,45 @@ namespace SchoolApp
         private string login    = "Login non défini";
         private string password = "Password non défini";
         private Classe? classe;
+        private bool isAdmin = false;
 
         // Propriétés :
         public string Id        {   get { return id; }                      }
         public string Login     {   get { return login; }                   }
         public string Password  {   get { return password; }                }
-        public Classe? Classe   {   get;                        set;        }
-
+        public bool IsAdmin     {   get { return isAdmin; }                }
+        public Classe? Classe   {   get { return classe;           }           set            {                 classe = value;            }            }
+        // Getters Setters :
         // Constructeurs :
         public Professeur(string nom, string prenom, string newLogin, string newPassword) : base(nom, prenom)
         {
             this.login      = newLogin;
             this.password   = newPassword;
-            id              = generateId();
+            this.id         = generateId();
         }
 
         // Methodes :
-        public void ajouterClasse ( Classe classe)
+        public void ajouterClasse(Classe classe)
         {
-            if (this.classe !=null)
+            if ( Classe != classe)
             {
                 Classe = classe;
-            }
-            else
-            {
-                MessageBox.Show(Nom + " a déjà une classe.");
+                if (classe.Professeur !=this)
+                {
+                    classe.ajouterProfesseur(this);
+                }
             }
         }
-        public void supprimerClasse()
+        public void supprimerClasse(Classe classe)
         {
-            this.classe = null;
+            if (Classe == classe)
+            {
+                Classe = null;
+                if (classe.Professeur == this)
+                {
+                    classe.supprimerProfesseur(this);
+                }
+            }
         }
 
         // ToString Override
