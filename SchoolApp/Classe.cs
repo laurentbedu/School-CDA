@@ -13,7 +13,14 @@ namespace SchoolApp
         public Professeur prof;
         public Niveau niveau;
         List<Eleve> listEleves = new List<Eleve>();
+        public void addProf(Professeur prof)
+        {
 
+        }
+        public void removeProf(Professeur prof)
+        {
+
+        }
         public override string ToString()
         {
             return label;

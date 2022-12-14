@@ -14,9 +14,10 @@ namespace SchoolApp
 
         List<Note> notes = new List<Note>();
 
-        public Eleve(string nom, string prenom) {
+        public Eleve(string nom, string prenom, Classe classe) {
             this.nom = nom;
             this.prenom = prenom;
+            this.classe = classe;
         }
         public void ajouterNote(Note note)
         {
