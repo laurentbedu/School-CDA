@@ -14,19 +14,26 @@ namespace SchoolApp
         public string password { get; set; }
 
 
-
-        public void addClasse(Classe classe)
+        public void AddClasse(Classe classe)
         {
-            if (!Professeur.Contains(classe))
+            if (Classe != classe)
             {
-                Professeur.Add(classe);
+                Classe = classe;
+                if (classe.Professeur != this)
+                {
+                    classe.AddProfesseur(this);
+                }
             }
         }
-        public void removeClasse(Classe classe) 
+        public void RemoveClasse(Classe classe)
         {
-            if (!Professeur.Contains(classe))
+            if (Classe == classe)
             {
-                Professeur.Remove(classe);
+                Classe = null;
+                if (classe.Professeur == this)
+                {
+                    classe.RemoveProfesseur(this);
+                }
             }
         }
         public void creerPassword() {

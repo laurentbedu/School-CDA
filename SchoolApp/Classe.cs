@@ -20,20 +20,27 @@ namespace SchoolApp
             cm2
         }
         List<Eleve> listEleves = new List<Eleve>();
-        public void addProf(Professeur prof)
+        public void AddProfesseur(Professeur prof)
         {
-            if (!Classe.Contains(prof))
+            if (Professeur != prof)
             {
-                Classe.Add(prof);
+                Professeur = prof;
+                if (prof.Classe != this)
+                {
+                    prof.AddClasse(this);
+                }
             }
         }
-        public void removeProf(Professeur prof)
+        public void RemoveClasse(Classe classe)
         {
-            if (!Classe.Contains(prof))
+            if (Professeur == prof)
             {
-                Classe.Remove(prof);
+                Professeur = null;
+                if (prof.Classe == this)
+                {
+                    prof.RemoveClasse(this);
+                }
             }
-
         }
         public override string ToString()
         {
