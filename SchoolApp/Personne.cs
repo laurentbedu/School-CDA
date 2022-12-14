@@ -10,7 +10,7 @@ namespace SchoolApp
     {
         public string nom { get; set; }
         public string prenom { get; set; }
-        public int id { get; set; }
+        public string id { get; set; }
 
         public Personne()
         {

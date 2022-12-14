@@ -8,7 +8,8 @@ namespace SchoolApp
 {
     internal class Professeur : Personne
     {
-        public Classe? classe { get; set; }
+
+        public Classe? Classe { get; private set; }
         public string login { get; set; }
         public string password { get; set; }
 
@@ -44,7 +45,7 @@ namespace SchoolApp
         }
         public override string ToString()
         {
-            return "Professeur : "+nom+" "+prenom+" - Classe : "+classe;
+            return "Professeur : "+nom+" "+prenom+" - Classe : "+Classe;
         }
     }
 }

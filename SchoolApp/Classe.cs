@@ -10,7 +10,6 @@ namespace SchoolApp
     {
         public string id { get; set; }
         public string label { get; set; }
-        public Professeur? prof { get; set; }
         enum niveau
         {
             cp,
@@ -20,11 +19,13 @@ namespace SchoolApp
             cm2
         }
         List<Eleve> listEleves = new List<Eleve>();
+        public Professeur? Professeur { get; private set; }
 
         public Classe()
         {
             id = IdGenerator.Create(this);
         }
+
 
         public void AddProfesseur(Professeur professeur)
         {

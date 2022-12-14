@@ -13,20 +13,6 @@ namespace SchoolApp
 
         List<Note> notes = new List<Note>();
 
-        public void addClasse(Classe classe)
-        {
-            if (!Eleve.Contains(classe))
-            {
-                Eleve.Add(classe);
-            }
-        }
-        public void removeClasse(Classe classe)
-        {
-            if (!Eleve.Contains(classe))
-            {
-                Eleve.Remove(classe);
-            }
-        }
         public void ajouterNote(Note note)
         {
             this.notes.Add(note);
