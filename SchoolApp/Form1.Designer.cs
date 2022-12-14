@@ -43,7 +43,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.comboBoxClasse = new System.Windows.Forms.ComboBox();
             this.numericUpDownAncienneteEleve = new System.Windows.Forms.NumericUpDown();
-            this.comboBoxMatiere = new System.Windows.Forms.ComboBox();
+            this.comboBoxClasseProf = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAncienneteEleve)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,9 +111,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(345, 96);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 20);
+            this.label4.Size = new System.Drawing.Size(57, 20);
             this.label4.TabIndex = 14;
-            this.label4.Text = "Matière :";
+            this.label4.Text = "Classe :";
             // 
             // label5
             // 
@@ -171,20 +171,20 @@
             this.numericUpDownAncienneteEleve.Size = new System.Drawing.Size(190, 27);
             this.numericUpDownAncienneteEleve.TabIndex = 18;
             // 
-            // comboBoxMatiere
+            // comboBoxClasseProf
             // 
-            this.comboBoxMatiere.FormattingEnabled = true;
-            this.comboBoxMatiere.Location = new System.Drawing.Point(418, 88);
-            this.comboBoxMatiere.Name = "comboBoxMatiere";
-            this.comboBoxMatiere.Size = new System.Drawing.Size(190, 28);
-            this.comboBoxMatiere.TabIndex = 19;
+            this.comboBoxClasseProf.FormattingEnabled = true;
+            this.comboBoxClasseProf.Location = new System.Drawing.Point(418, 88);
+            this.comboBoxClasseProf.Name = "comboBoxClasseProf";
+            this.comboBoxClasseProf.Size = new System.Drawing.Size(190, 28);
+            this.comboBoxClasseProf.TabIndex = 19;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1111, 450);
-            this.Controls.Add(this.comboBoxMatiere);
+            this.Controls.Add(this.comboBoxClasseProf);
             this.Controls.Add(this.numericUpDownAncienneteEleve);
             this.Controls.Add(this.comboBoxClasse);
             this.Controls.Add(this.label7);
@@ -225,6 +225,6 @@
         private Label label7;
         private ComboBox comboBoxClasse;
         private NumericUpDown numericUpDownAncienneteEleve;
-        private ComboBox comboBoxMatiere;
+        private ComboBox comboBoxClasseProf;
     }
 }

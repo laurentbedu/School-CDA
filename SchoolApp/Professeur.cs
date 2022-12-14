@@ -9,15 +9,15 @@ namespace SchoolApp
     internal class Professeur : Personne
     {
         public int id_prof;
-        public string matiere;
+        public string classe;
         public string login;
         public string password;
 
-        public Professeur(string nom, string prenom, string matiere)
+        public Professeur(string nom, string prenom, string classe)
         {
             this.nom = nom;
             this.prenom = prenom;
-            this.matiere = matiere;
+            this.classe = classe;
         }
         public void creerPassword() {
 
