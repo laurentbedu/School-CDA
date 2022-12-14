@@ -10,7 +10,10 @@ namespace SchoolApp
     {
         public int Identifiant { get; set; }
         public string MotDePasse { get; set; }
-    }
+
+
+
+            }
 
     
 }

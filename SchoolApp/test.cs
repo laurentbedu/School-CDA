@@ -14,8 +14,7 @@ namespace SchoolApp
 
             sebastien.AjouterNotes(5);
 
-            MessageBox.Show(sebastien.NotesEleve.ToArray());
-            
+           sebastien
             bool stop = false;
         }
     }

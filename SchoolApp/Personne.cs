@@ -11,6 +11,8 @@ namespace SchoolApp
 
         public string Nom { get; set; } 
         public string Prenom { get; set; }
+
+        public int Id { get; }
     }
 
 }

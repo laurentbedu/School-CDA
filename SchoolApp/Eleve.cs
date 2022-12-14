@@ -12,6 +12,8 @@ namespace SchoolApp
 
         public List<int> NotesEleve = new List<int>();
 
+        public int Id { get; set; }
+
         public void AjouterNotes(int note)
         {
             NotesEleve.Add(note);
