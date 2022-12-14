@@ -1,32 +1,22 @@
-﻿using System;
+﻿using SchoolApp.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolApp
+namespace SchoolApp.Models
 {
     internal class Eleve : Personne
     {
-        public Eleve()
-        {
-            id = ++lastNumber + "";
-        }
 
+        [IsNotInToStringAttribute]
         public int Anciennete { get; set; }
 
-        private static int lastNumber = 0;
 
-        public string id;
-        public string Id
-        {
-            get
-            {
-                return "E" + id.PadLeft(9, '0');
-            }
-        }
-
+        
         private Classe? classe;
+        [IsNotInToStringAttribute]
         public Classe? Classe
         {
             get => classe;
@@ -41,7 +31,8 @@ namespace SchoolApp
             }
         }
 
-        
+
+        [IsNotInToStringAttribute]
         public List<Note> NoteList { get; set; } = new List<Note>();
 
         public void AddNote(Note note)
@@ -50,7 +41,7 @@ namespace SchoolApp
             {
                 NoteList.Add(note);
             }
-            if (note.Eleve != this) 
+            if (note.Eleve != this)
             {
                 note.Eleve = this;
             }
@@ -59,8 +50,8 @@ namespace SchoolApp
         public void RemoveNote(Note note)
         {
             if (note != null && NoteList.Contains(note))
-            { 
-            NoteList.Remove(note);
+            {
+                NoteList.Remove(note);
                 if (note.Eleve == this)
                 {
                     note.Eleve = null;
@@ -69,16 +60,7 @@ namespace SchoolApp
         }
 
 
-        
 
-
-
-
-
-        public override string ToString()
-        {
-            return Id + " " + Nom + " " + Prenom;
-        }
 
     }
 }

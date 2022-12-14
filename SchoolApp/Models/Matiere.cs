@@ -1,18 +1,19 @@
-﻿using System;
+﻿using SchoolApp.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolApp
+namespace SchoolApp.Models
 {
     internal class Matiere
     {
-        public string id_Matiere { get; set; }
-
+       
         public string Label_Matiere { get; set; }
 
 
+       
         public List<Note> NoteList { get; set; } = new List<Note>();
 
         public void AddNote(Note note)
@@ -39,7 +40,7 @@ namespace SchoolApp
             }
         }
 
-
+   
 
 
     }

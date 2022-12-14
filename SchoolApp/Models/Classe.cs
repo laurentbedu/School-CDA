@@ -1,18 +1,19 @@
-﻿using System;
+﻿using SchoolApp.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolApp
+namespace SchoolApp.Models
 {
     internal class Classe
     {
-        public string Id_Classe { get; set; }
-
+        
         public string Label_Classe { get; set; }
 
 
+       
         public List<Eleve> EleveList { get; set; } = new List<Eleve>();
 
 
@@ -22,7 +23,7 @@ namespace SchoolApp
             {
                 EleveList.Add(eleve);
             }
-            if (eleve.Classe != this) 
+            if (eleve.Classe != this)
             {
                 eleve.Classe = this;
             }
@@ -33,7 +34,7 @@ namespace SchoolApp
             if (eleve != null && EleveList.Contains(eleve))
             {
                 EleveList.Remove(eleve);
-                if (eleve.Classe == this) 
+                if (eleve.Classe == this)
                 {
                     eleve.Classe = null;
                 }
@@ -57,6 +58,32 @@ namespace SchoolApp
         }
 
 
+        [IsNotInToStringAttribute]
+        public Professeur? Professeur { get; private set; }
+
+        public void AddProfesseur(Professeur professeur)
+        {
+            if (Professeur != professeur)
+            {
+                Professeur = professeur;
+                if (professeur.Classe != this)
+                {
+                    professeur.AddClasse(this);
+                }
+            }
+        }
+
+        public void RemoveProfesseur(Professeur professeur)
+        {
+            if (Professeur == professeur)
+            {
+                Professeur = null;
+                if (professeur.Classe == this)
+                {
+                    professeur.RemoveClasse(this);
+                }
+            }
+        }
 
 
 

@@ -1,23 +1,23 @@
-﻿using System;
+﻿using SchoolApp.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolApp
+namespace SchoolApp.Models
 {
     internal class Niveau
     {
-        public string Id_Niveau { get; set; }
-
+       
         public string Label_Niveau { get; set; }
 
-
-
+        
         public List<Classe> ClasseList { get; set; } = new List<Classe>();
 
         public void AddClasse(Classe classe)
-        {   if (ClasseList.Contains(classe))
+        {
+            if (ClasseList.Contains(classe))
             {
                 ClasseList.Add(classe);
             }
@@ -26,7 +26,7 @@ namespace SchoolApp
                 classe.Niveau = this;
             }
         }
-           
+
         public void RemoveClasse(Classe classe)
         {
             if (classe != null && ClasseList.Contains(classe))
@@ -40,13 +40,13 @@ namespace SchoolApp
         }
 
 
-        
 
+   
 
 
     }
 
-    
+
 
     /*public enum Niveau
     {

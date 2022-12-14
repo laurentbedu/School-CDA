@@ -5,16 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace SchoolApp
+namespace SchoolApp.Models
 {
-    internal class Personne
-    {       
+    internal class Personne : ModelBase
+    {
 
         public string Nom { get; set; }
 
         public string Prenom { get; set; }
 
-        
+
 
     }
 }

@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolApp
+namespace SchoolApp.Models
 {
     internal class Note
     {
-        public string Id_Note { get; set; }
-
+        
         public double Valeur { get; set; }
+
+
 
         private Eleve? eleve;
 
@@ -18,14 +19,14 @@ namespace SchoolApp
         {
             get => eleve;
             set
-            { 
-                if (eleve!= value)
+            {
+                if (eleve != value)
                 {
                     eleve?.RemoveNote(this);
                     eleve = value;
                     eleve?.AddNote(this);
                 }
-            
+
             }
         }
 
