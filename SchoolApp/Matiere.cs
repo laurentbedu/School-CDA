@@ -8,7 +8,12 @@ namespace SchoolApp
 {
     internal class Matiere
     {
-        public string id_matiere { get; set; }
+        public string id { get; set; }
         public string label { get; set; }
+
+        public Matiere()
+        {
+            id = IdGenerator.Create(this);
+        }
     }
 }
