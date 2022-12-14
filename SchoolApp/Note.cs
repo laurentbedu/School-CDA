@@ -10,9 +10,13 @@ namespace SchoolApp
     {
         public string id_note;
         public double valeur;
-
-        public void ajouterNote() { 
+        public string matiere;
         
+        public Note(string id_note,double valeur, string matiere)
+        {
+            this.id_note = id_note;
+            this.valeur = valeur;
+            this.matiere = matiere;
         }
     }
 }

@@ -17,5 +17,9 @@ namespace SchoolApp
             this.nom = nom;
             this.prenom = prenom;
         }
+        public void ajouterNote(Note note)
+        {
+            this.notes.Add(note);
+        }
     }
 }

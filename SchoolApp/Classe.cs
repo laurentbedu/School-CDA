@@ -10,6 +10,6 @@ namespace SchoolApp
     {
         public int id_classe;
         public string label;
-        List<Classe> classes = new List<Classe>();
+        List<Classe> listEleves = new List<Classe>();
     }
 }

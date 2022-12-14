@@ -10,5 +10,6 @@ namespace SchoolApp
     {
         public string id_niveau;
         public string label;
+        string[] listNiveau = {"CP","CE1","CE2","CM1","CM2"};
     }
 }
