@@ -51,6 +51,21 @@ namespace SchoolApp.Models
                 }
             }
         }
+        public void AddEleve(Eleve eleve)
+        {
+            if (!listEleves.Contains(eleve))
+            {
+                listEleves.Add(eleve);
+            }
+        }
+
+        public void RemoveEleve(Eleve eleve)
+        {
+            if (listEleves.Contains(eleve))
+            {
+                listEleves.Remove(eleve);
+            }
+        }
 
         public override string ToString()
         {

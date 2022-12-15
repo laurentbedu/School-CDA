@@ -27,7 +27,7 @@ namespace SchoolApp
         {
             classe = new Classe()
             {
-                label = textBoxNomClass.Text,
+                label = textBoxNomClasse.Text,
             };
             MessageBox.Show(classe+"");
         }
@@ -54,6 +54,11 @@ namespace SchoolApp
         {
             professeur.RemoveClasse(classe);
             MessageBox.Show(professeur.Classe+"");
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
