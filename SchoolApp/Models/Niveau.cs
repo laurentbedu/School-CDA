@@ -39,17 +39,40 @@ namespace SchoolApp.Models
             }
         }
 
+        public List<Matiere> MatiereList { get; set; } = new List<Matiere>();
 
+        public void AddMatiere(params Matiere[] matieres)
+        {
+            MatiereList.AddRange(matieres);
+            foreach (Matiere matiere in matieres)
+            {
+                if (!matiere.NiveauList.Contains(this))
+                {
+                    matiere.AddNiveau(this);
+                }
+            }
+        }
 
-   
+        public void RemoveMatiere(params Matiere[] matieres)
+        {
+            MatiereList.RemoveAll(e => matieres.Contains(e));
+            foreach (Matiere matiere in matieres)
+            {
+                if (matiere.NiveauList.Contains(this))
+                {
+                    matiere.RemoveNiveau(this);
+                }
+            }
+        }
 
+        public override string ToString()
+        {
+            return Label_Niveau;
+        }
 
     }
 
 
 
-    /*public enum Niveau
-    {
-        CP, CE1, CE2, CM1, CM2
-    }*/
+   
 }

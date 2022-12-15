@@ -57,6 +57,7 @@ namespace SchoolApp
             Niveau niveau2 = new Niveau() { Label_Niveau = "CE1" };
             Matiere matiere1 = new Matiere() { Label_Matiere = "Français" };
             Matiere matiere2 = new Matiere() { Label_Matiere = "Mathématiques" };
+            Matiere matiere3 = new Matiere() { Label_Matiere = "Anglais" };
 
             niveau1.AddClasse(classe1);
             classe1.AddProfesseur(professeur1);
@@ -67,6 +68,12 @@ namespace SchoolApp
             niveau2.AddClasse(classe1);
             professeur2.AddClasse(classe2);
             professeur2.AddClasse(classe1);
+            niveau1.AddMatiere(matiere1);
+            niveau1.AddMatiere(matiere2, matiere3);
+            matiere1.AddNiveau(niveau1,niveau2);
+
+
+
 
 
             bool stop = true;

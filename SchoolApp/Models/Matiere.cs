@@ -9,11 +9,11 @@ namespace SchoolApp.Models
 {
     internal class Matiere
     {
-       
-        public string Label_Matiere { get; set; }
+               
+        public string Label_Matiere { get; set; } 
 
 
-       
+
         public List<Note> NoteList { get; set; } = new List<Note>();
 
         public void AddNote(Note note)
@@ -40,14 +40,37 @@ namespace SchoolApp.Models
             }
         }
 
-   
+        public List<Niveau> NiveauList { get; set;} = new List<Niveau>();
 
+        public void AddNiveau(params Niveau[] niveaux)
+        {
+            NiveauList.AddRange(niveaux);
+            foreach (Niveau niveau in niveaux)
+            {
+                if (!niveau.MatiereList.Contains(this))
+                {
+                    niveau.AddMatiere(this);
+                }
+            }
+        }
+
+        public void RemoveNiveau(params Niveau[] niveaux)
+        {
+            NiveauList.RemoveAll(e => niveaux.Contains(e));
+            foreach (Niveau niveau in niveaux)
+            {
+                if (niveau.MatiereList.Contains(this))
+                {
+                    niveau.RemoveMatiere(this);
+                }
+            }
+        }
+
+        public override string ToString()
+        {
+            return Label_Matiere;
+        }
 
     }
-
-
-    /*public enum Matiere
-    {
-        français, mathématiques, anglais, histoire, physique
-    }*/
+   
 }
