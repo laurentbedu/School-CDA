@@ -11,9 +11,9 @@ namespace SchoolApp.Models
     {
         public List<Matiere> matiereList;
 
-        public void AddMatiere(params Matiere[] matiereList)
+        public void AddMatiere(params Matiere[] matiere)
         {
-
+            this.matiereList.AddRange(matiere);
         }
     }
 }
