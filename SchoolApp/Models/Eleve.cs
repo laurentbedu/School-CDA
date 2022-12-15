@@ -4,15 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolApp
+namespace SchoolApp.Models
 {
     internal class Eleve : Personne
     {
-        public string[] niveau = new string[] { "CP", "CE1", "CE2", "CM1", "CM2" };
-
+        public Eleve()
+        {
+            Identifiant = ++id;
+        }
+        public int id = 0;
         public List<int> NotesEleve = new List<int>();
 
-        public int Id { get; set; }
+        public int Identifiant { get; set; }
 
         public void AjouterNotes(int note)
         {

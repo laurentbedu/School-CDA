@@ -8,12 +8,13 @@ namespace SchoolApp
 {
     internal class Note
     {
-        
+        public Note() { }
 
 
 
 
 
-      
+
+
     }
 }

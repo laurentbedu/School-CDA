@@ -8,6 +8,8 @@ namespace SchoolApp
 {
     internal class Niveau
     {
-        
+     public Niveau() { }
+
+
     }
 }
