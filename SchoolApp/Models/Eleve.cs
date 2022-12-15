@@ -9,51 +9,71 @@ namespace SchoolApp.Models
     internal class Eleve : Personne
     {
         // Attributs :
-        private string id = "Id non défini";
-        private string anciennete = "Anciennété non définie";
         private Classe? classe;
-        private List<Note> listeNotes;
 
         // Propriétés :
-        public new string Id { get { return id; } }
-        public string Anciennete { get { return anciennete; } set { anciennete = value; } }
-        public Classe? Classe { get { return classe; } set { classe = value; } }
+        public string? Anciennete { get; set; }
+        public List<Note> listeNotes { get; } = new List<Note>();
+        public Classe? Classe 
+        { 
+            get => classe; 
+            set 
+            { 
+                if (classe != value) 
+                { 
+                    classe?.RemoveEleve(this);                   
+                    classe = value;
+                    classe?.AddEleve(this);
+                }
+            }
+        }
         public List<Note> ListeNotes { get { return listeNotes; } }
 
         // Constructeurs :
         public Eleve(string nom, string prenom, string anciennete) : base(nom, prenom)
         {
             listeNotes = new List<Note>();
-            this.anciennete = anciennete;
-            id = Tools.IdGenerator.generateId(this);
+            this.Anciennete = anciennete;
         }
         public Eleve(string nom, string prenom) : base(nom, prenom)
         {
             listeNotes = new List<Note>();
-            id = Tools.IdGenerator.generateId(this);
         }
 
         // Methodes :
         public void ajouterNote(Note noteToAdd)
         {
-            ListeNotes.Add(noteToAdd);
+            if (!listeNotes.Contains(noteToAdd))
+            {
+                listeNotes.Add(noteToAdd);
+            }
+            if (noteToAdd.Eleve != this)
+            {
+                noteToAdd.Eleve = this;
+            }
         }
         public void supprimerNote(Note noteToRemove)
         {
-            ListeNotes.Remove(noteToRemove);
+            if (noteToRemove != null && listeNotes.Contains(noteToRemove))
+            {
+                listeNotes.Remove(noteToRemove);
+                if (noteToRemove.Eleve == this)
+                {
+                    noteToRemove.Eleve = null;
+                }
+            }
         }
         public string ToStringPourSave()
         {
             if (Classe?.Id != null)
             {
-                return Nom + " " + Prenom + " " + Anciennete + " " + id + " " + Classe.Id;
+                return Nom + " " + Prenom + " " + Anciennete + " " + base.Id + " " + Classe.Id;
             }
             else
             {
-                return Nom + " " + Prenom + " " + Anciennete + " " + id + " " + "PasDeClasseId";
+                return Nom + " " + Prenom + " " + Anciennete + " " + base.Id + " " + "PasDeClasseId";
             }
         }
 
-        // ToString Override
     }
 }

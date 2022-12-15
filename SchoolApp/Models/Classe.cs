@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolApp.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,29 +8,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace SchoolApp.Models
 {
-    internal class Classe
+    internal class Classe : Model
     {
-        // Attributs :
-        private string id = "Id non défini";
-        private string nom = "Nom non défini";
-        private Professeur? professeur;
-        private List<Eleve> listeEleves;
+        public string? Nom { get; set; }
+        public Niveau? Niveau { get; set; }
 
-        // Propriétés :
-        public string Id { get { return id; } }
-        public string Nom { get { return nom; } set { nom = value; } }
-        public Professeur? Professeur { get { return professeur; } set { professeur = value; } }
-        public List<Eleve> ListeEleves { get { return listeEleves; } }
-
-        // Constructeurs :
-        public Classe(string nomClasse)
-        {
-            listeEleves = new List<Eleve>();
-            nom = nomClasse;
-            id = Tools.IdGenerator.generateId(this);
-        }
-
-        // Methodes :
+        [NePasIntegrerDansToString] public Professeur? Professeur { get; private set; }
         public void ajouterProfesseur(Professeur professeur)
         {
             if (Professeur != professeur)
@@ -37,7 +21,7 @@ namespace SchoolApp.Models
                 Professeur = professeur;
                 if (professeur.Classe != this)
                 {
-                    professeur.retirerClasse(this);
+                    professeur.ajouterClasse(this);
                 }
             }
         }
@@ -53,10 +37,30 @@ namespace SchoolApp.Models
             }
         }
 
-        // ToString Override
-        public override string ToString()
+        [NePasIntegrerDansToString] public List<Eleve> EleveList { get; } = new List<Eleve>();
+        public void AddEleve(Eleve eleve)
         {
-            return Tools.UniversalToString.ToStringer(this);
+            if (!EleveList.Contains(eleve))
+            {
+                EleveList.Add(eleve);
+            }
+            if (eleve.Classe != this)
+            {
+                eleve.Classe = this;
+            }
+
         }
+        public void RemoveEleve(Eleve eleve)
+        {
+            if (eleve != null && EleveList.Contains(eleve))
+            {
+                EleveList.Remove(eleve);
+                if (eleve.Classe == this)
+                {
+                    eleve.Classe = null;
+                }
+            }
+        }
+
     }
 }

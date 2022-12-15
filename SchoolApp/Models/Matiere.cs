@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolApp.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,33 +9,38 @@ namespace SchoolApp.Models
 {
     internal class Matiere
     {
-        // Attributs :
-        private string id = "Id non défini";
-        private string nom = "Nom non défini";
-
-
         // Propriétés :
-        public string Id { get { return id; } set { id = value; } }
-        public string Nom { get { return nom; } set { nom = value; } }
+        public string Nom { get; set; }
 
-        // Constructeurs :
-        public Matiere(string nomMatiere)
+        [NePasIntegrerDansToString] public List<Niveau> ListeNiveaux { get; private set; } = new List<Niveau>();
+
+        // Méthodes :
+        public void ajouterNiveau(params Niveau[] niveaux)
         {
-            nom = nomMatiere;
-            id = generateId();
+            ListeNiveaux.AddRange(niveaux);
+            foreach (Niveau niveau in niveaux)
+            {
+                if (!niveau.ListeMatieres.Contains(this))
+                {
+                    niveau.ajouterMatiere(this);
+                }
+            }
         }
-
-        // Methodes :
-        public string generateId()
+        public void retirerNiveau(params Niveau[] niveaux)
         {
-            Random rnd = new Random();
-            return DateTime.Now.ToString("yyMMddHHmmssff") + "-" + rnd.Next(1, 999);
+            ListeNiveaux.RemoveAll(e => niveaux.Contains(e));
+            foreach (Niveau niveau in niveaux)
+            {
+                if (niveau.ListeMatieres.Contains(this))
+                {
+                    niveau.retirerMatiere(this);
+                }
+            }
         }
-
-        // ToString Override
         public override string ToString()
         {
-            return "Matière: " + nom;
+            return Nom;
         }
+
     }
 }

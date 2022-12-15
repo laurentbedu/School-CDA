@@ -9,24 +9,17 @@ namespace SchoolApp.Models
 {
     internal class Professeur : Personne
     {
-        // Attributs :
-        private string login = "Login non défini";
-        private string password = "Password non défini";
-        private bool isAdmin = false;
-        private Classe? classe;
-
         // Propriétés :
+        public bool IsAdmin { get; set; }
+        [NePasIntegrerDansToStringAttribute] public string Login { get; set; }
+        [NePasIntegrerDansToStringAttribute] public string Password { get; set; }
+        [NePasIntegrerDansToStringAttribute] public Classe? Classe { get; private set; }
 
-        [NePasIntegrerDansToStringAttribute] public string Login { get { return login; } }
-        [NePasIntegrerDansToStringAttribute] public string Password { get { return password; } }
-        public bool IsAdmin { get { return isAdmin; } }
-        public Classe? Classe { get { return classe; } set { classe = value; } }
-        // Getters Setters :
         // Constructeurs :
         public Professeur(string nom, string prenom, string newLogin, string newPassword) : base(nom, prenom)
         {
-            login = newLogin;
-            password = newPassword;
+            Login = newLogin;
+            Password = newPassword;
         }
 
         // Methodes :

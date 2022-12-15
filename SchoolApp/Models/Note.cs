@@ -6,39 +6,31 @@ using System.Threading.Tasks;
 
 namespace SchoolApp.Models
 {
-    internal class Note
+    internal class Note : Model
     {
         // Attributs :
-        private string id = "Id non défini";
-        private double valeur = -1;
-        private Eleve eleve;
-        private Matiere matiere;
+        private Eleve? eleve;
 
         // Propriétés :
-        public string Id { get { return id; } set { id = value; } }
-        public double Valeur { get { return valeur; } set { valeur = value; } }
-        public Eleve Eleve { get { return eleve; } set { eleve = value; } }
-        public Matiere Matiere { get { return matiere; } set { matiere = value; } }
-
+        public double? Valeur { get; set; }
+        public Matiere? Matiere { get; set; }
+        public Eleve? Eleve
+        {
+            get => eleve;
+            set
+            {
+                if (eleve != value)
+                {
+                    eleve?.supprimerNote(this);
+                    eleve = value;
+                    eleve?.ajouterNote(this);
+                }
+            }
+        }
         // Constructeurs :
-        public Note(Eleve eleve, Matiere matiere, int valeur)
+        public Note()
         {
-            this.matiere = matiere;
-            this.eleve = eleve;
-            this.valeur = valeur;
-            id = generateId();
-        }
-        // Methodes :
-        public string generateId()
-        {
-            Random rnd = new Random();
-            return DateTime.Now.ToString("yyMMddHHmmssff") + "-" + rnd.Next(1, 999);
-        }
 
-        // ToString Override
-        public override string ToString()
-        {
-            return "Note= " + valeur + "/20" + "(" + matiere + ")";
         }
     }
 }

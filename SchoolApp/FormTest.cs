@@ -1,4 +1,3 @@
-using GestionNotes;
 using SchoolApp.Models;
 using SchoolApp.UserControls;
 
@@ -8,43 +7,46 @@ namespace SchoolApp
     {
         List<Eleve>         listeEleves         = new List<Eleve>();
         List<Professeur>    listeProfesseurs    = new List<Professeur>();
-        List<Matiere>       listeMatiere        = new List<Matiere>();
+        List<Classe>        listeClasses        = new List<Classe>();
+        List<Matiere>       listeMatieres       = new List<Matiere>();
 
         public FormTest()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e) 
-        {
-            Eleve newEleve = new Eleve("all", "max","2ans");
-            MessageBox.Show(newEleve.ToString());
-
-        }   // btn add eleve
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Professeur newProf = new Professeur("Bedu", "Laurent", "b.laurent", "toto");
-            MessageBox.Show(newProf.ToString());
-        }   // btn add prof
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Classe newClasse = new Classe("Alpha");
-            MessageBox.Show(newClasse.ToString());
-        }   //btn add classe
-
         private void button4_Click(object sender, EventArgs e)
         {
-            //FormGestion newFormGestion = new FormGestion(listeEleves, listeProfesseurs, listeMatiere);
-            FormGestion newFormGestion = new FormGestion();
-            newFormGestion.Show();
+            
         }
 
         private void buttonGestion2_Click(object sender, EventArgs e)
         {
             UserControl1 myUserControl = new UserControl1() { Dock= DockStyle.Fill };
             panelGestion.Controls.Add(myUserControl);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Matiere math    = new Matiere() { Nom = "Math" };
+            Matiere french  = new Matiere() { Nom = "Français" };
+            Matiere english = new Matiere() { Nom = "Anglais" };
+
+            Niveau cp   = new Niveau() { Nom = "CP" };
+            Niveau ce1  = new Niveau() { Nom = "CE1" };
+            Niveau ce2  = new Niveau() { Nom = "CE2" };
+            Niveau cm1  = new Niveau() { Nom = "CM1" };
+
+            // Possible grace à params
+            cp.ajouterMatiere(math, french);
+            ce1.ajouterMatiere(math, english, french);
+            // Ajouter plusieurs matieres d'un coup:
+            Matiere[] matiereArray = new Matiere[] { math, french };
+            ce2.ajouterMatiere(matiereArray);
+            // Methode classique :
+            cm1.ajouterMatiere(math);
+            cm1.ajouterMatiere(french);
+            cm1.ajouterMatiere(english);
         }
     }
 }
