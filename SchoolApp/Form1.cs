@@ -11,15 +11,17 @@ namespace SchoolApp
             InitializeComponent();
         }
         List<Classe> classes = new List<Classe>();
+        List<Professeur> professeurs = new List<Professeur>();
 
         Professeur professeur;
-        private void buttonAddProf_Click(object sender, EventArgs e)
+        private void buttonCreerProf_Click(object sender, EventArgs e)
         {
             professeur = new Professeur()
             {
                 nom = textBoxNomProf.Text,
                 prenom = textBoxPrenomProf.Text
             };
+            professeurs.Add(professeur);
             MessageBox.Show(professeur+"");
         }
         Classe classe;
@@ -29,10 +31,11 @@ namespace SchoolApp
             {
                 label = textBoxNomClasse.Text,
             };
+            classes.Add(classe);
             MessageBox.Show(classe+"");
         }
 
-        private void buttonAddProf_Click_1(object sender, EventArgs e)
+        private void buttonAddProf_Click(object sender, EventArgs e)
         {
             classe.AddProfesseur(professeur);
             MessageBox.Show(classe.Professeur+"");
@@ -55,9 +58,17 @@ namespace SchoolApp
             professeur.RemoveClasse(classe);
             MessageBox.Show(professeur.Classe+"");
         }
-
-        private void label3_Click(object sender, EventArgs e)
+        Eleve eleve;
+        private void buttonCreerEleve_Click(object sender, EventArgs e)
         {
+            eleve = new Eleve()
+            {
+                nom = textBoxNomEleve.Text,
+                prenom = textBoxPrenomEleve.Text,
+                anciennete = numericUpDownAncienneteEleve.Value
+            };
+            professeurs.Add(professeur);
+            MessageBox.Show(professeur + "");
 
         }
     }

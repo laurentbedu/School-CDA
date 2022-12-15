@@ -64,6 +64,10 @@
             this.label15 = new System.Windows.Forms.Label();
             this.textBoxPasswordProf = new System.Windows.Forms.TextBox();
             this.textBoxLoginProf = new System.Windows.Forms.TextBox();
+            this.comboBoxEleveClasse = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.buttonRemoveEleveClasse = new System.Windows.Forms.Button();
+            this.buttonAddEleveClasse = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAncienneteEleve)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +79,7 @@
             this.buttonCreerProf.TabIndex = 0;
             this.buttonCreerProf.Text = "Créer prof";
             this.buttonCreerProf.UseVisualStyleBackColor = true;
-            this.buttonCreerProf.Click += new System.EventHandler(this.buttonAddProf_Click);
+            this.buttonCreerProf.Click += new System.EventHandler(this.buttonCreerProf_Click);
             // 
             // buttonCreerEleve
             // 
@@ -85,6 +89,7 @@
             this.buttonCreerEleve.TabIndex = 1;
             this.buttonCreerEleve.Text = "Creer eleve";
             this.buttonCreerEleve.UseVisualStyleBackColor = true;
+            this.buttonCreerEleve.Click += new System.EventHandler(this.buttonCreerEleve_Click);
             // 
             // textBoxNomEleve
             // 
@@ -126,7 +131,6 @@
             this.label3.Size = new System.Drawing.Size(57, 20);
             this.label3.TabIndex = 7;
             this.label3.Text = "Classe :";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBoxPrenomProf
             // 
@@ -245,7 +249,7 @@
             this.buttonAddProfClasse.TabIndex = 28;
             this.buttonAddProfClasse.Text = "Ajouter prof";
             this.buttonAddProfClasse.UseVisualStyleBackColor = true;
-            this.buttonAddProfClasse.Click += new System.EventHandler(this.buttonAddProf_Click_1);
+            this.buttonAddProfClasse.Click += new System.EventHandler(this.buttonAddProf_Click);
             // 
             // label4
             // 
@@ -399,11 +403,50 @@
             this.textBoxLoginProf.Size = new System.Drawing.Size(148, 27);
             this.textBoxLoginProf.TabIndex = 44;
             // 
+            // comboBoxEleveClasse
+            // 
+            this.comboBoxEleveClasse.FormattingEnabled = true;
+            this.comboBoxEleveClasse.Location = new System.Drawing.Point(632, 247);
+            this.comboBoxEleveClasse.Name = "comboBoxEleveClasse";
+            this.comboBoxEleveClasse.Size = new System.Drawing.Size(148, 28);
+            this.comboBoxEleveClasse.TabIndex = 51;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(583, 255);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(51, 20);
+            this.label16.TabIndex = 50;
+            this.label16.Text = "Eleve :";
+            // 
+            // buttonRemoveEleveClasse
+            // 
+            this.buttonRemoveEleveClasse.Location = new System.Drawing.Point(704, 281);
+            this.buttonRemoveEleveClasse.Name = "buttonRemoveEleveClasse";
+            this.buttonRemoveEleveClasse.Size = new System.Drawing.Size(77, 55);
+            this.buttonRemoveEleveClasse.TabIndex = 49;
+            this.buttonRemoveEleveClasse.Text = "Enlever eleve";
+            this.buttonRemoveEleveClasse.UseVisualStyleBackColor = true;
+            // 
+            // buttonAddEleveClasse
+            // 
+            this.buttonAddEleveClasse.Location = new System.Drawing.Point(621, 281);
+            this.buttonAddEleveClasse.Name = "buttonAddEleveClasse";
+            this.buttonAddEleveClasse.Size = new System.Drawing.Size(77, 57);
+            this.buttonAddEleveClasse.TabIndex = 48;
+            this.buttonAddEleveClasse.Text = "Ajouter eleve";
+            this.buttonAddEleveClasse.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1111, 450);
+            this.Controls.Add(this.comboBoxEleveClasse);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.buttonRemoveEleveClasse);
+            this.Controls.Add(this.buttonAddEleveClasse);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.textBoxPasswordProf);
@@ -486,5 +529,9 @@
         private Label label15;
         private TextBox textBoxPasswordProf;
         private TextBox textBoxLoginProf;
+        private ComboBox comboBoxEleveClasse;
+        private Label label16;
+        private Button buttonRemoveEleveClasse;
+        private Button buttonAddEleveClasse;
     }
 }
