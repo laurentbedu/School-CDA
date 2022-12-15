@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SchoolApp.Models
 {
-    internal class Note : Model
+    internal class Note : Model, INotifyPropertyChanged
     {
         // Attributs :
         private Eleve? eleve;
@@ -31,6 +32,19 @@ namespace SchoolApp.Models
         public Note()
         {
 
+        }
+
+        event PropertyChangedEventHandler? INotifyPropertyChanged.PropertyChanged
+        {
+            add
+            {
+                throw new NotImplementedException();
+            }
+
+            remove
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }

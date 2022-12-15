@@ -1,5 +1,7 @@
+using Microsoft.VisualBasic;
 using SchoolApp.Models;
 using SchoolApp.UserControls;
+using System.Windows.Forms;
 
 namespace SchoolApp
 {
@@ -17,13 +19,14 @@ namespace SchoolApp
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void buttonGestion2_Click(object sender, EventArgs e)
         {
             UserControl1 myUserControl = new UserControl1() { Dock= DockStyle.Fill };
             panelGestion.Controls.Add(myUserControl);
+
         }
 
         private void button5_Click(object sender, EventArgs e)
