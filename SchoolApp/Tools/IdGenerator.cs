@@ -6,8 +6,8 @@
         {
             long unixTimestamp = GetElapsedFromEpoch();
             string id = LongToString(unixTimestamp) + LongToString(obj.GetHashCode());
-            Guid guid = Guid.NewGuid();
-            return guid.ToString();
+            //string guid = Guid.NewGuid() + "-" + id;
+            return id;
         }
 
         private static long GetElapsedFromEpoch(Elapsed elapsed = Elapsed.micro)

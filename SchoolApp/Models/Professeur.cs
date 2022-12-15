@@ -10,7 +10,7 @@ namespace SchoolApp.Models
         public bool? IsAdmin { get; }
 
 
-        [IsNotInToStringAttribute]
+        [IsNotInToString]
         public Classe? Classe { get; private set; }
         public void AddClasse(Classe classe)
         {

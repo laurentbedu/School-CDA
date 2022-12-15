@@ -2,17 +2,11 @@
 
 namespace SchoolApp.Models
 {
-    internal class Classe
+    internal class Classe : Model
     {
-        public Classe()
-        {
-            Id = Tools.IdGenerator.Create(this);
-        }
-
-        public string Id { get; private set; }
         public string? Label { get; set; }
 
-        [IsNotInToStringAttribute]
+        [IsNotInToString]
         public Professeur? Professeur { get; private set; }
 
         public void AddProfesseur(Professeur professeur)
@@ -39,15 +33,35 @@ namespace SchoolApp.Models
             }
         }
 
-        public override string ToString()
-        {
-            string desc = "";
-            GetType().GetProperties()
-                .Where(p => !Attribute.IsDefined(p, typeof(IsNotInToStringAttribute)))
-                .ToList()
-                .ForEach(p => desc += p.Name + ":" + GetType().GetProperty(p.Name)?.GetValue(this) + "\r\n");
+        public Niveau? Niveau { get; set; }
 
-            return desc;
+        [IsNotInToString]
+        public List<Eleve> EleveList { get; } = new List<Eleve>();
+
+        public void AddEleve(Eleve eleve)
+        {
+            if (!EleveList.Contains(eleve))
+            {
+                EleveList.Add(eleve);
+            }
+            if (eleve.Classe != this)
+            {
+                eleve.Classe = this;
+            }
+
         }
+
+        public void RemoveEleve(Eleve eleve)
+        {
+            if (eleve != null && EleveList.Contains(eleve))
+            {
+                EleveList.Remove(eleve);
+                if (eleve.Classe == this)
+                {
+                    eleve.Classe = null;
+                }
+            }
+        }
+
     }
 }
