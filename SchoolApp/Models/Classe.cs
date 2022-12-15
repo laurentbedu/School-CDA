@@ -7,25 +7,11 @@ using SchoolApp.Tools;
 
 namespace SchoolApp.Models
 {
-    internal class Classe
+    internal class Classe :Model
     {
-        public string id { get; set; }
-        public string label { get; set; }
-        enum niveau
-        {
-            cp,
-            ce1,
-            ce2,
-            cm1,
-            cm2
-        }
+        public Niveau niveau { get; set; }
         List<Eleve> listEleves = new List<Eleve>();
         public Professeur? Professeur { get; set; }
-
-        public Classe()
-        {
-            id = IdGenerator.Create(this);
-        }
 
 
         public void AddProfesseur(Professeur professeur)
