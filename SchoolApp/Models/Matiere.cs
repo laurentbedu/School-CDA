@@ -1,9 +1,12 @@
-﻿namespace SchoolApp.Models
+﻿using SchoolApp.Attributes;
+
+namespace SchoolApp.Models
 {
     internal class Matiere
     {
         public string Label { get; set; }
 
+        [IsNotInToString]
         public List<Niveau> NiveauList { get; private set; } = new List<Niveau>();
 
         public void AddNiveaux(params Niveau[] niveaux)

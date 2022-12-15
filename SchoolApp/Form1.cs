@@ -127,5 +127,22 @@ namespace SchoolApp
             Note note = new Note() { Eleve = eleve, Matiere = (Matiere)cbMatiere.SelectedItem, Valeur = Double.Parse(nudNoteValeur.Value.ToString()) };
             eleve.AddNote(note);
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            Matiere math = new Matiere() { Label = "Math" };
+            Matiere french = new Matiere() { Label = "Français" };
+            Matiere english = new Matiere() { Label = "Anglais" };
+
+            Niveau cp = new Niveau() { Label = "CP" };
+            Niveau ce1 = new Niveau() { Label = "CE1" };
+            Niveau ce2 = new Niveau() { Label = "CE2" };
+
+            cp.AddMatieres(math, french);
+            ce1.AddMatieres(math, english, french);
+
+            Matiere[] matiereArray = new Matiere[] { math, french };
+            ce2.AddMatieres(matiereArray);
+        }
     }
 }

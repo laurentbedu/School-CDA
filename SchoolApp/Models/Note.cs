@@ -1,6 +1,6 @@
 ﻿namespace SchoolApp.Models
 {
-    internal class Note
+    internal class Note : Model
     {
         public double Valeur { get; set; }
 

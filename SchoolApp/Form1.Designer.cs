@@ -50,6 +50,7 @@
             this.cbMatiere = new System.Windows.Forms.ComboBox();
             this.nudNoteValeur = new System.Windows.Forms.NumericUpDown();
             this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudNoteValeur)).BeginInit();
             this.SuspendLayout();
             // 
@@ -256,11 +257,22 @@
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(31, 209);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(154, 29);
+            this.button13.TabIndex = 22;
+            this.button13.Text = "Test Niveau Matiere";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 450);
+            this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.nudNoteValeur);
             this.Controls.Add(this.cbMatiere);
@@ -315,5 +327,6 @@
         private ComboBox cbMatiere;
         private NumericUpDown nudNoteValeur;
         private Button button12;
+        private Button button13;
     }
 }
