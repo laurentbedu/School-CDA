@@ -12,7 +12,16 @@ namespace SchoolApp
         }
         List<Classe> classes = new List<Classe>();
         List<Professeur> professeurs = new List<Professeur>();
-        List<Niveau> niveaux = new List<Niveau>();
+
+        List<Niveau> niveaux = new List<Niveau>() {
+            new Niveau() { label = "cp" },
+            new Niveau() { label = "ce1" },
+            new Niveau() { label = "ce2" },
+            new Niveau() { label = "cm1" },
+            new Niveau() { label = "cm2" }
+        };
+
+
 
         Professeur professeur;
         private void buttonCreerProf_Click(object sender, EventArgs e)
@@ -33,7 +42,7 @@ namespace SchoolApp
             classe = new Classe()
             {
                 label = textBoxNomClasse.Text,
-                niveau = niveaux.Contains(comboBoxNiveauClasse.Text)
+                niveau = niveaux.Find(label = comboBoxNiveauClasse.Text)
             };
             classes.Add(classe);
             MessageBox.Show(classe+"");

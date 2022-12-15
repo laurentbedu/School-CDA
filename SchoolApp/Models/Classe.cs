@@ -55,7 +55,7 @@ namespace SchoolApp.Models
 
         public override string ToString()
         {
-            return "Classe : "+ label;
+            return "Classe : "+ label + " "+niveau;
         }
     }
 }
