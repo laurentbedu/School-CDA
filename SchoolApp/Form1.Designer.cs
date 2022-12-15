@@ -431,6 +431,7 @@
             this.buttonAddEleveClasse.TabIndex = 48;
             this.buttonAddEleveClasse.Text = "Ajouter eleve";
             this.buttonAddEleveClasse.UseVisualStyleBackColor = true;
+            this.buttonAddEleveClasse.Click += new System.EventHandler(this.buttonAddEleveClasse_Click);
             // 
             // Form1
             // 

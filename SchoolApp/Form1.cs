@@ -71,25 +71,25 @@ namespace SchoolApp
 
         private void buttonAddProf_Click(object sender, EventArgs e)
         {
-            classe.AddProfesseur(professeur);
+            classe.AddProfesseur(comboBoxProfClasse as Professeur);
             MessageBox.Show(classe.Professeur+"");
         }
 
         private void buttonRemoveProf_Click(object sender, EventArgs e)
         {
-            classe.RemoveProfesseur(professeur);
+            classe.RemoveProfesseur(comboBoxProfClasse as Professeur);
             MessageBox.Show(classe.Professeur + "");
         }
 
         private void buttonAddClasse_Click(object sender, EventArgs e)
         {
-            professeur.AddClasse(classe); 
+            professeur.AddClasse(comboBoxClasseProf.SelectedItem as Classe); 
             MessageBox.Show(professeur.Classe+"");
         }
 
         private void buttonRemoveClasse_Click(object sender, EventArgs e)
         {
-            professeur.RemoveClasse(classe);
+            professeur.RemoveClasse(comboBoxClasseProf.SelectedItem as Classe);
             MessageBox.Show(professeur.Classe+"");
         }
         Eleve eleve;
@@ -105,6 +105,11 @@ namespace SchoolApp
             eleveList.Add(eleve);
             MessageBox.Show(eleve + "");
             comboBoxEleveClasse.DataSource = eleveList.ToArray(); ;
+
+        }
+
+        private void buttonAddEleveClasse_Click(object sender, EventArgs e)
+        {
 
         }
     }
