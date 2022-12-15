@@ -343,12 +343,6 @@
             // comboBoxNiveauClasse
             // 
             this.comboBoxNiveauClasse.FormattingEnabled = true;
-            this.comboBoxNiveauClasse.Items.AddRange(new object[] {
-            "CP",
-            "CE1",
-            "CE2",
-            "CM1",
-            "CM2"});
             this.comboBoxNiveauClasse.Location = new System.Drawing.Point(631, 65);
             this.comboBoxNiveauClasse.Name = "comboBoxNiveauClasse";
             this.comboBoxNiveauClasse.Size = new System.Drawing.Size(148, 28);

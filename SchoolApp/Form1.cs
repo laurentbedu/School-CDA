@@ -1,4 +1,5 @@
 using System.Runtime.ConstrainedExecution;
+using System.Windows.Forms;
 using SchoolApp.Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
@@ -9,19 +10,36 @@ namespace SchoolApp
         public Form1()
         {
             InitializeComponent();
+
+            niveauList = new List<Niveau>
+            {
+                new Niveau() { label = "CP" },
+                new Niveau() { label = "CE1" },
+                new Niveau() { label = "CE2" },
+                new Niveau() { label = "CM1" },
+                new Niveau() { label = "CM2" }
+            };
+            matiereList = new List<Matiere> {
+                new Matiere() {label = "Mathématique"},
+                new Matiere() {label = "Français"},
+                new Matiere() {label = "Anglais"},
+                new Matiere() {label = "Sciences"},
+                new Matiere() {label = "Histoire"},
+                new Matiere() {label = "Géographie"}
+            };
+            niveauList.Find(e => e.label == "CP")?.AddMatiere(matiereList[0], matiereList[1]);
+            niveauList.Find(e => e.label == "CE1")?.AddMatiere(matiereList[0], matiereList[1], matiereList[2]);
+            niveauList.Find(e => e.label == "CE2")?.AddMatiere(matiereList[0], matiereList[1], matiereList[2], matiereList[3]);
+            niveauList.Find(e => e.label == "CM1")?.AddMatiere(matiereList[0], matiereList[1], matiereList[2], matiereList[3], matiereList[4]);
+            niveauList.Find(e => e.label == "CM2")?.AddMatiere(matiereList.ToArray());
+
+            comboBoxNiveauClasse.DataSource = niveauList;
         }
         List<Classe> classes = new List<Classe>();
         List<Professeur> professeurs = new List<Professeur>();
-
-        List<Niveau> niveaux = new List<Niveau>() {
-            new Niveau() { label = "cp" },
-            new Niveau() { label = "ce1" },
-            new Niveau() { label = "ce2" },
-            new Niveau() { label = "cm1" },
-            new Niveau() { label = "cm2" }
-        };
-
-
+        List<Niveau> niveauList = new List<Niveau>();
+        List<Matiere> matiereList = new List<Matiere>();
+        List<Eleve> eleveList = new List<Eleve>();
 
         Professeur professeur;
         private void buttonCreerProf_Click(object sender, EventArgs e)
@@ -35,6 +53,7 @@ namespace SchoolApp
             };
             professeurs.Add(professeur);
             MessageBox.Show(professeur+"");
+            comboBoxProfClasse.DataSource = professeurs.ToArray();
         }
         Classe classe;
         private void buttonCreerClasse_Click(object sender, EventArgs e)
@@ -42,10 +61,12 @@ namespace SchoolApp
             classe = new Classe()
             {
                 label = textBoxNomClasse.Text,
-                niveau = niveaux.Find(label = comboBoxNiveauClasse.Text)
+                niveau = comboBoxNiveauClasse.SelectedItem as Niveau
             };
             classes.Add(classe);
             MessageBox.Show(classe+"");
+            comboBoxClasseProf.DataSource = classes.ToArray();
+            comboBoxClasseEleve.DataSource = classes.ToArray();
         }
 
         private void buttonAddProf_Click(object sender, EventArgs e)
@@ -78,9 +99,12 @@ namespace SchoolApp
             {
                 nom = textBoxNomEleve.Text,
                 prenom = textBoxPrenomEleve.Text,
-                anciennete = Convert.ToInt32(numericUpDownAncienneteEleve.Value)
+                anciennete = Convert.ToInt32(numericUpDownAncienneteEleve.Value),
+                classe = comboBoxClasseEleve.SelectedItem as Classe
             };
+            eleveList.Add(eleve);
             MessageBox.Show(eleve + "");
+            comboBoxEleveClasse.DataSource = eleveList.ToArray(); ;
 
         }
     }

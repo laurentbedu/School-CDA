@@ -9,11 +9,23 @@ namespace SchoolApp.Models
 {
     internal class Niveau : Model
     {
-        public List<Matiere> matiereList;
+        public List<Matiere> matiereList { get; private set; } = new List<Matiere>();
 
-        public void AddMatiere(params Matiere[] matiere)
+        public void AddMatiere(params Matiere[] matieres)
         {
-            this.matiereList.AddRange(matiere);
+            matiereList.AddRange(matieres);
+            foreach (Matiere matiere in matieres)
+            {
+                if (!matiere.niveauList.Contains(this))
+                {
+                    matiere.AddNiveau(this);
+                }
+            }
+        }
+
+        public override string ToString()
+        {
+            return label;
         }
     }
 }
