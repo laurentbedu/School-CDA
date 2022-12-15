@@ -35,25 +35,25 @@ namespace SchoolApp
         private void buttonAddProf_Click_1(object sender, EventArgs e)
         {
             classe.AddProfesseur(professeur);
-            //MessageBox.Show(classe+"");
+            MessageBox.Show(classe.Professeur+"");
         }
 
         private void buttonRemoveProf_Click(object sender, EventArgs e)
         {
             classe.RemoveProfesseur(professeur);
-            //MessageBox.Show(classe+"");
+            MessageBox.Show(classe.Professeur + "");
         }
 
         private void buttonAddClasse_Click(object sender, EventArgs e)
         {
             professeur.AddClasse(classe); 
-            MessageBox.Show(professeur+"");
+            MessageBox.Show(professeur.Classe+"");
         }
 
         private void buttonRemoveClasse_Click(object sender, EventArgs e)
         {
             professeur.RemoveClasse(classe);
-            MessageBox.Show(professeur+"");
+            MessageBox.Show(professeur.Classe+"");
         }
     }
 }
