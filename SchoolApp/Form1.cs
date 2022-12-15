@@ -71,13 +71,13 @@ namespace SchoolApp
 
         private void buttonAddProf_Click(object sender, EventArgs e)
         {
-            classe.AddProfesseur(comboBoxProfClasse as Professeur);
+            classe.AddProfesseur(comboBoxProfClasse.SelectedItem as Professeur);
             MessageBox.Show(classe.Professeur+"");
         }
 
         private void buttonRemoveProf_Click(object sender, EventArgs e)
         {
-            classe.RemoveProfesseur(comboBoxProfClasse as Professeur);
+            classe.RemoveProfesseur(comboBoxProfClasse.SelectedItem as Professeur);
             MessageBox.Show(classe.Professeur + "");
         }
 
