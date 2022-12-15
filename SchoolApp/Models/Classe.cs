@@ -10,7 +10,7 @@ namespace SchoolApp.Models
     internal class Classe :Model
     {
         public Niveau niveau { get; set; }
-        List<Eleve> listEleves = new List<Eleve>();
+        public List<Eleve> listEleves = new List<Eleve>();
         public Professeur? Professeur { get; set; }
 
 

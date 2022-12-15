@@ -32,7 +32,7 @@ namespace SchoolApp
             classe = new Classe()
             {
                 label = textBoxNomClasse.Text,
-                niveau = comboBoxNiveauClasse
+                niveau = Niveau(comboBoxNiveauClasse.Text)
             };
             classes.Add(classe);
             MessageBox.Show(classe+"");
