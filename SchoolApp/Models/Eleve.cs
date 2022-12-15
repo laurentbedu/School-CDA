@@ -19,7 +19,7 @@ namespace SchoolApp.Models
         }
         public override string ToString()
         {
-            return "Eleve : "+ nom + " " + prenom;
+            return "Eleve : "+ nom + " " + prenom + " "+ anciennete+"ans";
         }
     }
 }

@@ -19,7 +19,9 @@ namespace SchoolApp
             professeur = new Professeur()
             {
                 nom = textBoxNomProf.Text,
-                prenom = textBoxPrenomProf.Text
+                prenom = textBoxPrenomProf.Text,
+                login = textBoxLoginProf.Text,
+                password = textBoxPasswordProf.Text
             };
             professeurs.Add(professeur);
             MessageBox.Show(professeur+"");
@@ -30,6 +32,7 @@ namespace SchoolApp
             classe = new Classe()
             {
                 label = textBoxNomClasse.Text,
+                niveau = comboBoxNiveauClasse
             };
             classes.Add(classe);
             MessageBox.Show(classe+"");
@@ -65,10 +68,9 @@ namespace SchoolApp
             {
                 nom = textBoxNomEleve.Text,
                 prenom = textBoxPrenomEleve.Text,
-                anciennete = numericUpDownAncienneteEleve.Value
+                anciennete = Convert.ToInt32(numericUpDownAncienneteEleve.Value)
             };
-            professeurs.Add(professeur);
-            MessageBox.Show(professeur + "");
+            MessageBox.Show(eleve + "");
 
         }
     }
