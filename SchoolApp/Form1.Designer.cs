@@ -68,6 +68,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.buttonRemoveEleveClasse = new System.Windows.Forms.Button();
             this.buttonAddEleveClasse = new System.Windows.Forms.Button();
+            this.buttonJson = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAncienneteEleve)).BeginInit();
             this.SuspendLayout();
             // 
@@ -433,11 +434,22 @@
             this.buttonAddEleveClasse.UseVisualStyleBackColor = true;
             this.buttonAddEleveClasse.Click += new System.EventHandler(this.buttonAddEleveClasse_Click);
             // 
+            // buttonJson
+            // 
+            this.buttonJson.Location = new System.Drawing.Point(110, 386);
+            this.buttonJson.Name = "buttonJson";
+            this.buttonJson.Size = new System.Drawing.Size(94, 29);
+            this.buttonJson.TabIndex = 52;
+            this.buttonJson.Text = "lire json";
+            this.buttonJson.UseVisualStyleBackColor = true;
+            this.buttonJson.Click += new System.EventHandler(this.buttonJson_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1111, 450);
+            this.Controls.Add(this.buttonJson);
             this.Controls.Add(this.comboBoxEleveClasse);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.buttonRemoveEleveClasse);
@@ -528,5 +540,6 @@
         private Label label16;
         private Button buttonRemoveEleveClasse;
         private Button buttonAddEleveClasse;
+        private Button buttonJson;
     }
 }

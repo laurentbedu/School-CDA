@@ -112,5 +112,11 @@ namespace SchoolApp
         {
 
         }
+
+        private void buttonJson_Click(object sender, EventArgs e)
+        {
+            var jsonDataManager = new DAL.JsonDataManager<Models.Niveau>();
+            List<Niveau> list = jsonDataManager.DataList;
+        }
     }
 }
