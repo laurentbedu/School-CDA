@@ -13,9 +13,13 @@ namespace SchoolApp.Models
 
         List<Note> notes = new List<Note>();
 
-        public void ajouterNote(Note note)
+        public void addNote(Note note)
         {
             notes.Add(note);
+        }
+        public void removeNote(Note note)
+        {
+            notes.Remove(note);
         }
         public override string ToString()
         {

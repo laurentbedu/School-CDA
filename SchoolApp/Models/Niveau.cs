@@ -22,6 +22,13 @@ namespace SchoolApp.Models
                 }
             }
         }
+        public void RemovedMatiere(Matiere matiere)
+        {
+            if (!matiereList.Contains(matiere))
+            {
+                matiereList.Remove(matiere);
+            }
+        }
 
         public override string ToString()
         {
