@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Json\" />
     <Folder Include="ViewModel\" />
   </ItemGroup>
 

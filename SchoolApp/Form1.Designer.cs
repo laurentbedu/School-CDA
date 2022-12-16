@@ -51,6 +51,7 @@
             this.nudNoteValeur = new System.Windows.Forms.NumericUpDown();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudNoteValeur)).BeginInit();
             this.SuspendLayout();
             // 
@@ -267,11 +268,22 @@
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(39, 288);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(151, 37);
+            this.button14.TabIndex = 23;
+            this.button14.Text = "Load Niveaux";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 450);
+            this.Controls.Add(this.button14);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.nudNoteValeur);
@@ -328,5 +340,6 @@
         private NumericUpDown nudNoteValeur;
         private Button button12;
         private Button button13;
+        private Button button14;
     }
 }

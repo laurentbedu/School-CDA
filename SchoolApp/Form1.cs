@@ -144,5 +144,11 @@ namespace SchoolApp
             Matiere[] matiereArray = new Matiere[] { math, french };
             ce2.AddMatieres(matiereArray);
         }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            var jsonDataManager = new DAL.JsonDataManager<Models.Niveau>();
+            List<Niveau> list = jsonDataManager.DataList;
+        }
     }
 }
