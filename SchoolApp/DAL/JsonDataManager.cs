@@ -10,7 +10,7 @@ namespace SchoolApp.DAL
 {
     internal class JsonDataManager<T> where T : Models.Model
     {
-        private List<T> dataList = new List<T>();
+        private List<T> dataList;
 
         public List<T> DataList
         {
@@ -23,18 +23,32 @@ namespace SchoolApp.DAL
                 }
                 return dataList;
             }
+            set 
+            {
+                WriteJsonData();
+            }
+
         }
 
         private List<T> LoadJsonData()
         {
-            string fileName = "C:\\Users\\Nicolas\\source\\repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\niveau.json";
+            string str = typeof(T).Name;
+            string fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\" + str + ".json";
             string jsonString = File.ReadAllText(fileName);
-            Niveau niveaux = JsonSerializer.Deserialize<Niveau>(jsonString)!;
+            List<T> newList = JsonSerializer.Deserialize<List<T>>(jsonString)!;
 
-            MessageBox.Show($"id: {niveaux.id}");
-            MessageBox.Show($"nom: {niveaux.label}");
-
-            return new List<T>();
+            return newList;
         }
+
+        private void WriteJsonData()
+        {   
+            string str = typeof(T).Name;
+            string fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\"+str+".json";
+            string jsonString = JsonSerializer.Serialize(dataList);
+            File.WriteAllText(fileName, jsonString);
+
+        }
+        
     }
 }
+

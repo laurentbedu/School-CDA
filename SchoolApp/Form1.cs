@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using System.Runtime.ConstrainedExecution;
+using System.Text.Json;
 using System.Windows.Forms;
 using SchoolApp.Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
@@ -19,6 +21,7 @@ namespace SchoolApp
                 new Niveau() { label = "CM1" },
                 new Niveau() { label = "CM2" }
             };
+
             matiereList = new List<Matiere> {
                 new Matiere() {label = "Mathématique"},
                 new Matiere() {label = "Français"},
@@ -27,6 +30,15 @@ namespace SchoolApp
                 new Matiere() {label = "Histoire"},
                 new Matiere() {label = "Géographie"}
             };
+
+            string fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\Matiere.json";
+            string jsonString = JsonSerializer.Serialize(matiereList);
+            File.WriteAllText(fileName, jsonString);
+
+            fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\Niveau.json";
+            jsonString = JsonSerializer.Serialize(niveauList);
+            File.WriteAllText(fileName, jsonString);
+
             niveauList.Find(e => e.label == "CP")?.AddMatiere(matiereList[0], matiereList[1]);
             niveauList.Find(e => e.label == "CE1")?.AddMatiere(matiereList[0], matiereList[1], matiereList[2]);
             niveauList.Find(e => e.label == "CE2")?.AddMatiere(matiereList[0], matiereList[1], matiereList[2], matiereList[3]);
@@ -117,6 +129,7 @@ namespace SchoolApp
         {
             var jsonDataManager = new DAL.JsonDataManager<Models.Niveau>();
             List<Niveau> list = jsonDataManager.DataList;
+            bool stop = true;
         }
     }
 }
