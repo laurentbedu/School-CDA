@@ -14,6 +14,11 @@ namespace SchoolApp.Models
         public Professeur? Professeur { get; set; }
 
 
+        public Classe()
+        {
+            id = IdGenerator.Create(this);
+        }
+
         public void AddProfesseur(Professeur professeur)
         {
             if (Professeur != professeur)

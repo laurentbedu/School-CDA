@@ -69,12 +69,14 @@
             this.buttonRemoveEleveClasse = new System.Windows.Forms.Button();
             this.buttonAddEleveClasse = new System.Windows.Forms.Button();
             this.buttonJson = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.comboBoxIsAdminProf = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAncienneteEleve)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonCreerProf
             // 
-            this.buttonCreerProf.Location = new System.Drawing.Point(364, 166);
+            this.buttonCreerProf.Location = new System.Drawing.Point(364, 206);
             this.buttonCreerProf.Name = "buttonCreerProf";
             this.buttonCreerProf.Size = new System.Drawing.Size(132, 27);
             this.buttonCreerProf.TabIndex = 0;
@@ -214,7 +216,7 @@
             // 
             // buttonAddClasseProf
             // 
-            this.buttonAddClasseProf.Location = new System.Drawing.Point(325, 254);
+            this.buttonAddClasseProf.Location = new System.Drawing.Point(325, 294);
             this.buttonAddClasseProf.Name = "buttonAddClasseProf";
             this.buttonAddClasseProf.Size = new System.Drawing.Size(82, 60);
             this.buttonAddClasseProf.TabIndex = 26;
@@ -224,7 +226,7 @@
             // 
             // buttonRemoveClasseProf
             // 
-            this.buttonRemoveClasseProf.Location = new System.Drawing.Point(413, 254);
+            this.buttonRemoveClasseProf.Location = new System.Drawing.Point(413, 294);
             this.buttonRemoveClasseProf.Name = "buttonRemoveClasseProf";
             this.buttonRemoveClasseProf.Size = new System.Drawing.Size(82, 60);
             this.buttonRemoveClasseProf.TabIndex = 27;
@@ -309,7 +311,7 @@
             // comboBoxClasseProf
             // 
             this.comboBoxClasseProf.FormattingEnabled = true;
-            this.comboBoxClasseProf.Location = new System.Drawing.Point(348, 213);
+            this.comboBoxClasseProf.Location = new System.Drawing.Point(348, 253);
             this.comboBoxClasseProf.Name = "comboBoxClasseProf";
             this.comboBoxClasseProf.Size = new System.Drawing.Size(148, 28);
             this.comboBoxClasseProf.TabIndex = 38;
@@ -317,7 +319,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(285, 221);
+            this.label12.Location = new System.Drawing.Point(285, 261);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(57, 20);
             this.label12.TabIndex = 37;
@@ -390,6 +392,7 @@
             this.textBoxPasswordProf.Name = "textBoxPasswordProf";
             this.textBoxPasswordProf.Size = new System.Drawing.Size(148, 27);
             this.textBoxPasswordProf.TabIndex = 45;
+            this.textBoxPasswordProf.Text = "Admin";
             // 
             // textBoxLoginProf
             // 
@@ -397,6 +400,7 @@
             this.textBoxLoginProf.Name = "textBoxLoginProf";
             this.textBoxLoginProf.Size = new System.Drawing.Size(148, 27);
             this.textBoxLoginProf.TabIndex = 44;
+            this.textBoxLoginProf.Text = "Default";
             // 
             // comboBoxEleveClasse
             // 
@@ -444,11 +448,34 @@
             this.buttonJson.UseVisualStyleBackColor = true;
             this.buttonJson.Click += new System.EventHandler(this.buttonJson_Click);
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(282, 176);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(60, 20);
+            this.label17.TabIndex = 53;
+            this.label17.Text = "Admin :";
+            // 
+            // comboBoxIsAdminProf
+            // 
+            this.comboBoxIsAdminProf.FormattingEnabled = true;
+            this.comboBoxIsAdminProf.Items.AddRange(new object[] {
+            "NON",
+            "OUI"});
+            this.comboBoxIsAdminProf.Location = new System.Drawing.Point(348, 168);
+            this.comboBoxIsAdminProf.Name = "comboBoxIsAdminProf";
+            this.comboBoxIsAdminProf.Size = new System.Drawing.Size(148, 28);
+            this.comboBoxIsAdminProf.TabIndex = 54;
+            this.comboBoxIsAdminProf.Text = "NON";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1111, 450);
+            this.Controls.Add(this.comboBoxIsAdminProf);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.buttonJson);
             this.Controls.Add(this.comboBoxEleveClasse);
             this.Controls.Add(this.label16);
@@ -541,5 +568,7 @@
         private Button buttonRemoveEleveClasse;
         private Button buttonAddEleveClasse;
         private Button buttonJson;
+        private Label label17;
+        private ComboBox comboBoxIsAdminProf;
     }
 }

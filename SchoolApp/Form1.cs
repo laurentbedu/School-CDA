@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Runtime.ConstrainedExecution;
 using System.Text.Json;
 using System.Windows.Forms;
+using SchoolApp.DAL;
 using SchoolApp.Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
@@ -15,27 +16,27 @@ namespace SchoolApp
 
             niveauList = new List<Niveau>
             {
-                new Niveau() { label = "CP" },
-                new Niveau() { label = "CE1" },
-                new Niveau() { label = "CE2" },
-                new Niveau() { label = "CM1" },
-                new Niveau() { label = "CM2" }
+                new Niveau() { label = "CP", id = "niveau_1" },
+                new Niveau() { label = "CE1", id = "niveau_2" },
+                new Niveau() { label = "CE2", id = "niveau_3" },
+                new Niveau() { label = "CM1", id = "niveau_4" },
+                new Niveau() { label = "CM2", id = "niveau_5" }
             };
 
             matiereList = new List<Matiere> {
-                new Matiere() {label = "Mathématique", id = "1"},
-                new Matiere() {label = "Français", id = "2"},
-                new Matiere() {label = "Anglais", id = "3"},
-                new Matiere() {label = "Sciences", id = "4"},
-                new Matiere() {label = "Histoire", id = "5"},
-                new Matiere() {label = "Géographie", id = "6"}
+                new Matiere() {label = "Mathématique", id = "matiere_1"},
+                new Matiere() {label = "Français", id = "matiere_2"},
+                new Matiere() {label = "Anglais", id = "matiere_3"},
+                new Matiere() {label = "Sciences", id = "matiere_4"},
+                new Matiere() {label = "Histoire", id = "matiere_5"},
+                new Matiere() {label = "Géographie", id = "matiere_6"}
             };
 
-            string fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\Matiere.json";
+            string fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\Matieres.json";
             string jsonString = JsonSerializer.Serialize(matiereList);
             File.WriteAllText(fileName, jsonString);
 
-            fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\Niveau.json";
+            fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\Niveaux.json";
             jsonString = JsonSerializer.Serialize(niveauList);
             File.WriteAllText(fileName, jsonString);
 
@@ -48,11 +49,11 @@ namespace SchoolApp
             comboBoxNiveauClasse.DataSource = niveauList;
         }
         List<Classe> classes = new List<Classe>();
-        List<Professeur> professeurs = new List<Professeur>();
         List<Niveau> niveauList = new List<Niveau>();
         List<Matiere> matiereList = new List<Matiere>();
         List<Eleve> eleveList = new List<Eleve>();
 
+        List<Professeur> professeurs = JsonDataManager<Professeur>.DataList;
         Professeur professeur;
         private void buttonCreerProf_Click(object sender, EventArgs e)
         {
@@ -63,9 +64,19 @@ namespace SchoolApp
                 login = textBoxLoginProf.Text,
                 password = textBoxPasswordProf.Text
             };
+            if (comboBoxIsAdminProf.Text == "OUI")
+            {
+                professeur.isAdmin = true;
+            }
+            else
+            {
+                professeur.isAdmin = false;
+            }
+
             professeurs.Add(professeur);
             MessageBox.Show(professeur+"");
             comboBoxProfClasse.DataSource = professeurs.ToArray();
+            JsonDataManager<Professeur>.WriteJsonData(professeurs);
         }
         Classe classe;
         private void buttonCreerClasse_Click(object sender, EventArgs e)
