@@ -84,15 +84,18 @@ namespace SchoolApp
         Classe classe;
         private void buttonCreerClasse_Click(object sender, EventArgs e)
         {
+            var jsonClasse = new DAL.JsonDataManager<Classe>();
+            //List<Classe> classes = jsonClasse.DataList;
             classe = new Classe()
             {
                 label = textBoxNomClasse.Text,
-                niveau = comboBoxNiveauClasse.SelectedItem as Niveau
+                //niveau = comboBoxNiveauClasse.SelectedItem as Niveau
             };
             classes.Add(classe);
             MessageBox.Show(classe+"");
             comboBoxClasseProf.DataSource = classes.ToArray();
             comboBoxClasseEleve.DataSource = classes.ToArray();
+            jsonClasse.WriteJsonData(classes);
         }
 
         private void buttonAddProf_Click(object sender, EventArgs e)
