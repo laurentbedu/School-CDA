@@ -13,6 +13,8 @@ namespace SchoolApp.Models
 
         List<Note> notes = new List<Note>();
 
+       
+
         public void addNote(Note note)
         {
             notes.Add(note);

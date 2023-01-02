@@ -65,14 +65,16 @@ namespace SchoolApp
                 login = textBoxLoginProf.Text,
                 password = textBoxPasswordProf.Text
             };
-            if (comboBoxIsAdminProf.Text == "OUI")
+            professeur.isAdmin = comboBoxIsAdminProf.Text == "OUI" ? professeur.isAdmin = true : professeur.isAdmin = false; ;
+            // équivalent à :
+            /*if (comboBoxIsAdminProf.Text == "OUI")
             {
                 professeur.isAdmin = true;
             }
             else
             {
                 professeur.isAdmin = false;
-            }
+            }*/
 
             professeurs.Add(professeur);
             MessageBox.Show(professeur+"");
@@ -144,14 +146,9 @@ namespace SchoolApp
 
         private void buttonAddEleveClasse_Click(object sender, EventArgs e)
         {
-
+            eleve.classe = comboBoxClasseEleve.SelectedItem as Classe;
+            MessageBox.Show(eleve.classe + "");
         }
 
-        private void buttonJson_Click(object sender, EventArgs e)
-        {
-            var jsonDataManager = new DAL.JsonDataManager<Models.Niveau>();
-            List<Niveau> list = jsonDataManager.DataList;
-            bool stop = true;
-        }
     }
 }
