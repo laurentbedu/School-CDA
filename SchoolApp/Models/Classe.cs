@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace SchoolApp.Models
 {
 
-    internal class Classe
+    internal class Classe : Model
     {
         public List<Eleve> EleveList { get; set; } = new List<Eleve>();
 

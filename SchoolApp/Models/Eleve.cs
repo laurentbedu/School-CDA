@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolApp.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,23 +9,49 @@ namespace SchoolApp.Models
 {
     internal class Eleve : Personne
     {
-        public Eleve()
-        {
-            Identifiant = ++id;
-        }
-        public int id = 0;
-        public List<int> NotesEleve = new List<int>();
+      public int Anciennete { get; set; }
 
-        public int Identifiant { get; set; }
+            private Classe? classe;
+            public Classe? Classe
+            {
+                get => classe;
+                set
+                {
+                    if (classe != value)
+                    {
+                        classe?.RemoveEleve(this);
+                        classe = value;
+                        classe?.AddEleve(this);
+                    }
+                }
+            }
 
-        public void AjouterNotes(int note)
-        {
-            NotesEleve.Add(note);
-        }
+            [IsNotInToString]
+            public List<Note> NoteList { get; } = new List<Note>();
 
-        public override string ToString()
-        {
-            return NotesEleve.Count.ToString();
+            public void AddNote(Note note)
+            {
+                if (!NoteList.Contains(note))
+                {
+                    NoteList.Add(note);
+                }
+                if (note.Eleve != this)
+                {
+                    note.Eleve = this;
+                }
+
+            }
+
+            public void RemoveNote(Note note)
+            {
+                if (note != null && NoteList.Contains(note))
+                {
+                    NoteList.Remove(note);
+                    if (note.Eleve == this)
+                    {
+                        note.Eleve = null;
+                    }
+                }
+            }
         }
     }
-}
