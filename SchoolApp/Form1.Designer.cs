@@ -68,8 +68,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.buttonRemoveEleveClasse = new System.Windows.Forms.Button();
             this.buttonAddEleveClasse = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.comboBoxIsAdminProf = new System.Windows.Forms.ComboBox();
+            this.checkBoxAdminProf = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAncienneteEleve)).BeginInit();
             this.SuspendLayout();
             // 
@@ -391,7 +390,7 @@
             this.textBoxPasswordProf.Name = "textBoxPasswordProf";
             this.textBoxPasswordProf.Size = new System.Drawing.Size(148, 27);
             this.textBoxPasswordProf.TabIndex = 45;
-            this.textBoxPasswordProf.Text = "Admin";
+            this.textBoxPasswordProf.Text = "PasswordDefault";
             // 
             // textBoxLoginProf
             // 
@@ -399,7 +398,7 @@
             this.textBoxLoginProf.Name = "textBoxLoginProf";
             this.textBoxLoginProf.Size = new System.Drawing.Size(148, 27);
             this.textBoxLoginProf.TabIndex = 44;
-            this.textBoxLoginProf.Text = "Default";
+            this.textBoxLoginProf.Text = "LoginDefault";
             // 
             // comboBoxEleveClasse
             // 
@@ -437,34 +436,22 @@
             this.buttonAddEleveClasse.UseVisualStyleBackColor = true;
             this.buttonAddEleveClasse.Click += new System.EventHandler(this.buttonAddEleveClasse_Click);
             // 
-            // label17
+            // checkBoxAdminProf
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(282, 176);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(60, 20);
-            this.label17.TabIndex = 53;
-            this.label17.Text = "Admin :";
-            // 
-            // comboBoxIsAdminProf
-            // 
-            this.comboBoxIsAdminProf.FormattingEnabled = true;
-            this.comboBoxIsAdminProf.Items.AddRange(new object[] {
-            "NON",
-            "OUI"});
-            this.comboBoxIsAdminProf.Location = new System.Drawing.Point(348, 168);
-            this.comboBoxIsAdminProf.Name = "comboBoxIsAdminProf";
-            this.comboBoxIsAdminProf.Size = new System.Drawing.Size(148, 28);
-            this.comboBoxIsAdminProf.TabIndex = 54;
-            this.comboBoxIsAdminProf.Text = "NON";
+            this.checkBoxAdminProf.AutoSize = true;
+            this.checkBoxAdminProf.Location = new System.Drawing.Point(364, 166);
+            this.checkBoxAdminProf.Name = "checkBoxAdminProf";
+            this.checkBoxAdminProf.Size = new System.Drawing.Size(129, 24);
+            this.checkBoxAdminProf.TabIndex = 54;
+            this.checkBoxAdminProf.Text = "Administrateur";
+            this.checkBoxAdminProf.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1111, 450);
-            this.Controls.Add(this.comboBoxIsAdminProf);
-            this.Controls.Add(this.label17);
+            this.Controls.Add(this.checkBoxAdminProf);
             this.Controls.Add(this.comboBoxEleveClasse);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.buttonRemoveEleveClasse);
@@ -555,7 +542,6 @@
         private Label label16;
         private Button buttonRemoveEleveClasse;
         private Button buttonAddEleveClasse;
-        private Label label17;
-        private ComboBox comboBoxIsAdminProf;
+        private CheckBox checkBoxAdminProf;
     }
 }

@@ -61,9 +61,9 @@ namespace SchoolApp
                 login = textBoxLoginProf.Text,
                 password = textBoxPasswordProf.Text
             };
-            professeur.isAdmin = comboBoxIsAdminProf.Text == "OUI" ? professeur.isAdmin = true : professeur.isAdmin = false;
+            professeur.isAdmin = checkBoxAdminProf.Checked ? professeur.isAdmin = true : professeur.isAdmin = false;
             // équivalent à :
-            /*if (comboBoxIsAdminProf.Text == "OUI")
+            /*if (checkBoxAdminProf.Checked)
             {
                 professeur.isAdmin = true;
             }
