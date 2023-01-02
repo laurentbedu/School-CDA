@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
+using SchoolApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,5 +37,11 @@ namespace SchoolApp.DAL
 
             return new List<Niveau>();
         }
+
+       //public void Serialize(Eleve eleve)
+       // {
+       //     string jsonString = JsonSerializer.Serialize(eleve);
+       //     File.WriteAllText("C:\\Users\\xseb\\source\\repos\\School - CDA\\SchoolApp\\dataEleve.json", jsonString);
+       // }
     }
 }

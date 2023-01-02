@@ -1,5 +1,8 @@
 using SchoolApp.Models;
 using System.Security.Cryptography.X509Certificates;
+using System.IO;
+using System.Data.SQLite;
+using System.Linq.Expressions;
 
 namespace SchoolApp
 {
@@ -103,8 +106,58 @@ namespace SchoolApp
 
         private void BtJson_Click(object sender, EventArgs e)
         {
-            var jsonDataManager = new DAL.JsonDataManager<Models.Niveau>();
-            List<Niveau> list = jsonDataManager.dataList;
+           
+                      
+           
+
+          
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string bddpath = "C:\\Users\\xseb\\source\\repos\\bdd.sqlite";
+            if (!File.Exists(bddpath)) CreateBDD();
+
+            void CreateBDD()
+            {
+                SQLiteConnection.CreateFile(bddpath);
+                SQLiteConnection con = new SQLiteConnection("Data Source =C:\\Users\\xseb\\source\\repos\\bdd.sqlite;Version=3;");
+                con.Open();
+
+                string sql = "create table model (nom varchar(20), prenom varchar(20))";
+                
+                SQLiteCommand command = new SQLiteCommand(sql, con);
+                command.ExecuteNonQuery();
+                con.Close();
+            }
+            
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Personne personne = new Personne();
+
+            string N = BoxNom2.Text;
+
+            string P = BoxPrenom2.Text;
+
+            
+                AddData(N,P);
+                MessageBox.Show("OK");
+            
+            
+
+            void AddData(string N, string P)
+            {
+                SQLiteConnection con = new SQLiteConnection("Data Source =C:\\Users\\xseb\\source\\repos\\bdd.sqlite;Version=3;");
+                con.Open();
+
+                string sql = "INSERT INTO model(nom, prenom) VALUES ('" + N + "','" + P + "')";
+                SQLiteCommand command = new SQLiteCommand(sql, con);
+                command.ExecuteNonQuery();
+                con.Close();
+                
+            }
         }
     }
 }
