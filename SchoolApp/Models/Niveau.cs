@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SchoolApp.Models
 {
-    internal class Niveau
+    internal class Niveau : ModelBase
     {
        
         public string Label_Niveau { get; set; }

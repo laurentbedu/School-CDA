@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SchoolApp.Models
 {
-    internal class Classe
+    internal class Classe : ModelBase
     {
         
         public string Label_Classe { get; set; }
@@ -85,7 +85,7 @@ namespace SchoolApp.Models
             }
         }
 
-
+      
 
     }
 }

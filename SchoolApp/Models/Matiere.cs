@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SchoolApp.Models
 {
-    internal class Matiere
+    internal class Matiere : ModelBase
     {
                
         public string Label_Matiere { get; set; } 

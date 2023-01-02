@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SchoolApp.Models
 {
-    internal class Note
+    internal class Note : ModelBase
     {
         
         public double Valeur { get; set; }
