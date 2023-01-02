@@ -13,7 +13,7 @@ namespace SchoolApp.Models
         private Classe? classe;
 
         // Propriétés :
-        public string? Anciennete { get; set; }
+        public int? Anciennete { get; set; }
         public List<Note> listeNotes { get; } = new List<Note>();
         public Classe? Classe 
         { 
@@ -28,8 +28,7 @@ namespace SchoolApp.Models
                 }
             }
         }
-        public List<Note> ListeNotes { get { return listeNotes; } }
-
+        //public List<Note> ListeNotes { get { return listeNotes; } }
 
         // Methodes :
         public void ajouterNote(Note noteToAdd)
@@ -53,7 +52,7 @@ namespace SchoolApp.Models
                     noteToRemove.Eleve = null;
                 }
             }
-        }
+        }        
         public string ToStringPourSave()
         {
             if (Classe?.Id != null)
@@ -65,6 +64,5 @@ namespace SchoolApp.Models
                 return Nom + " " + Prenom + " " + Anciennete + " " + base.Id + " " + "PasDeClasseId";
             }
         }
-
     }
 }

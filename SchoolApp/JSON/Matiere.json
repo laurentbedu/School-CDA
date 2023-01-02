@@ -1,0 +1,52 @@
+[
+  {
+    "Id_Matiere": 1,
+    "label": "Français",
+    "Id_Niveau": 4
+  },
+  {
+    "Id_Matiere": 2,
+    "label": "Anglais",
+    "Id_Niveau": 1
+  },
+  {
+    "Id_Matiere": 3,
+    "label": "Allemand",
+    "Id_Niveau": 2
+  },
+  {
+    "Id_Matiere": 4,
+    "label": "Mathématique",
+    "Id_Niveau": 5
+  },
+  {
+    "Id_Matiere": 5,
+    "label": "Science",
+    "Id_Niveau": 1
+  },
+  {
+    "Id_Matiere": 6,
+    "label": "Histoire",
+    "Id_Niveau": 4
+  },
+  {
+    "Id_Matiere": 7,
+    "label": "Géographie",
+    "Id_Niveau": 5
+  },
+  {
+    "Id_Matiere": 8,
+    "label": "Sport",
+    "Id_Niveau": 2
+  },
+  {
+    "Id_Matiere": 9,
+    "label": "Espagnol",
+    "Id_Niveau": 3
+  },
+  {
+    "Id_Matiere": 10,
+    "label": "Philosophie",
+    "Id_Niveau": 1
+  }
+]

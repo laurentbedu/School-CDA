@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace SchoolApp.Models
 {
-    internal class Matiere
+    internal class Matiere : Model
     {
         // Propriétés :
-        public string Nom { get; set; }
+        public string label { get; set; }
 
         [NePasIntegrerDansToString] public List<Niveau> ListeNiveaux { get; private set; } = new List<Niveau>();
 
@@ -39,7 +39,7 @@ namespace SchoolApp.Models
         }
         public override string ToString()
         {
-            return Nom;
+            return label;
         }
 
     }

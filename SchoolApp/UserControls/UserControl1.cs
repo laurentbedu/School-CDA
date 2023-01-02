@@ -13,11 +13,12 @@ namespace SchoolApp.UserControls
 {
     public partial class UserControl1 : UserControl
     {
-        List<Eleve> listeEleves             = new List<Eleve>();
-        List<Professeur> listeProfesseurs   = new List<Professeur>();
-        List<Classe> listeClasses           = new List<Classe>();
-        List<Matiere> listeMatieres         = new List<Matiere>();
-        List<Niveau> listeNiveaux           = new List<Niveau>();
+        List<Eleve>     listeEleves        = new List<Eleve>();
+        List<Professeur>listeProfesseurs   = new List<Professeur>();
+        List<Classe>    listeClasses       = new List<Classe>();
+        List<Matiere>   listeMatieres      = new List<Matiere>();
+        List<Niveau>    listeNiveaux       = new List<Niveau>();
+        List<Note>      listeNotes         = new List<Note>();
         public UserControl1()
         {
             InitializeComponent();
@@ -115,14 +116,18 @@ namespace SchoolApp.UserControls
         private void buttonAjouterMatiere_Click(object sender, EventArgs e)
         {
             string nom = textBoxNomMatiere.Text;
-            Matiere nouvelleMatiere = new Matiere() { Nom = nom };
+            Matiere nouvelleMatiere = new Matiere() { label = nom };
             listeMatieres.Add(nouvelleMatiere);
             resetBoxes();
             majTabMatiere();
         }   // ajouter Matiere
 
+
+
         private void buttonSauvegarderListeEleve_Click(object sender, EventArgs e)
         {
+            // OLD SAVE:
+            /*
             DateTime now = DateTime.Now;
             if (textBoxCheminListe.Text != "")
             {
@@ -136,10 +141,13 @@ namespace SchoolApp.UserControls
             }
             textBoxCheminListe.Text = cheminFicherExporter;
             File.AppendAllLines(saveFileDialog1.FileName, toSave);
+            */
         }
 
         private void buttonChargerListeEleve_Click(object sender, EventArgs e)
         {
+            // OLD LOAD :
+            /*
             string cheminFichierImporter = "";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -157,8 +165,22 @@ namespace SchoolApp.UserControls
                 //listeEleves.Add(new Eleve(newNom, newPrenom, "1an"));
                 majTabEleve();
             }
-        }
+            */
 
+            var jsonDataManagerNiveau = new DAL.JsonDataManager<Models.Niveau>();
+            listeNiveaux = jsonDataManagerNiveau.DataList;
+            var jsonDataManagerEleve = new DAL.JsonDataManager<Models.Eleve>();
+            listeEleves = jsonDataManagerEleve.DataList;
+            var jsonDataManagerProfesseur = new DAL.JsonDataManager<Models.Professeur>();
+            listeProfesseurs = jsonDataManagerProfesseur.DataList;
+            var jsonDataManagerClasse = new DAL.JsonDataManager<Models.Classe>();
+            listeClasses = jsonDataManagerClasse.DataList;
+            var jsonDataManagerMatiere = new DAL.JsonDataManager<Models.Matiere>();
+            listeMatieres = jsonDataManagerMatiere.DataList;
+            var jsonDataManagerNote = new DAL.JsonDataManager<Models.Note>();
+            listeNotes = jsonDataManagerNote.DataList;
+
+        }
 
     }
 }
