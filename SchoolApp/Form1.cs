@@ -53,10 +53,12 @@ namespace SchoolApp
         List<Matiere> matiereList = new List<Matiere>();
         List<Eleve> eleveList = new List<Eleve>();
 
-        List<Professeur> professeurs = JsonDataManager<Professeur>.DataList;
+        //List<Professeur> professeurs = new List<Professeur>();
         Professeur professeur;
         private void buttonCreerProf_Click(object sender, EventArgs e)
         {
+            var jsonProf = new DAL.JsonDataManager<Professeur>();
+            List<Professeur> professeurs = jsonProf.DataList;
             professeur = new Professeur()
             {
                 nom = textBoxNomProf.Text,
@@ -76,7 +78,7 @@ namespace SchoolApp
             professeurs.Add(professeur);
             MessageBox.Show(professeur+"");
             comboBoxProfClasse.DataSource = professeurs.ToArray();
-            JsonDataManager<Professeur>.WriteJsonData(professeurs);
+            jsonProf.WriteJsonData(professeurs);
         }
         Classe classe;
         private void buttonCreerClasse_Click(object sender, EventArgs e)
