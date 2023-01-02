@@ -12,9 +12,5 @@ namespace SchoolApp.Models
         public string id { get; set; }
         public string label { get; set; }
 
-        public Model()
-        {
-            id = IdGenerator.Create(this);
-        }
     }
 }
