@@ -32,11 +32,11 @@ namespace SchoolApp
                 new Matiere() {label = "Géographie", id = "matiere_6"}
             };
 
-            string fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\Matieres.json";
+            string fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\Matiere.json";
             string jsonString = JsonSerializer.Serialize(matiereList);
             File.WriteAllText(fileName, jsonString);
 
-            fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\Niveaux.json";
+            fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\Niveau.json";
             jsonString = JsonSerializer.Serialize(niveauList);
             File.WriteAllText(fileName, jsonString);
 
@@ -48,7 +48,7 @@ namespace SchoolApp
 
             comboBoxNiveauClasse.DataSource = niveauList;
         }
-        List<Classe> classes = new List<Classe>();
+        
         List<Niveau> niveauList = new List<Niveau>();
         List<Matiere> matiereList = new List<Matiere>();
         List<Eleve> eleveList = new List<Eleve>();
@@ -80,6 +80,8 @@ namespace SchoolApp
             comboBoxProfClasse.DataSource = professeurs.ToArray();
             jsonProf.WriteJsonData(professeurs);
         }
+
+        List<Classe> classes = new List<Classe>();
         Classe classe;
         private void buttonCreerClasse_Click(object sender, EventArgs e)
         {
