@@ -36,10 +36,6 @@ namespace SchoolApp
             string jsonString = JsonSerializer.Serialize(matiereList);
             File.WriteAllText(fileName, jsonString);
 
-            fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\Niveau.json";
-            jsonString = JsonSerializer.Serialize(niveauList);
-            File.WriteAllText(fileName, jsonString);
-
             niveauList.Find(e => e.label == "CP")?.AddMatiere(matiereList[0], matiereList[1]);
             niveauList.Find(e => e.label == "CE1")?.AddMatiere(matiereList[0], matiereList[1], matiereList[2]);
             niveauList.Find(e => e.label == "CE2")?.AddMatiere(matiereList[0], matiereList[1], matiereList[2], matiereList[3]);
@@ -65,7 +61,7 @@ namespace SchoolApp
                 login = textBoxLoginProf.Text,
                 password = textBoxPasswordProf.Text
             };
-            professeur.isAdmin = comboBoxIsAdminProf.Text == "OUI" ? professeur.isAdmin = true : professeur.isAdmin = false; ;
+            professeur.isAdmin = comboBoxIsAdminProf.Text == "OUI" ? professeur.isAdmin = true : professeur.isAdmin = false;
             // équivalent à :
             /*if (comboBoxIsAdminProf.Text == "OUI")
             {
