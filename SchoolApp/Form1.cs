@@ -51,7 +51,6 @@ namespace SchoolApp
         
         List<Niveau> niveauList = new List<Niveau>();
         List<Matiere> matiereList = new List<Matiere>();
-        List<Eleve> eleveList = new List<Eleve>();
 
         //List<Professeur> professeurs = new List<Professeur>();
         Professeur professeur;
@@ -119,9 +118,13 @@ namespace SchoolApp
             professeur.RemoveClasse(comboBoxClasseProf.SelectedItem as Classe);
             MessageBox.Show(professeur.Classe+"");
         }
+
+       //List<Eleve> eleves = new List<Eleve>();
         Eleve eleve;
         private void buttonCreerEleve_Click(object sender, EventArgs e)
         {
+            var jsonEleve = new DAL.JsonDataManager<Eleve>();
+            List<Eleve> eleves = jsonEleve.DataList;
             eleve = new Eleve()
             {
                 nom = textBoxNomEleve.Text,
@@ -129,9 +132,10 @@ namespace SchoolApp
                 anciennete = Convert.ToInt32(numericUpDownAncienneteEleve.Value),
                 classe = comboBoxClasseEleve.SelectedItem as Classe
             };
-            eleveList.Add(eleve);
+            eleves.Add(eleve);
             MessageBox.Show(eleve + "");
-            comboBoxEleveClasse.DataSource = eleveList.ToArray(); ;
+            comboBoxEleveClasse.DataSource = eleves.ToArray();
+            jsonEleve.WriteJsonData(eleves);
 
         }
 
