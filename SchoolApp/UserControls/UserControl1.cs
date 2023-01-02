@@ -71,6 +71,8 @@ namespace SchoolApp.UserControls
         ///////////////////////////////
         private void buttonAjouterEleve_Click(object sender, EventArgs e)
         {
+            // A REFAIRE CAR PLUS DE CONSTRUCTORS:
+            /*
             string nom = textBoxEleveNom.Text;
             string prenom = textBoxElevePrenom.Text;
             string anciennete = textBoxEleveAnciennete.Text;
@@ -78,9 +80,12 @@ namespace SchoolApp.UserControls
             listeEleves.Add(nouvelEleve);
             resetBoxes();
             majTabEleve();
+            */
         }   // ajouter eleve
         private void buttonAjouterProf_Click(object sender, EventArgs e)
         {
+            // A REFAIRE CAR PLUS DE CONSTRUCTORS:
+            /*
             string nom      = textBoxNomProf.Text;
             string prenom   = textBoxPrenomProf.Text;
             string login    = textBoxLoginProf.Text;
@@ -97,6 +102,7 @@ namespace SchoolApp.UserControls
             }
             resetBoxes();
             majTabProfesseur();
+            */
         }   // ajouter Professeur  
         private void buttonAjouterClasse_Click(object sender, EventArgs e)
         {
@@ -148,7 +154,7 @@ namespace SchoolApp.UserControls
                 string newNom = aDecomposer[0];
                 string newPrenom = aDecomposer[1];
                 string newAnciennete = aDecomposer[2];
-                listeEleves.Add(new Eleve(newNom, newPrenom, "1an"));
+                //listeEleves.Add(new Eleve(newNom, newPrenom, "1an"));
                 majTabEleve();
             }
         }

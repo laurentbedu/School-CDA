@@ -16,11 +16,6 @@ namespace SchoolApp.Models
         [NePasIntegrerDansToStringAttribute] public Classe? Classe { get; private set; }
 
         // Constructeurs :
-        public Professeur(string nom, string prenom, string newLogin, string newPassword) : base(nom, prenom)
-        {
-            Login = newLogin;
-            Password = newPassword;
-        }
 
         // Methodes :
         public void ajouterClasse(Classe classe)

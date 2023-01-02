@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SchoolApp.Models
 {
-    internal class Niveau
+    internal class Niveau : Model
     {
         // Propriétés :
         public string Nom { get; set; }

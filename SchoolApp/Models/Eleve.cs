@@ -30,16 +30,6 @@ namespace SchoolApp.Models
         }
         public List<Note> ListeNotes { get { return listeNotes; } }
 
-        // Constructeurs :
-        public Eleve(string nom, string prenom, string anciennete) : base(nom, prenom)
-        {
-            listeNotes = new List<Note>();
-            this.Anciennete = anciennete;
-        }
-        public Eleve(string nom, string prenom) : base(nom, prenom)
-        {
-            listeNotes = new List<Note>();
-        }
 
         // Methodes :
         public void ajouterNote(Note noteToAdd)

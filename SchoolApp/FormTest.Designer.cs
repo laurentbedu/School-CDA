@@ -32,10 +32,12 @@
             this.buttonGestion2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panelGestion = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -44,9 +46,9 @@
             // 
             this.button4.AutoSize = true;
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Location = new System.Drawing.Point(4, 130);
+            this.button4.Location = new System.Drawing.Point(4, 131);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(91, 119);
+            this.button4.Size = new System.Drawing.Size(91, 120);
             this.button4.TabIndex = 3;
             this.button4.Text = "gestion";
             this.button4.UseVisualStyleBackColor = true;
@@ -57,7 +59,7 @@
             this.buttonGestion2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonGestion2.Location = new System.Drawing.Point(4, 4);
             this.buttonGestion2.Name = "buttonGestion2";
-            this.buttonGestion2.Size = new System.Drawing.Size(91, 119);
+            this.buttonGestion2.Size = new System.Drawing.Size(91, 120);
             this.buttonGestion2.TabIndex = 5;
             this.buttonGestion2.Text = "Super admin";
             this.buttonGestion2.UseVisualStyleBackColor = true;
@@ -66,9 +68,9 @@
             // button5
             // 
             this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.Location = new System.Drawing.Point(4, 256);
+            this.button5.Location = new System.Drawing.Point(4, 258);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(91, 119);
+            this.button5.Size = new System.Drawing.Size(91, 120);
             this.button5.TabIndex = 6;
             this.button5.Text = "testClasse";
             this.button5.UseVisualStyleBackColor = true;
@@ -89,8 +91,18 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(97, 508);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(97, 511);
             this.tableLayoutPanel1.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(32, 626);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Load";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -122,7 +134,7 @@
             this.panelGestion.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelGestion.Location = new System.Drawing.Point(115, 112);
             this.panelGestion.Name = "panelGestion";
-            this.panelGestion.Size = new System.Drawing.Size(771, 379);
+            this.panelGestion.Size = new System.Drawing.Size(924, 508);
             this.panelGestion.TabIndex = 4;
             // 
             // flowLayoutPanel1
@@ -132,14 +144,26 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(475, 213);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(121, 627);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Save";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FormTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1099, 761);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.panelGestion);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormTest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -161,5 +185,7 @@
         private TableLayoutPanel tableLayoutPanel2;
         private Panel panelGestion;
         private FlowLayoutPanel flowLayoutPanel1;
+        private Button button1;
+        private Button button2;
     }
 }
