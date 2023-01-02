@@ -23,12 +23,12 @@ namespace SchoolApp
             };
 
             matiereList = new List<Matiere> {
-                new Matiere() {label = "Mathématique"},
-                new Matiere() {label = "Français"},
-                new Matiere() {label = "Anglais"},
-                new Matiere() {label = "Sciences"},
-                new Matiere() {label = "Histoire"},
-                new Matiere() {label = "Géographie"}
+                new Matiere() {label = "Mathématique", id = "1"},
+                new Matiere() {label = "Français", id = "2"},
+                new Matiere() {label = "Anglais", id = "3"},
+                new Matiere() {label = "Sciences", id = "4"},
+                new Matiere() {label = "Histoire", id = "5"},
+                new Matiere() {label = "Géographie", id = "6"}
             };
 
             string fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\Matiere.json";
