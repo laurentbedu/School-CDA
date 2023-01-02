@@ -224,7 +224,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(123, 23);
             this.button2.TabIndex = 10;
-            this.button2.Text = "ajour classes/prof";
+            this.button2.Text = "Add liaisons";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

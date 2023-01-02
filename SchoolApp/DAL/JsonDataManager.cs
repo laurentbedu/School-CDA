@@ -43,7 +43,7 @@ namespace SchoolApp.DAL
             string cheminFichierExporter = cheminRoot + nomClasseT + ".json";
             string jsonString = JsonSerializer.Serialize(dataListSave)!;
 
-            MessageBox.Show(jsonString);
+            //MessageBox.Show(jsonString);            
             File.WriteAllText(cheminFichierExporter, jsonString);
         }
     }
