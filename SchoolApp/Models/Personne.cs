@@ -9,7 +9,6 @@ namespace SchoolApp.Models
 {
     internal class Personne : Model
     {
-        public string id { get; set; }
         public string nom { get; set; }
         public string prenom { get; set; }
 
@@ -20,13 +19,5 @@ namespace SchoolApp.Models
 
         }
 
-        public void AddNom(string nom)
-        {
-            nom = nom.ToLower();
-        }
-        public void AddPrenom(string prenom)
-        {
-            prenom = prenom.ToLower();
-        }
     }
 }

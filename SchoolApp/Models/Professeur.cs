@@ -38,14 +38,7 @@ namespace SchoolApp.Models
                 }
             }
         }
-        public void creerPassword()
-        {
 
-        }
-        public void modifierPassword()
-        {
-
-        }
         public override string ToString()
         {
             return nom + " " + prenom;

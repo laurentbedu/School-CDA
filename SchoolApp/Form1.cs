@@ -65,7 +65,7 @@ namespace SchoolApp
 
         //List<Professeur> professeurs = new List<Professeur>();
         Professeur professeur;
-        private void buttonCreerProf_Click(object sender, EventArgs e)
+        private void ButtonCreerProf_Click(object sender, EventArgs e)
         {
             var jsonVar = new DAL.JsonDataManager<Professeur>();
             List<Professeur> professeurs = jsonVar.DataList;
@@ -95,7 +95,7 @@ namespace SchoolApp
 
         //List<Classe> classes = new List<Classe>();
         Classe classe;
-        private void buttonCreerClasse_Click(object sender, EventArgs e)
+        private void ButtonCreerClasse_Click(object sender, EventArgs e)
         {
             var jsonVar = new DAL.JsonDataManager<Classe>();
             List<Classe> classes = jsonVar.DataList;
@@ -111,14 +111,14 @@ namespace SchoolApp
             jsonVar.WriteJsonData(classes);
         }
 
-        private void buttonAddProf_Click(object sender, EventArgs e)
+        private void ButtonAddProf_Click(object sender, EventArgs e)
         {
             classe = comboBoxClasseProf.SelectedItem as Classe;
             classe.AddProfesseur(comboBoxProfClasse.SelectedItem as Professeur);
             MessageBox.Show(classe.Professeur+"");
         }
 
-        private void buttonRemoveProf_Click(object sender, EventArgs e)
+        private void ButtonRemoveProf_Click(object sender, EventArgs e)
         {
             classe = comboBoxClasseProf.SelectedItem as Classe;
             classe.RemoveProfesseur(comboBoxProfClasse.SelectedItem as Professeur);
@@ -127,7 +127,7 @@ namespace SchoolApp
 
        //List<Eleve> eleves = new List<Eleve>();
         Eleve eleve;
-        private void buttonCreerEleve_Click(object sender, EventArgs e)
+        private void ButtonCreerEleve_Click(object sender, EventArgs e)
         {
             var jsonVar = new DAL.JsonDataManager<Eleve>();
             List<Eleve> eleves = jsonVar.DataList;
@@ -145,14 +145,14 @@ namespace SchoolApp
 
         }
 
-        private void buttonAddEleveClasse_Click(object sender, EventArgs e)
+        private void ButtonAddEleveClasse_Click(object sender, EventArgs e)
         {
             eleve = comboBoxEleveClasse.SelectedItem as Eleve;
             eleve.classe = comboBoxClasseEleve.SelectedItem as Classe;
             MessageBox.Show(eleve.classe + "");
         }
 
-        private void buttonRemoveEleveClasse_Click(object sender, EventArgs e)
+        private void ButtonRemoveEleveClasse_Click(object sender, EventArgs e)
         {
             eleve = comboBoxEleveClasse.SelectedItem as Eleve;
             eleve.classe = null;

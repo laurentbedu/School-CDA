@@ -76,7 +76,7 @@
             this.buttonCreerProf.TabIndex = 0;
             this.buttonCreerProf.Text = "Créer prof";
             this.buttonCreerProf.UseVisualStyleBackColor = true;
-            this.buttonCreerProf.Click += new System.EventHandler(this.buttonCreerProf_Click);
+            this.buttonCreerProf.Click += new System.EventHandler(this.ButtonCreerProf_Click);
             // 
             // buttonCreerEleve
             // 
@@ -86,7 +86,7 @@
             this.buttonCreerEleve.TabIndex = 1;
             this.buttonCreerEleve.Text = "Creer eleve";
             this.buttonCreerEleve.UseVisualStyleBackColor = true;
-            this.buttonCreerEleve.Click += new System.EventHandler(this.buttonCreerEleve_Click);
+            this.buttonCreerEleve.Click += new System.EventHandler(this.ButtonCreerEleve_Click);
             // 
             // textBoxNomEleve
             // 
@@ -199,7 +199,7 @@
             this.buttonCreerClasse.TabIndex = 22;
             this.buttonCreerClasse.Text = "Créer classe";
             this.buttonCreerClasse.UseVisualStyleBackColor = true;
-            this.buttonCreerClasse.Click += new System.EventHandler(this.buttonCreerClasse_Click);
+            this.buttonCreerClasse.Click += new System.EventHandler(this.ButtonCreerClasse_Click);
             // 
             // textBoxNomClasse
             // 
@@ -216,7 +216,7 @@
             this.buttonRemoveProfClasse.TabIndex = 29;
             this.buttonRemoveProfClasse.Text = "Enlever prof";
             this.buttonRemoveProfClasse.UseVisualStyleBackColor = true;
-            this.buttonRemoveProfClasse.Click += new System.EventHandler(this.buttonRemoveProf_Click);
+            this.buttonRemoveProfClasse.Click += new System.EventHandler(this.ButtonRemoveProf_Click);
             // 
             // buttonAddProfClasse
             // 
@@ -226,7 +226,7 @@
             this.buttonAddProfClasse.TabIndex = 28;
             this.buttonAddProfClasse.Text = "Ajouter prof";
             this.buttonAddProfClasse.UseVisualStyleBackColor = true;
-            this.buttonAddProfClasse.Click += new System.EventHandler(this.buttonAddProf_Click);
+            this.buttonAddProfClasse.Click += new System.EventHandler(this.ButtonAddProf_Click);
             // 
             // label4
             // 
@@ -383,7 +383,7 @@
             this.buttonRemoveEleveClasse.TabIndex = 49;
             this.buttonRemoveEleveClasse.Text = "Enlever eleve";
             this.buttonRemoveEleveClasse.UseVisualStyleBackColor = true;
-            this.buttonRemoveEleveClasse.Click += new System.EventHandler(this.buttonRemoveEleveClasse_Click);
+            this.buttonRemoveEleveClasse.Click += new System.EventHandler(this.ButtonRemoveEleveClasse_Click);
             // 
             // buttonAddEleveClasse
             // 
@@ -393,7 +393,7 @@
             this.buttonAddEleveClasse.TabIndex = 48;
             this.buttonAddEleveClasse.Text = "Ajouter eleve";
             this.buttonAddEleveClasse.UseVisualStyleBackColor = true;
-            this.buttonAddEleveClasse.Click += new System.EventHandler(this.buttonAddEleveClasse_Click);
+            this.buttonAddEleveClasse.Click += new System.EventHandler(this.ButtonAddEleveClasse_Click);
             // 
             // checkBoxAdminProf
             // 
