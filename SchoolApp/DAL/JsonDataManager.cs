@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using SchoolApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,13 +25,10 @@ namespace SchoolApp.DAL
                 return dataList;
             }
         }
-
-      
-
         private List<T> LoadJsonData()
         {
            
-            string fileName = "C:\\Users\\antoi\\Source\\Repos\\School-CDA\\sp1\\SchoolApp\\Json\\Niveau.json";
+            string fileName = "C:\\Users\\afpa\\source\\repos\\School-CDA\\SchoolApp\\Json\\Niveau.json";
                 string jsonString = File.ReadAllText(fileName);
                 List<T> data = JsonSerializer.Deserialize<List<T>>(jsonString)!;
 

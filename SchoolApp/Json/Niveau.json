@@ -1,5 +1,5 @@
-[{"Label_Niveau":"CP"},
-{"Label_Niveau":"CE1"},
-{"Label_Niveau":"CE2"},
-{"Label_Niveau":"CM1"},
-{"Label_Niveau":"CM2"}]
+[{"Id":1,"Label_Niveau":"ut"},
+{"Id":2,"Label_Niveau":"morbi"},
+{"Id":3,"Label_Niveau":"varius"},
+{"Id":4,"Label_Niveau":"donec"},
+{"Id":5,"Label_Niveau":"tristique"}]
