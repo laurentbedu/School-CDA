@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace SchoolApp.Models
 {
-    internal class Model
+    internal abstract class Model
     {
-        public string id { get; set; }
-        public string label { get; set; }
+        public string Id { get; set; }
+        public string Label { get; set; }
 
     }
 }

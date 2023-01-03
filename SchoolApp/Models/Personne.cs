@@ -7,15 +7,15 @@ using SchoolApp.Tools;
 
 namespace SchoolApp.Models
 {
-    internal class Personne : Model
+    internal abstract class Personne : Model
     {
-        public string nom { get; set; }
-        public string prenom { get; set; }
+        public string Nom { get; set; }
+        public string Prenom { get; set; }
 
         public Personne() 
         {
 
-            id = IdGenerator.Create(this);
+            Id = IdGenerator.Create(this);
 
         }
 

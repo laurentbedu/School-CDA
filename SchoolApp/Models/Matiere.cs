@@ -24,7 +24,7 @@ namespace SchoolApp.Models
         }
             public override string ToString()
         {
-            return label;
+            return Label;
         }
     
     }

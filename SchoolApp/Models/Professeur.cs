@@ -11,9 +11,9 @@ namespace SchoolApp.Models
 
         public Classe? Classe { get; set; }
         public string? Login { get; set; }
-        public string? password { get; set; }
+        public string? Password { get; set; }
 
-        public bool isAdmin { get; set; }
+        public bool IsAdmin { get; set; }
 
 
         public void AddClasse(Classe classe)
@@ -41,7 +41,7 @@ namespace SchoolApp.Models
 
         public override string ToString()
         {
-            return nom + " " + prenom;
+            return Nom + " " + Prenom;
         }
     }
 }

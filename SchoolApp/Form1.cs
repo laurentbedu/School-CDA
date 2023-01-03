@@ -14,37 +14,45 @@ namespace SchoolApp
         {
             InitializeComponent();
 
-            niveauList = new List<Niveau>
+            NiveauList = new List<Niveau>
             {
-                new Niveau() { label = "CP", id = "niveau_1" },
-                new Niveau() { label = "CE1", id = "niveau_2" },
-                new Niveau() { label = "CE2", id = "niveau_3" },
-                new Niveau() { label = "CM1", id = "niveau_4" },
-                new Niveau() { label = "CM2", id = "niveau_5" }
+                new Niveau() { Label = "CP", Id = "niveau_1" },
+                new Niveau() { Label = "CE1", Id = "niveau_2" },
+                new Niveau() { Label = "CE2", Id = "niveau_3" },
+                new Niveau() { Label = "CM1", Id = "niveau_4" },
+                new Niveau() { Label = "CM2", Id = "niveau_5" }
             };
 
-            matiereList = new List<Matiere> {
-                new Matiere() {label = "Mathématique", id = "matiere_1"},
-                new Matiere() {label = "Français", id = "matiere_2"},
-                new Matiere() {label = "Anglais", id = "matiere_3"},
-                new Matiere() {label = "Sciences", id = "matiere_4"},
-                new Matiere() {label = "Histoire", id = "matiere_5"},
-                new Matiere() {label = "Géographie", id = "matiere_6"}
+            
+            /*
+             * string fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\Niveau.json";
+            string jsonString = JsonSerializer.Serialize(NiveauList);
+            File.WriteAllText(fileName, jsonString);
+            */
+            
+
+            MatiereList = new List<Matiere> {
+                new Matiere() {Label = "Mathématique", Id = "matiere_1"},
+                new Matiere() {Label = "Français", Id = "matiere_2"},
+                new Matiere() {Label = "Anglais", Id = "matiere_3"},
+                new Matiere() {Label = "Sciences", Id = "matiere_4"},
+                new Matiere() {Label = "Histoire", Id = "matiere_5"},
+                new Matiere() {Label = "Géographie", Id = "matiere_6"}
             };
 
             /*
             string fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\Matiere.json";
-            string jsonString = JsonSerializer.Serialize(matiereList);
+            string jsonString = JsonSerializer.Serialize(MatiereList);
             File.WriteAllText(fileName, jsonString);
             */
 
-            niveauList.Find(e => e.label == "CP")?.AddMatiere(matiereList[0], matiereList[1]);
-            niveauList.Find(e => e.label == "CE1")?.AddMatiere(matiereList[0], matiereList[1], matiereList[2]);
-            niveauList.Find(e => e.label == "CE2")?.AddMatiere(matiereList[0], matiereList[1], matiereList[2], matiereList[3]);
-            niveauList.Find(e => e.label == "CM1")?.AddMatiere(matiereList[0], matiereList[1], matiereList[2], matiereList[3], matiereList[4]);
-            niveauList.Find(e => e.label == "CM2")?.AddMatiere(matiereList.ToArray());
+            NiveauList.Find(e => e.Label == "CP")?.AddMatiere(MatiereList[0], MatiereList[1]);
+            NiveauList.Find(e => e.Label == "CE1")?.AddMatiere(MatiereList[0], MatiereList[1], MatiereList[2]);
+            NiveauList.Find(e => e.Label == "CE2")?.AddMatiere(MatiereList[0], MatiereList[1], MatiereList[2], MatiereList[3]);
+            NiveauList.Find(e => e.Label == "CM1")?.AddMatiere(MatiereList[0], MatiereList[1], MatiereList[2], MatiereList[3], MatiereList[4]);
+            NiveauList.Find(e => e.Label == "CM2")?.AddMatiere(MatiereList.ToArray());
 
-            comboBoxNiveauClasse.DataSource = niveauList;
+            comboBoxNiveauClasse.DataSource = NiveauList;
 
             var jsonClasse = new DAL.JsonDataManager<Classe>();
             List<Classe> classes = jsonClasse.DataList;
@@ -53,17 +61,17 @@ namespace SchoolApp
 
             var jsonProf = new DAL.JsonDataManager<Professeur>();
             List <Professeur> professeurs = jsonProf.DataList;
-            professeurs = professeurs.OrderBy(e => e.nom).ToList();
+            professeurs = professeurs.OrderBy(e => e.Nom).ToList();
             comboBoxProfClasse.DataSource = professeurs;
 
             var jsonEleve = new DAL.JsonDataManager<Eleve>();
             List<Eleve> eleves = jsonEleve.DataList;
-            eleves = eleves.OrderBy(e => e.nom).ToList();
+            eleves = eleves.OrderBy(e => e.Nom).ToList();
             comboBoxEleveClasse.DataSource = eleves;
         }
 
-        readonly List<Niveau> niveauList = new();
-        readonly List<Matiere> matiereList = new();
+        readonly List<Niveau> NiveauList = new();
+        readonly List<Matiere> MatiereList = new();
 
         //List<Professeur> professeurs = new List<Professeur>();
         Professeur professeur;
@@ -72,20 +80,20 @@ namespace SchoolApp
             var jsonVar = new DAL.JsonDataManager<Professeur>();
             List<Professeur> professeurs = jsonVar.DataList;
             string lastname = textBoxPrenomProf.Text;
-            string _prenom = char.ToUpper(lastname[0]) + lastname.Substring(1).ToLower();
+            string _prenom = char.ToUpper(lastname[0]) + lastname[1..].ToLower();
 
             professeur = new Professeur()
             {
-                nom = textBoxNomProf.Text.ToUpper(),
-                prenom = _prenom,
+                Nom = textBoxNomProf.Text.ToUpper(),
+                Prenom = _prenom,
                 Login = textBoxLoginProf.Text,
-                password = textBoxPasswordProf.Text,
-                isAdmin = checkBoxAdminProf.Checked
+                Password = textBoxPasswordProf.Text,
+                IsAdmin = checkBoxAdminProf.Checked
             };
 
             professeurs.Add(professeur);
             MessageBox.Show(professeur+"");
-            professeurs = professeurs.OrderBy(e => e.nom).ToList();
+            professeurs = professeurs.OrderBy(e => e.Nom).ToList();
             comboBoxProfClasse.DataSource = professeurs;
             jsonVar.WriteJsonData(professeurs);
         }
@@ -98,7 +106,7 @@ namespace SchoolApp
             List<Classe> classes = jsonVar.DataList;
             classe = new Classe()
             {
-                label = comboBoxNiveauClasse.SelectedItem + " - " + textBoxNomClasse.Text,
+                Label = comboBoxNiveauClasse.SelectedItem + " - " + textBoxNomClasse.Text,
                 //niveau = comboBoxNiveauClasse.SelectedItem as Niveau
             };
             classes.Add(classe);
@@ -129,17 +137,17 @@ namespace SchoolApp
             var jsonVar = new DAL.JsonDataManager<Eleve>();
             List<Eleve> eleves = jsonVar.DataList;
             string lastname = textBoxPrenomEleve.Text;
-            string _prenom = char.ToUpper(lastname[0]) + lastname.Substring(1).ToLower();
+            string _prenom = char.ToUpper(lastname[0]) + lastname[1..].ToLower();
             eleve = new Eleve()
             {
-                nom = textBoxNomEleve.Text.ToUpper(),
-                prenom = _prenom,
+                Nom = textBoxNomEleve.Text.ToUpper(),
+                Prenom = _prenom,
                 anciennete = Convert.ToInt32(numericUpDownAncienneteEleve.Value),
                 classe = comboBoxClasseEleve.SelectedItem as Classe
             };
             eleves.Add(eleve);
             MessageBox.Show(eleve + "");
-            eleves = eleves.OrderBy(e => e.nom).ToList();
+            eleves = eleves.OrderBy(e => e.Nom).ToList();
             comboBoxEleveClasse.DataSource = eleves;
             jsonVar.WriteJsonData(eleves);
 
