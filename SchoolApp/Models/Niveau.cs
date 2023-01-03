@@ -1,9 +1,13 @@
 ﻿using SchoolApp.Attributes;
+using System.Runtime.Serialization;
 
 namespace SchoolApp.Models
 {
+    [DataContract]
     internal class Niveau : Model
     {
+
+        [DataMember(Name = "label")]
         public string Label { get; set; }
 
         [IsNotInToString]

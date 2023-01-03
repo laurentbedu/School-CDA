@@ -1,3 +1,4 @@
+using SchoolApp.Extensions;
 using SchoolApp.Models;
 
 namespace SchoolApp
@@ -147,8 +148,19 @@ namespace SchoolApp
 
         private void button14_Click(object sender, EventArgs e)
         {
-            var jsonDataManager = new DAL.JsonDataManager<Models.Niveau>();
-            List<Niveau> list = jsonDataManager.DataList;
+            var jsonDataManager = new DAL.JsonDataManager<Models.Matiere>();
+            List<Matiere> list = jsonDataManager.DataList;
+            list.Add(new Matiere { Label = "MatSup" });
+            list.Serialize();
+            list.Add(new Matiere { Label = "Toto" });
+            jsonDataManager.SaveJsonData();
+
+            var jdm = new DAL.JsonDataManager<Models.Niveau>();
+            List<Niveau> nivList = jdm.DataList;
+            nivList.Add(new Niveau { Label = "Mat.1" });
+            nivList.Serialize();
+
+            //jsonDataManager.DataList = jsonDataManager.DataList;
         }
     }
 }

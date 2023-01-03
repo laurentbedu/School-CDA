@@ -1,13 +1,17 @@
 ﻿using SchoolApp.Attributes;
+using System.Runtime.Serialization;
 
 namespace SchoolApp.Models
 {
+    [DataContract]
     internal abstract class Model
     {
         public Model()
         {
             Id = Tools.IdGenerator.Create(this);
         }
+
+        [DataMember(Name = "id")]
         public string Id { get; private set; }
 
         public override string ToString()

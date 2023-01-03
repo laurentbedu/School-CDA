@@ -1,9 +1,12 @@
 ﻿using SchoolApp.Attributes;
+using System.Runtime.Serialization;
 
 namespace SchoolApp.Models
 {
-    internal class Matiere
+    [DataContract]
+    internal class Matiere : Model
     {
+        [DataMember(Name = "label")]
         public string Label { get; set; }
 
         [IsNotInToString]
