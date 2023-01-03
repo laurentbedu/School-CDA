@@ -28,6 +28,7 @@ namespace SchoolApp.DAL
         {
             string str = typeof(T).Name;
             string fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\" + str + ".json";
+
             string jsonString = File.ReadAllText(fileName);
             List<T> newList = JsonSerializer.Deserialize<List<T>>(jsonString)!;
 

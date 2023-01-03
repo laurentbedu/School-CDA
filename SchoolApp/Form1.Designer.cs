@@ -43,8 +43,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.buttonCreerClasse = new System.Windows.Forms.Button();
             this.textBoxNomClasse = new System.Windows.Forms.TextBox();
-            this.buttonAddClasseProf = new System.Windows.Forms.Button();
-            this.buttonRemoveClasseProf = new System.Windows.Forms.Button();
             this.buttonRemoveProfClasse = new System.Windows.Forms.Button();
             this.buttonAddProfClasse = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,8 +53,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.comboBoxClasseProf = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.buttonRemoveClasseEleve = new System.Windows.Forms.Button();
-            this.buttonAddClasseEleve = new System.Windows.Forms.Button();
             this.comboBoxNiveauClasse = new System.Windows.Forms.ComboBox();
             this.comboBoxProfClasse = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -74,7 +70,7 @@
             // 
             // buttonCreerProf
             // 
-            this.buttonCreerProf.Location = new System.Drawing.Point(364, 206);
+            this.buttonCreerProf.Location = new System.Drawing.Point(364, 196);
             this.buttonCreerProf.Name = "buttonCreerProf";
             this.buttonCreerProf.Size = new System.Drawing.Size(132, 27);
             this.buttonCreerProf.TabIndex = 0;
@@ -127,7 +123,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 191);
+            this.label3.Location = new System.Drawing.Point(17, 291);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 20);
             this.label3.TabIndex = 7;
@@ -159,7 +155,7 @@
             // comboBoxClasseEleve
             // 
             this.comboBoxClasseEleve.FormattingEnabled = true;
-            this.comboBoxClasseEleve.Location = new System.Drawing.Point(80, 183);
+            this.comboBoxClasseEleve.Location = new System.Drawing.Point(84, 283);
             this.comboBoxClasseEleve.Name = "comboBoxClasseEleve";
             this.comboBoxClasseEleve.Size = new System.Drawing.Size(148, 28);
             this.comboBoxClasseEleve.TabIndex = 17;
@@ -212,29 +208,9 @@
             this.textBoxNomClasse.Size = new System.Drawing.Size(125, 27);
             this.textBoxNomClasse.TabIndex = 24;
             // 
-            // buttonAddClasseProf
-            // 
-            this.buttonAddClasseProf.Location = new System.Drawing.Point(325, 294);
-            this.buttonAddClasseProf.Name = "buttonAddClasseProf";
-            this.buttonAddClasseProf.Size = new System.Drawing.Size(82, 60);
-            this.buttonAddClasseProf.TabIndex = 26;
-            this.buttonAddClasseProf.Text = "Ajouter classe";
-            this.buttonAddClasseProf.UseVisualStyleBackColor = true;
-            this.buttonAddClasseProf.Click += new System.EventHandler(this.buttonAddClasse_Click);
-            // 
-            // buttonRemoveClasseProf
-            // 
-            this.buttonRemoveClasseProf.Location = new System.Drawing.Point(413, 294);
-            this.buttonRemoveClasseProf.Name = "buttonRemoveClasseProf";
-            this.buttonRemoveClasseProf.Size = new System.Drawing.Size(82, 60);
-            this.buttonRemoveClasseProf.TabIndex = 27;
-            this.buttonRemoveClasseProf.Text = "Enlever classe";
-            this.buttonRemoveClasseProf.UseVisualStyleBackColor = true;
-            this.buttonRemoveClasseProf.Click += new System.EventHandler(this.buttonRemoveClasse_Click);
-            // 
             // buttonRemoveProfClasse
             // 
-            this.buttonRemoveProfClasse.Location = new System.Drawing.Point(704, 176);
+            this.buttonRemoveProfClasse.Location = new System.Drawing.Point(436, 352);
             this.buttonRemoveProfClasse.Name = "buttonRemoveProfClasse";
             this.buttonRemoveProfClasse.Size = new System.Drawing.Size(77, 55);
             this.buttonRemoveProfClasse.TabIndex = 29;
@@ -244,7 +220,7 @@
             // 
             // buttonAddProfClasse
             // 
-            this.buttonAddProfClasse.Location = new System.Drawing.Point(621, 176);
+            this.buttonAddProfClasse.Location = new System.Drawing.Point(353, 352);
             this.buttonAddProfClasse.Name = "buttonAddProfClasse";
             this.buttonAddProfClasse.Size = new System.Drawing.Size(77, 57);
             this.buttonAddProfClasse.TabIndex = 28;
@@ -309,7 +285,7 @@
             // comboBoxClasseProf
             // 
             this.comboBoxClasseProf.FormattingEnabled = true;
-            this.comboBoxClasseProf.Location = new System.Drawing.Point(348, 253);
+            this.comboBoxClasseProf.Location = new System.Drawing.Point(364, 283);
             this.comboBoxClasseProf.Name = "comboBoxClasseProf";
             this.comboBoxClasseProf.Size = new System.Drawing.Size(148, 28);
             this.comboBoxClasseProf.TabIndex = 38;
@@ -317,29 +293,11 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(285, 261);
+            this.label12.Location = new System.Drawing.Point(302, 291);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(57, 20);
             this.label12.TabIndex = 37;
             this.label12.Text = "Classe :";
-            // 
-            // buttonRemoveClasseEleve
-            // 
-            this.buttonRemoveClasseEleve.Location = new System.Drawing.Point(146, 226);
-            this.buttonRemoveClasseEleve.Name = "buttonRemoveClasseEleve";
-            this.buttonRemoveClasseEleve.Size = new System.Drawing.Size(82, 60);
-            this.buttonRemoveClasseEleve.TabIndex = 40;
-            this.buttonRemoveClasseEleve.Text = "Enlever classe";
-            this.buttonRemoveClasseEleve.UseVisualStyleBackColor = true;
-            // 
-            // buttonAddClasseEleve
-            // 
-            this.buttonAddClasseEleve.Location = new System.Drawing.Point(58, 226);
-            this.buttonAddClasseEleve.Name = "buttonAddClasseEleve";
-            this.buttonAddClasseEleve.Size = new System.Drawing.Size(82, 60);
-            this.buttonAddClasseEleve.TabIndex = 39;
-            this.buttonAddClasseEleve.Text = "Ajouter classe";
-            this.buttonAddClasseEleve.UseVisualStyleBackColor = true;
             // 
             // comboBoxNiveauClasse
             // 
@@ -352,7 +310,7 @@
             // comboBoxProfClasse
             // 
             this.comboBoxProfClasse.FormattingEnabled = true;
-            this.comboBoxProfClasse.Location = new System.Drawing.Point(632, 142);
+            this.comboBoxProfClasse.Location = new System.Drawing.Point(364, 318);
             this.comboBoxProfClasse.Name = "comboBoxProfClasse";
             this.comboBoxProfClasse.Size = new System.Drawing.Size(148, 28);
             this.comboBoxProfClasse.TabIndex = 43;
@@ -360,7 +318,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(583, 150);
+            this.label13.Location = new System.Drawing.Point(316, 326);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(43, 20);
             this.label13.TabIndex = 42;
@@ -403,7 +361,7 @@
             // comboBoxEleveClasse
             // 
             this.comboBoxEleveClasse.FormattingEnabled = true;
-            this.comboBoxEleveClasse.Location = new System.Drawing.Point(632, 247);
+            this.comboBoxEleveClasse.Location = new System.Drawing.Point(83, 318);
             this.comboBoxEleveClasse.Name = "comboBoxEleveClasse";
             this.comboBoxEleveClasse.Size = new System.Drawing.Size(148, 28);
             this.comboBoxEleveClasse.TabIndex = 51;
@@ -411,7 +369,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(583, 255);
+            this.label16.Location = new System.Drawing.Point(23, 326);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(51, 20);
             this.label16.TabIndex = 50;
@@ -419,16 +377,17 @@
             // 
             // buttonRemoveEleveClasse
             // 
-            this.buttonRemoveEleveClasse.Location = new System.Drawing.Point(704, 281);
+            this.buttonRemoveEleveClasse.Location = new System.Drawing.Point(155, 352);
             this.buttonRemoveEleveClasse.Name = "buttonRemoveEleveClasse";
             this.buttonRemoveEleveClasse.Size = new System.Drawing.Size(77, 55);
             this.buttonRemoveEleveClasse.TabIndex = 49;
             this.buttonRemoveEleveClasse.Text = "Enlever eleve";
             this.buttonRemoveEleveClasse.UseVisualStyleBackColor = true;
+            this.buttonRemoveEleveClasse.Click += new System.EventHandler(this.buttonRemoveEleveClasse_Click);
             // 
             // buttonAddEleveClasse
             // 
-            this.buttonAddEleveClasse.Location = new System.Drawing.Point(621, 281);
+            this.buttonAddEleveClasse.Location = new System.Drawing.Point(72, 352);
             this.buttonAddEleveClasse.Name = "buttonAddEleveClasse";
             this.buttonAddEleveClasse.Size = new System.Drawing.Size(77, 57);
             this.buttonAddEleveClasse.TabIndex = 48;
@@ -439,7 +398,7 @@
             // checkBoxAdminProf
             // 
             this.checkBoxAdminProf.AutoSize = true;
-            this.checkBoxAdminProf.Location = new System.Drawing.Point(364, 166);
+            this.checkBoxAdminProf.Location = new System.Drawing.Point(367, 166);
             this.checkBoxAdminProf.Name = "checkBoxAdminProf";
             this.checkBoxAdminProf.Size = new System.Drawing.Size(129, 24);
             this.checkBoxAdminProf.TabIndex = 54;
@@ -463,8 +422,6 @@
             this.Controls.Add(this.comboBoxProfClasse);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.comboBoxNiveauClasse);
-            this.Controls.Add(this.buttonRemoveClasseEleve);
-            this.Controls.Add(this.buttonAddClasseEleve);
             this.Controls.Add(this.comboBoxClasseProf);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -475,8 +432,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonRemoveProfClasse);
             this.Controls.Add(this.buttonAddProfClasse);
-            this.Controls.Add(this.buttonRemoveClasseProf);
-            this.Controls.Add(this.buttonAddClasseProf);
             this.Controls.Add(this.textBoxNomClasse);
             this.Controls.Add(this.buttonCreerClasse);
             this.Controls.Add(this.label8);
@@ -517,8 +472,6 @@
         private Label label8;
         private Button buttonCreerClasse;
         private TextBox textBoxNomClasse;
-        private Button buttonAddClasseProf;
-        private Button buttonRemoveClasseProf;
         private Button buttonRemoveProfClasse;
         private Button buttonAddProfClasse;
         private Label label4;
@@ -529,8 +482,6 @@
         private Label label11;
         private ComboBox comboBoxClasseProf;
         private Label label12;
-        private Button buttonRemoveClasseEleve;
-        private Button buttonAddClasseEleve;
         private ComboBox comboBoxNiveauClasse;
         private ComboBox comboBoxProfClasse;
         private Label label13;
