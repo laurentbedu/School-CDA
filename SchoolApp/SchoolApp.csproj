@@ -12,4 +12,9 @@
     <Folder Include="ViewModel\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="bin\Debug\net7.0-windows\Json\Matiere.json" />
+    <None Include="bin\Debug\net7.0-windows\Json\Niveau.json" />
+  </ItemGroup>
+
 </Project>

@@ -17,23 +17,20 @@ namespace SchoolApp.DAL
                 }
                 return dataList;
             }
-            //set
-            //{
-            //    dataList = value;
-            //    SaveJsonData();
 
-            //}
         }
 
         private List<T> LoadJsonData()
         {
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(List<T>));
+            //string fileP = "Json/" + typeof(T).Name + ".json";
             string filePath = $"Json/{typeof(T).Name}.json";
             using (FileStream stream = new FileStream(filePath, FileMode.OpenOrCreate))
             {
-                return (List<T>)serializer.ReadObject(stream);
+                var result = serializer.ReadObject(stream);
+                return (List<T>)result;
             }
-            //return new List<T>();
+            return new List<T>();
         }
 
         public bool SaveJsonData()
@@ -43,8 +40,9 @@ namespace SchoolApp.DAL
             using (FileStream stream = new FileStream(filePath, FileMode.OpenOrCreate))
             {
                 serializer.WriteObject(stream, dataList);
+                return true;
             }
-            return true;
+            return false;
         }
     }
 }
