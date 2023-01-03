@@ -10,8 +10,8 @@ namespace SchoolApp.Models
     {
 
         public Classe? Classe { get; set; }
-        public string login { get; set; }
-        public string password { get; set; }
+        public string? Login { get; set; }
+        public string? password { get; set; }
 
         public bool isAdmin { get; set; }
 

@@ -9,7 +9,7 @@ namespace SchoolApp.Models
 {
     internal class Niveau : Model
     {
-        public List<Matiere> matiereList { get; private set; } = new List<Matiere>();
+        public List<Matiere> matiereList { get; private set; } = new();
 
         public void AddMatiere(params Matiere[] matieres)
         {

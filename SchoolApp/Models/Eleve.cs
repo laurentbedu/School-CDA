@@ -11,7 +11,7 @@ namespace SchoolApp.Models
         public int anciennete { get; set; }
         public Classe classe { get; set; }
 
-        List<Note> notes = new List<Note>();
+        List<Note> notes = new();
 
        
 

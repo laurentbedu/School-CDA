@@ -59,9 +59,9 @@ namespace SchoolApp
             List<Eleve> eleves = jsonEleve.DataList;
             comboBoxEleveClasse.DataSource = eleves.ToArray();
         }
-        
-        List<Niveau> niveauList = new List<Niveau>();
-        List<Matiere> matiereList = new List<Matiere>();
+
+        readonly List<Niveau> niveauList = new();
+        readonly List<Matiere> matiereList = new();
 
         //List<Professeur> professeurs = new List<Professeur>();
         Professeur professeur;
@@ -73,19 +73,10 @@ namespace SchoolApp
             {
                 nom = textBoxNomProf.Text,
                 prenom = textBoxPrenomProf.Text,
-                login = textBoxLoginProf.Text,
-                password = textBoxPasswordProf.Text
+                Login = textBoxLoginProf.Text,
+                password = textBoxPasswordProf.Text,
+                isAdmin = checkBoxAdminProf.Checked
             };
-            professeur.isAdmin = checkBoxAdminProf.Checked ? true : false;
-            // équivalent à :
-            /*if (checkBoxAdminProf.Checked)
-            {
-                professeur.isAdmin = true;
-            }
-            else
-            {
-                professeur.isAdmin = false;
-            }*/
 
             professeurs.Add(professeur);
             MessageBox.Show(professeur+"");
