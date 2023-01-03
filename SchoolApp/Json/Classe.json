@@ -1,1 +1,38 @@
-[{"niveau":null,"Professeur":null,"id":"28709778-f5a2-4675-848b-ea3dd6322208","label":"CP - Voltaire"},{"niveau":null,"Professeur":null,"id":"cac0d17b-0c9d-45fb-9ae8-ac5beaf27330","label":"CE1 - Rousseau"},{"niveau":null,"Professeur":null,"id":"bbd0dc91-c624-4009-ad0c-b502f938a80d","label":"CM1 - Vivien"},{"niveau":null,"Professeur":null,"id":"00a93aa2-e555-4845-bca7-2801edd86ce5","label":"CM2 - Julien"},{"niveau":null,"Professeur":null,"id":"ce2cacd7-f10b-4205-8e23-099065a94619","label":"CE2 - Cesar"}]
+[
+  {
+    "niveau": null,
+    "Professeur": null,
+    "id": "28709778-f5a2-4675-848b-ea3dd6322208",
+    "label": "CP - Voltaire"
+  },
+  {
+    "niveau": null,
+    "Professeur": null,
+    "id": "cac0d17b-0c9d-45fb-9ae8-ac5beaf27330",
+    "label": "CE1 - Rousseau"
+  },
+  {
+    "niveau": null,
+    "Professeur": null,
+    "id": "27856ce8-dda3-44f1-b45c-24a6615f7ee9",
+    "label": "CE1 - Delibe"
+  },
+  {
+    "niveau": null,
+    "Professeur": null,
+    "id": "ce2cacd7-f10b-4205-8e23-099065a94619",
+    "label": "CE2 - Cesar"
+  },
+  {
+    "niveau": null,
+    "Professeur": null,
+    "id": "bbd0dc91-c624-4009-ad0c-b502f938a80d",
+    "label": "CM1 - Vivien"
+  },
+  {
+    "niveau": null,
+    "Professeur": null,
+    "id": "00a93aa2-e555-4845-bca7-2801edd86ce5",
+    "label": "CM2 - Julien"
+  }
+]

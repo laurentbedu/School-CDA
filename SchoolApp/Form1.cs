@@ -48,16 +48,18 @@ namespace SchoolApp
 
             var jsonClasse = new DAL.JsonDataManager<Classe>();
             List<Classe> classes = jsonClasse.DataList;
-            comboBoxClasseProf.DataSource = classes.ToArray();
-            comboBoxClasseEleve.DataSource = classes.ToArray();
+            comboBoxClasseProf.DataSource = classes;
+            comboBoxClasseEleve.DataSource = classes;
 
             var jsonProf = new DAL.JsonDataManager<Professeur>();
             List <Professeur> professeurs = jsonProf.DataList;
-            comboBoxProfClasse.DataSource = professeurs.ToArray();
+            professeurs = professeurs.OrderBy(e => e.nom).ToList();
+            comboBoxProfClasse.DataSource = professeurs;
 
             var jsonEleve = new DAL.JsonDataManager<Eleve>();
             List<Eleve> eleves = jsonEleve.DataList;
-            comboBoxEleveClasse.DataSource = eleves.ToArray();
+            eleves = eleves.OrderBy(e => e.nom).ToList();
+            comboBoxEleveClasse.DataSource = eleves;
         }
 
         readonly List<Niveau> niveauList = new();
@@ -69,10 +71,13 @@ namespace SchoolApp
         {
             var jsonVar = new DAL.JsonDataManager<Professeur>();
             List<Professeur> professeurs = jsonVar.DataList;
+            string lastname = textBoxPrenomProf.Text;
+            string _prenom = char.ToUpper(lastname[0]) + lastname.Substring(1).ToLower();
+
             professeur = new Professeur()
             {
-                nom = textBoxNomProf.Text,
-                prenom = textBoxPrenomProf.Text,
+                nom = textBoxNomProf.Text.ToUpper(),
+                prenom = _prenom,
                 Login = textBoxLoginProf.Text,
                 password = textBoxPasswordProf.Text,
                 isAdmin = checkBoxAdminProf.Checked
@@ -80,7 +85,8 @@ namespace SchoolApp
 
             professeurs.Add(professeur);
             MessageBox.Show(professeur+"");
-            comboBoxProfClasse.DataSource = professeurs.ToArray();
+            professeurs = professeurs.OrderBy(e => e.nom).ToList();
+            comboBoxProfClasse.DataSource = professeurs;
             jsonVar.WriteJsonData(professeurs);
         }
 
@@ -97,8 +103,8 @@ namespace SchoolApp
             };
             classes.Add(classe);
             MessageBox.Show(classe+"");
-            comboBoxClasseProf.DataSource = classes.ToArray();
-            comboBoxClasseEleve.DataSource = classes.ToArray();
+            comboBoxClasseProf.DataSource = classes;
+            comboBoxClasseEleve.DataSource = classes;
             jsonVar.WriteJsonData(classes);
         }
 
@@ -122,16 +128,19 @@ namespace SchoolApp
         {
             var jsonVar = new DAL.JsonDataManager<Eleve>();
             List<Eleve> eleves = jsonVar.DataList;
+            string lastname = textBoxPrenomEleve.Text;
+            string _prenom = char.ToUpper(lastname[0]) + lastname.Substring(1).ToLower();
             eleve = new Eleve()
             {
-                nom = textBoxNomEleve.Text,
-                prenom = textBoxPrenomEleve.Text,
+                nom = textBoxNomEleve.Text.ToUpper(),
+                prenom = _prenom,
                 anciennete = Convert.ToInt32(numericUpDownAncienneteEleve.Value),
                 classe = comboBoxClasseEleve.SelectedItem as Classe
             };
             eleves.Add(eleve);
             MessageBox.Show(eleve + "");
-            comboBoxEleveClasse.DataSource = eleves.ToArray();
+            eleves = eleves.OrderBy(e => e.nom).ToList();
+            comboBoxEleveClasse.DataSource = eleves;
             jsonVar.WriteJsonData(eleves);
 
         }
