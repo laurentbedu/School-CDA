@@ -154,6 +154,7 @@ namespace SchoolApp
             list.Add(new Matiere { Label = "MatSup" });
             list.Serialize();
             list.Add(new Matiere { Label = "Toto" });
+
             jsonDataManager.SaveJsonData();
 
             var jdm = new DAL.JsonDataManager<Models.Niveau>();
