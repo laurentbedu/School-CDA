@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SchoolApp.Models
 {
-    internal class Personne
+    internal class Personne : Model
     {
 
         public Personne()

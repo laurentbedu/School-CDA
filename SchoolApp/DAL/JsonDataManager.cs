@@ -6,14 +6,16 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Runtime.Serialization.Json;
+
 
 namespace SchoolApp.DAL
 {
-    internal class JsonDataManager<Niveau> where Niveau : Models.Model
+    internal class JsonDataManager<T> where T : Model
     {
 
-
-        public List<Niveau> dataList
+        private List<T> dataList;
+        public List<T> DataList
 
         {
             get
@@ -25,23 +27,37 @@ namespace SchoolApp.DAL
                 }
                 return dataList;
             }
-            set
-            { }
+           
         }
 
-        private List<Niveau> LoadJsonData()
+        public List<T> LoadJsonData()
         {
-            String jsonString = File.ReadAllText("C:\\Users\\xseb\\source\\repos\\School - CDA\\SchoolApp\\MOCK_DATA.json");
+            DataContractJsonSerializer serializer= new DataContractJsonSerializer(typeof(T));
+            string filePath = $"Json/{typeof(T).Name}.json";
+            using (FileStream stream = new FileStream(filePath, FileMode.OpenOrCreate)) 
+            { 
+            var result = serializer.ReadObject(stream);
 
-            dataList = JsonSerializer.Deserialize<List<Niveau>>(jsonString);
+                return (List<T>)result;
+            }
 
-            return new List<Niveau>();
+             }
+
+        public bool SaveJsonData()
+        {
+           DataContractJsonSerializer serializer= new DataContractJsonSerializer(typeof(T));
+            string filePath = $"Json/{typeof(T).Name}.json";
+            using (FileStream stream = new FileStream(filePath, FileMode.OpenOrCreate))
+            {
+                serializer.WriteObject(stream, dataList);
+                return true;
+            }
+            
         }
-
-       //public void Serialize(Eleve eleve)
-       // {
-       //     string jsonString = JsonSerializer.Serialize(eleve);
-       //     File.WriteAllText("C:\\Users\\xseb\\source\\repos\\School - CDA\\SchoolApp\\dataEleve.json", jsonString);
-       // }
+        //public void Serialize(Eleve eleve)
+        // {
+        //     string jsonString = JsonSerializer.Serialize(eleve);
+        //     File.WriteAllText("C:\\Users\\xseb\\source\\repos\\School - CDA\\SchoolApp\\dataEleve.json", jsonString);
+        // }
     }
 }
