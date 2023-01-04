@@ -72,6 +72,7 @@ namespace SchoolApp.Models
             if (professeur_id != professeur.Id)
             {
                 professeur_id = professeur.Id;
+
                 if (professeur.Classe != this)
                 {
                     professeur.AddClasse(this);

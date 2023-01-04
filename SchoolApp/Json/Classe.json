@@ -1,1 +1,20 @@
-[{"Label":"Voltaire","niveau_id":"niveau_1","professeur_id":null,"Id":"995bf453-9ef1-4bc9-862d-73c18bd21136"},{"Label":"Rousseau","niveau_id":"niveau_1","professeur_id":null,"Id":"6313f181-2b1e-473a-b3e4-ec093525d6c0"},{"Label":"Cesar","niveau_id":"niveau_2","professeur_id":null,"Id":"da018921-c36c-4abd-8f1d-b38a051ba9f7"}]
+[
+  {
+    "Label": "Voltaire",
+    "niveau_id": "niveau_1",
+    "professeur_id": null,
+    "Id": "995bf453-9ef1-4bc9-862d-73c18bd21136"
+  },
+  {
+    "Label": "Rousseau",
+    "niveau_id": "niveau_1",
+    "professeur_id": null,
+    "Id": "6313f181-2b1e-473a-b3e4-ec093525d6c0"
+  },
+  {
+    "Label": "Cesar",
+    "niveau_id": "niveau_2",
+    "professeur_id": null,
+    "Id": "da018921-c36c-4abd-8f1d-b38a051ba9f7"
+  }
+]
