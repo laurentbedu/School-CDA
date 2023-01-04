@@ -13,24 +13,7 @@ namespace SchoolApp
         public Form1()
         {
             InitializeComponent();
-
-            NiveauList = new List<Niveau>
-            {
-                new Niveau() { Label = "CP", Id = "niveau_1" },
-                new Niveau() { Label = "CE1", Id = "niveau_2" },
-                new Niveau() { Label = "CE2", Id = "niveau_3" },
-                new Niveau() { Label = "CM1", Id = "niveau_4" },
-                new Niveau() { Label = "CM2", Id = "niveau_5" }
-            };
-
-            
-            /*
-            string fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\Niveau.json";
-            string jsonString = JsonSerializer.Serialize(NiveauList);
-            File.WriteAllText(fileName, jsonString);
-            */
-            
-
+         
             MatiereList = new List<Matiere> {
                 new Matiere() {Label = "Mathématique", Id = "matiere_1"},
                 new Matiere() {Label = "Français", Id = "matiere_2"},
@@ -52,7 +35,10 @@ namespace SchoolApp
             NiveauList.Find(e => e.Label == "CM1")?.AddMatiere(MatiereList[0], MatiereList[1], MatiereList[2], MatiereList[3], MatiereList[4]);
             NiveauList.Find(e => e.Label == "CM2")?.AddMatiere(MatiereList.ToArray());
 
-            comboBoxNiveauClasse.DataSource = NiveauList;
+            var jsonNiveau = new DAL.JsonDataManager<Niveau>();
+            List<Niveau> niveaux = jsonNiveau.DataList;
+            niveaux = niveaux.OrderBy(e => e.Id).ToList();
+            comboBoxNiveauClasse.DataSource = niveaux;
 
             var jsonClasse = new DAL.JsonDataManager<Classe>();
             List<Classe> classes = jsonClasse.DataList;

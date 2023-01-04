@@ -1,1 +1,22 @@
-[{"matiereList":[],"Id":"niveau_1","Label":"CP"},{"matiereList":[],"Id":"niveau_2","Label":"CE1"},{"matiereList":[],"Id":"niveau_3","Label":"CE2"},{"matiereList":[],"Id":"niveau_4","Label":"CM1"},{"matiereList":[],"Id":"niveau_5","Label":"CM2"}]
+[
+  {
+    "Id": "niveau_1",
+    "Label": "CP"
+  },
+  {
+    "Id": "niveau_2",
+    "Label": "CE1"
+  },
+  {
+    "Id": "niveau_3",
+    "Label": "CE2"
+  },
+  {
+    "Id": "niveau_4",
+    "Label": "CM1"
+  },
+  {
+    "Id": "niveau_5",
+    "Label": "CM2"
+  }
+]
