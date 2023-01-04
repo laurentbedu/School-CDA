@@ -1,6 +1,7 @@
 ﻿using SchoolApp.Attributes;
 using SchoolApp.DAL;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace SchoolApp.Models
 {
@@ -38,7 +39,10 @@ namespace SchoolApp.Models
         }
 
         [DataMember(Name = "niveau_id")]
+        //[JsonPropertyName("niveau_id")]
         private string? niveauId;
+
+        [JsonIgnore]
         public Niveau? Niveau
         {
             get
