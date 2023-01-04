@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="JSON\" />
     <Folder Include="NewFolder\" />
   </ItemGroup>
 

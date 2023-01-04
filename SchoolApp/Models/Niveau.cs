@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace SchoolApp.Models
@@ -10,7 +11,7 @@ namespace SchoolApp.Models
     internal class Niveau : Model
     {
         // Propriétés :
-        public string Nom { get; set; }
+        [JsonPropertyName("niveau_id")] public string Label { get; set; }
         [NePasIntegrerDansToString] public List<Matiere> ListeMatieres { get; private set; } = new List<Matiere>();
 
         // Methodes :
@@ -40,7 +41,7 @@ namespace SchoolApp.Models
         // ToString Override
         public override string ToString()
         {
-            return Nom;
+            return Label;
         }
     }
 }

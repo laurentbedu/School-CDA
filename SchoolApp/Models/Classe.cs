@@ -1,19 +1,30 @@
 ﻿using SchoolApp.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
+using SchoolApp.DAL;
+using System.Text.Json.Serialization;
+
 
 namespace SchoolApp.Models
 {
     internal class Classe : Model
     {
-        public string? Nom { get; set; }
-        public Niveau? Niveau { get; set; }
+        [JsonPropertyName("label")] public string? Label { get; set; }
+        [JsonPropertyName("niveau_id")] public string? niveauId { get; set; }
+        [JsonIgnore][NePasIntegrerDansToString] public Professeur? Professeur { get; private set; }
+        [JsonIgnore][NePasIntegrerDansToString] public List<Eleve> EleveList { get; } = new List<Eleve>();
+        [JsonIgnore] public Niveau? Niveau
+        {
+            get
+            {
+                var jdm = new JsonDataManager<Niveau>();
+                return jdm.GetById(niveauId);
+            }
+            set
+            {
+                niveauId = value?.Id;
+            }
+        }
 
-        [NePasIntegrerDansToString] public Professeur? Professeur { get; private set; }
+        ///////////////////////////////////////////////////////////
         public void ajouterProfesseur(Professeur professeur)
         {
             if (Professeur != professeur)
@@ -37,7 +48,6 @@ namespace SchoolApp.Models
             }
         }
 
-        [NePasIntegrerDansToString] public List<Eleve> EleveList { get; } = new List<Eleve>();
         public void AddEleve(Eleve eleve)
         {
             if (!EleveList.Contains(eleve))

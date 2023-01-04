@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Text.Json;
+
 
 namespace SchoolApp.DAL
 {
@@ -45,6 +39,17 @@ namespace SchoolApp.DAL
 
             //MessageBox.Show(jsonString);            
             File.WriteAllText(cheminFichierExporter, jsonString);
+        }
+
+        public List<T> GetWhere(Predicate<T>? filter = null)
+        {
+            return filter != null ? DataList.FindAll(filter) : DataList;
+        }
+
+        public T? GetById(string? id)
+        {
+            List<T> list = GetWhere(item => item.Id == id);
+            return id != null && list.Count == 1 ? GetWhere(item => item.Id == id).First() : null;
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace SchoolApp.Models
@@ -11,11 +12,10 @@ namespace SchoolApp.Models
     {
         // Attributs :
         private Classe? classe;
-
-        // Propriétés :
-        public int? Anciennete { get; set; }
-        public List<Note> listeNotes { get; } = new List<Note>();
-        public Classe? Classe 
+        // Propriétés :    
+        [JsonPropertyName("anciennete")] public int? Anciennete { get; set; }
+        [JsonIgnore] public List<Note> listeNotes { get; } = new List<Note>();
+        [JsonIgnore] public Classe? Classe 
         { 
             get => classe; 
             set 

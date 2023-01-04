@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace SchoolApp.Models
@@ -10,14 +11,14 @@ namespace SchoolApp.Models
     internal class Model
     {
         // Propriétés :
-        public string Id { get; private set; }
+        [JsonPropertyName("id")] public string Id { get; private set; }
 
         // Constructeurs :
         public Model()
         {
             Id = Tools.IdGenerator.generateId(this);
         }
-
+        
         // Override ToString :
         public override string ToString()
         {

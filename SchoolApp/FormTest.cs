@@ -149,11 +149,13 @@ namespace SchoolApp
                 Eleve eleve = listeEleves[i];
                 eleve.Classe = listeClasses[rnd.Next(listeClasses.Count)];
             }
+            /*
             for (int i = 0; i < listeEleves.Count; i++)
             {
                 Eleve eleve = listeEleves[i];
                 eleve.ajouterNote(listeNotes[i]);
             }
+            */
             for ( int i = 0; i < listeNotes.Count; i++)
             {
                 Note note = listeNotes[i];
@@ -164,6 +166,36 @@ namespace SchoolApp
         {
             var jsonDataManager2 = new DAL.JsonDataManager<Models.Professeur>();
             jsonDataManager2.SaveJSonData(listeProfesseurs);
+            var jsonDataManager3 = new DAL.JsonDataManager<Models.Eleve>();
+            jsonDataManager3.SaveJSonData(listeEleves);
         }//Btn save
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            /*
+            List<Classe> listeClasse = new List<Classe>();
+            Classe classe1 = new Classe { Label = "Alpha" };
+            listeClasse.Add(classe1);
+            //Classe classe2 = new Classe { Label = "Beta" };
+            //listeClasse.Add(classe2);
+
+            var jdm = new DAL.JsonDataManager<Models.Classe>();
+            jdm.SaveJSonData(listeClasse);
+            bool stop = false;
+            */
+            var jsonDataManager = new DAL.JsonDataManager<Models.Classe>();
+            List<Classe> list = jsonDataManager.DataList;
+            var classeList = jsonDataManager.GetWhere();
+            //list.Add(new Classe { Label = "test3" });
+            //list.Add(new Classe { Label = "test4" });
+            //list.Serialize();
+            Classe cl1 = jsonDataManager.GetById("3e1283a6-60c2-49ab-b625-bd01924d0681");
+            Niveau niv = cl1.Niveau;
+
+            var niveauDataManager = new DAL.JsonDataManager<Models.Niveau>();
+            var nivCE1 = niveauDataManager.GetById("2");
+            cl1.Niveau = null;
+            jsonDataManager.SaveJSonData(list);
+        }
     }
 }

@@ -1,20 +1,52 @@
-[{"Id_Classe":1,"Nom":"Chornobay","Id_Niveau":5,"Id_Professeur":8},
-{"Id_Classe":2,"Nom":"Tianshan","Id_Niveau":4,"Id_Professeur":18},
-{"Id_Classe":3,"Nom":"Xicheng","Id_Niveau":4,"Id_Professeur":14},
-{"Id_Classe":4,"Nom":"Sapphaya","Id_Niveau":2,"Id_Professeur":16},
-{"Id_Classe":5,"Nom":"Palmital","Id_Niveau":3,"Id_Professeur":2},
-{"Id_Classe":6,"Nom":"Malaruhatan","Id_Niveau":1,"Id_Professeur":1},
-{"Id_Classe":7,"Nom":"Phitsanulok","Id_Niveau":2,"Id_Professeur":14},
-{"Id_Classe":8,"Nom":"Ayrihuanca","Id_Niveau":2,"Id_Professeur":11},
-{"Id_Classe":9,"Nom":"Obita","Id_Niveau":2,"Id_Professeur":17},
-{"Id_Classe":10,"Nom":"Wang Chan","Id_Niveau":3,"Id_Professeur":14},
-{"Id_Classe":11,"Nom":"Harrisburg","Id_Niveau":3,"Id_Professeur":19},
-{"Id_Classe":12,"Nom":"Atipuluhan","Id_Niveau":3,"Id_Professeur":1},
-{"Id_Classe":13,"Nom":"Dailekh","Id_Niveau":4,"Id_Professeur":9},
-{"Id_Classe":14,"Nom":"Todorovo","Id_Niveau":1,"Id_Professeur":7},
-{"Id_Classe":15,"Nom":"Stockholm","Id_Niveau":4,"Id_Professeur":10},
-{"Id_Classe":16,"Nom":"Yonghe","Id_Niveau":1,"Id_Professeur":16},
-{"Id_Classe":17,"Nom":"Sanhe","Id_Niveau":4,"Id_Professeur":13},
-{"Id_Classe":18,"Nom":"Týn nad Vltavou","Id_Niveau":5,"Id_Professeur":17},
-{"Id_Classe":19,"Nom":"Paris 11","Id_Niveau":3,"Id_Professeur":6},
-{"Id_Classe":20,"Nom":"Newala Kisimani","Id_Niveau":2,"Id_Professeur":2}]
+[
+  {
+    "id": "1",
+    "label": "Hukvaldy",
+    "niveau_id": "1"
+  },
+  {
+    "id": "2",
+    "label": "Shuangxing",
+    "niveau_id": "1"
+  },
+  {
+    "id": "3",
+    "label": "Svetogorsk",
+    "niveau_id": "2"
+  },
+  {
+    "id": "4",
+    "label": "Kaum Kaler",
+    "niveau_id": "2"
+  },
+  {
+    "id": "5",
+    "label": "Bogo",
+    "niveau_id": "3"
+  },
+  {
+    "id": "6",
+    "label": "Ruzayevka",
+    "niveau_id": "3"
+  },
+  {
+    "id": "7",
+    "label": "København",
+    "niveau_id": "4"
+  },
+  {
+    "id": "8",
+    "label": "Rathangan",
+    "niveau_id": "4"
+  },
+  {
+    "id": "9",
+    "label": "Dongzha",
+    "niveau_id": "5"
+  },
+  {
+    "id": "10",
+    "label": "Trebisht-Muçinë",
+    "niveau_id": "5"
+  }
+]

@@ -1,14 +1,6 @@
-﻿using SchoolApp.DAL;
-using SchoolApp.Models;
-using System;
-using System.Collections.Generic;
+﻿using SchoolApp.Models;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace SchoolApp.UserControls
 {
@@ -157,7 +149,7 @@ namespace SchoolApp.UserControls
         private void buttonAjouterClasse_Click(object sender, EventArgs e)
         {
             string nom              = textBoxNomClasse.Text;
-            Classe nouvelleClasse   = new Classe() { Nom = nom };
+            Classe nouvelleClasse   = new Classe() { Label = nom };
             listeClasses.Add(nouvelleClasse);
             resetBoxes();
             majTabClasse();

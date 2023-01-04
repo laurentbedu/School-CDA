@@ -1,5 +1,22 @@
-[{"Id_Niveau":1,"Nom":"CP"},
-{"Id_Niveau":2,"Nom":"CE1"},
-{"Id_Niveau":3,"Nom":"CE2"},
-{"Id_Niveau":4,"Nom":"CM1"},
-{"Id_Niveau":5,"Nom":"CM2"}]
+[
+  {
+    "id": "1",
+    "label": "CP"
+  },
+  {
+    "id": "2",
+    "label": "CE1"
+  },
+  {
+    "id": "3",
+    "label": "CE2"
+  },
+  {
+    "id": "4",
+    "label": "CM1"
+  },
+  {
+    "id": "5",
+    "label": "CM2"
+  }
+]
