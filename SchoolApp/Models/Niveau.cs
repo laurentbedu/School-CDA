@@ -12,6 +12,8 @@ namespace SchoolApp
     {
         public string Label { get; set; }
 
+
+
         [IsNotInToString]
         public List<Matiere> MatiereList { get; private set; } = new List<Matiere>();
 
