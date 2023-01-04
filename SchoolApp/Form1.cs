@@ -1,4 +1,4 @@
-using SchoolApp.Extensions;
+using SchoolApp.DAL;
 using SchoolApp.Models;
 
 namespace SchoolApp
@@ -149,20 +149,38 @@ namespace SchoolApp
         private void button14_Click(object sender, EventArgs e)
         {
 
-            var jsonDataManager = new DAL.JsonDataManager<Models.Matiere>();
-            List<Matiere> list = jsonDataManager.DataList;
-            list.Add(new Matiere { Label = "MatSup" });
-            list.Serialize();
-            list.Add(new Matiere { Label = "Toto" });
+            var jsonDataManager = new DAL.JsonDataManager<Models.Classe>();
+            List<Classe> list = jsonDataManager.DataList;
+            //list.Add(new Classe { Label = "test3" });
+            //list.Add(new Classe { Label = "test4" });
+            //list.Serialize();
+            Classe cl1 = jsonDataManager.GetById("1");
+            Niveau niv = cl1.Niveau;
 
+            var niveauDataManager = new DAL.JsonDataManager<Models.Niveau>();
+            var nivCE1 = niveauDataManager.GetById("2");
+            cl1.Niveau = nivCE1;
             jsonDataManager.SaveJsonData();
 
-            var jdm = new DAL.JsonDataManager<Models.Niveau>();
-            List<Niveau> nivList = jdm.DataList;
-            nivList.Add(new Niveau { Label = "Mat.1" });
-            nivList.Serialize();
+            //list.Add(new Matiere { Label = "MatSup" });
+            //list.Serialize();
+            //list.Add(new Matiere { Label = "Toto" });
+
+            //jsonDataManager.SaveJsonData();
+
+            //var jdm = new DAL.JsonDataManager<Models.Niveau>();
+            //List<Niveau> nivList = jdm.DataList;
+            //nivList.Add(new Niveau { Label = "Mat.1" });
+            //nivList.Serialize();
 
             //jsonDataManager.DataList = jsonDataManager.DataList;
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            var eleveJdM = new JsonDataManager<Eleve>();
+            var eleveListe = eleveJdM.GetWhere();
+            var eleve37 = eleveJdM.GetById("37");
         }
     }
 }

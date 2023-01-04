@@ -9,6 +9,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Json\Classe.json" />
+    <None Remove="Json\eleve.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\net7.0-windows\Json\Classe.json" />
+    <Content Include="bin\Debug\net7.0-windows\Json\Eleve.json" />
+    <Content Include="Json\Classe.json" />
+    <Content Include="Json\Eleve.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="ViewModel\" />
   </ItemGroup>
 

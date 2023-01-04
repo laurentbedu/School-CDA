@@ -1,9 +1,13 @@
 ﻿using SchoolApp.Attributes;
+using SchoolApp.DAL;
+using System.Runtime.Serialization;
 
 namespace SchoolApp.Models
 {
+    [DataContract]
     internal class Classe : Model
     {
+        [DataMember(Name = "label")]
         public string? Label { get; set; }
 
         [IsNotInToString]
@@ -33,7 +37,20 @@ namespace SchoolApp.Models
             }
         }
 
-        public Niveau? Niveau { get; set; }
+        [DataMember(Name = "niveau_id")]
+        private string? niveauId;
+        public Niveau? Niveau
+        {
+            get
+            {
+                var jdm = new JsonDataManager<Niveau>();
+                return jdm.GetById(niveauId);
+            }
+            set
+            {
+                niveauId = value?.Id;
+            }
+        }
 
         [IsNotInToString]
         public List<Eleve> EleveList { get; } = new List<Eleve>();

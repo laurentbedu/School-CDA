@@ -4,7 +4,7 @@ namespace SchoolApp.DAL
 {
     internal class JsonDataManager<T> where T : Models.Model
     {
-        private List<T> dataList;
+        private List<T>? dataList;
 
         public List<T> DataList
         {
@@ -23,14 +23,12 @@ namespace SchoolApp.DAL
         private List<T> LoadJsonData()
         {
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(List<T>));
-            //string fileP = "Json/" + typeof(T).Name + ".json";
             string filePath = $"Json/{typeof(T).Name}.json";
             using (FileStream stream = new FileStream(filePath, FileMode.OpenOrCreate))
             {
                 var result = serializer.ReadObject(stream);
                 return (List<T>)result;
             }
-            return new List<T>();
         }
 
         public bool SaveJsonData()
@@ -42,7 +40,19 @@ namespace SchoolApp.DAL
                 serializer.WriteObject(stream, dataList);
                 return true;
             }
-            return false;
         }
+
+        public List<T> GetWhere(Predicate<T>? filter = null)
+        {
+            return filter != null ? DataList.FindAll(filter) : DataList;
+        }
+
+        public T? GetById(string? id)
+        {
+            List<T> list = GetWhere(item => item.Id == id);
+            return id != null && list.Count == 1 ? GetWhere(item => item.Id == id).First() : null;
+        }
+
+
     }
 }

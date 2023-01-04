@@ -1,9 +1,12 @@
 ﻿using SchoolApp.Attributes;
+using System.Runtime.Serialization;
 
 namespace SchoolApp.Models
 {
+    [DataContract]
     internal class Eleve : Personne
     {
+        [DataMember(Name = "anciennete")]
         public int Anciennete { get; set; }
 
         private Classe? classe;
