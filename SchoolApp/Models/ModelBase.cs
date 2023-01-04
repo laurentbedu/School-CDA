@@ -24,7 +24,7 @@ namespace SchoolApp.Models
             GetType().GetProperties()
                 .Where(p => !Attribute.IsDefined(p, typeof(IsNotInToStringAttribute)))
                 .ToList()
-                .ForEach(p => desc += p.Name + ":" + GetType().GetProperty(p.Name)?.GetValue(this) + "\r\n");
+                .ForEach(p => desc += p.Name + " : " + GetType().GetProperty(p.Name)?.GetValue(this) + "\r\n");
 
             return desc;
         }

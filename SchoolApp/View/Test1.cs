@@ -46,6 +46,8 @@ namespace SchoolApp.View
 
         List<Matiere> matiereList;
 
+        
+
         Professeur? professeur;
         private void button1_Click(object sender, EventArgs e)
         {
@@ -57,6 +59,15 @@ namespace SchoolApp.View
                 Password = textBoxPassProf.Text,
             };
             MessageBox.Show(professeur + "");
+
+            var jsonDataManager = new DAL.JsonDataManager<Models.Professeur>();
+            List<Professeur> list = jsonDataManager.DataList;
+                        
+            list.Add(professeur);
+                        
+            jsonDataManager.SaveJsonData(list);
+
+
         }
 
         Eleve? eleve;
@@ -68,6 +79,14 @@ namespace SchoolApp.View
                 Prenom = textBoxPrenomEl.Text,
             };
             MessageBox.Show(eleve + "");
+
+            var jsonDataManager = new DAL.JsonDataManager<Models.Eleve>();
+            List<Eleve> list = jsonDataManager.DataList;
+
+            list.Add(eleve);
+
+            jsonDataManager.SaveJsonData(list);
+
         }        
         
 
@@ -95,9 +114,10 @@ namespace SchoolApp.View
 
             foreach (var item in list) { listBox1.Items.Add(item.ToString()); }
 
+            
 
-
-            /*List<Niveau> ListeNiveau = new List<Niveau>();
+            
+            List<Niveau> ListeNiveau = new List<Niveau>();
             Niveau niveau1 = new Niveau() { Label_Niveau = "CP"};
             Niveau niveau2 = new Niveau() { Label_Niveau = "CE1" };
             Niveau niveau3 = new Niveau() { Label_Niveau = "CE2" };
@@ -108,10 +128,31 @@ namespace SchoolApp.View
 
             string jsonString = JsonSerializer.Serialize<List<Niveau>>(ListeNiveau)!;
             MessageBox.Show(jsonString);
-            */
-
+            
+            
 
             bool stop = true;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var jsonDataManager = new DAL.JsonDataManager<Models.Professeur>();
+            List<Professeur> list = jsonDataManager.DataList;
+
+            foreach (var item in list) { listBox2.Items.Add(item.ToString()); }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var jsonDataManager = new DAL.JsonDataManager<Models.Eleve>();
+            List<Eleve> list = jsonDataManager.DataList;
+
+            foreach (var item in list) { listBox2.Items.Add(item.ToString()); }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            listBox2.SelectedItem
         }
     }
 }

@@ -6,12 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace SchoolApp.DAL
 {
     internal class JsonDataManager<T> where T : Models.ModelBase
     {
-        private List<T> dataList;
+        private List<T>? dataList;
 
         public List<T> DataList
         {
@@ -25,15 +26,24 @@ namespace SchoolApp.DAL
                 return dataList;
             }
         }
+
         private List<T> LoadJsonData()
         {
-           
-            string fileName = "C:\\Users\\afpa\\source\\repos\\School-CDA\\SchoolApp\\Json\\Niveau.json";
+            string typeName = typeof(T).Name;
+            string fileName = "Json\\" + typeName +".json";
                 string jsonString = File.ReadAllText(fileName);
                 List<T> data = JsonSerializer.Deserialize<List<T>>(jsonString)!;
-
-                return data;
-            
+                return data;            
         }
+
+        public void SaveJsonData (List<T> dataList) 
+        {
+            string typeName = typeof(T).Name;
+            string fileName = "Json\\" + typeName + ".json";
+            string jsonString = JsonSerializer.Serialize(DataList);
+            File.WriteAllText(fileName, jsonString);
+              
+        }
+        
     }
 }
