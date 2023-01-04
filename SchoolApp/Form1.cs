@@ -25,7 +25,7 @@ namespace SchoolApp
 
             
             /*
-             * string fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\Niveau.json";
+            string fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\Niveau.json";
             string jsonString = JsonSerializer.Serialize(NiveauList);
             File.WriteAllText(fileName, jsonString);
             */
@@ -73,12 +73,12 @@ namespace SchoolApp
         readonly List<Niveau> NiveauList = new();
         readonly List<Matiere> MatiereList = new();
 
-        //List<Professeur> professeurs = new List<Professeur>();
+        List<Professeur> professeurs = new List<Professeur>();
         Professeur professeur;
         private void ButtonCreerProf_Click(object sender, EventArgs e)
         {
             var jsonVar = new DAL.JsonDataManager<Professeur>();
-            List<Professeur> professeurs = jsonVar.DataList;
+            professeurs = jsonVar.DataList;
             string lastname = textBoxPrenomProf.Text;
             string _prenom = char.ToUpper(lastname[0]) + lastname[1..].ToLower();
 
@@ -95,32 +95,36 @@ namespace SchoolApp
             MessageBox.Show(professeur+"");
             professeurs = professeurs.OrderBy(e => e.Nom).ToList();
             comboBoxProfClasse.DataSource = professeurs;
-            jsonVar.WriteJsonData(professeurs);
+            jsonVar.SaveJsonData(professeurs);
         }
 
-        //List<Classe> classes = new List<Classe>();
+        List<Classe> classes = new List<Classe>();
         Classe classe;
         private void ButtonCreerClasse_Click(object sender, EventArgs e)
         {
             var jsonVar = new DAL.JsonDataManager<Classe>();
-            List<Classe> classes = jsonVar.DataList;
+            classes = jsonVar.DataList;
             classe = new Classe()
             {
-                Label = comboBoxNiveauClasse.SelectedItem + " - " + textBoxNomClasse.Text,
-                //niveau = comboBoxNiveauClasse.SelectedItem as Niveau
+                Label = textBoxNomClasse.Text,
+                Niveau = comboBoxNiveauClasse.SelectedItem as Niveau
             };
             classes.Add(classe);
             MessageBox.Show(classe+"");
             comboBoxClasseProf.DataSource = classes;
             comboBoxClasseEleve.DataSource = classes;
-            jsonVar.WriteJsonData(classes);
+            jsonVar.SaveJsonData(classes);
         }
 
         private void ButtonAddProf_Click(object sender, EventArgs e)
         {
+            var jsonVar = new DAL.JsonDataManager<Classe>();
+            classes = jsonVar.DataList;
             classe = comboBoxClasseProf.SelectedItem as Classe;
             classe.AddProfesseur(comboBoxProfClasse.SelectedItem as Professeur);
             MessageBox.Show(classe.Professeur+"");
+            jsonVar.SaveJsonData(classes);
+
         }
 
         private void ButtonRemoveProf_Click(object sender, EventArgs e)
@@ -130,41 +134,39 @@ namespace SchoolApp
             MessageBox.Show(classe.Professeur + "");
         }
 
-       //List<Eleve> eleves = new List<Eleve>();
+       List<Eleve> eleves = new List<Eleve>();
         Eleve eleve;
         private void ButtonCreerEleve_Click(object sender, EventArgs e)
         {
             var jsonVar = new DAL.JsonDataManager<Eleve>();
-            List<Eleve> eleves = jsonVar.DataList;
+            eleves = jsonVar.DataList;
             string lastname = textBoxPrenomEleve.Text;
             string _prenom = char.ToUpper(lastname[0]) + lastname[1..].ToLower();
             eleve = new Eleve()
             {
                 Nom = textBoxNomEleve.Text.ToUpper(),
                 Prenom = _prenom,
-                anciennete = Convert.ToInt32(numericUpDownAncienneteEleve.Value),
-                classe = comboBoxClasseEleve.SelectedItem as Classe
+                anciennete = Convert.ToInt32(numericUpDownAncienneteEleve.Value)
             };
             eleves.Add(eleve);
             MessageBox.Show(eleve + "");
             eleves = eleves.OrderBy(e => e.Nom).ToList();
             comboBoxEleveClasse.DataSource = eleves;
-            jsonVar.WriteJsonData(eleves);
-
+            jsonVar.SaveJsonData(eleves);
         }
 
         private void ButtonAddEleveClasse_Click(object sender, EventArgs e)
         {
             eleve = comboBoxEleveClasse.SelectedItem as Eleve;
-            eleve.classe = comboBoxClasseEleve.SelectedItem as Classe;
-            MessageBox.Show(eleve.classe + "");
+            eleve.Classe = comboBoxClasseEleve.SelectedItem as Classe;
+            MessageBox.Show(eleve.Classe + "");
         }
 
         private void ButtonRemoveEleveClasse_Click(object sender, EventArgs e)
         {
             eleve = comboBoxEleveClasse.SelectedItem as Eleve;
-            eleve.classe = null;
-            MessageBox.Show(eleve.classe + "");
+            eleve.Classe = null;
+            MessageBox.Show(eleve.Classe + "");
 
         }
     }

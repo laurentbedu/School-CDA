@@ -1,28 +1,77 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using SchoolApp.DAL;
 using SchoolApp.Tools;
 
 namespace SchoolApp.Models
 {
     internal class Classe :Model
     {
-        public Niveau Niveau { get; set; }
-        public Professeur? Professeur { get; set; }
-
+        public string Label { get; set; }
 
         public Classe()
         {
             Id = IdGenerator.Create(this);
         }
 
+        public string? niveau_id { get; set; }
+        [JsonIgnore]
+        public Niveau? Niveau
+        {
+            get
+            {
+                var jdm = new JsonDataManager<Niveau>();
+                return jdm.GetById(niveau_id);
+            }
+            set
+            {
+                // equivalent à :
+                //if (value.Id != null)
+                //{
+                //    niveauId = value.Id;
+                //}
+                //else
+                //{
+                //    niveauId = null;
+                //}
+                niveau_id = value?.Id;
+            }
+        }
+
+        public string? professeur_id { get; set; }
+        [JsonIgnore]
+        public Professeur? Professeur
+        { 
+            get
+            {
+                var jdm = new JsonDataManager<Professeur>();
+                return jdm.GetById(professeur_id);
+            }
+            set
+            {
+                // equivalent à :
+                //if (value.Id != null)
+                //{
+                //    niveauId = value.Id;
+                //}
+                //else
+                //{
+                //    niveauId = null;
+                //}
+                professeur_id = value?.Id;
+            }
+        }
+
         public void AddProfesseur(Professeur professeur)
         {
-            if (Professeur != professeur)
+            if (professeur_id != professeur.Id)
             {
-                Professeur = professeur;
+                professeur_id = professeur.Id;
                 if (professeur.Classe != this)
                 {
                     professeur.AddClasse(this);
@@ -32,20 +81,20 @@ namespace SchoolApp.Models
 
         public void RemoveProfesseur(Professeur professeur)
         {
-            if (Professeur == professeur)
+            if (professeur_id == professeur.Id)
             {
-                Professeur = null;
+                professeur_id = null;
                 if (professeur.Classe == this)
                 {
                     professeur.RemoveClasse(this);
                 }
             }
         }
-        
 
         public override string ToString()
         {
-            return Niveau + " - "+ Label;
+            var jdm = new JsonDataManager<Niveau>(); 
+            return jdm.GetById(niveau_id) + " - "+ Label;
         }
     }
 }

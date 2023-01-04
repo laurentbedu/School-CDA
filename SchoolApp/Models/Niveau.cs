@@ -2,13 +2,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace SchoolApp.Models
 {
     internal class Niveau : Model
     {
+        public string Label { get; set; }
+        [JsonIgnore]
         public List<Matiere> matiereList { get; private set; } = new();
 
         public void AddMatiere(params Matiere[] matieres)
