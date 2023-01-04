@@ -12,6 +12,7 @@ namespace SchoolApp.Models
     {
         // Attributs :
         private Classe? classe;
+        [JsonPropertyName("classe_id")] public string? classeId { get; set; }
         // Propriétés :    
         [JsonPropertyName("anciennete")] public int? Anciennete { get; set; }
         [JsonIgnore] public List<Note> listeNotes { get; } = new List<Note>();

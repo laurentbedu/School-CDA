@@ -12,7 +12,7 @@ namespace SchoolApp.Models
     {
         // Propriétés :
         [JsonPropertyName("niveau_id")] public string Label { get; set; }
-        [NePasIntegrerDansToString] public List<Matiere> ListeMatieres { get; private set; } = new List<Matiere>();
+        [NePasIntegrerDansToString][JsonIgnore] public List<Matiere> ListeMatieres { get; private set; } = new List<Matiere>();
 
         // Methodes :
         public void ajouterMatiere(params Matiere[] matieres)

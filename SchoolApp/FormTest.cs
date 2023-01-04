@@ -172,30 +172,61 @@ namespace SchoolApp
 
         private void button10_Click(object sender, EventArgs e)
         {
-            /*
-            List<Classe> listeClasse = new List<Classe>();
+            var jdmClasse = new DAL.JsonDataManager<Models.Classe>();
+            var jdmNiveau = new DAL.JsonDataManager<Models.Niveau>();
+
             Classe classe1 = new Classe { Label = "Alpha" };
-            listeClasse.Add(classe1);
-            //Classe classe2 = new Classe { Label = "Beta" };
-            //listeClasse.Add(classe2);
+            Classe classe2 = new Classe { Label = "Beta" };
+            List<Classe> classes= new List<Classe>();    
+            
 
-            var jdm = new DAL.JsonDataManager<Models.Classe>();
-            jdm.SaveJSonData(listeClasse);
-            bool stop = false;
-            */
-            var jsonDataManager = new DAL.JsonDataManager<Models.Classe>();
-            List<Classe> list = jsonDataManager.DataList;
-            var classeList = jsonDataManager.GetWhere();
-            //list.Add(new Classe { Label = "test3" });
-            //list.Add(new Classe { Label = "test4" });
-            //list.Serialize();
-            Classe cl1 = jsonDataManager.GetById("3e1283a6-60c2-49ab-b625-bd01924d0681");
-            Niveau niv = cl1.Niveau;
+            Niveau niveau1 = new Niveau { Label = "CP" , Id = "1" };
+            Niveau niveau2 = new Niveau { Label = "CE1", Id = "2" };
+            List<Niveau> niveaux = new List<Niveau>();
 
-            var niveauDataManager = new DAL.JsonDataManager<Models.Niveau>();
-            var nivCE1 = niveauDataManager.GetById("2");
-            cl1.Niveau = null;
-            jsonDataManager.SaveJSonData(list);
+            classe1.Niveau= niveau1;
+
+            var TestList = jdmClasse.GetWhere();
+            var TestId = jdmNiveau.GetById("3");
+
+            classes.Add(classe1);
+            classes.Add(classe2);
+            niveaux.Add(niveau1);
+            niveaux.Add(niveau2);
+            //Serialisation :
+
+            jdmClasse.SaveJSonData(classes);
+            jdmNiveau.SaveJSonData(niveaux);
+
+            bool stop = true;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            var jdmEleve = new DAL.JsonDataManager<Models.Eleve>();
+
+            Eleve eleve1 = new Eleve { Nom = "nomEleve1", Prenom = "prenomEleve1", Anciennete = 0 };
+            Eleve eleve2 = new Eleve { Nom = "nomEleve2", Prenom = "prenomEleve2", Anciennete = 1 };
+            Eleve eleve3 = new Eleve { Nom = "nomEleve3", Prenom = "prenomEleve3", Anciennete = 5 };
+            Eleve eleve4 = new Eleve { Nom = "nomEleve4", Prenom = "prenomEleve4", Anciennete = 3 };
+            Eleve eleve5 = new Eleve { Nom = "nomEleve5", Prenom = "prenomEleve5", Anciennete = 2 };
+            List<Eleve> eleves = new List<Eleve>();
+            eleves.Add(eleve1);            eleves.Add(eleve2);
+            eleves.Add(eleve3);            eleves.Add(eleve4);
+            eleves.Add(eleve5);
+
+            jdmEleve.SaveJSonData(eleves);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            var eleveJdM = new JsonDataManager<Eleve>();
+            var eleveListe = eleveJdM.GetWhere();
+            var elevePrenomEleve2 = eleveJdM.GetWhere(item => item.Prenom == "prenomEleve2");
+            var eleve37 = eleveJdM.GetById("d0a24f76-4b75-4967-9b0b-87d5757131ca");
+            var eleve201 = eleveJdM.GetById("111");
+
+            bool stop = true;
         }
     }
 }

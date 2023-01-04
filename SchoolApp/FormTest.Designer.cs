@@ -45,6 +45,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panelGestion.SuspendLayout();
@@ -241,19 +243,41 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(383, 628);
+            this.button10.Location = new System.Drawing.Point(352, 627);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.Size = new System.Drawing.Size(183, 23);
             this.button10.TabIndex = 12;
-            this.button10.Text = "button10";
+            this.button10.Text = "button10 create niveau/classe";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(541, 627);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(184, 23);
+            this.button11.TabIndex = 13;
+            this.button11.Text = "button11 create eleves";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(731, 627);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(182, 23);
+            this.button12.TabIndex = 14;
+            this.button12.Text = "button12 search eleve";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // FormTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1099, 664);
+            this.Controls.Add(this.button12);
+            this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button2);
@@ -292,5 +316,7 @@
         private Button button8;
         private Button button9;
         private Button button10;
+        private Button button11;
+        private Button button12;
     }
 }

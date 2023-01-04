@@ -1,52 +1,17 @@
 [
   {
-    "id": "1",
-    "label": "Hukvaldy",
-    "niveau_id": "1"
+    "label": "Alpha",
+    "niveau_id": "1",
+    "id": "afe5da85-24ed-42bc-ba7d-900eb7990777"
   },
   {
-    "id": "2",
-    "label": "Shuangxing",
-    "niveau_id": "1"
+    "label": "Beta",
+    "niveau_id": null,
+    "id": "4af279cd-4b4e-4ad0-99f9-013eb5261802"
   },
   {
-    "id": "3",
-    "label": "Svetogorsk",
-    "niveau_id": "2"
-  },
-  {
-    "id": "4",
-    "label": "Kaum Kaler",
-    "niveau_id": "2"
-  },
-  {
-    "id": "5",
-    "label": "Bogo",
-    "niveau_id": "3"
-  },
-  {
-    "id": "6",
-    "label": "Ruzayevka",
-    "niveau_id": "3"
-  },
-  {
-    "id": "7",
-    "label": "København",
-    "niveau_id": "4"
-  },
-  {
-    "id": "8",
-    "label": "Rathangan",
-    "niveau_id": "4"
-  },
-  {
-    "id": "9",
-    "label": "Dongzha",
-    "niveau_id": "5"
-  },
-  {
-    "id": "10",
-    "label": "Trebisht-Muçinë",
-    "niveau_id": "5"
+    "label": "Gamma",
+    "niveau_id": null,
+    "id": "ec27d3ea-8080-4baa-b14d-cc8e8eddba79"
   }
 ]

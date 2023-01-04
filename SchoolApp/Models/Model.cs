@@ -11,7 +11,7 @@ namespace SchoolApp.Models
     internal class Model
     {
         // Propriétés :
-        [JsonPropertyName("id")] public string Id { get; private set; }
+        [JsonPropertyName("id")] public string Id { get; set; }
 
         // Constructeurs :
         public Model()
