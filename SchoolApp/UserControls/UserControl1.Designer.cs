@@ -69,6 +69,10 @@
             this.dataGridViewProfesseurs = new System.Windows.Forms.DataGridView();
             this.tabPageClasse = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.comboBoxClasseNivea = new System.Windows.Forms.ComboBox();
+            this.label73 = new System.Windows.Forms.Label();
+            this.comboBoxClasseProf = new System.Windows.Forms.ComboBox();
+            this.label72 = new System.Windows.Forms.Label();
             this.textBoxCheminListeClasse = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.buttonImportClasses = new System.Windows.Forms.Button();
@@ -419,6 +423,10 @@
             this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView22 = new System.Windows.Forms.DataGridView();
             this.tabControl5 = new System.Windows.Forms.TabControl();
+            this.buttonClasseLierProf = new System.Windows.Forms.Button();
+            this.buttonClasseLierClasse = new System.Windows.Forms.Button();
+            this.label74 = new System.Windows.Forms.Label();
+            this.comboBoxClasse = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPageEleve.SuspendLayout();
             this.groupBoxAjoutEleve.SuspendLayout();
@@ -930,6 +938,14 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.comboBoxClasse);
+            this.groupBox4.Controls.Add(this.label74);
+            this.groupBox4.Controls.Add(this.buttonClasseLierClasse);
+            this.groupBox4.Controls.Add(this.buttonClasseLierProf);
+            this.groupBox4.Controls.Add(this.comboBoxClasseNivea);
+            this.groupBox4.Controls.Add(this.label73);
+            this.groupBox4.Controls.Add(this.comboBoxClasseProf);
+            this.groupBox4.Controls.Add(this.label72);
             this.groupBox4.Controls.Add(this.textBoxCheminListeClasse);
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.buttonImportClasses);
@@ -946,6 +962,40 @@
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Ajout d\'une classe :";
+            // 
+            // comboBoxClasseNivea
+            // 
+            this.comboBoxClasseNivea.FormattingEnabled = true;
+            this.comboBoxClasseNivea.Location = new System.Drawing.Point(686, 40);
+            this.comboBoxClasseNivea.Name = "comboBoxClasseNivea";
+            this.comboBoxClasseNivea.Size = new System.Drawing.Size(129, 23);
+            this.comboBoxClasseNivea.TabIndex = 16;
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Location = new System.Drawing.Point(613, 44);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(68, 15);
+            this.label73.TabIndex = 15;
+            this.label73.Text = "Liste nivea :";
+            // 
+            // comboBoxClasseProf
+            // 
+            this.comboBoxClasseProf.FormattingEnabled = true;
+            this.comboBoxClasseProf.Location = new System.Drawing.Point(686, 12);
+            this.comboBoxClasseProf.Name = "comboBoxClasseProf";
+            this.comboBoxClasseProf.Size = new System.Drawing.Size(129, 23);
+            this.comboBoxClasseProf.TabIndex = 14;
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Location = new System.Drawing.Point(613, 15);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(67, 15);
+            this.label72.TabIndex = 13;
+            this.label72.Text = "Liste profs :";
             // 
             // textBoxCheminListeClasse
             // 
@@ -4610,6 +4660,43 @@
             this.tabControl5.Size = new System.Drawing.Size(200, 100);
             this.tabControl5.TabIndex = 0;
             // 
+            // buttonClasseLierProf
+            // 
+            this.buttonClasseLierProf.Location = new System.Drawing.Point(816, 11);
+            this.buttonClasseLierProf.Name = "buttonClasseLierProf";
+            this.buttonClasseLierProf.Size = new System.Drawing.Size(75, 23);
+            this.buttonClasseLierProf.TabIndex = 17;
+            this.buttonClasseLierProf.Text = "Lier...";
+            this.buttonClasseLierProf.UseVisualStyleBackColor = true;
+            this.buttonClasseLierProf.Click += new System.EventHandler(this.buttonClasseLierProf_Click);
+            // 
+            // buttonClasseLierClasse
+            // 
+            this.buttonClasseLierClasse.Location = new System.Drawing.Point(816, 36);
+            this.buttonClasseLierClasse.Name = "buttonClasseLierClasse";
+            this.buttonClasseLierClasse.Size = new System.Drawing.Size(75, 23);
+            this.buttonClasseLierClasse.TabIndex = 18;
+            this.buttonClasseLierClasse.Text = "Lier...";
+            this.buttonClasseLierClasse.UseVisualStyleBackColor = true;
+            this.buttonClasseLierClasse.Click += new System.EventHandler(this.buttonClasseLierClasse_Click);
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(389, 15);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(48, 15);
+            this.label74.TabIndex = 19;
+            this.label74.Text = "Classe ?";
+            // 
+            // comboBoxClasse
+            // 
+            this.comboBoxClasse.FormattingEnabled = true;
+            this.comboBoxClasse.Location = new System.Drawing.Point(443, 12);
+            this.comboBoxClasse.Name = "comboBoxClasse";
+            this.comboBoxClasse.Size = new System.Drawing.Size(129, 23);
+            this.comboBoxClasse.TabIndex = 20;
+            // 
             // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -5159,5 +5246,13 @@
         private TableLayoutPanel tableLayoutPanel25;
         private DataGridView dataGridView22;
         private TabControl tabControl5;
+        private ComboBox comboBoxClasseProf;
+        private Label label72;
+        private Label label73;
+        private ComboBox comboBoxClasseNivea;
+        private Button buttonClasseLierClasse;
+        private Button buttonClasseLierProf;
+        private ComboBox comboBoxClasse;
+        private Label label74;
     }
 }

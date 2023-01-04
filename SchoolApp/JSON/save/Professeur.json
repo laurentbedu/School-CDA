@@ -1,173 +1,173 @@
 [
   {
-    "IsAdmin": false,
+    "IsAdmin": true,
+    "classe_id": "49f77e9c-c813-4d31-a385-f278b6ebafc9",
     "Login": "admin",
     "Password": "password",
-    "Classe": null,
     "Nom": "Allart",
     "Prenom": "Maxence",
-    "Id": "idProfDeTest"
+    "id": "7853764d-c271-46e1-acff-c0879b330160"
   },
   {
     "IsAdmin": true,
+    "classe_id": null,
     "Login": "Mexico",
     "Password": "MX",
-    "Classe": null,
     "Nom": "Evangeline",
     "Prenom": "Camier",
-    "Id": "01d7f0f6-abb2-4153-b35c-5e2f8ef8ba80"
+    "id": "4a4f7357-68d0-4197-a545-1d1b45bfd38e"
   },
   {
     "IsAdmin": false,
+    "classe_id": null,
     "Login": "Kyrgyzstan",
     "Password": "KG",
-    "Classe": null,
     "Nom": "Olga",
     "Prenom": "Blaise",
-    "Id": "6e7abba1-71ea-4b04-9074-3c39a99d993a"
+    "id": "b8558113-8f87-4b61-a8cf-15240d069fc2"
   },
   {
     "IsAdmin": true,
+    "classe_id": null,
     "Login": "Argentina",
     "Password": "AR",
-    "Classe": null,
     "Nom": "Anica",
     "Prenom": "Santer",
-    "Id": "2e1dbf25-f7f5-44b5-8db5-e6d2105a88ed"
+    "id": "47926d6f-3f7a-46a4-b3cb-1412e629c99b"
   },
   {
     "IsAdmin": false,
+    "classe_id": null,
     "Login": "Canada",
     "Password": "CA",
-    "Classe": null,
     "Nom": "Leon",
     "Prenom": "Himpson",
-    "Id": "fce55024-edff-4121-bc42-1a7e1156fb3a"
+    "id": "b5bed01a-b97b-4636-8865-63f5d6284448"
   },
   {
     "IsAdmin": true,
+    "classe_id": null,
     "Login": "Russia",
     "Password": "RU",
-    "Classe": null,
     "Nom": "Dorie",
     "Prenom": "Wonfor",
-    "Id": "a8821d06-701d-45f9-a2b6-640afa0abe2e"
+    "id": "53dc58d3-35c6-496b-8290-8f9ff7e8f1c6"
   },
   {
     "IsAdmin": false,
+    "classe_id": null,
     "Login": "China",
     "Password": "CN",
-    "Classe": null,
     "Nom": "Melba",
     "Prenom": "Adolfsen",
-    "Id": "30e9e371-42a1-4e8b-9139-4e4bae8a3431"
+    "id": "84ca930d-50f3-47be-ac46-c751a865aeda"
   },
   {
     "IsAdmin": true,
+    "classe_id": null,
     "Login": "Poland",
     "Password": "PL",
-    "Classe": null,
     "Nom": "Clair",
     "Prenom": "Fasse",
-    "Id": "da183b87-944b-4fc8-b757-e643980c8ddc"
+    "id": "6d92ad04-0fc4-4500-a0d9-dae61a58190d"
   },
   {
     "IsAdmin": true,
+    "classe_id": null,
     "Login": "Indonesia",
     "Password": "ID",
-    "Classe": null,
     "Nom": "Theadora",
     "Prenom": "Trelease",
-    "Id": "891ff644-e740-47fe-be1e-5becc0ce6265"
+    "id": "9847a2fc-a319-4246-bb66-66589f605d63"
   },
   {
     "IsAdmin": false,
+    "classe_id": null,
     "Login": "Greece",
     "Password": "GR",
-    "Classe": null,
     "Nom": "Candis",
     "Prenom": "Shillitto",
-    "Id": "e1487b09-f48f-4175-b90d-934a0c8dafc7"
+    "id": "38d1a21a-6441-4b02-b820-56514bfe2328"
   },
   {
     "IsAdmin": false,
+    "classe_id": null,
     "Login": "Brazil",
     "Password": "BR",
-    "Classe": null,
     "Nom": "Joannes",
     "Prenom": "Robyns",
-    "Id": "e21c5934-5e0d-41c2-a988-d98902082def"
+    "id": "a0ebb084-62b4-4359-b8d5-1fb2e3a98c23"
   },
   {
     "IsAdmin": false,
+    "classe_id": null,
     "Login": "Russia",
     "Password": "RU",
-    "Classe": null,
     "Nom": "Lexi",
     "Prenom": "Mariyushkin",
-    "Id": "d2fc77a6-00be-4f50-a09d-fedd36f723e3"
+    "id": "34b0ce95-7d05-4977-889d-754ad3b787d0"
   },
   {
     "IsAdmin": true,
+    "classe_id": null,
     "Login": "Indonesia",
     "Password": "ID",
-    "Classe": null,
     "Nom": "Chrystal",
     "Prenom": "Basketfield",
-    "Id": "06e08613-778b-4206-8550-6afc4009ecc0"
+    "id": "5aa2ee9b-d3ea-4f35-8de7-2cfcd77d103f"
   },
   {
     "IsAdmin": false,
+    "classe_id": null,
     "Login": "Indonesia",
     "Password": "ID",
-    "Classe": null,
     "Nom": "Chickie",
     "Prenom": "Bonnette",
-    "Id": "74de3e36-93a1-4f47-8cf1-93ac67eada7b"
+    "id": "accb3552-5ed3-42ac-a41d-9cba6a3af054"
   },
   {
     "IsAdmin": true,
+    "classe_id": null,
     "Login": "Portugal",
     "Password": "PT",
-    "Classe": null,
     "Nom": "Demetris",
     "Prenom": "Iskowicz",
-    "Id": "117ee2cb-a9cc-4d1b-a19b-c4fcc31d5a51"
+    "id": "dfe17c17-73a7-4082-8519-75030e10ffff"
   },
   {
     "IsAdmin": true,
+    "classe_id": null,
     "Login": "France",
     "Password": "FR",
-    "Classe": null,
     "Nom": "Carmine",
     "Prenom": "Fleeming",
-    "Id": "c36fe934-f3bd-451f-b102-a28891dfd9af"
+    "id": "838ac271-040e-4594-a201-029443a43310"
   },
   {
     "IsAdmin": false,
+    "classe_id": null,
     "Login": "France",
     "Password": "FR",
-    "Classe": null,
     "Nom": "Olga",
     "Prenom": "Marr",
-    "Id": "18c16d6e-61cf-4051-af7d-52ce49a8146f"
+    "id": "7ffd1270-dcc3-49ed-a3e4-0a7c97cf0075"
   },
   {
     "IsAdmin": true,
+    "classe_id": null,
     "Login": "China",
     "Password": "CN",
-    "Classe": null,
     "Nom": "Cathrine",
     "Prenom": "Hagan",
-    "Id": "d2f9b070-9772-46f3-ad69-755013a2c3b6"
+    "id": "552989b0-fc15-46a1-919e-8fb60f65aa75"
   },
   {
     "IsAdmin": true,
+    "classe_id": null,
     "Login": "Nigeria",
     "Password": "NG",
-    "Classe": null,
     "Nom": "Eldon",
     "Prenom": "Mitchall",
-    "Id": "fd4e0087-5835-43c7-860a-b7e4f0b41e43"
+    "id": "509923d6-0b70-477b-b7dc-0f7a49a89361"
   }
 ]

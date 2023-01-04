@@ -11,7 +11,18 @@ namespace SchoolApp.Models
         [JsonPropertyName("label")] public string? Label { get; set; }
         [JsonPropertyName("niveau_id")] public string? niveauId { get; set; }
         [JsonPropertyName("professeur_id")] public string? professeurId { get; set; }
-        [JsonIgnore][NePasIntegrerDansToString] public Professeur? Professeur { get; private set; }
+        [JsonIgnore][NePasIntegrerDansToString] public Professeur? Professeur
+        {
+            get
+            {
+                var jdm = new JsonDataManager<Professeur>();
+                return jdm.GetById(professeurId);
+            }
+            set
+            {
+                niveauId = value?.Id;
+            }
+        }
         [JsonIgnore][NePasIntegrerDansToString] public List<Eleve> EleveList { get; } = new List<Eleve>();
         [JsonIgnore] public Niveau? Niveau
         {
@@ -74,6 +85,11 @@ namespace SchoolApp.Models
                     eleve.Classe = null;
                 }
             }
+        }
+        // ToString Override
+        public override string ToString()
+        {
+            return Label;
         }
     }
 }

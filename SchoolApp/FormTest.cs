@@ -10,19 +10,19 @@ namespace SchoolApp
 {
     public partial class FormTest : Form
     {
-        List<Eleve>         listeEleves         = new List<Eleve>();
-        List<Professeur>    listeProfesseurs    = new List<Professeur>();
-        List<Classe>        listeClasses        = new List<Classe>();
-        List<Matiere>       listeMatieres       = new List<Matiere>();
-        List<Niveau>        listeNiveaux        = new List<Niveau>();
-        List<Note>          listeNotes          = new List<Note>();
-        UserControl1 userControl1;
+        List<Eleve>         listeEleves                                     = new List<Eleve>();
+        List<Professeur>    listeProfesseurs                                = new List<Professeur>();
+        List<Classe>        listeClasses                                    = new List<Classe>();
+        List<Matiere>       listeMatieres                                   = new List<Matiere>();
+        List<Niveau>        listeNiveaux                                    = new List<Niveau>();
+        List<Note>          listeNotes                                      = new List<Note>();
         DAL.JsonDataManager<Models.Niveau>      jsonDataManagerNiveau       = new DAL.JsonDataManager<Models.Niveau>();
         DAL.JsonDataManager<Models.Eleve>       jsonDataManagerEleve        = new DAL.JsonDataManager<Models.Eleve>();
         DAL.JsonDataManager<Models.Professeur>  jsonDataManagerProfesseur   = new DAL.JsonDataManager<Models.Professeur>();
         DAL.JsonDataManager<Models.Classe>      jsonDataManagerClasse       = new DAL.JsonDataManager<Models.Classe>();
         DAL.JsonDataManager<Models.Matiere>     jsonDataManagerMatiere      = new DAL.JsonDataManager<Models.Matiere>();
         DAL.JsonDataManager<Models.Note>        jsonDataManagerNote         = new DAL.JsonDataManager<Models.Note>();
+        UserControl1 userControl1;
 
         public FormTest()
         {
@@ -31,7 +31,6 @@ namespace SchoolApp
         public void importJSON()
         {            
             dataGridViewTest.Visible = true;
-
             listeNiveaux = jsonDataManagerNiveau.DataList;
             listeEleves = jsonDataManagerEleve.DataList;            
             listeProfesseurs = jsonDataManagerProfesseur.DataList;            

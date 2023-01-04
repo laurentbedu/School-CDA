@@ -44,5 +44,9 @@ namespace SchoolApp.Models
             }
         }
         // ToString Override
+        public override string ToString()
+        {
+            return base.Nom + " " + base.Prenom;
+        }
     }
 }
