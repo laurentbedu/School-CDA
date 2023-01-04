@@ -17,7 +17,12 @@ namespace SchoolApp
         List<Niveau>        listeNiveaux        = new List<Niveau>();
         List<Note>          listeNotes          = new List<Note>();
         UserControl1 userControl1;
-
+        DAL.JsonDataManager<Models.Niveau>      jsonDataManagerNiveau       = new DAL.JsonDataManager<Models.Niveau>();
+        DAL.JsonDataManager<Models.Eleve>       jsonDataManagerEleve        = new DAL.JsonDataManager<Models.Eleve>();
+        DAL.JsonDataManager<Models.Professeur>  jsonDataManagerProfesseur   = new DAL.JsonDataManager<Models.Professeur>();
+        DAL.JsonDataManager<Models.Classe>      jsonDataManagerClasse       = new DAL.JsonDataManager<Models.Classe>();
+        DAL.JsonDataManager<Models.Matiere>     jsonDataManagerMatiere      = new DAL.JsonDataManager<Models.Matiere>();
+        DAL.JsonDataManager<Models.Note>        jsonDataManagerNote         = new DAL.JsonDataManager<Models.Note>();
 
         public FormTest()
         {
@@ -26,17 +31,12 @@ namespace SchoolApp
         public void importJSON()
         {            
             dataGridViewTest.Visible = true;
-            var jsonDataManagerNiveau = new DAL.JsonDataManager<Models.Niveau>();
+
             listeNiveaux = jsonDataManagerNiveau.DataList;
-            var jsonDataManagerEleve = new DAL.JsonDataManager<Models.Eleve>();
-            listeEleves = jsonDataManagerEleve.DataList;
-            var jsonDataManagerProfesseur = new DAL.JsonDataManager<Models.Professeur>();
-            listeProfesseurs = jsonDataManagerProfesseur.DataList;
-            var jsonDataManagerClasse = new DAL.JsonDataManager<Models.Classe>();
-            listeClasses = jsonDataManagerClasse.DataList;
-            var jsonDataManagerMatiere = new DAL.JsonDataManager<Models.Matiere>();
-            listeMatieres = jsonDataManagerMatiere.DataList;
-            var jsonDataManagerNote = new DAL.JsonDataManager<Models.Note>();
+            listeEleves = jsonDataManagerEleve.DataList;            
+            listeProfesseurs = jsonDataManagerProfesseur.DataList;            
+            listeClasses = jsonDataManagerClasse.DataList;            
+            listeMatieres = jsonDataManagerMatiere.DataList;            
             listeNotes = jsonDataManagerNote.DataList;
         }
         private void buttonGestion2_Click(object sender, EventArgs e)
@@ -98,76 +98,22 @@ namespace SchoolApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /*
-            var jsonDataManager = new DAL.JsonDataManager<Models.Niveau>();
-            List<Niveau> ListeNiveau = new List<Niveau>();
-            Niveau cp = new Niveau()  { Nom = "CP" };
-            Niveau ce1 = new Niveau() { Nom = "CE1" };
-            Niveau ce2 = new Niveau() { Nom = "CE2" };
-            Niveau cm1 = new Niveau() { Nom = "CM1" };
-            ListeNiveau.Add(cp);
-            ListeNiveau.Add(ce1);
-            ListeNiveau.Add(ce2);
-            ListeNiveau.Add(cm1);
-            //Sérialise :
-            jsonDataManager.SaveJSonData(ListeNiveau);
-            */
 
-            /*
-            var jsonDataManager2 = new DAL.JsonDataManager<Models.Professeur>();
-            List<Professeur> ListeProf = new List<Professeur>();
-            */
-            /*
-            Professeur prof1 = new Professeur() { Nom = "Allart", Prenom = "Maxence", Login = "admin", Password= "admin", IsAdmin=true };
-            Professeur prof2 = new Professeur() { Nom = "Billy" , Prenom = "Bob"    , Login = "admin", Password= "admin", IsAdmin=false };
-            Professeur prof3 = new Professeur() { Nom = "Toto"  , Prenom = "Tata"   , Login = "admin", Password= "admin", IsAdmin=false };
-            Classe newClasse = new Classe() { Nom = "CLASSENAME" };
-            prof1.ajouterClasse(newClasse);
-            prof2.ajouterClasse(newClasse);
-            prof3.ajouterClasse(newClasse);
-            listeProfesseurs.Add(prof1);
-            listeProfesseurs.Add(prof2);
-            listeProfesseurs.Add(prof3);
-            */
-            //Sérialise :
-            //jsonDataManager2.SaveJSonData(ListeProfesseurs);
-
-            Random rnd = new Random();
-            for ( int i = 0 ; i < listeProfesseurs.Count ; i++ )
-            {
-                Professeur prof = listeProfesseurs[i];
-                Classe classe = listeClasses[i];
-                prof.ajouterClasse(classe);
-            }     
-            for ( int i = 0 ; i < listeClasses.Count ; i++ )
-            {
-                Classe classe = listeClasses[i];
-                classe.Niveau = listeNiveaux[rnd.Next(listeNiveaux.Count)];                
-            }
-            for (int i = 0; i < listeEleves.Count; i++)
-            {
-                Eleve eleve = listeEleves[i];
-                eleve.Classe = listeClasses[rnd.Next(listeClasses.Count)];
-            }
-            /*
-            for (int i = 0; i < listeEleves.Count; i++)
-            {
-                Eleve eleve = listeEleves[i];
-                eleve.ajouterNote(listeNotes[i]);
-            }
-            */
-            for ( int i = 0; i < listeNotes.Count; i++)
-            {
-                Note note = listeNotes[i];
-                note.Matiere = listeMatieres[rnd.Next(listeMatieres.Count)];
-            }
         } 
         private void button9_Click(object sender, EventArgs e)
         {
+            /*
             var jsonDataManager2 = new DAL.JsonDataManager<Models.Professeur>();
             jsonDataManager2.SaveJSonData(listeProfesseurs);
             var jsonDataManager3 = new DAL.JsonDataManager<Models.Eleve>();
             jsonDataManager3.SaveJSonData(listeEleves);
+            */
+            jsonDataManagerNiveau.SaveJSonData();
+            jsonDataManagerEleve.SaveJSonData();
+            jsonDataManagerProfesseur.SaveJSonData();
+            jsonDataManagerClasse.SaveJSonData();
+            jsonDataManagerMatiere.SaveJSonData();
+            jsonDataManagerNote.SaveJSonData();
         }//Btn save
 
         private void button10_Click(object sender, EventArgs e)
@@ -195,8 +141,8 @@ namespace SchoolApp
             niveaux.Add(niveau2);
             //Serialisation :
 
-            jdmClasse.SaveJSonData(classes);
-            jdmNiveau.SaveJSonData(niveaux);
+            jdmClasse.SaveJSonData();
+            jdmNiveau.SaveJSonData();
 
             bool stop = true;
         }
@@ -215,7 +161,7 @@ namespace SchoolApp
             eleves.Add(eleve3);            eleves.Add(eleve4);
             eleves.Add(eleve5);
 
-            jdmEleve.SaveJSonData(eleves);
+            jdmEleve.SaveJSonData();
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -225,6 +171,29 @@ namespace SchoolApp
             var elevePrenomEleve2 = eleveJdM.GetWhere(item => item.Prenom == "prenomEleve2");
             var eleve37 = eleveJdM.GetById("d0a24f76-4b75-4967-9b0b-87d5757131ca");
             var eleve201 = eleveJdM.GetById("111");
+
+            bool stop = true;
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            var classeJdM = new JsonDataManager<Classe>();
+            var classeListe = classeJdM.GetWhere();
+
+            var professeurJdM = new JsonDataManager<Professeur>();
+            var professeurListe = professeurJdM.GetWhere();
+
+            var prof = professeurJdM.GetWhere(item => item.Nom == "Allart" && item.Prenom == "Maxence");
+            var classe = classeJdM.GetWhere(item => item.Label == "Gamma");
+
+            prof[0].ajouterClasse(classe[0]);
+            //classe[0].ajouterProfesseur(prof[0]);
+
+            Professeur PROF = prof[0];
+            Classe CLASSE = classe[0];
+
+            classeJdM.SaveJSonData();
+            professeurJdM.SaveJSonData();
 
             bool stop = true;
         }

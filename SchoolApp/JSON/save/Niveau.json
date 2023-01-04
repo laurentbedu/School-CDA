@@ -1,5 +1,1 @@
-[{"Id_Niveau":1,"Nom":"CP"},
-{"Id_Niveau":2,"Nom":"CE1"},
-{"Id_Niveau":3,"Nom":"CE2"},
-{"Id_Niveau":4,"Nom":"CM1"},
-{"Id_Niveau":5,"Nom":"CM2"}]
+[{"label":"CP","id":"1"},{"label":"CE1","id":"2"},{"label":"CE2","id":"819ef257-8147-470d-9017-31df027c4430"},{"label":"CM1","id":"2fbf84fa-69e9-4a97-a31c-5dee5375b4c4"}]

@@ -11,7 +11,7 @@ namespace SchoolApp.Models
     internal class Niveau : Model
     {
         // Propriétés :
-        [JsonPropertyName("niveau_id")] public string Label { get; set; }
+        [JsonPropertyName("label")] public string Label { get; set; }
         [NePasIntegrerDansToString][JsonIgnore] public List<Matiere> ListeMatieres { get; private set; } = new List<Matiere>();
 
         // Methodes :

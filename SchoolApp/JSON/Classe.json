@@ -2,16 +2,25 @@
   {
     "label": "Alpha",
     "niveau_id": "1",
+    "professeur_id": null,
     "id": "afe5da85-24ed-42bc-ba7d-900eb7990777"
   },
   {
     "label": "Beta",
     "niveau_id": null,
+    "professeur_id": null,
     "id": "4af279cd-4b4e-4ad0-99f9-013eb5261802"
   },
   {
     "label": "Gamma",
     "niveau_id": null,
-    "id": "ec27d3ea-8080-4baa-b14d-cc8e8eddba79"
+    "professeur_id": "7853764d-c271-46e1-acff-c0879b330160",
+    "id": "49f77e9c-c813-4d31-a385-f278b6ebafc9"
+  },
+  {
+    "label": "Theta",
+    "niveau_id": null,
+    "professeur_id": null,
+    "id": "8c3f3315-a826-4416-929d-9ed832b4fcc4"
   }
 ]

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace SchoolApp.Models
@@ -11,11 +12,10 @@ namespace SchoolApp.Models
     {
         // Propriétés :
         public bool IsAdmin { get; set; }
+        [JsonPropertyName("classe_id")] public string? classeId { get; set; }
         [NePasIntegrerDansToStringAttribute] public string Login { get; set; }
         [NePasIntegrerDansToStringAttribute] public string Password { get; set; }
-        [NePasIntegrerDansToStringAttribute] public Classe? Classe { get; private set; }
-
-        // Constructeurs :
+        [NePasIntegrerDansToStringAttribute][JsonIgnore] public Classe? Classe { get; private set; }
 
         // Methodes :
         public void ajouterClasse(Classe classe)
@@ -23,8 +23,10 @@ namespace SchoolApp.Models
             if (Classe != classe)
             {
                 Classe = classe;
+                classeId = classe.Id;
                 if (classe.Professeur != this)
                 {
+                    classeId = classe.Id;
                     classe.ajouterProfesseur(this);
                 }
             }
@@ -37,6 +39,7 @@ namespace SchoolApp.Models
                 if (classe.Professeur == this)
                 {
                     classe.retirerProfesseur(this);
+                    classeId = null;
                 }
             }
         }

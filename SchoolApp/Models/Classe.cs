@@ -1,6 +1,7 @@
 ﻿using SchoolApp.Attributes;
 using SchoolApp.DAL;
 using System.Text.Json.Serialization;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 
 namespace SchoolApp.Models
@@ -9,6 +10,7 @@ namespace SchoolApp.Models
     {
         [JsonPropertyName("label")] public string? Label { get; set; }
         [JsonPropertyName("niveau_id")] public string? niveauId { get; set; }
+        [JsonPropertyName("professeur_id")] public string? professeurId { get; set; }
         [JsonIgnore][NePasIntegrerDansToString] public Professeur? Professeur { get; private set; }
         [JsonIgnore][NePasIntegrerDansToString] public List<Eleve> EleveList { get; } = new List<Eleve>();
         [JsonIgnore] public Niveau? Niveau
@@ -30,9 +32,11 @@ namespace SchoolApp.Models
             if (Professeur != professeur)
             {
                 Professeur = professeur;
+                professeurId = professeur.Id;
                 if (professeur.Classe != this)
                 {
-                    professeur.ajouterClasse(this);
+                    professeurId = professeur.Id;
+                    professeur.ajouterClasse(this);                    
                 }
             }
         }

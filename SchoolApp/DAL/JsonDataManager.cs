@@ -29,13 +29,13 @@ namespace SchoolApp.DAL
             List<T> data = JsonSerializer.Deserialize<List<T>>(jsonString)!;
             return data;
         }
-        public void SaveJSonData(List<T> dataListSave)
+        public void SaveJSonData()
         {
             string nomClasseT = typeof(T).Name;
             string cheminRoot = Directory.GetCurrentDirectory();
             cheminRoot = cheminRoot.Remove(cheminRoot.Length - 25) + "\\JSON\\";
             string cheminFichierExporter = cheminRoot + nomClasseT + ".json";
-            string jsonString = JsonSerializer.Serialize(dataListSave)!;
+            string jsonString = JsonSerializer.Serialize(dataList)!;
 
             //MessageBox.Show(jsonString);            
             File.WriteAllText(cheminFichierExporter, jsonString);

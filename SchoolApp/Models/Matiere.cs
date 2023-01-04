@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace SchoolApp.Models
@@ -11,8 +12,7 @@ namespace SchoolApp.Models
     {
         // Propriétés :
         public string label { get; set; }
-
-        [NePasIntegrerDansToString] public List<Niveau> ListeNiveaux { get; private set; } = new List<Niveau>();
+        [NePasIntegrerDansToString][JsonIgnore] public List<Niveau> ListeNiveaux { get; private set; } = new List<Niveau>();
 
         // Méthodes :
         public void ajouterNiveau(params Niveau[] niveaux)

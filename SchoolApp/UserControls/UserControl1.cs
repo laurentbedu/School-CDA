@@ -163,8 +163,8 @@ namespace SchoolApp.UserControls
         }   // ajouter Matiere
         private void buttonAjouterNiveau_Click(object sender, EventArgs e) {
             string nom = textBoxNomNiveau.Text;
-            Matiere nouveauNiveau = new Matiere() { label = nom };
-            listeMatieres.Add(nouveauNiveau);
+            Niveau nouveauNiveau = new Niveau() { Label = nom };
+            listeNiveaux.Add(nouveauNiveau);
             resetBoxes();
             majTabNiveau();
         } // ajouter Niveau
@@ -189,7 +189,7 @@ namespace SchoolApp.UserControls
         // ///////////////////////////////////////////
         // ///////////////////////////////////////////
         private void buttonSauvegarderListeEleve_Click(object sender, EventArgs e) {
-            jsonDataManagerEleve.SaveJSonData(listeEleves);
+            jsonDataManagerEleve.SaveJSonData();
             //Affichage URL:
             string cheminRoot = Directory.GetCurrentDirectory();
             cheminRoot = cheminRoot.Remove(cheminRoot.Length - 25) + "\\JSON\\";
@@ -198,7 +198,7 @@ namespace SchoolApp.UserControls
             MessageBox.Show("Exportation avec succès!");
         }
         private void buttonExportProfs_Click(object sender, EventArgs e) {
-            jsonDataManagerProfesseur.SaveJSonData(listeProfesseurs);
+            jsonDataManagerProfesseur.SaveJSonData();
             //Affichage URL:
             string cheminRoot = Directory.GetCurrentDirectory();
             cheminRoot = cheminRoot.Remove(cheminRoot.Length - 25) + "\\JSON\\";
@@ -207,7 +207,7 @@ namespace SchoolApp.UserControls
             MessageBox.Show("Exportation avec succès!");
         }
         private void buttonExportClasses_Click(object sender, EventArgs e) {
-            jsonDataManagerClasse.SaveJSonData(listeClasses);
+            jsonDataManagerClasse.SaveJSonData();
             //Affichage URL:
             string cheminRoot = Directory.GetCurrentDirectory();
             cheminRoot = cheminRoot.Remove(cheminRoot.Length - 25) + "\\JSON\\";
@@ -216,7 +216,7 @@ namespace SchoolApp.UserControls
             MessageBox.Show("Exportation avec succès!");
         }
         private void buttonExportMatiere_Click_Click(object sender, EventArgs e) {
-            jsonDataManagerMatiere.SaveJSonData(listeMatieres);
+            jsonDataManagerMatiere.SaveJSonData();
             //Affichage URL:
             string cheminRoot = Directory.GetCurrentDirectory();
             cheminRoot = cheminRoot.Remove(cheminRoot.Length - 25) + "\\JSON\\";
@@ -225,7 +225,7 @@ namespace SchoolApp.UserControls
             MessageBox.Show("Exportation avec succès!");
         }
         private void buttonExportNiveaux_Click(object sender, EventArgs e) {
-            jsonDataManagerNiveau.SaveJSonData(listeNiveaux);
+            jsonDataManagerNiveau.SaveJSonData();
             //Affichage URL:
             string cheminRoot = Directory.GetCurrentDirectory();
             cheminRoot = cheminRoot.Remove(cheminRoot.Length - 25) + "\\JSON\\";

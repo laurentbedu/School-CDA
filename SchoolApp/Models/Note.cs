@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace SchoolApp.Models
@@ -14,8 +15,8 @@ namespace SchoolApp.Models
 
         // Propriétés :
         public double? Valeur { get; set; }
-        public Matiere? Matiere { get; set; }
-        public Eleve? Eleve
+        [JsonIgnore] public Matiere? Matiere { get; set; }
+        [JsonIgnore] public Eleve? Eleve
         {
             get => eleve;
             set
@@ -32,8 +33,7 @@ namespace SchoolApp.Models
         public Note()
         {
 
-        }
-        
+        }     
 
         event PropertyChangedEventHandler? INotifyPropertyChanged.PropertyChanged
         {
