@@ -151,6 +151,7 @@ namespace SchoolApp
 
             var jsonDataManager = new DAL.JsonDataManager<Models.Classe>();
             List<Classe> list = jsonDataManager.DataList;
+            var classeList = jsonDataManager.GetWhere();
             //list.Add(new Classe { Label = "test3" });
             //list.Add(new Classe { Label = "test4" });
             //list.Serialize();
@@ -159,7 +160,7 @@ namespace SchoolApp
 
             var niveauDataManager = new DAL.JsonDataManager<Models.Niveau>();
             var nivCE1 = niveauDataManager.GetById("2");
-            cl1.Niveau = nivCE1;
+            cl1.Niveau = null;
             jsonDataManager.SaveJsonData();
 
             //list.Add(new Matiere { Label = "MatSup" });
@@ -180,7 +181,9 @@ namespace SchoolApp
         {
             var eleveJdM = new JsonDataManager<Eleve>();
             var eleveListe = eleveJdM.GetWhere();
+            var elevePrenomCatha = eleveJdM.GetWhere(item => item.Prenom == "Catha");
             var eleve37 = eleveJdM.GetById("37");
+            var eleve201 = eleveJdM.GetById("201");
         }
     }
 }

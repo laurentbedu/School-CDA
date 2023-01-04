@@ -44,13 +44,16 @@ namespace SchoolApp.DAL
 
         public List<T> GetWhere(Predicate<T>? filter = null)
         {
-            return filter != null ? DataList.FindAll(filter) : DataList;
+            //var list = DataList.FindAll(filter);
+            var result = filter != null ? DataList.FindAll(filter) : DataList;
+            return result;
         }
 
         public T? GetById(string? id)
         {
-            List<T> list = GetWhere(item => item.Id == id);
-            return id != null && list.Count == 1 ? GetWhere(item => item.Id == id).First() : null;
+            //List<T> list = GetWhere(item => item.Id == id);
+            List<T> list = DataList.FindAll(obj => obj.Id == id);
+            return id != null && list.Count == 1 ? list.First() : null;
         }
 
 

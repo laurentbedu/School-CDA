@@ -48,6 +48,14 @@ namespace SchoolApp.Models
             }
             set
             {
+                //if (value.Id != null)
+                //{
+                //    niveauId = value.Id;
+                //}
+                //else
+                //{
+                //    niveauId = null;
+                //}
                 niveauId = value?.Id;
             }
         }
