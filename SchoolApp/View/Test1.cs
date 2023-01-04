@@ -1,4 +1,5 @@
-﻿using SchoolApp.Models;
+﻿using SchoolApp.DAL;
+using SchoolApp.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,6 +68,14 @@ namespace SchoolApp.View
                         
             jsonDataManager.SaveJsonData(list);
 
+            ListViewItem ligne = new ListViewItem();
+            ligne.Text = textBoxNomProf.Text;
+            ligne.SubItems.Add(textBoxPrenomProf.Text);
+
+            listView1.Items.Add(ligne);
+
+
+
 
         }
 
@@ -106,17 +115,16 @@ namespace SchoolApp.View
         {
             var jsonDataManager = new DAL.JsonDataManager<Models.Niveau>();
             List<Niveau> list = jsonDataManager.DataList;
-            
+
 
             foreach (var item in list) { comboBox1.Items.Add(item.ToString()); }
 
             foreach (var item in list) { textBox1.Text += item.ToString() + " "; }
 
             foreach (var item in list) { listBox1.Items.Add(item.ToString()); }
+                      
 
-            
 
-            
             List<Niveau> ListeNiveau = new List<Niveau>();
             Niveau niveau1 = new Niveau() { Label_Niveau = "CP"};
             Niveau niveau2 = new Niveau() { Label_Niveau = "CE1" };
@@ -134,25 +142,108 @@ namespace SchoolApp.View
             bool stop = true;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e) // afficher la liste des professeurs
         {
+            listBox2.Items.Clear();
+            listView1.Items.Clear();
             var jsonDataManager = new DAL.JsonDataManager<Models.Professeur>();
             List<Professeur> list = jsonDataManager.DataList;
 
             foreach (var item in list) { listBox2.Items.Add(item.ToString()); }
+
+          
+            foreach (Professeur professeur in list)             
+            {
+                ListViewItem ligne = new ListViewItem();
+                ligne.Text = professeur.Nom.ToString();
+                ligne.SubItems.Add(professeur.Prenom.ToString());
+                ligne.SubItems.Add(professeur.Id.ToString());
+                listView1.Items.Add(ligne);
+                
+            }                   
+            
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e) // afficher la liste des élèves
         {
+            listBox2.Items.Clear();
+            listView1.Items.Clear();
             var jsonDataManager = new DAL.JsonDataManager<Models.Eleve>();
             List<Eleve> list = jsonDataManager.DataList;
 
             foreach (var item in list) { listBox2.Items.Add(item.ToString()); }
+
+            foreach (Eleve eleve in list)
+            {
+                ListViewItem ligne = new ListViewItem();
+                ligne.Text = eleve.Nom.ToString();
+                ligne.SubItems.Add(eleve.Prenom.ToString());
+                ligne.SubItems.Add(eleve.Id.ToString());
+                listView1.Items.Add(ligne);
+
+            }
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e) // supprimer un professeur de la liste
         {
-            listBox2.SelectedItem
+            //var jsonDataManager = new DAL.JsonDataManager<Models.Professeur>();
+            //List<Professeur> list = jsonDataManager.DataList;
+
+            //professeur = listBox2.SelectedItem as Professeur;
+            //listBox2.Items.Remove(professeur);
+
+            //var prof = listView1.SelectedItems ;
+
+            //var test = prof.Cast<Professeur>() ;
+
+            //list.Remove(test);
+
+            //var eleveJdM = new JsonDataManager<Eleve>();
+            //var eleveListe = eleveJdM.GetWhere();
+            //var elevePrenomCatha = eleveJdM.GetWhere(item => item.Prenom == "Catha");
+            //var eleve37 = eleveJdM.GetById("37");
+            //var eleve201 = eleveJdM.GetById("201");
+
+            ListView.SelectedListViewItemCollection selection = listView1.SelectedItems ;
+                        
+            foreach (ListViewItem item in selection)
+            {
+               string IdProf = item.SubItems[2].Text;
+                var profJdM = new JsonDataManager<Professeur>();
+                List<Professeur> list = profJdM.DataList;
+                var deleteProf = profJdM.GetById(IdProf);
+                list.Remove(deleteProf);
+
+                profJdM.SaveJsonData(list);
+
+            }
+               
+
+            //var profJdM = new JsonDataManager<Professeur>();
+            //List<Professeur> list = profJdM.DataList;
+            //var profprof = profJdM.GetById("8de3fc0a-5ee5-4a53-971a-6faf0c2b278c");
+            //list.Remove(profprof);
+
+            //profJdM.SaveJsonData(list);
+
+            bool stop = true;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection selection = listView1.SelectedItems;
+
+            foreach (ListViewItem item in selection)
+            {
+                string IdEleve = item.SubItems[2].Text;
+                var eleveJdM = new JsonDataManager<Eleve>();
+                List<Eleve> list = eleveJdM.DataList;
+                var deleteEleve = eleveJdM.GetById(IdEleve);
+                list.Remove(deleteEleve);
+
+                eleveJdM.SaveJsonData(list);
+
+            }
         }
     }
 }

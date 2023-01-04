@@ -44,6 +44,20 @@ namespace SchoolApp.DAL
             File.WriteAllText(fileName, jsonString);
               
         }
-        
+
+        public List<T> GetWhere(Predicate<T>? filter = null)
+        {
+            //var list = DataList.FindAll(filter);
+            var result = filter != null ? DataList.FindAll(filter) : DataList;
+            return result;
+        }
+
+        public T? GetById(string? id)
+        {
+            //List<T> list = GetWhere(item => item.Id == id);
+            List<T> list = DataList.FindAll(obj => obj.Id == id);
+            return id != null && list.Count == 1 ? list.First() : null;
+        }
+
     }
 }
