@@ -56,6 +56,7 @@ namespace SchoolApp
 
             var jsonClasse = new DAL.JsonDataManager<Classe>();
             List<Classe> classes = jsonClasse.DataList;
+            classes = classes.OrderBy(e => e.niveau_id).ToList();
             comboBoxClasseProf.DataSource = classes;
             comboBoxClasseEleve.DataSource = classes;
 
@@ -104,13 +105,17 @@ namespace SchoolApp
         {
             var jsonVar = new DAL.JsonDataManager<Classe>();
             classes = jsonVar.DataList;
+
+            string nom = textBoxNomClasse.Text;
+            string _nom = char.ToUpper(nom[0]) + nom[1..].ToLower();
             classe = new Classe()
             {
-                Label = textBoxNomClasse.Text,
+                Label = _nom,
                 Niveau = comboBoxNiveauClasse.SelectedItem as Niveau
             };
             classes.Add(classe);
             MessageBox.Show(classe+"");
+            classes = classes.OrderBy(e => e.niveau_id).ToList();
             comboBoxClasseProf.DataSource = classes;
             comboBoxClasseEleve.DataSource = classes;
             jsonVar.SaveJsonData(classes);
