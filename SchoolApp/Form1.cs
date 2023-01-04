@@ -23,17 +23,12 @@ namespace SchoolApp
                 new Matiere() {Label = "Géographie", Id = "matiere_6"}
             };
 
-            /*
-            string fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\Matiere.json";
-            string jsonString = JsonSerializer.Serialize(MatiereList);
-            File.WriteAllText(fileName, jsonString);
-            */
-
             NiveauList.Find(e => e.Label == "CP")?.AddMatiere(MatiereList[0], MatiereList[1]);
             NiveauList.Find(e => e.Label == "CE1")?.AddMatiere(MatiereList[0], MatiereList[1], MatiereList[2]);
             NiveauList.Find(e => e.Label == "CE2")?.AddMatiere(MatiereList[0], MatiereList[1], MatiereList[2], MatiereList[3]);
             NiveauList.Find(e => e.Label == "CM1")?.AddMatiere(MatiereList[0], MatiereList[1], MatiereList[2], MatiereList[3], MatiereList[4]);
             NiveauList.Find(e => e.Label == "CM2")?.AddMatiere(MatiereList.ToArray());
+
 
             var jsonNiveau = new DAL.JsonDataManager<Niveau>();
             List<Niveau> niveaux = jsonNiveau.DataList;
