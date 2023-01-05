@@ -8,56 +8,56 @@ namespace SchoolApp.UserControls
 {
     public partial class UserControl1 : UserControl
     {
-        List<Eleve>         listeEleves                                     = new List<Eleve>();
-        List<Professeur>    listeProfesseurs                                = new List<Professeur>();
-        List<Classe>        listeClasses                                    = new List<Classe>();
-        List<Matiere>       listeMatieres                                   = new List<Matiere>();
-        List<Niveau>        listeNiveaux                                    = new List<Niveau>();
-        List<Note>          listeNotes                                      = new List<Note>();
-        DAL.JsonDataManager<Models.Niveau>      jsonDataManagerNiveau       = new DAL.JsonDataManager<Models.Niveau>();
-        DAL.JsonDataManager<Models.Eleve>       jsonDataManagerEleve        = new DAL.JsonDataManager<Models.Eleve>();
-        DAL.JsonDataManager<Models.Professeur>  jsonDataManagerProfesseur   = new DAL.JsonDataManager<Models.Professeur>();
-        DAL.JsonDataManager<Models.Classe>      jsonDataManagerClasse       = new DAL.JsonDataManager<Models.Classe>();
-        DAL.JsonDataManager<Models.Matiere>     jsonDataManagerMatiere      = new DAL.JsonDataManager<Models.Matiere>();
-        DAL.JsonDataManager<Models.Note>        jsonDataManagerNote         = new DAL.JsonDataManager<Models.Note>();
+        List<Eleve> listeEleves = new List<Eleve>();
+        List<Professeur> listeProfesseurs = new List<Professeur>();
+        List<Classe> listeClasses = new List<Classe>();
+        List<Matiere> listeMatieres = new List<Matiere>();
+        List<Niveau> listeNiveaux = new List<Niveau>();
+        List<Note> listeNotes = new List<Note>();
+        DAL.JsonDataManager<Models.Niveau> jsonDataManagerNiveau = new DAL.JsonDataManager<Models.Niveau>();
+        DAL.JsonDataManager<Models.Eleve> jsonDataManagerEleve = new DAL.JsonDataManager<Models.Eleve>();
+        DAL.JsonDataManager<Models.Professeur> jsonDataManagerProfesseur = new DAL.JsonDataManager<Models.Professeur>();
+        DAL.JsonDataManager<Models.Classe> jsonDataManagerClasse = new DAL.JsonDataManager<Models.Classe>();
+        DAL.JsonDataManager<Models.Matiere> jsonDataManagerMatiere = new DAL.JsonDataManager<Models.Matiere>();
+        DAL.JsonDataManager<Models.Note> jsonDataManagerNote = new DAL.JsonDataManager<Models.Note>();
 
         // ///////////////////////////////////////////
         // ///////////////////////////////////////////
         public UserControl1()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
         // ///////////////////////////////////////////
         // ///////////////////////////////////////////
         private void majTabEleve()
         {
-            var bindingListEleve                = new BindingList<Eleve>(listeEleves);
-            var sourceEleve                     = new BindingSource(bindingListEleve, null);
-            dataGridViewEleve.DataSource        = sourceEleve;
+            var bindingListEleve = new BindingList<Eleve>(listeEleves);
+            var sourceEleve = new BindingSource(bindingListEleve, null);
+            dataGridViewEleve.DataSource = sourceEleve;
         }
         private void majTabProfesseur()
         {
-            var bindingListProfesseur           = new BindingList<Professeur>(listeProfesseurs);
-            var sourceProfesseur                = new BindingSource(bindingListProfesseur, null);
-            dataGridViewProfesseurs.DataSource  = sourceProfesseur;
+            var bindingListProfesseur = new BindingList<Professeur>(listeProfesseurs);
+            var sourceProfesseur = new BindingSource(bindingListProfesseur, null);
+            dataGridViewProfesseurs.DataSource = sourceProfesseur;
         }
         private void majTabClasse()
         {
-            var bindingListClasse               = new BindingList<Classe>(listeClasses);
-            var sourceClasse                    = new BindingSource(bindingListClasse, null);
-            dataGridViewClasse.DataSource       = sourceClasse;
+            var bindingListClasse = new BindingList<Classe>(listeClasses);
+            var sourceClasse = new BindingSource(bindingListClasse, null);
+            dataGridViewClasse.DataSource = sourceClasse;
         }
         private void majTabMatiere()
         {
-            var bindingListMatiere              = new BindingList<Matiere>(listeMatieres);
-            var sourceMatiere                   = new BindingSource(bindingListMatiere, null);
-            dataGridViewMatiere.DataSource      = sourceMatiere;
+            var bindingListMatiere = new BindingList<Matiere>(listeMatieres);
+            var sourceMatiere = new BindingSource(bindingListMatiere, null);
+            dataGridViewMatiere.DataSource = sourceMatiere;
         }
         private void majTabNiveau()
         {
-            var bindingListNiveau               = new BindingList<Niveau>(listeNiveaux);
-            var sourceNiveau                    = new BindingSource(bindingListNiveau, null);
-            dataGridViewNiveaux.DataSource      = sourceNiveau;
+            var bindingListNiveau = new BindingList<Niveau>(listeNiveaux);
+            var sourceNiveau = new BindingSource(bindingListNiveau, null);
+            dataGridViewNiveaux.DataSource = sourceNiveau;
         }
         private void majTabNote()
         {
@@ -78,15 +78,15 @@ namespace SchoolApp.UserControls
             //Boxes Prof:
             textBoxNomProf.Text = string.Empty;
             textBoxPrenomProf.Text = string.Empty;
-            textBoxLoginProf.Text= string.Empty;
-            textBoxMdpProf.Text= string.Empty;
+            textBoxLoginProf.Text = string.Empty;
+            textBoxMdpProf.Text = string.Empty;
             //Boxes notes :
             textBoxValeurNote.Text = string.Empty;
         }
         // ///////////////////////////////////////////
         // ///////////////////////////////////////////
         public void majAllJson()
-        {            
+        {
             listeEleves = jsonDataManagerEleve.DataList;
             string cheminRoot = Directory.GetCurrentDirectory();
             cheminRoot = cheminRoot.Remove(cheminRoot.Length - 25) + "\\JSON\\";
@@ -94,27 +94,27 @@ namespace SchoolApp.UserControls
             textBoxCheminListe.Text = cheminFichierImporter;
 
             listeProfesseurs = jsonDataManagerProfesseur.DataList;
-             cheminRoot = Directory.GetCurrentDirectory();
+            cheminRoot = Directory.GetCurrentDirectory();
             cheminRoot = cheminRoot.Remove(cheminRoot.Length - 25) + "\\JSON\\";
-             cheminFichierImporter = cheminRoot + "Professeur" + ".json";
+            cheminFichierImporter = cheminRoot + "Professeur" + ".json";
             textBoxCheminListeProff.Text = cheminFichierImporter;
 
             listeClasses = jsonDataManagerClasse.DataList;
-             cheminRoot = Directory.GetCurrentDirectory();
+            cheminRoot = Directory.GetCurrentDirectory();
             cheminRoot = cheminRoot.Remove(cheminRoot.Length - 25) + "\\JSON\\";
-             cheminFichierImporter = cheminRoot + "Classe" + ".json";
+            cheminFichierImporter = cheminRoot + "Classe" + ".json";
             textBoxCheminListeClasse.Text = cheminFichierImporter;
 
             listeMatieres = jsonDataManagerMatiere.DataList;
-             cheminRoot = Directory.GetCurrentDirectory();
+            cheminRoot = Directory.GetCurrentDirectory();
             cheminRoot = cheminRoot.Remove(cheminRoot.Length - 25) + "\\JSON\\";
-             cheminFichierImporter = cheminRoot + "Matiere" + ".json";
+            cheminFichierImporter = cheminRoot + "Matiere" + ".json";
             textBoxCheminListeMatiere.Text = cheminFichierImporter;
 
             listeNiveaux = jsonDataManagerNiveau.DataList;
-             cheminRoot = Directory.GetCurrentDirectory();
+            cheminRoot = Directory.GetCurrentDirectory();
             cheminRoot = cheminRoot.Remove(cheminRoot.Length - 25) + "\\JSON\\";
-             cheminFichierImporter = cheminRoot + "Niveau" + ".json";
+            cheminFichierImporter = cheminRoot + "Niveau" + ".json";
             textBoxCheminListeNiveaux.Text = cheminFichierImporter;
 
             listeNotes = jsonDataManagerNote.DataList;
@@ -122,18 +122,28 @@ namespace SchoolApp.UserControls
             cheminRoot = cheminRoot.Remove(cheminRoot.Length - 25) + "\\JSON\\";
             cheminFichierImporter = cheminRoot + "Note" + ".json";
             textBoxCheminListeNote.Text = cheminFichierImporter;
-
-            majAllTab();
-
         }
-        public void majAllTab()
+        public void majCheminJSON()
         {
-            majTabClasse();
-            majTabEleve();
-            majTabMatiere();
-            majTabNiveau();
-            majTabProfesseur();
-            majTabNote();
+            textBoxCheminListe.Text         = Directory.GetCurrentDirectory().Remove(Directory.GetCurrentDirectory().Length - 25) + "\\JSON\\" + "Eleve" + ".json";
+            textBoxCheminListeProff.Text    = Directory.GetCurrentDirectory().Remove(Directory.GetCurrentDirectory().Length - 25) + "\\JSON\\" + "Professeur" + ".json";
+            textBoxCheminListeClasse.Text   = Directory.GetCurrentDirectory().Remove(Directory.GetCurrentDirectory().Length - 25) + "\\JSON\\" + "Classe" + ".json";
+            textBoxCheminListeMatiere.Text  = Directory.GetCurrentDirectory().Remove(Directory.GetCurrentDirectory().Length - 25) + "\\JSON\\" + "Matiere" + ".json";
+            textBoxCheminListeNiveaux.Text  = Directory.GetCurrentDirectory().Remove(Directory.GetCurrentDirectory().Length - 25) + "\\JSON\\" + "Niveau" + ".json";
+            textBoxCheminListeNote.Text     = Directory.GetCurrentDirectory().Remove(Directory.GetCurrentDirectory().Length - 25) + "\\JSON\\" + "Note" + ".json";
+        }
+        public void ImportFromJSON()
+        {
+            listeEleves = jsonDataManagerEleve.DataList;
+            listeProfesseurs = jsonDataManagerProfesseur.DataList;
+            listeClasses = jsonDataManagerClasse.DataList;
+            listeMatieres = jsonDataManagerMatiere.DataList;
+            listeNiveaux = jsonDataManagerNiveau.DataList;
+            listeNotes = jsonDataManagerNote.DataList;
+        }
+        public void majDataSource()
+        {
+            //Maj des combos box après un ajout/suppression.
             comboBoxClasseProf.DataSource = null;
             comboBoxClasseProf.DataSource = listeProfesseurs;
             comboBoxClasseNivea.DataSource = null;
@@ -151,6 +161,32 @@ namespace SchoolApp.UserControls
             comboBoxProfProf.DataSource = null;
             comboBoxProfProf.DataSource = listeProfesseurs;
         }
+        public void majAllTab()
+        {
+            var bindingListEleve = new BindingList<Eleve>(listeEleves);
+            var sourceEleve = new BindingSource(bindingListEleve, null);
+            dataGridViewEleve.DataSource = sourceEleve;
+
+            var bindingListProfesseur = new BindingList<Professeur>(listeProfesseurs);
+            var sourceProfesseur = new BindingSource(bindingListProfesseur, null);
+            dataGridViewProfesseurs.DataSource = sourceProfesseur;
+
+            var bindingListClasse = new BindingList<Classe>(listeClasses);
+            var sourceClasse = new BindingSource(bindingListClasse, null);
+            dataGridViewClasse.DataSource = sourceClasse;
+
+            var bindingListMatiere = new BindingList<Matiere>(listeMatieres);
+            var sourceMatiere = new BindingSource(bindingListMatiere, null);
+            dataGridViewMatiere.DataSource = sourceMatiere;
+
+            var bindingListNiveau = new BindingList<Niveau>(listeNiveaux);
+            var sourceNiveau = new BindingSource(bindingListNiveau, null);
+            dataGridViewNiveaux.DataSource = sourceNiveau;
+
+            var bindingListNote = new BindingList<Note>(listeNotes);
+            var sourceNote = new BindingSource(bindingListNote, null);
+            dataGridViewNotes.DataSource = sourceNote;
+        }
         // Différents boutons AJOUTER :
         ///////////////////////////////
         private void buttonAjouterEleve_Click(object sender, EventArgs e)
@@ -158,11 +194,12 @@ namespace SchoolApp.UserControls
             string nom = textBoxEleveNom.Text;
             string prenom = textBoxElevePrenom.Text;
             string anciennete = textBoxEleveAnciennete.Text;
-            Eleve nouvelEleve = new Eleve{ Nom = nom, Prenom = prenom, Anciennete = Convert.ToInt16(anciennete)};
+            Eleve nouvelEleve = new Eleve { Nom = nom, Prenom = prenom, Anciennete = Convert.ToInt16(anciennete) };
             listeEleves.Add(nouvelEleve);
             resetBoxes();
-            majTabEleve();
-            majAllJson();
+            majAllTab();
+            majDataSource();
+            majCheminJSON();
         }   // ajouter eleve
         private void buttonAjouterProf_Click(object sender, EventArgs e)
         {
@@ -180,18 +217,18 @@ namespace SchoolApp.UserControls
             }
             resetBoxes();
             majAllTab();
-            majAllJson();
+            majDataSource();
+            majCheminJSON();
         }   // ajouter Professeur  
-        // ///////////////////////////////////////////// ///////////////////////////////////////////
         private void buttonAjouterClasse_Click(object sender, EventArgs e)
         {
-            string nom              = textBoxNomClasse.Text;
-            Classe nouvelleClasse   = new Classe() { Label = nom };
+            string nom = textBoxNomClasse.Text;
+            Classe nouvelleClasse = new Classe() { Label = nom };
             listeClasses.Add(nouvelleClasse);
             resetBoxes();
             majAllTab();
-            majAllJson();
-            comboBoxClasse.DataSource = listeClasses;
+            majDataSource();
+            majCheminJSON();
         }   // ajouter Classe
         private void buttonAjouterMatiere_Click(object sender, EventArgs e) {
             string nom = textBoxNomMatiere.Text;
@@ -199,7 +236,8 @@ namespace SchoolApp.UserControls
             listeMatieres.Add(nouvelleMatiere);
             resetBoxes();
             majAllTab();
-            majAllJson();
+            majDataSource();
+            majCheminJSON();
         }   // ajouter Matiere
         private void buttonAjouterNiveau_Click(object sender, EventArgs e) {
             string nom = textBoxNomNiveau.Text;
@@ -207,36 +245,81 @@ namespace SchoolApp.UserControls
             listeNiveaux.Add(nouveauNiveau);
             resetBoxes();
             majAllTab();
-            majAllJson();
+            majDataSource();
+            majCheminJSON();
         } // ajouter Niveau
+        private void buttonAjouterNote_Click(object sender, EventArgs e)
+        {
 
-        // ///////////////////////////////////////////
-        // ///////////////////////////////////////////
-        private void buttonChargerListeEleve_Click(object sender, EventArgs e) {
-            majAllJson();
+            string valeur = textBoxValeurNote.Text;
+            Note nouvelleNote = new Note() { Valeur = Convert.ToDouble(valeur) };
+            listeNotes.Add(nouvelleNote);
+
+            string EleveSelected = comboBoxNoteEleves.Text;
+            string[] EleveSplit = EleveSelected.Split(" ");
+            string nomEleve = EleveSplit[0];
+            string prenomEleve = EleveSplit[1];
+
+            var eleve = jsonDataManagerEleve.GetWhere(item => item.Nom == nomEleve);
+            eleve[0].ajouterNote(nouvelleNote);
+
+            string MatiereSelected = comboBoxNoteMatiere.Text;
+            var matiere = jsonDataManagerMatiere.GetWhere(item => item.label == MatiereSelected);
+
+            nouvelleNote.matiereId = matiere[0].Id;
+
+            resetBoxes();
             majAllTab();
+            majDataSource();
+            majCheminJSON();
+        } // ajouter note
+        /////////////////////////////////////////////
+        /////////////////////////////////////////////
+        /////////////////////////////////////////////
+        /////////////////////////////////////////////
+        private void buttonChargerListeEleve_Click(object sender, EventArgs e)
+        {
+            ImportFromJSON();
+            majAllTab();
+            majDataSource();
+            majCheminJSON();
         }
 
-        private void buttonImportProfs_Click(object sender, EventArgs e) {
-            majAllJson();
+        private void buttonImportProfs_Click(object sender, EventArgs e)
+        {
+
+            ImportFromJSON();
             majAllTab();
+            majDataSource();
+            majCheminJSON();
         }
-        private void buttonImportClasses_Click(object sender, EventArgs e) {
-            majAllJson();
+        private void buttonImportClasses_Click(object sender, EventArgs e)
+        {
+            ImportFromJSON();
             majAllTab();
+            majDataSource();
+            majCheminJSON();
         }
-        private void buttonImportMatieres_Click_Click(object sender, EventArgs e) {
-            majAllJson();
+        private void buttonImportMatieres_Click_Click(object sender, EventArgs e)
+        {
+            ImportFromJSON();
             majAllTab();
+            majDataSource();
+            majCheminJSON();
         }
-        private void buttonImportNiveaux_Click(object sender, EventArgs e) {
-            majAllJson();
+        private void buttonImportNiveaux_Click(object sender, EventArgs e)
+        {
+            ImportFromJSON();
             majAllTab();
+            majDataSource();
+            majCheminJSON();
         }
         private void buttonImportNote_Click(object sender, EventArgs e)
         {
-            majAllJson();
+            ImportFromJSON();
             majAllTab();
+            majDataSource();
+            majCheminJSON();
         }
         // ///////////////////////////////////////////
         // ///////////////////////////////////////////
@@ -295,6 +378,9 @@ namespace SchoolApp.UserControls
             textBoxCheminListeNote.Text = cheminFichierImporter;
             MessageBox.Show("Exportation avec succès!");
         }
+        /////////////////////////////////
+        /////////////////////////////////
+        /////////////////////////////////
         private void buttonClasseLierProf_Click(object sender, EventArgs e)
         {            
             string ClasseSelected = comboBoxClasse.Text;
@@ -309,6 +395,8 @@ namespace SchoolApp.UserControls
             classe[0].ajouterProfesseur(prof[0]);
 
             majAllTab();
+            majDataSource();
+            majCheminJSON();
         }
         private void buttonClasseLierClasse_Click(object sender, EventArgs e)
         {
@@ -321,6 +409,8 @@ namespace SchoolApp.UserControls
             classe[0].Niveau = niveau[0];
 
             majAllTab();
+            majDataSource();
+            majCheminJSON();
         }
 
         private void buttonEleveLierClasse_Click(object sender, EventArgs e)
@@ -336,34 +426,11 @@ namespace SchoolApp.UserControls
 
             classe[0].AddEleve(eleve[0]);
 
-            jsonDataManagerClasse.SaveJSonData();
-            jsonDataManagerEleve.SaveJSonData();
             majAllTab();
+            majDataSource();
+            majCheminJSON();
         }
-        private void buttonAjouterNote_Click(object sender, EventArgs e)
-        {
 
-            string valeur = textBoxValeurNote.Text;
-            Note nouvelleNote = new Note() { Valeur = Convert.ToDouble(valeur) };
-            listeNotes.Add(nouvelleNote);
-
-            string EleveSelected = comboBoxNoteEleves.Text;
-            string[] EleveSplit = EleveSelected.Split(" ");
-            string nomEleve = EleveSplit[0];
-            string prenomEleve = EleveSplit[1];
-
-            var eleve = jsonDataManagerEleve.GetWhere(item => item.Nom == nomEleve);
-            eleve[0].ajouterNote(nouvelleNote);
-
-            string MatiereSelected = comboBoxNoteMatiere.Text;
-            var matiere = jsonDataManagerMatiere.GetWhere(item => item.label == MatiereSelected);
-
-            nouvelleNote.matiereId = matiere[0].Id;
-
-            resetBoxes();
-            majAllJson();
-            majAllTab();
-        } // ajouter note
 
         private void buttonRetirerEleve_Click(object sender, EventArgs e)
         {
@@ -378,8 +445,9 @@ namespace SchoolApp.UserControls
             listeEleves.Remove(eleve[0]);
             classe[0].EleveList.Remove(eleve[0]);
 
-            majAllJson();
             majAllTab();
+            majDataSource();
+            majCheminJSON();
 
         }
         private void buttonRetirerProf_Click(object sender, EventArgs e)
@@ -395,9 +463,10 @@ namespace SchoolApp.UserControls
             classe[0].retirerProfesseur(prof[0]);
             prof[0].retirerClasse(classe[0]);
             listeProfesseurs.Remove(prof[0]);
-            
-            majAllJson();
+
             majAllTab();
+            majDataSource();
+            majCheminJSON();
         }
 
     }

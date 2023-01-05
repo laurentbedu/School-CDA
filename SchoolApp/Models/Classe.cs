@@ -20,7 +20,7 @@ namespace SchoolApp.Models
             }
             set
             {
-                niveauId = value?.Id;
+                professeurId = value?.Id;
             }
         }
         [JsonIgnore][NePasIntegrerDansToString] public List<Eleve> EleveList { get; } = new List<Eleve>();

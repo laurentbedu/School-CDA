@@ -1,0 +1,46 @@
+[
+  {
+    "label": "Francais",
+    "id": "a3069f95-8109-449f-8297-0def6e850e71"
+  },
+  {
+    "label": "Anglais",
+    "id": "88f1aafb-0594-4f19-b3b6-26a7893e2fe9"
+  },
+  {
+    "label": "Allemand",
+    "id": "9edfb7cf-6e07-43b4-8776-f768ff2d26e4"
+  },
+  {
+    "label": "Mathematique",
+    "id": "2e3e7cab-ec14-46b0-92c4-6fe9a49409f5"
+  },
+  {
+    "label": "Science",
+    "id": "3c736b47-4578-44bc-a866-9bb428a26377"
+  },
+  {
+    "label": "Histoire",
+    "id": "4d3af2ca-2857-41cf-af57-ee2916dc3d88"
+  },
+  {
+    "label": "Geographie",
+    "id": "d1dffa01-4e88-4a37-a847-c7dcce804653"
+  },
+  {
+    "label": "Sport",
+    "id": "1fe9a454-62c6-4350-8574-1d19003c0ce2"
+  },
+  {
+    "label": "Espagnol",
+    "id": "91a2fa01-e662-4864-8b64-c176dd69b706"
+  },
+  {
+    "label": "Philosophie",
+    "id": "a047ba5f-f968-4ce5-a028-edd04675b9a1"
+  },
+  {
+    "label": "Math Sup",
+    "id": "a245a6f5-0c3e-438c-8c4e-aa916033ae95"
+  }
+]
