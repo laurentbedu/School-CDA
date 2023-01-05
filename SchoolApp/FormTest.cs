@@ -92,21 +92,13 @@ namespace SchoolApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-           importJSON();
         } //Btn load
 
         private void button2_Click(object sender, EventArgs e)
         {
-
         } 
         private void button9_Click(object sender, EventArgs e)
         {
-            /*
-            var jsonDataManager2 = new DAL.JsonDataManager<Models.Professeur>();
-            jsonDataManager2.SaveJSonData(listeProfesseurs);
-            var jsonDataManager3 = new DAL.JsonDataManager<Models.Eleve>();
-            jsonDataManager3.SaveJSonData(listeEleves);
-            */
             jsonDataManagerNiveau.SaveJSonData();
             jsonDataManagerEleve.SaveJSonData();
             jsonDataManagerProfesseur.SaveJSonData();
@@ -142,8 +134,6 @@ namespace SchoolApp
 
             jdmClasse.SaveJSonData();
             jdmNiveau.SaveJSonData();
-
-            bool stop = true;
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -170,8 +160,6 @@ namespace SchoolApp
             var elevePrenomEleve2 = eleveJdM.GetWhere(item => item.Prenom == "prenomEleve2");
             var eleve37 = eleveJdM.GetById("d0a24f76-4b75-4967-9b0b-87d5757131ca");
             var eleve201 = eleveJdM.GetById("111");
-
-            bool stop = true;
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -193,8 +181,6 @@ namespace SchoolApp
 
             classeJdM.SaveJSonData();
             professeurJdM.SaveJSonData();
-
-            bool stop = true;
         }
     }
 }

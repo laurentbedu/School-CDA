@@ -36,7 +36,6 @@ namespace SchoolApp.DAL
             cheminRoot = cheminRoot.Remove(cheminRoot.Length - 25) + "\\JSON\\";
             string cheminFichierExporter = cheminRoot + nomClasseT + ".json";
             string jsonString = JsonSerializer.Serialize(dataList)!;
-
             //MessageBox.Show(jsonString);            
             File.WriteAllText(cheminFichierExporter, jsonString);
         }

@@ -13,8 +13,8 @@ namespace SchoolApp.Models
         // Propriétés :
         public bool IsAdmin { get; set; }
         [JsonPropertyName("classe_id")] public string? classeId { get; set; }
-        [NePasIntegrerDansToStringAttribute] public string Login { get; set; }
-        [NePasIntegrerDansToStringAttribute] public string Password { get; set; }
+        [NePasIntegrerDansToStringAttribute] public string? Login { get; set; }
+        [NePasIntegrerDansToStringAttribute] public string? Password { get; set; }
         [NePasIntegrerDansToStringAttribute][JsonIgnore] public Classe? Classe { get; private set; }
 
         // Methodes :

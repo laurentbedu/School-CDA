@@ -8,62 +8,24 @@ namespace SchoolApp.UserControls
 {
     public partial class UserControl1 : UserControl
     {
-        List<Eleve> listeEleves = new List<Eleve>();
-        List<Professeur> listeProfesseurs = new List<Professeur>();
-        List<Classe> listeClasses = new List<Classe>();
-        List<Matiere> listeMatieres = new List<Matiere>();
-        List<Niveau> listeNiveaux = new List<Niveau>();
-        List<Note> listeNotes = new List<Note>();
-        DAL.JsonDataManager<Models.Niveau> jsonDataManagerNiveau = new DAL.JsonDataManager<Models.Niveau>();
-        DAL.JsonDataManager<Models.Eleve> jsonDataManagerEleve = new DAL.JsonDataManager<Models.Eleve>();
-        DAL.JsonDataManager<Models.Professeur> jsonDataManagerProfesseur = new DAL.JsonDataManager<Models.Professeur>();
-        DAL.JsonDataManager<Models.Classe> jsonDataManagerClasse = new DAL.JsonDataManager<Models.Classe>();
-        DAL.JsonDataManager<Models.Matiere> jsonDataManagerMatiere = new DAL.JsonDataManager<Models.Matiere>();
-        DAL.JsonDataManager<Models.Note> jsonDataManagerNote = new DAL.JsonDataManager<Models.Note>();
+        List<Eleve> listeEleves                                             = new List<Eleve>();
+        List<Professeur> listeProfesseurs                                   = new List<Professeur>();
+        List<Classe> listeClasses                                           = new List<Classe>();
+        List<Matiere> listeMatieres                                         = new List<Matiere>();
+        List<Niveau> listeNiveaux                                           = new List<Niveau>();
+        List<Note> listeNotes                                               = new List<Note>();
+        DAL.JsonDataManager<Models.Niveau> jsonDataManagerNiveau            = new DAL.JsonDataManager<Models.Niveau>();
+        DAL.JsonDataManager<Models.Eleve> jsonDataManagerEleve              = new DAL.JsonDataManager<Models.Eleve>();
+        DAL.JsonDataManager<Models.Professeur> jsonDataManagerProfesseur    = new DAL.JsonDataManager<Models.Professeur>();
+        DAL.JsonDataManager<Models.Classe> jsonDataManagerClasse            = new DAL.JsonDataManager<Models.Classe>();
+        DAL.JsonDataManager<Models.Matiere> jsonDataManagerMatiere          = new DAL.JsonDataManager<Models.Matiere>();
+        DAL.JsonDataManager<Models.Note> jsonDataManagerNote                = new DAL.JsonDataManager<Models.Note>();
 
         // ///////////////////////////////////////////
         // ///////////////////////////////////////////
         public UserControl1()
         {
             InitializeComponent();
-        }
-        // ///////////////////////////////////////////
-        // ///////////////////////////////////////////
-        private void majTabEleve()
-        {
-            var bindingListEleve = new BindingList<Eleve>(listeEleves);
-            var sourceEleve = new BindingSource(bindingListEleve, null);
-            dataGridViewEleve.DataSource = sourceEleve;
-        }
-        private void majTabProfesseur()
-        {
-            var bindingListProfesseur = new BindingList<Professeur>(listeProfesseurs);
-            var sourceProfesseur = new BindingSource(bindingListProfesseur, null);
-            dataGridViewProfesseurs.DataSource = sourceProfesseur;
-        }
-        private void majTabClasse()
-        {
-            var bindingListClasse = new BindingList<Classe>(listeClasses);
-            var sourceClasse = new BindingSource(bindingListClasse, null);
-            dataGridViewClasse.DataSource = sourceClasse;
-        }
-        private void majTabMatiere()
-        {
-            var bindingListMatiere = new BindingList<Matiere>(listeMatieres);
-            var sourceMatiere = new BindingSource(bindingListMatiere, null);
-            dataGridViewMatiere.DataSource = sourceMatiere;
-        }
-        private void majTabNiveau()
-        {
-            var bindingListNiveau = new BindingList<Niveau>(listeNiveaux);
-            var sourceNiveau = new BindingSource(bindingListNiveau, null);
-            dataGridViewNiveaux.DataSource = sourceNiveau;
-        }
-        private void majTabNote()
-        {
-            var bindingListNote = new BindingList<Note>(listeNotes);
-            var sourceNote = new BindingSource(bindingListNote, null);
-            dataGridViewNotes.DataSource = sourceNote;
         }
         // ///////////////////////////////////////////
         // ///////////////////////////////////////////
@@ -84,45 +46,7 @@ namespace SchoolApp.UserControls
             textBoxValeurNote.Text = string.Empty;
         }
         // ///////////////////////////////////////////
-        // ///////////////////////////////////////////
-        public void majAllJson()
-        {
-            listeEleves = jsonDataManagerEleve.DataList;
-            string cheminRoot = Directory.GetCurrentDirectory();
-            cheminRoot = cheminRoot.Remove(cheminRoot.Length - 25) + "\\JSON\\";
-            string cheminFichierImporter = cheminRoot + "Eleve" + ".json";
-            textBoxCheminListe.Text = cheminFichierImporter;
-
-            listeProfesseurs = jsonDataManagerProfesseur.DataList;
-            cheminRoot = Directory.GetCurrentDirectory();
-            cheminRoot = cheminRoot.Remove(cheminRoot.Length - 25) + "\\JSON\\";
-            cheminFichierImporter = cheminRoot + "Professeur" + ".json";
-            textBoxCheminListeProff.Text = cheminFichierImporter;
-
-            listeClasses = jsonDataManagerClasse.DataList;
-            cheminRoot = Directory.GetCurrentDirectory();
-            cheminRoot = cheminRoot.Remove(cheminRoot.Length - 25) + "\\JSON\\";
-            cheminFichierImporter = cheminRoot + "Classe" + ".json";
-            textBoxCheminListeClasse.Text = cheminFichierImporter;
-
-            listeMatieres = jsonDataManagerMatiere.DataList;
-            cheminRoot = Directory.GetCurrentDirectory();
-            cheminRoot = cheminRoot.Remove(cheminRoot.Length - 25) + "\\JSON\\";
-            cheminFichierImporter = cheminRoot + "Matiere" + ".json";
-            textBoxCheminListeMatiere.Text = cheminFichierImporter;
-
-            listeNiveaux = jsonDataManagerNiveau.DataList;
-            cheminRoot = Directory.GetCurrentDirectory();
-            cheminRoot = cheminRoot.Remove(cheminRoot.Length - 25) + "\\JSON\\";
-            cheminFichierImporter = cheminRoot + "Niveau" + ".json";
-            textBoxCheminListeNiveaux.Text = cheminFichierImporter;
-
-            listeNotes = jsonDataManagerNote.DataList;
-            cheminRoot = Directory.GetCurrentDirectory();
-            cheminRoot = cheminRoot.Remove(cheminRoot.Length - 25) + "\\JSON\\";
-            cheminFichierImporter = cheminRoot + "Note" + ".json";
-            textBoxCheminListeNote.Text = cheminFichierImporter;
-        }
+        // /////////////////////////////////////////// 
         public void majCheminJSON()
         {
             textBoxCheminListe.Text         = Directory.GetCurrentDirectory().Remove(Directory.GetCurrentDirectory().Length - 25) + "\\JSON\\" + "Eleve" + ".json";
