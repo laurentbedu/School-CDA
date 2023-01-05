@@ -43,6 +43,8 @@ namespace SchoolApp
             niveauList.Find(e => e.Label == "CM2")?.AddMatieres(matiereList.ToArray());
 
             cbBoxNiveau.DataSource = niveauList;
+
+           
         }
 
         private void boxNom_TextChanged(object sender, EventArgs e)
@@ -52,7 +54,7 @@ namespace SchoolApp
         Professeur? professeur;
         private void button1_Click(object sender, EventArgs e)
         {
-            Professeur professeur = new Professeur()
+             professeur = new Professeur()
             {
                 Nom = boxNom.Text,
                 Prenom = boxPrenom.Text,
@@ -105,6 +107,49 @@ namespace SchoolApp
         {
             professeur.AddClasse(classe);
             MessageBox.Show(professeur + "\n" + professeur.Classe?.ToString(true));
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            classe.RemoveProfesseur(professeur);
+            MessageBox.Show(classe + "\n" + classe.Professeur?.ToString(true));
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            classe.RemoveEleve(eleve);
+            MessageBox.Show(classe + "\n" + classe.Eleve?.ToString(true));
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            classe.AddEleve(eleve);
+            listBox1.Items.Add(eleve);
+            MessageBox.Show(classe + "\n" + classe.Eleve?.ToString(true));
+
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            
+         //   foreach (var item in classe.EleveList) { cbListeEleve.Items.Add(item.ToString()); }
+            
+        }
+
+        private void boxLabelClasse_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void boxNomEleve_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            var jsonDataManager = new DAL.JsonDataManager<Models.Eleve>();
+            List<Eleve> listEleve = jsonDataManager.DataList;
         }
     }
 }

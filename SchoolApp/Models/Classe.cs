@@ -11,7 +11,7 @@ using System.Xml.Linq;
 
 namespace SchoolApp.Models
 {
-
+    [DataContract]
     internal class Classe : Model
     {
         public List<Eleve> EleveList { get; set; } = new List<Eleve>();
@@ -29,6 +29,7 @@ namespace SchoolApp.Models
 
         //[JsonIgnore]
 
+        public Eleve ? Eleve { get; set; }
         public Niveau? Niveau { get; set; }
 //        {
 //            get
@@ -90,16 +91,6 @@ namespace SchoolApp.Models
             }
         }
 
-        public override string ToString()
-        {
-            string desc = "";
-            GetType().GetProperties()
-                .Where(p => !Attribute.IsDefined(p, typeof(IsNotInToStringAttribute)))
-                .ToList()
-                .ForEach(p => desc += p.Name + ":" + GetType().GetProperty(p.Name)?.GetValue(this) + "\r\n");
-
-            return desc;
-
-        }
+        
     }
 }
