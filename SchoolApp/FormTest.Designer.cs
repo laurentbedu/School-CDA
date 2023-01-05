@@ -234,7 +234,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(93, 622);
+            this.button9.Location = new System.Drawing.Point(12, 651);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 23);
             this.button9.TabIndex = 11;
@@ -286,7 +286,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1099, 689);
+            this.ClientSize = new System.Drawing.Size(1099, 695);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);

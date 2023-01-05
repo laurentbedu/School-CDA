@@ -1,14 +1,1 @@
-[
-  {
-    "eleve_id": "f836fd3e-e08f-41d0-90f5-3031883424ee",
-    "matiere_id": "a3069f95-8109-449f-8297-0def6e850e71",
-    "value": 15,
-    "id": "17114f7f-ed12-49ac-9fa2-62ed267be585"
-  },
-  {
-    "eleve_id": "879d8bd1-f9cd-49d3-8eb3-1d2dd0674442",
-    "matiere_id": "9edfb7cf-6e07-43b4-8776-f768ff2d26e4",
-    "value": 5,
-    "id": "cc633c8e-ced7-4a90-abb7-2b593dc68e25"
-  }
-]
+[]

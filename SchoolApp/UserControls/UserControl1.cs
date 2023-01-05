@@ -1,4 +1,6 @@
-﻿using SchoolApp.Models;
+﻿using SchoolApp.DAL;
+using SchoolApp.Models;
+using System.Collections.Generic;
 using System.ComponentModel;
 
 
@@ -18,6 +20,7 @@ namespace SchoolApp.UserControls
         DAL.JsonDataManager<Models.Classe>      jsonDataManagerClasse       = new DAL.JsonDataManager<Models.Classe>();
         DAL.JsonDataManager<Models.Matiere>     jsonDataManagerMatiere      = new DAL.JsonDataManager<Models.Matiere>();
         DAL.JsonDataManager<Models.Note>        jsonDataManagerNote         = new DAL.JsonDataManager<Models.Note>();
+
         // ///////////////////////////////////////////
         // ///////////////////////////////////////////
         public UserControl1()
@@ -131,14 +134,22 @@ namespace SchoolApp.UserControls
             majTabNiveau();
             majTabProfesseur();
             majTabNote();
+            comboBoxClasseProf.DataSource = null;
             comboBoxClasseProf.DataSource = listeProfesseurs;
+            comboBoxClasseNivea.DataSource = null;
             comboBoxClasseNivea.DataSource = listeNiveaux;
+            comboBoxClasse.DataSource = null;
             comboBoxClasse.DataSource = listeClasses;
+            comboBoxEleves.DataSource = null;
             comboBoxEleves.DataSource = listeEleves;
+            comboBoxEleveClasses.DataSource = null;
             comboBoxEleveClasses.DataSource = listeClasses;
+            comboBoxNoteEleves.DataSource = null;
             comboBoxNoteEleves.DataSource = listeEleves;
+            comboBoxNoteMatiere.DataSource = null;
             comboBoxNoteMatiere.DataSource = listeMatieres;
-
+            comboBoxProfProf.DataSource = null;
+            comboBoxProfProf.DataSource = listeProfesseurs;
         }
         // Différents boutons AJOUTER :
         ///////////////////////////////
@@ -353,5 +364,41 @@ namespace SchoolApp.UserControls
             majAllJson();
             majAllTab();
         } // ajouter note
+
+        private void buttonRetirerEleve_Click(object sender, EventArgs e)
+        {
+            string EleveSelected = comboBoxNoteEleves.Text;
+            string[] EleveSplit = EleveSelected.Split(" ");
+            string nomEleve = EleveSplit[0];
+            string prenomEleve = EleveSplit[1];
+            
+            var eleve = jsonDataManagerEleve.GetWhere(item => item.Nom == nomEleve);
+            var classe = jsonDataManagerClasse.GetWhere(item => item.Id == eleve[0].classeId);
+
+            listeEleves.Remove(eleve[0]);
+            classe[0].EleveList.Remove(eleve[0]);
+
+            majAllJson();
+            majAllTab();
+
+        }
+        private void buttonRetirerProf_Click(object sender, EventArgs e)
+        {
+            string ProfSelected = comboBoxProfProf.Text;
+            string[] ProfSplit = ProfSelected.Split(" ");
+            string nomProf = ProfSplit[0];
+            string prenomProf = ProfSplit[1];
+
+            var prof = jsonDataManagerProfesseur.GetWhere(item => item.Nom == nomProf);
+            var classe = jsonDataManagerClasse.GetWhere(item => item.Id == prof[0].classeId);
+
+            classe[0].retirerProfesseur(prof[0]);
+            prof[0].retirerClasse(classe[0]);
+            listeProfesseurs.Remove(prof[0]);
+            
+            majAllJson();
+            majAllTab();
+        }
+
     }
 }

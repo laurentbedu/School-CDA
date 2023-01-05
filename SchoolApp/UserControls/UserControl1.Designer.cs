@@ -29,111 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPageEleve = new System.Windows.Forms.TabPage();
-            this.groupBoxAjoutEleve = new System.Windows.Forms.GroupBox();
-            this.buttonEleveLierClasse = new System.Windows.Forms.Button();
-            this.comboBoxEleveClasses = new System.Windows.Forms.ComboBox();
-            this.label76 = new System.Windows.Forms.Label();
-            this.comboBoxEleves = new System.Windows.Forms.ComboBox();
-            this.label75 = new System.Windows.Forms.Label();
-            this.textBoxCheminListe = new System.Windows.Forms.TextBox();
-            this.labelCheminListeEleve = new System.Windows.Forms.Label();
-            this.buttonChargerListeEleve = new System.Windows.Forms.Button();
-            this.buttonSauvegarderListeEleve = new System.Windows.Forms.Button();
-            this.textBoxEleveAnciennete = new System.Windows.Forms.TextBox();
-            this.labelAncienneteEleve = new System.Windows.Forms.Label();
-            this.buttonModifierEleve = new System.Windows.Forms.Button();
-            this.labelElevePrenom = new System.Windows.Forms.Label();
-            this.textBoxElevePrenom = new System.Windows.Forms.TextBox();
-            this.labelAjoutEleveNom = new System.Windows.Forms.Label();
-            this.textBoxEleveNom = new System.Windows.Forms.TextBox();
-            this.buttonAjouterEleve = new System.Windows.Forms.Button();
-            this.buttonRetirerEleve = new System.Windows.Forms.Button();
-            this.tableLayoutPanelEleve = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridViewEleve = new System.Windows.Forms.DataGridView();
-            this.tabPageProfesseur = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBoxSuperAdmin = new System.Windows.Forms.CheckBox();
-            this.textBoxMdpProf = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxLoginProf = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBoxCheminListeProff = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.buttonImportProfs = new System.Windows.Forms.Button();
-            this.buttonExportProfs = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBoxPrenomProf = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBoxNomProf = new System.Windows.Forms.TextBox();
-            this.buttonAjouterProf = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridViewProfesseurs = new System.Windows.Forms.DataGridView();
-            this.tabPageClasse = new System.Windows.Forms.TabPage();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.comboBoxClasse = new System.Windows.Forms.ComboBox();
-            this.label74 = new System.Windows.Forms.Label();
-            this.buttonClasseLierClasse = new System.Windows.Forms.Button();
-            this.buttonClasseLierProf = new System.Windows.Forms.Button();
-            this.comboBoxClasseNivea = new System.Windows.Forms.ComboBox();
-            this.label73 = new System.Windows.Forms.Label();
-            this.comboBoxClasseProf = new System.Windows.Forms.ComboBox();
-            this.label72 = new System.Windows.Forms.Label();
-            this.textBoxCheminListeClasse = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.buttonImportClasses = new System.Windows.Forms.Button();
-            this.buttonExportClasses = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBoxNomClasse = new System.Windows.Forms.TextBox();
-            this.buttonAjouterClasse = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridViewClasse = new System.Windows.Forms.DataGridView();
-            this.tabPageMatiere = new System.Windows.Forms.TabPage();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBoxCheminListeMatiere = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.buttonImportMatieres_Click = new System.Windows.Forms.Button();
-            this.buttonExportMatiere_Click = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBoxNomMatiere = new System.Windows.Forms.TextBox();
-            this.buttonAjouterMatiere = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridViewMatiere = new System.Windows.Forms.DataGridView();
-            this.tabPageNiveau = new System.Windows.Forms.TabPage();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.textBoxCheminListeNiveaux = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.buttonImportNiveaux = new System.Windows.Forms.Button();
-            this.buttonExportNiveaux = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBoxNomNiveau = new System.Windows.Forms.TextBox();
-            this.buttonAjouterNiveau = new System.Windows.Forms.Button();
-            this.button33 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridViewNiveaux = new System.Windows.Forms.DataGridView();
-            this.tabPage21 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox25 = new System.Windows.Forms.GroupBox();
-            this.comboBoxNoteEleves = new System.Windows.Forms.ComboBox();
-            this.label79 = new System.Windows.Forms.Label();
-            this.label78 = new System.Windows.Forms.Label();
-            this.textBoxValeurNote = new System.Windows.Forms.TextBox();
-            this.textBoxCheminListeNote = new System.Windows.Forms.TextBox();
-            this.label77 = new System.Windows.Forms.Label();
-            this.buttonImportNote = new System.Windows.Forms.Button();
-            this.buttonExportNote = new System.Windows.Forms.Button();
-            this.buttonModifierNote = new System.Windows.Forms.Button();
-            this.buttonAjouterNote = new System.Windows.Forms.Button();
-            this.buttonRetirerNote = new System.Windows.Forms.Button();
-            this.dataGridViewNotes = new System.Windows.Forms.DataGridView();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -447,33 +342,117 @@
             this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView22 = new System.Windows.Forms.DataGridView();
             this.tabControl5 = new System.Windows.Forms.TabControl();
+            this.tabPage21 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
+            this.dataGridViewNotes = new System.Windows.Forms.DataGridView();
+            this.groupBox25 = new System.Windows.Forms.GroupBox();
+            this.buttonRetirerNote = new System.Windows.Forms.Button();
+            this.buttonAjouterNote = new System.Windows.Forms.Button();
+            this.buttonModifierNote = new System.Windows.Forms.Button();
+            this.buttonExportNote = new System.Windows.Forms.Button();
+            this.buttonImportNote = new System.Windows.Forms.Button();
+            this.label77 = new System.Windows.Forms.Label();
+            this.textBoxCheminListeNote = new System.Windows.Forms.TextBox();
+            this.textBoxValeurNote = new System.Windows.Forms.TextBox();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label79 = new System.Windows.Forms.Label();
+            this.comboBoxNoteEleves = new System.Windows.Forms.ComboBox();
             this.label80 = new System.Windows.Forms.Label();
             this.comboBoxNoteMatiere = new System.Windows.Forms.ComboBox();
-            this.tabControl1.SuspendLayout();
-            this.tabPageEleve.SuspendLayout();
-            this.groupBoxAjoutEleve.SuspendLayout();
-            this.tableLayoutPanelEleve.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEleve)).BeginInit();
-            this.tabPageProfesseur.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProfesseurs)).BeginInit();
-            this.tabPageClasse.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClasse)).BeginInit();
-            this.tabPageMatiere.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMatiere)).BeginInit();
-            this.tabPageNiveau.SuspendLayout();
-            this.groupBox8.SuspendLayout();
-            this.tableLayoutPanel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNiveaux)).BeginInit();
-            this.tabPage21.SuspendLayout();
-            this.tableLayoutPanel26.SuspendLayout();
-            this.groupBox25.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNotes)).BeginInit();
+            this.tabPageNiveau = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.dataGridViewNiveaux = new System.Windows.Forms.DataGridView();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.button33 = new System.Windows.Forms.Button();
+            this.buttonAjouterNiveau = new System.Windows.Forms.Button();
+            this.textBoxNomNiveau = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.button31 = new System.Windows.Forms.Button();
+            this.buttonExportNiveaux = new System.Windows.Forms.Button();
+            this.buttonImportNiveaux = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBoxCheminListeNiveaux = new System.Windows.Forms.TextBox();
+            this.tabPageMatiere = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.dataGridViewMatiere = new System.Windows.Forms.DataGridView();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.button25 = new System.Windows.Forms.Button();
+            this.buttonAjouterMatiere = new System.Windows.Forms.Button();
+            this.textBoxNomMatiere = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.button23 = new System.Windows.Forms.Button();
+            this.buttonExportMatiere_Click = new System.Windows.Forms.Button();
+            this.buttonImportMatieres_Click = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBoxCheminListeMatiere = new System.Windows.Forms.TextBox();
+            this.tabPageClasse = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.dataGridViewClasse = new System.Windows.Forms.DataGridView();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button20 = new System.Windows.Forms.Button();
+            this.buttonAjouterClasse = new System.Windows.Forms.Button();
+            this.textBoxNomClasse = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.button18 = new System.Windows.Forms.Button();
+            this.buttonExportClasses = new System.Windows.Forms.Button();
+            this.buttonImportClasses = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBoxCheminListeClasse = new System.Windows.Forms.TextBox();
+            this.label72 = new System.Windows.Forms.Label();
+            this.comboBoxClasseProf = new System.Windows.Forms.ComboBox();
+            this.label73 = new System.Windows.Forms.Label();
+            this.comboBoxClasseNivea = new System.Windows.Forms.ComboBox();
+            this.buttonClasseLierProf = new System.Windows.Forms.Button();
+            this.buttonClasseLierClasse = new System.Windows.Forms.Button();
+            this.label74 = new System.Windows.Forms.Label();
+            this.comboBoxClasse = new System.Windows.Forms.ComboBox();
+            this.tabPageProfesseur = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.dataGridViewProfesseurs = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonRetirerProf = new System.Windows.Forms.Button();
+            this.buttonAjouterProf = new System.Windows.Forms.Button();
+            this.textBoxNomProf = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBoxPrenomProf = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.button13 = new System.Windows.Forms.Button();
+            this.buttonExportProfs = new System.Windows.Forms.Button();
+            this.buttonImportProfs = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBoxCheminListeProff = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBoxLoginProf = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxMdpProf = new System.Windows.Forms.TextBox();
+            this.checkBoxSuperAdmin = new System.Windows.Forms.CheckBox();
+            this.label81 = new System.Windows.Forms.Label();
+            this.comboBoxProfProf = new System.Windows.Forms.ComboBox();
+            this.buttonRefreshProf = new System.Windows.Forms.Button();
+            this.tabPageEleve = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanelEleve = new System.Windows.Forms.TableLayoutPanel();
+            this.dataGridViewEleve = new System.Windows.Forms.DataGridView();
+            this.groupBoxAjoutEleve = new System.Windows.Forms.GroupBox();
+            this.buttonRetirerEleve = new System.Windows.Forms.Button();
+            this.buttonAjouterEleve = new System.Windows.Forms.Button();
+            this.textBoxEleveNom = new System.Windows.Forms.TextBox();
+            this.labelAjoutEleveNom = new System.Windows.Forms.Label();
+            this.textBoxElevePrenom = new System.Windows.Forms.TextBox();
+            this.labelElevePrenom = new System.Windows.Forms.Label();
+            this.buttonModifierEleve = new System.Windows.Forms.Button();
+            this.labelAncienneteEleve = new System.Windows.Forms.Label();
+            this.textBoxEleveAnciennete = new System.Windows.Forms.TextBox();
+            this.buttonSauvegarderListeEleve = new System.Windows.Forms.Button();
+            this.buttonChargerListeEleve = new System.Windows.Forms.Button();
+            this.labelCheminListeEleve = new System.Windows.Forms.Label();
+            this.textBoxCheminListe = new System.Windows.Forms.TextBox();
+            this.label75 = new System.Windows.Forms.Label();
+            this.comboBoxEleves = new System.Windows.Forms.ComboBox();
+            this.label76 = new System.Windows.Forms.Label();
+            this.comboBoxEleveClasses = new System.Windows.Forms.ComboBox();
+            this.buttonEleveLierClasse = new System.Windows.Forms.Button();
+            this.buttonEleveRefresh = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -554,1117 +533,32 @@
             this.groupBox24.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView22)).BeginInit();
             this.tabControl5.SuspendLayout();
+            this.tabPage21.SuspendLayout();
+            this.tableLayoutPanel26.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNotes)).BeginInit();
+            this.groupBox25.SuspendLayout();
+            this.tabPageNiveau.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNiveaux)).BeginInit();
+            this.groupBox8.SuspendLayout();
+            this.tabPageMatiere.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMatiere)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            this.tabPageClasse.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClasse)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            this.tabPageProfesseur.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProfesseurs)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.tabPageEleve.SuspendLayout();
+            this.tableLayoutPanelEleve.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEleve)).BeginInit();
+            this.groupBoxAjoutEleve.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPageEleve);
-            this.tabControl1.Controls.Add(this.tabPageProfesseur);
-            this.tabControl1.Controls.Add(this.tabPageClasse);
-            this.tabControl1.Controls.Add(this.tabPageMatiere);
-            this.tabControl1.Controls.Add(this.tabPageNiveau);
-            this.tabControl1.Controls.Add(this.tabPage21);
-            this.tabControl1.Location = new System.Drawing.Point(8, 8);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(908, 497);
-            this.tabControl1.TabIndex = 1;
-            // 
-            // tabPageEleve
-            // 
-            this.tabPageEleve.Controls.Add(this.groupBoxAjoutEleve);
-            this.tabPageEleve.Controls.Add(this.tableLayoutPanelEleve);
-            this.tabPageEleve.Location = new System.Drawing.Point(4, 24);
-            this.tabPageEleve.Name = "tabPageEleve";
-            this.tabPageEleve.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageEleve.Size = new System.Drawing.Size(900, 469);
-            this.tabPageEleve.TabIndex = 0;
-            this.tabPageEleve.Text = "Gestion eleves";
-            this.tabPageEleve.UseVisualStyleBackColor = true;
-            // 
-            // groupBoxAjoutEleve
-            // 
-            this.groupBoxAjoutEleve.Controls.Add(this.buttonEleveLierClasse);
-            this.groupBoxAjoutEleve.Controls.Add(this.comboBoxEleveClasses);
-            this.groupBoxAjoutEleve.Controls.Add(this.label76);
-            this.groupBoxAjoutEleve.Controls.Add(this.comboBoxEleves);
-            this.groupBoxAjoutEleve.Controls.Add(this.label75);
-            this.groupBoxAjoutEleve.Controls.Add(this.textBoxCheminListe);
-            this.groupBoxAjoutEleve.Controls.Add(this.labelCheminListeEleve);
-            this.groupBoxAjoutEleve.Controls.Add(this.buttonChargerListeEleve);
-            this.groupBoxAjoutEleve.Controls.Add(this.buttonSauvegarderListeEleve);
-            this.groupBoxAjoutEleve.Controls.Add(this.textBoxEleveAnciennete);
-            this.groupBoxAjoutEleve.Controls.Add(this.labelAncienneteEleve);
-            this.groupBoxAjoutEleve.Controls.Add(this.buttonModifierEleve);
-            this.groupBoxAjoutEleve.Controls.Add(this.labelElevePrenom);
-            this.groupBoxAjoutEleve.Controls.Add(this.textBoxElevePrenom);
-            this.groupBoxAjoutEleve.Controls.Add(this.labelAjoutEleveNom);
-            this.groupBoxAjoutEleve.Controls.Add(this.textBoxEleveNom);
-            this.groupBoxAjoutEleve.Controls.Add(this.buttonAjouterEleve);
-            this.groupBoxAjoutEleve.Controls.Add(this.buttonRetirerEleve);
-            this.groupBoxAjoutEleve.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBoxAjoutEleve.Location = new System.Drawing.Point(3, 308);
-            this.groupBoxAjoutEleve.Name = "groupBoxAjoutEleve";
-            this.groupBoxAjoutEleve.Size = new System.Drawing.Size(894, 158);
-            this.groupBoxAjoutEleve.TabIndex = 6;
-            this.groupBoxAjoutEleve.TabStop = false;
-            this.groupBoxAjoutEleve.Text = "Ajout d\'un eleve :";
-            // 
-            // buttonEleveLierClasse
-            // 
-            this.buttonEleveLierClasse.Location = new System.Drawing.Point(813, 0);
-            this.buttonEleveLierClasse.Name = "buttonEleveLierClasse";
-            this.buttonEleveLierClasse.Size = new System.Drawing.Size(75, 23);
-            this.buttonEleveLierClasse.TabIndex = 17;
-            this.buttonEleveLierClasse.Text = "Lier ...";
-            this.buttonEleveLierClasse.UseVisualStyleBackColor = true;
-            this.buttonEleveLierClasse.Click += new System.EventHandler(this.buttonEleveLierClasse_Click);
-            // 
-            // comboBoxEleveClasses
-            // 
-            this.comboBoxEleveClasses.FormattingEnabled = true;
-            this.comboBoxEleveClasses.Location = new System.Drawing.Point(686, 1);
-            this.comboBoxEleveClasses.Name = "comboBoxEleveClasses";
-            this.comboBoxEleveClasses.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxEleveClasses.TabIndex = 16;
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(627, 4);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(53, 15);
-            this.label76.TabIndex = 15;
-            this.label76.Text = "Classes ?";
-            // 
-            // comboBoxEleves
-            // 
-            this.comboBoxEleves.FormattingEnabled = true;
-            this.comboBoxEleves.Location = new System.Drawing.Point(370, 0);
-            this.comboBoxEleves.Name = "comboBoxEleves";
-            this.comboBoxEleves.Size = new System.Drawing.Size(251, 23);
-            this.comboBoxEleves.TabIndex = 14;
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(313, 3);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(47, 15);
-            this.label75.TabIndex = 13;
-            this.label75.Text = "Eleves ?";
-            // 
-            // textBoxCheminListe
-            // 
-            this.textBoxCheminListe.Location = new System.Drawing.Point(313, 91);
-            this.textBoxCheminListe.Name = "textBoxCheminListe";
-            this.textBoxCheminListe.Size = new System.Drawing.Size(578, 23);
-            this.textBoxCheminListe.TabIndex = 12;
-            // 
-            // labelCheminListeEleve
-            // 
-            this.labelCheminListeEleve.AutoSize = true;
-            this.labelCheminListeEleve.Location = new System.Drawing.Point(313, 75);
-            this.labelCheminListeEleve.Name = "labelCheminListeEleve";
-            this.labelCheminListeEleve.Size = new System.Drawing.Size(163, 15);
-            this.labelCheminListeEleve.TabIndex = 6;
-            this.labelCheminListeEleve.Text = "Chemin vers la liste en cours :";
-            // 
-            // buttonChargerListeEleve
-            // 
-            this.buttonChargerListeEleve.Location = new System.Drawing.Point(607, 66);
-            this.buttonChargerListeEleve.Name = "buttonChargerListeEleve";
-            this.buttonChargerListeEleve.Size = new System.Drawing.Size(123, 23);
-            this.buttonChargerListeEleve.TabIndex = 11;
-            this.buttonChargerListeEleve.Text = "Importer une liste ...";
-            this.buttonChargerListeEleve.UseVisualStyleBackColor = true;
-            this.buttonChargerListeEleve.Click += new System.EventHandler(this.buttonChargerListeEleve_Click);
-            // 
-            // buttonSauvegarderListeEleve
-            // 
-            this.buttonSauvegarderListeEleve.Location = new System.Drawing.Point(482, 66);
-            this.buttonSauvegarderListeEleve.Name = "buttonSauvegarderListeEleve";
-            this.buttonSauvegarderListeEleve.Size = new System.Drawing.Size(119, 23);
-            this.buttonSauvegarderListeEleve.TabIndex = 10;
-            this.buttonSauvegarderListeEleve.Text = "Exporter une liste...";
-            this.buttonSauvegarderListeEleve.UseVisualStyleBackColor = true;
-            this.buttonSauvegarderListeEleve.Click += new System.EventHandler(this.buttonSauvegarderListeEleve_Click);
-            // 
-            // textBoxEleveAnciennete
-            // 
-            this.textBoxEleveAnciennete.Location = new System.Drawing.Point(186, 67);
-            this.textBoxEleveAnciennete.Name = "textBoxEleveAnciennete";
-            this.textBoxEleveAnciennete.Size = new System.Drawing.Size(100, 23);
-            this.textBoxEleveAnciennete.TabIndex = 6;
-            // 
-            // labelAncienneteEleve
-            // 
-            this.labelAncienneteEleve.AutoSize = true;
-            this.labelAncienneteEleve.Location = new System.Drawing.Point(107, 70);
-            this.labelAncienneteEleve.Name = "labelAncienneteEleve";
-            this.labelAncienneteEleve.Size = new System.Drawing.Size(73, 15);
-            this.labelAncienneteEleve.TabIndex = 8;
-            this.labelAncienneteEleve.Text = "Anciennété :";
-            // 
-            // buttonModifierEleve
-            // 
-            this.buttonModifierEleve.Location = new System.Drawing.Point(3, 70);
-            this.buttonModifierEleve.Name = "buttonModifierEleve";
-            this.buttonModifierEleve.Size = new System.Drawing.Size(98, 23);
-            this.buttonModifierEleve.TabIndex = 3;
-            this.buttonModifierEleve.Text = "Modifier eleve";
-            this.buttonModifierEleve.UseVisualStyleBackColor = true;
-            // 
-            // labelElevePrenom
-            // 
-            this.labelElevePrenom.AutoSize = true;
-            this.labelElevePrenom.Location = new System.Drawing.Point(125, 46);
-            this.labelElevePrenom.Name = "labelElevePrenom";
-            this.labelElevePrenom.Size = new System.Drawing.Size(55, 15);
-            this.labelElevePrenom.TabIndex = 6;
-            this.labelElevePrenom.Text = "Prénom :";
-            // 
-            // textBoxElevePrenom
-            // 
-            this.textBoxElevePrenom.Location = new System.Drawing.Point(186, 41);
-            this.textBoxElevePrenom.Name = "textBoxElevePrenom";
-            this.textBoxElevePrenom.Size = new System.Drawing.Size(100, 23);
-            this.textBoxElevePrenom.TabIndex = 5;
-            // 
-            // labelAjoutEleveNom
-            // 
-            this.labelAjoutEleveNom.AutoSize = true;
-            this.labelAjoutEleveNom.Location = new System.Drawing.Point(140, 19);
-            this.labelAjoutEleveNom.Name = "labelAjoutEleveNom";
-            this.labelAjoutEleveNom.Size = new System.Drawing.Size(40, 15);
-            this.labelAjoutEleveNom.TabIndex = 5;
-            this.labelAjoutEleveNom.Text = "Nom :";
-            // 
-            // textBoxEleveNom
-            // 
-            this.textBoxEleveNom.Location = new System.Drawing.Point(186, 17);
-            this.textBoxEleveNom.Name = "textBoxEleveNom";
-            this.textBoxEleveNom.Size = new System.Drawing.Size(100, 23);
-            this.textBoxEleveNom.TabIndex = 4;
-            // 
-            // buttonAjouterEleve
-            // 
-            this.buttonAjouterEleve.Location = new System.Drawing.Point(3, 21);
-            this.buttonAjouterEleve.Name = "buttonAjouterEleve";
-            this.buttonAjouterEleve.Size = new System.Drawing.Size(98, 23);
-            this.buttonAjouterEleve.TabIndex = 1;
-            this.buttonAjouterEleve.Text = "Ajouter eleve";
-            this.buttonAjouterEleve.UseVisualStyleBackColor = true;
-            this.buttonAjouterEleve.Click += new System.EventHandler(this.buttonAjouterEleve_Click);
-            // 
-            // buttonRetirerEleve
-            // 
-            this.buttonRetirerEleve.Location = new System.Drawing.Point(3, 46);
-            this.buttonRetirerEleve.Name = "buttonRetirerEleve";
-            this.buttonRetirerEleve.Size = new System.Drawing.Size(98, 23);
-            this.buttonRetirerEleve.TabIndex = 2;
-            this.buttonRetirerEleve.Text = "Retirer eleve";
-            this.buttonRetirerEleve.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanelEleve
-            // 
-            this.tableLayoutPanelEleve.AutoSize = true;
-            this.tableLayoutPanelEleve.ColumnCount = 1;
-            this.tableLayoutPanelEleve.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelEleve.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelEleve.Controls.Add(this.dataGridViewEleve, 0, 0);
-            this.tableLayoutPanelEleve.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelEleve.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanelEleve.Name = "tableLayoutPanelEleve";
-            this.tableLayoutPanelEleve.RowCount = 2;
-            this.tableLayoutPanelEleve.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.0108F));
-            this.tableLayoutPanelEleve.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.9892F));
-            this.tableLayoutPanelEleve.Size = new System.Drawing.Size(894, 463);
-            this.tableLayoutPanelEleve.TabIndex = 7;
-            // 
-            // dataGridViewEleve
-            // 
-            this.dataGridViewEleve.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewEleve.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridViewEleve.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEleve.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridViewEleve.Location = new System.Drawing.Point(3, 3);
-            this.dataGridViewEleve.Name = "dataGridViewEleve";
-            this.dataGridViewEleve.ReadOnly = true;
-            this.dataGridViewEleve.RowTemplate.Height = 25;
-            this.dataGridViewEleve.Size = new System.Drawing.Size(888, 294);
-            this.dataGridViewEleve.TabIndex = 0;
-            // 
-            // tabPageProfesseur
-            // 
-            this.tabPageProfesseur.Controls.Add(this.groupBox3);
-            this.tabPageProfesseur.Controls.Add(this.tableLayoutPanel4);
-            this.tabPageProfesseur.Location = new System.Drawing.Point(4, 24);
-            this.tabPageProfesseur.Name = "tabPageProfesseur";
-            this.tabPageProfesseur.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageProfesseur.Size = new System.Drawing.Size(900, 469);
-            this.tabPageProfesseur.TabIndex = 4;
-            this.tabPageProfesseur.Text = "Gestion Professeurs";
-            this.tabPageProfesseur.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.checkBoxSuperAdmin);
-            this.groupBox3.Controls.Add(this.textBoxMdpProf);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.textBoxLoginProf);
-            this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.textBoxCheminListeProff);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.buttonImportProfs);
-            this.groupBox3.Controls.Add(this.buttonExportProfs);
-            this.groupBox3.Controls.Add(this.button13);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.textBoxPrenomProf);
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.textBoxNomProf);
-            this.groupBox3.Controls.Add(this.buttonAjouterProf);
-            this.groupBox3.Controls.Add(this.button15);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox3.Location = new System.Drawing.Point(3, 349);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(894, 117);
-            this.groupBox3.TabIndex = 6;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Ajout d\'un professeur :";
-            // 
-            // checkBoxSuperAdmin
-            // 
-            this.checkBoxSuperAdmin.AutoSize = true;
-            this.checkBoxSuperAdmin.Location = new System.Drawing.Point(442, 21);
-            this.checkBoxSuperAdmin.Name = "checkBoxSuperAdmin";
-            this.checkBoxSuperAdmin.Size = new System.Drawing.Size(103, 19);
-            this.checkBoxSuperAdmin.TabIndex = 17;
-            this.checkBoxSuperAdmin.Text = "Super Admin ?";
-            this.checkBoxSuperAdmin.UseVisualStyleBackColor = true;
-            // 
-            // textBoxMdpProf
-            // 
-            this.textBoxMdpProf.Location = new System.Drawing.Point(336, 18);
-            this.textBoxMdpProf.Name = "textBoxMdpProf";
-            this.textBoxMdpProf.Size = new System.Drawing.Size(100, 23);
-            this.textBoxMdpProf.TabIndex = 16;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(292, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Mdp :";
-            // 
-            // textBoxLoginProf
-            // 
-            this.textBoxLoginProf.Location = new System.Drawing.Point(186, 73);
-            this.textBoxLoginProf.Name = "textBoxLoginProf";
-            this.textBoxLoginProf.Size = new System.Drawing.Size(100, 23);
-            this.textBoxLoginProf.TabIndex = 14;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(137, 73);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(43, 15);
-            this.label21.TabIndex = 13;
-            this.label21.Text = "Login :";
-            // 
-            // textBoxCheminListeProff
-            // 
-            this.textBoxCheminListeProff.Location = new System.Drawing.Point(310, 88);
-            this.textBoxCheminListeProff.Name = "textBoxCheminListeProff";
-            this.textBoxCheminListeProff.Size = new System.Drawing.Size(578, 23);
-            this.textBoxCheminListeProff.TabIndex = 12;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(310, 70);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(163, 15);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Chemin vers la liste en cours :";
-            // 
-            // buttonImportProfs
-            // 
-            this.buttonImportProfs.Location = new System.Drawing.Point(604, 65);
-            this.buttonImportProfs.Name = "buttonImportProfs";
-            this.buttonImportProfs.Size = new System.Drawing.Size(123, 23);
-            this.buttonImportProfs.TabIndex = 11;
-            this.buttonImportProfs.Text = "Importer une liste ...";
-            this.buttonImportProfs.UseVisualStyleBackColor = true;
-            this.buttonImportProfs.Click += new System.EventHandler(this.buttonImportProfs_Click);
-            // 
-            // buttonExportProfs
-            // 
-            this.buttonExportProfs.Location = new System.Drawing.Point(479, 65);
-            this.buttonExportProfs.Name = "buttonExportProfs";
-            this.buttonExportProfs.Size = new System.Drawing.Size(119, 23);
-            this.buttonExportProfs.TabIndex = 10;
-            this.buttonExportProfs.Text = "Exporter une liste...";
-            this.buttonExportProfs.UseVisualStyleBackColor = true;
-            this.buttonExportProfs.Click += new System.EventHandler(this.buttonExportProfs_Click);
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(3, 73);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(93, 23);
-            this.button13.TabIndex = 3;
-            this.button13.Text = "Modifier prof";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(128, 44);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(55, 15);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Prénom :";
-            // 
-            // textBoxPrenomProf
-            // 
-            this.textBoxPrenomProf.Location = new System.Drawing.Point(186, 44);
-            this.textBoxPrenomProf.Name = "textBoxPrenomProf";
-            this.textBoxPrenomProf.Size = new System.Drawing.Size(100, 23);
-            this.textBoxPrenomProf.TabIndex = 5;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(143, 21);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(40, 15);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "Nom :";
-            // 
-            // textBoxNomProf
-            // 
-            this.textBoxNomProf.Location = new System.Drawing.Point(186, 17);
-            this.textBoxNomProf.Name = "textBoxNomProf";
-            this.textBoxNomProf.Size = new System.Drawing.Size(100, 23);
-            this.textBoxNomProf.TabIndex = 4;
-            // 
-            // buttonAjouterProf
-            // 
-            this.buttonAjouterProf.Location = new System.Drawing.Point(3, 20);
-            this.buttonAjouterProf.Name = "buttonAjouterProf";
-            this.buttonAjouterProf.Size = new System.Drawing.Size(93, 23);
-            this.buttonAjouterProf.TabIndex = 1;
-            this.buttonAjouterProf.Text = "Ajouter prof";
-            this.buttonAjouterProf.UseVisualStyleBackColor = true;
-            this.buttonAjouterProf.Click += new System.EventHandler(this.buttonAjouterProf_Click);
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(3, 44);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(93, 23);
-            this.button15.TabIndex = 2;
-            this.button15.Text = "Retirer prof";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.AutoSize = true;
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Controls.Add(this.dataGridViewProfesseurs, 0, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.79646F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.20354F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(894, 463);
-            this.tableLayoutPanel4.TabIndex = 7;
-            // 
-            // dataGridViewProfesseurs
-            // 
-            this.dataGridViewProfesseurs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewProfesseurs.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridViewProfesseurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewProfesseurs.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridViewProfesseurs.Location = new System.Drawing.Point(3, 3);
-            this.dataGridViewProfesseurs.Name = "dataGridViewProfesseurs";
-            this.dataGridViewProfesseurs.ReadOnly = true;
-            this.dataGridViewProfesseurs.RowTemplate.Height = 25;
-            this.dataGridViewProfesseurs.Size = new System.Drawing.Size(888, 321);
-            this.dataGridViewProfesseurs.TabIndex = 0;
-            // 
-            // tabPageClasse
-            // 
-            this.tabPageClasse.Controls.Add(this.groupBox4);
-            this.tabPageClasse.Controls.Add(this.tableLayoutPanel5);
-            this.tabPageClasse.Location = new System.Drawing.Point(4, 24);
-            this.tabPageClasse.Name = "tabPageClasse";
-            this.tabPageClasse.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageClasse.Size = new System.Drawing.Size(900, 469);
-            this.tabPageClasse.TabIndex = 5;
-            this.tabPageClasse.Text = "Gestion Classe";
-            this.tabPageClasse.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.comboBoxClasse);
-            this.groupBox4.Controls.Add(this.label74);
-            this.groupBox4.Controls.Add(this.buttonClasseLierClasse);
-            this.groupBox4.Controls.Add(this.buttonClasseLierProf);
-            this.groupBox4.Controls.Add(this.comboBoxClasseNivea);
-            this.groupBox4.Controls.Add(this.label73);
-            this.groupBox4.Controls.Add(this.comboBoxClasseProf);
-            this.groupBox4.Controls.Add(this.label72);
-            this.groupBox4.Controls.Add(this.textBoxCheminListeClasse);
-            this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.buttonImportClasses);
-            this.groupBox4.Controls.Add(this.buttonExportClasses);
-            this.groupBox4.Controls.Add(this.button18);
-            this.groupBox4.Controls.Add(this.label16);
-            this.groupBox4.Controls.Add(this.textBoxNomClasse);
-            this.groupBox4.Controls.Add(this.buttonAjouterClasse);
-            this.groupBox4.Controls.Add(this.button20);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox4.Location = new System.Drawing.Point(3, 349);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(894, 117);
-            this.groupBox4.TabIndex = 6;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Ajout d\'une classe :";
-            // 
-            // comboBoxClasse
-            // 
-            this.comboBoxClasse.FormattingEnabled = true;
-            this.comboBoxClasse.Location = new System.Drawing.Point(443, 12);
-            this.comboBoxClasse.Name = "comboBoxClasse";
-            this.comboBoxClasse.Size = new System.Drawing.Size(129, 23);
-            this.comboBoxClasse.TabIndex = 20;
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(389, 15);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(48, 15);
-            this.label74.TabIndex = 19;
-            this.label74.Text = "Classe ?";
-            // 
-            // buttonClasseLierClasse
-            // 
-            this.buttonClasseLierClasse.Location = new System.Drawing.Point(816, 36);
-            this.buttonClasseLierClasse.Name = "buttonClasseLierClasse";
-            this.buttonClasseLierClasse.Size = new System.Drawing.Size(75, 23);
-            this.buttonClasseLierClasse.TabIndex = 18;
-            this.buttonClasseLierClasse.Text = "Lier...";
-            this.buttonClasseLierClasse.UseVisualStyleBackColor = true;
-            this.buttonClasseLierClasse.Click += new System.EventHandler(this.buttonClasseLierClasse_Click);
-            // 
-            // buttonClasseLierProf
-            // 
-            this.buttonClasseLierProf.Location = new System.Drawing.Point(816, 11);
-            this.buttonClasseLierProf.Name = "buttonClasseLierProf";
-            this.buttonClasseLierProf.Size = new System.Drawing.Size(75, 23);
-            this.buttonClasseLierProf.TabIndex = 17;
-            this.buttonClasseLierProf.Text = "Lier...";
-            this.buttonClasseLierProf.UseVisualStyleBackColor = true;
-            this.buttonClasseLierProf.Click += new System.EventHandler(this.buttonClasseLierProf_Click);
-            // 
-            // comboBoxClasseNivea
-            // 
-            this.comboBoxClasseNivea.FormattingEnabled = true;
-            this.comboBoxClasseNivea.Location = new System.Drawing.Point(686, 40);
-            this.comboBoxClasseNivea.Name = "comboBoxClasseNivea";
-            this.comboBoxClasseNivea.Size = new System.Drawing.Size(129, 23);
-            this.comboBoxClasseNivea.TabIndex = 16;
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.Location = new System.Drawing.Point(613, 44);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(68, 15);
-            this.label73.TabIndex = 15;
-            this.label73.Text = "Liste nivea :";
-            // 
-            // comboBoxClasseProf
-            // 
-            this.comboBoxClasseProf.FormattingEnabled = true;
-            this.comboBoxClasseProf.Location = new System.Drawing.Point(686, 12);
-            this.comboBoxClasseProf.Name = "comboBoxClasseProf";
-            this.comboBoxClasseProf.Size = new System.Drawing.Size(129, 23);
-            this.comboBoxClasseProf.TabIndex = 14;
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.Location = new System.Drawing.Point(613, 15);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(67, 15);
-            this.label72.TabIndex = 13;
-            this.label72.Text = "Liste profs :";
-            // 
-            // textBoxCheminListeClasse
-            // 
-            this.textBoxCheminListeClasse.Location = new System.Drawing.Point(389, 91);
-            this.textBoxCheminListeClasse.Name = "textBoxCheminListeClasse";
-            this.textBoxCheminListeClasse.Size = new System.Drawing.Size(500, 23);
-            this.textBoxCheminListeClasse.TabIndex = 12;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(391, 74);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(163, 15);
-            this.label13.TabIndex = 6;
-            this.label13.Text = "Chemin vers la liste en cours :";
-            // 
-            // buttonImportClasses
-            // 
-            this.buttonImportClasses.Location = new System.Drawing.Point(686, 66);
-            this.buttonImportClasses.Name = "buttonImportClasses";
-            this.buttonImportClasses.Size = new System.Drawing.Size(120, 25);
-            this.buttonImportClasses.TabIndex = 11;
-            this.buttonImportClasses.Text = "Importer une liste ...";
-            this.buttonImportClasses.UseVisualStyleBackColor = true;
-            this.buttonImportClasses.Click += new System.EventHandler(this.buttonImportClasses_Click);
-            // 
-            // buttonExportClasses
-            // 
-            this.buttonExportClasses.Location = new System.Drawing.Point(560, 66);
-            this.buttonExportClasses.Name = "buttonExportClasses";
-            this.buttonExportClasses.Size = new System.Drawing.Size(120, 25);
-            this.buttonExportClasses.TabIndex = 10;
-            this.buttonExportClasses.Text = "Exporter une liste...";
-            this.buttonExportClasses.UseVisualStyleBackColor = true;
-            this.buttonExportClasses.Click += new System.EventHandler(this.buttonExportClasses_Click);
-            // 
-            // button18
-            // 
-            this.button18.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button18.AutoSize = true;
-            this.button18.Location = new System.Drawing.Point(10, 80);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(100, 25);
-            this.button18.TabIndex = 3;
-            this.button18.Text = "Modifier classe";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(120, 25);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(40, 15);
-            this.label16.TabIndex = 5;
-            this.label16.Text = "Nom :";
-            // 
-            // textBoxNomClasse
-            // 
-            this.textBoxNomClasse.Location = new System.Drawing.Point(160, 20);
-            this.textBoxNomClasse.Name = "textBoxNomClasse";
-            this.textBoxNomClasse.Size = new System.Drawing.Size(100, 23);
-            this.textBoxNomClasse.TabIndex = 4;
-            // 
-            // buttonAjouterClasse
-            // 
-            this.buttonAjouterClasse.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.buttonAjouterClasse.AutoSize = true;
-            this.buttonAjouterClasse.Location = new System.Drawing.Point(10, 20);
-            this.buttonAjouterClasse.Name = "buttonAjouterClasse";
-            this.buttonAjouterClasse.Size = new System.Drawing.Size(100, 25);
-            this.buttonAjouterClasse.TabIndex = 1;
-            this.buttonAjouterClasse.Text = "Ajouter Classe";
-            this.buttonAjouterClasse.UseVisualStyleBackColor = true;
-            this.buttonAjouterClasse.Click += new System.EventHandler(this.buttonAjouterClasse_Click);
-            // 
-            // button20
-            // 
-            this.button20.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button20.AutoSize = true;
-            this.button20.Location = new System.Drawing.Point(10, 50);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(100, 25);
-            this.button20.TabIndex = 2;
-            this.button20.Text = "Retirer classe";
-            this.button20.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.AutoSize = true;
-            this.tableLayoutPanel5.ColumnCount = 1;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Controls.Add(this.dataGridViewClasse, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.79646F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.20354F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(894, 463);
-            this.tableLayoutPanel5.TabIndex = 7;
-            // 
-            // dataGridViewClasse
-            // 
-            this.dataGridViewClasse.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewClasse.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridViewClasse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewClasse.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridViewClasse.Location = new System.Drawing.Point(3, 3);
-            this.dataGridViewClasse.Name = "dataGridViewClasse";
-            this.dataGridViewClasse.ReadOnly = true;
-            this.dataGridViewClasse.RowTemplate.Height = 25;
-            this.dataGridViewClasse.Size = new System.Drawing.Size(888, 321);
-            this.dataGridViewClasse.TabIndex = 0;
-            // 
-            // tabPageMatiere
-            // 
-            this.tabPageMatiere.Controls.Add(this.groupBox5);
-            this.tabPageMatiere.Controls.Add(this.tableLayoutPanel6);
-            this.tabPageMatiere.Location = new System.Drawing.Point(4, 24);
-            this.tabPageMatiere.Name = "tabPageMatiere";
-            this.tabPageMatiere.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMatiere.Size = new System.Drawing.Size(900, 469);
-            this.tabPageMatiere.TabIndex = 6;
-            this.tabPageMatiere.Text = "Gestion Matières";
-            this.tabPageMatiere.UseVisualStyleBackColor = true;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.textBoxCheminListeMatiere);
-            this.groupBox5.Controls.Add(this.label17);
-            this.groupBox5.Controls.Add(this.buttonImportMatieres_Click);
-            this.groupBox5.Controls.Add(this.buttonExportMatiere_Click);
-            this.groupBox5.Controls.Add(this.button23);
-            this.groupBox5.Controls.Add(this.label20);
-            this.groupBox5.Controls.Add(this.textBoxNomMatiere);
-            this.groupBox5.Controls.Add(this.buttonAjouterMatiere);
-            this.groupBox5.Controls.Add(this.button25);
-            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox5.Location = new System.Drawing.Point(3, 349);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(894, 117);
-            this.groupBox5.TabIndex = 6;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Ajout d\'une matière :";
-            // 
-            // textBoxCheminListeMatiere
-            // 
-            this.textBoxCheminListeMatiere.Location = new System.Drawing.Point(388, 91);
-            this.textBoxCheminListeMatiere.Name = "textBoxCheminListeMatiere";
-            this.textBoxCheminListeMatiere.Size = new System.Drawing.Size(500, 23);
-            this.textBoxCheminListeMatiere.TabIndex = 12;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(388, 74);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(163, 15);
-            this.label17.TabIndex = 6;
-            this.label17.Text = "Chemin vers la liste en cours :";
-            // 
-            // buttonImportMatieres_Click
-            // 
-            this.buttonImportMatieres_Click.Location = new System.Drawing.Point(683, 66);
-            this.buttonImportMatieres_Click.Name = "buttonImportMatieres_Click";
-            this.buttonImportMatieres_Click.Size = new System.Drawing.Size(120, 25);
-            this.buttonImportMatieres_Click.TabIndex = 11;
-            this.buttonImportMatieres_Click.Text = "Importer une liste ...";
-            this.buttonImportMatieres_Click.UseVisualStyleBackColor = true;
-            this.buttonImportMatieres_Click.Click += new System.EventHandler(this.buttonImportMatieres_Click_Click);
-            // 
-            // buttonExportMatiere_Click
-            // 
-            this.buttonExportMatiere_Click.Location = new System.Drawing.Point(557, 66);
-            this.buttonExportMatiere_Click.Name = "buttonExportMatiere_Click";
-            this.buttonExportMatiere_Click.Size = new System.Drawing.Size(120, 25);
-            this.buttonExportMatiere_Click.TabIndex = 10;
-            this.buttonExportMatiere_Click.Text = "Exporter une liste...";
-            this.buttonExportMatiere_Click.UseVisualStyleBackColor = true;
-            this.buttonExportMatiere_Click.Click += new System.EventHandler(this.buttonExportMatiere_Click_Click);
-            // 
-            // button23
-            // 
-            this.button23.Location = new System.Drawing.Point(10, 80);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(100, 25);
-            this.button23.TabIndex = 3;
-            this.button23.Text = "Modifier matière";
-            this.button23.UseVisualStyleBackColor = true;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(120, 25);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(40, 15);
-            this.label20.TabIndex = 5;
-            this.label20.Text = "Nom :";
-            // 
-            // textBoxNomMatiere
-            // 
-            this.textBoxNomMatiere.Location = new System.Drawing.Point(160, 20);
-            this.textBoxNomMatiere.Name = "textBoxNomMatiere";
-            this.textBoxNomMatiere.Size = new System.Drawing.Size(100, 23);
-            this.textBoxNomMatiere.TabIndex = 4;
-            // 
-            // buttonAjouterMatiere
-            // 
-            this.buttonAjouterMatiere.Location = new System.Drawing.Point(10, 20);
-            this.buttonAjouterMatiere.Name = "buttonAjouterMatiere";
-            this.buttonAjouterMatiere.Size = new System.Drawing.Size(100, 25);
-            this.buttonAjouterMatiere.TabIndex = 1;
-            this.buttonAjouterMatiere.Text = "Ajouter matière";
-            this.buttonAjouterMatiere.UseVisualStyleBackColor = true;
-            this.buttonAjouterMatiere.Click += new System.EventHandler(this.buttonAjouterMatiere_Click);
-            // 
-            // button25
-            // 
-            this.button25.Location = new System.Drawing.Point(10, 50);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(100, 25);
-            this.button25.TabIndex = 2;
-            this.button25.Text = "Retirer matière";
-            this.button25.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.AutoSize = true;
-            this.tableLayoutPanel6.ColumnCount = 1;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Controls.Add(this.dataGridViewMatiere, 0, 0);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 2;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.79646F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.20354F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(894, 463);
-            this.tableLayoutPanel6.TabIndex = 7;
-            // 
-            // dataGridViewMatiere
-            // 
-            this.dataGridViewMatiere.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewMatiere.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridViewMatiere.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMatiere.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridViewMatiere.Location = new System.Drawing.Point(3, 3);
-            this.dataGridViewMatiere.Name = "dataGridViewMatiere";
-            this.dataGridViewMatiere.ReadOnly = true;
-            this.dataGridViewMatiere.RowTemplate.Height = 25;
-            this.dataGridViewMatiere.Size = new System.Drawing.Size(888, 321);
-            this.dataGridViewMatiere.TabIndex = 0;
-            // 
-            // tabPageNiveau
-            // 
-            this.tabPageNiveau.Controls.Add(this.groupBox8);
-            this.tabPageNiveau.Controls.Add(this.tableLayoutPanel9);
-            this.tabPageNiveau.Location = new System.Drawing.Point(4, 24);
-            this.tabPageNiveau.Name = "tabPageNiveau";
-            this.tabPageNiveau.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageNiveau.Size = new System.Drawing.Size(900, 469);
-            this.tabPageNiveau.TabIndex = 8;
-            this.tabPageNiveau.Text = "Gestion Niveaux";
-            this.tabPageNiveau.UseVisualStyleBackColor = true;
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.textBoxCheminListeNiveaux);
-            this.groupBox8.Controls.Add(this.label23);
-            this.groupBox8.Controls.Add(this.buttonImportNiveaux);
-            this.groupBox8.Controls.Add(this.buttonExportNiveaux);
-            this.groupBox8.Controls.Add(this.button31);
-            this.groupBox8.Controls.Add(this.label24);
-            this.groupBox8.Controls.Add(this.textBoxNomNiveau);
-            this.groupBox8.Controls.Add(this.buttonAjouterNiveau);
-            this.groupBox8.Controls.Add(this.button33);
-            this.groupBox8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox8.Location = new System.Drawing.Point(3, 349);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(894, 117);
-            this.groupBox8.TabIndex = 6;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Ajout d\'un niveau (cp , ce1 etc...) :";
-            // 
-            // textBoxCheminListeNiveaux
-            // 
-            this.textBoxCheminListeNiveaux.Location = new System.Drawing.Point(388, 91);
-            this.textBoxCheminListeNiveaux.Name = "textBoxCheminListeNiveaux";
-            this.textBoxCheminListeNiveaux.Size = new System.Drawing.Size(500, 23);
-            this.textBoxCheminListeNiveaux.TabIndex = 12;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(388, 74);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(163, 15);
-            this.label23.TabIndex = 6;
-            this.label23.Text = "Chemin vers la liste en cours :";
-            // 
-            // buttonImportNiveaux
-            // 
-            this.buttonImportNiveaux.Location = new System.Drawing.Point(683, 66);
-            this.buttonImportNiveaux.Name = "buttonImportNiveaux";
-            this.buttonImportNiveaux.Size = new System.Drawing.Size(120, 25);
-            this.buttonImportNiveaux.TabIndex = 11;
-            this.buttonImportNiveaux.Text = "Importer une liste ...";
-            this.buttonImportNiveaux.UseVisualStyleBackColor = true;
-            this.buttonImportNiveaux.Click += new System.EventHandler(this.buttonImportNiveaux_Click);
-            // 
-            // buttonExportNiveaux
-            // 
-            this.buttonExportNiveaux.Location = new System.Drawing.Point(557, 66);
-            this.buttonExportNiveaux.Name = "buttonExportNiveaux";
-            this.buttonExportNiveaux.Size = new System.Drawing.Size(120, 25);
-            this.buttonExportNiveaux.TabIndex = 10;
-            this.buttonExportNiveaux.Text = "Exporter une liste...";
-            this.buttonExportNiveaux.UseVisualStyleBackColor = true;
-            this.buttonExportNiveaux.Click += new System.EventHandler(this.buttonExportNiveaux_Click);
-            // 
-            // button31
-            // 
-            this.button31.Location = new System.Drawing.Point(10, 80);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(100, 25);
-            this.button31.TabIndex = 3;
-            this.button31.Text = "Modifier niveau";
-            this.button31.UseVisualStyleBackColor = true;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(120, 25);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(40, 15);
-            this.label24.TabIndex = 5;
-            this.label24.Text = "Nom :";
-            // 
-            // textBoxNomNiveau
-            // 
-            this.textBoxNomNiveau.Location = new System.Drawing.Point(160, 20);
-            this.textBoxNomNiveau.Name = "textBoxNomNiveau";
-            this.textBoxNomNiveau.Size = new System.Drawing.Size(100, 23);
-            this.textBoxNomNiveau.TabIndex = 4;
-            // 
-            // buttonAjouterNiveau
-            // 
-            this.buttonAjouterNiveau.Location = new System.Drawing.Point(10, 20);
-            this.buttonAjouterNiveau.Name = "buttonAjouterNiveau";
-            this.buttonAjouterNiveau.Size = new System.Drawing.Size(100, 25);
-            this.buttonAjouterNiveau.TabIndex = 1;
-            this.buttonAjouterNiveau.Text = "Ajouter niveau";
-            this.buttonAjouterNiveau.UseVisualStyleBackColor = true;
-            this.buttonAjouterNiveau.Click += new System.EventHandler(this.buttonAjouterNiveau_Click);
-            // 
-            // button33
-            // 
-            this.button33.Location = new System.Drawing.Point(10, 50);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(100, 25);
-            this.button33.TabIndex = 2;
-            this.button33.Text = "Retirer niveau";
-            this.button33.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel9
-            // 
-            this.tableLayoutPanel9.AutoSize = true;
-            this.tableLayoutPanel9.ColumnCount = 1;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel9.Controls.Add(this.dataGridViewNiveaux, 0, 0);
-            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 2;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.79646F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.20354F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(894, 463);
-            this.tableLayoutPanel9.TabIndex = 7;
-            // 
-            // dataGridViewNiveaux
-            // 
-            this.dataGridViewNiveaux.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewNiveaux.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridViewNiveaux.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNiveaux.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridViewNiveaux.Location = new System.Drawing.Point(3, 3);
-            this.dataGridViewNiveaux.Name = "dataGridViewNiveaux";
-            this.dataGridViewNiveaux.ReadOnly = true;
-            this.dataGridViewNiveaux.RowTemplate.Height = 25;
-            this.dataGridViewNiveaux.Size = new System.Drawing.Size(888, 321);
-            this.dataGridViewNiveaux.TabIndex = 0;
-            // 
-            // tabPage21
-            // 
-            this.tabPage21.Controls.Add(this.tableLayoutPanel26);
-            this.tabPage21.Location = new System.Drawing.Point(4, 24);
-            this.tabPage21.Name = "tabPage21";
-            this.tabPage21.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage21.Size = new System.Drawing.Size(900, 469);
-            this.tabPage21.TabIndex = 9;
-            this.tabPage21.Text = "Gestion Notes";
-            this.tabPage21.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel26
-            // 
-            this.tableLayoutPanel26.AutoSize = true;
-            this.tableLayoutPanel26.ColumnCount = 1;
-            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel26.Controls.Add(this.groupBox25, 0, 1);
-            this.tableLayoutPanel26.Controls.Add(this.dataGridViewNotes, 0, 0);
-            this.tableLayoutPanel26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel26.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel26.Name = "tableLayoutPanel26";
-            this.tableLayoutPanel26.RowCount = 2;
-            this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.79646F));
-            this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.20354F));
-            this.tableLayoutPanel26.Size = new System.Drawing.Size(894, 463);
-            this.tableLayoutPanel26.TabIndex = 8;
-            // 
-            // groupBox25
-            // 
-            this.groupBox25.Controls.Add(this.comboBoxNoteMatiere);
-            this.groupBox25.Controls.Add(this.label80);
-            this.groupBox25.Controls.Add(this.comboBoxNoteEleves);
-            this.groupBox25.Controls.Add(this.label79);
-            this.groupBox25.Controls.Add(this.label78);
-            this.groupBox25.Controls.Add(this.textBoxValeurNote);
-            this.groupBox25.Controls.Add(this.textBoxCheminListeNote);
-            this.groupBox25.Controls.Add(this.label77);
-            this.groupBox25.Controls.Add(this.buttonImportNote);
-            this.groupBox25.Controls.Add(this.buttonExportNote);
-            this.groupBox25.Controls.Add(this.buttonModifierNote);
-            this.groupBox25.Controls.Add(this.buttonAjouterNote);
-            this.groupBox25.Controls.Add(this.buttonRetirerNote);
-            this.groupBox25.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox25.Location = new System.Drawing.Point(3, 343);
-            this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Size = new System.Drawing.Size(888, 117);
-            this.groupBox25.TabIndex = 7;
-            this.groupBox25.TabStop = false;
-            this.groupBox25.Text = "Ajout d\'une note :";
-            // 
-            // comboBoxNoteEleves
-            // 
-            this.comboBoxNoteEleves.FormattingEnabled = true;
-            this.comboBoxNoteEleves.Location = new System.Drawing.Point(194, 16);
-            this.comboBoxNoteEleves.Name = "comboBoxNoteEleves";
-            this.comboBoxNoteEleves.Size = new System.Drawing.Size(129, 23);
-            this.comboBoxNoteEleves.TabIndex = 16;
-            // 
-            // label79
-            // 
-            this.label79.AutoSize = true;
-            this.label79.Location = new System.Drawing.Point(116, 19);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(72, 15);
-            this.label79.TabIndex = 15;
-            this.label79.Text = "Liste eleves :";
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(116, 50);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(45, 15);
-            this.label78.TabIndex = 14;
-            this.label78.Text = "Valeur :";
-            // 
-            // textBoxValeurNote
-            // 
-            this.textBoxValeurNote.Location = new System.Drawing.Point(167, 47);
-            this.textBoxValeurNote.Name = "textBoxValeurNote";
-            this.textBoxValeurNote.Size = new System.Drawing.Size(156, 23);
-            this.textBoxValeurNote.TabIndex = 13;
-            // 
-            // textBoxCheminListeNote
-            // 
-            this.textBoxCheminListeNote.Location = new System.Drawing.Point(388, 91);
-            this.textBoxCheminListeNote.Name = "textBoxCheminListeNote";
-            this.textBoxCheminListeNote.Size = new System.Drawing.Size(500, 23);
-            this.textBoxCheminListeNote.TabIndex = 12;
-            // 
-            // label77
-            // 
-            this.label77.AutoSize = true;
-            this.label77.Location = new System.Drawing.Point(388, 74);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(163, 15);
-            this.label77.TabIndex = 6;
-            this.label77.Text = "Chemin vers la liste en cours :";
-            // 
-            // buttonImportNote
-            // 
-            this.buttonImportNote.Location = new System.Drawing.Point(683, 66);
-            this.buttonImportNote.Name = "buttonImportNote";
-            this.buttonImportNote.Size = new System.Drawing.Size(120, 25);
-            this.buttonImportNote.TabIndex = 11;
-            this.buttonImportNote.Text = "Importer une liste ...";
-            this.buttonImportNote.UseVisualStyleBackColor = true;
-            this.buttonImportNote.Click += new System.EventHandler(this.buttonImportNote_Click);
-            // 
-            // buttonExportNote
-            // 
-            this.buttonExportNote.Location = new System.Drawing.Point(557, 66);
-            this.buttonExportNote.Name = "buttonExportNote";
-            this.buttonExportNote.Size = new System.Drawing.Size(120, 25);
-            this.buttonExportNote.TabIndex = 10;
-            this.buttonExportNote.Text = "Exporter une liste...";
-            this.buttonExportNote.UseVisualStyleBackColor = true;
-            this.buttonExportNote.Click += new System.EventHandler(this.buttonExportNote_Click);
-            // 
-            // buttonModifierNote
-            // 
-            this.buttonModifierNote.Location = new System.Drawing.Point(10, 80);
-            this.buttonModifierNote.Name = "buttonModifierNote";
-            this.buttonModifierNote.Size = new System.Drawing.Size(100, 25);
-            this.buttonModifierNote.TabIndex = 3;
-            this.buttonModifierNote.Text = "Modifier note";
-            this.buttonModifierNote.UseVisualStyleBackColor = true;
-            // 
-            // buttonAjouterNote
-            // 
-            this.buttonAjouterNote.Location = new System.Drawing.Point(10, 20);
-            this.buttonAjouterNote.Name = "buttonAjouterNote";
-            this.buttonAjouterNote.Size = new System.Drawing.Size(100, 25);
-            this.buttonAjouterNote.TabIndex = 1;
-            this.buttonAjouterNote.Text = "Ajouter note";
-            this.buttonAjouterNote.UseVisualStyleBackColor = true;
-            this.buttonAjouterNote.Click += new System.EventHandler(this.buttonAjouterNote_Click);
-            // 
-            // buttonRetirerNote
-            // 
-            this.buttonRetirerNote.Location = new System.Drawing.Point(10, 50);
-            this.buttonRetirerNote.Name = "buttonRetirerNote";
-            this.buttonRetirerNote.Size = new System.Drawing.Size(100, 25);
-            this.buttonRetirerNote.TabIndex = 2;
-            this.buttonRetirerNote.Text = "Retirer note";
-            this.buttonRetirerNote.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewNotes
-            // 
-            this.dataGridViewNotes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewNotes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridViewNotes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNotes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridViewNotes.Location = new System.Drawing.Point(3, 3);
-            this.dataGridViewNotes.Name = "dataGridViewNotes";
-            this.dataGridViewNotes.ReadOnly = true;
-            this.dataGridViewNotes.RowTemplate.Height = 25;
-            this.dataGridViewNotes.Size = new System.Drawing.Size(888, 321);
-            this.dataGridViewNotes.TabIndex = 0;
             // 
             // saveFileDialog1
             // 
@@ -4934,6 +3828,167 @@
             this.tabControl5.Size = new System.Drawing.Size(200, 100);
             this.tabControl5.TabIndex = 0;
             // 
+            // tabPage21
+            // 
+            this.tabPage21.Controls.Add(this.tableLayoutPanel26);
+            this.tabPage21.Location = new System.Drawing.Point(4, 24);
+            this.tabPage21.Name = "tabPage21";
+            this.tabPage21.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage21.Size = new System.Drawing.Size(900, 469);
+            this.tabPage21.TabIndex = 9;
+            this.tabPage21.Text = "Gestion Notes";
+            this.tabPage21.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel26
+            // 
+            this.tableLayoutPanel26.AutoSize = true;
+            this.tableLayoutPanel26.ColumnCount = 1;
+            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel26.Controls.Add(this.groupBox25, 0, 1);
+            this.tableLayoutPanel26.Controls.Add(this.dataGridViewNotes, 0, 0);
+            this.tableLayoutPanel26.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel26.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel26.Name = "tableLayoutPanel26";
+            this.tableLayoutPanel26.RowCount = 2;
+            this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.69978F));
+            this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.30022F));
+            this.tableLayoutPanel26.Size = new System.Drawing.Size(894, 463);
+            this.tableLayoutPanel26.TabIndex = 8;
+            // 
+            // dataGridViewNotes
+            // 
+            this.dataGridViewNotes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewNotes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridViewNotes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewNotes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridViewNotes.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewNotes.Name = "dataGridViewNotes";
+            this.dataGridViewNotes.ReadOnly = true;
+            this.dataGridViewNotes.RowTemplate.Height = 25;
+            this.dataGridViewNotes.Size = new System.Drawing.Size(888, 237);
+            this.dataGridViewNotes.TabIndex = 0;
+            // 
+            // groupBox25
+            // 
+            this.groupBox25.Controls.Add(this.comboBoxNoteMatiere);
+            this.groupBox25.Controls.Add(this.label80);
+            this.groupBox25.Controls.Add(this.comboBoxNoteEleves);
+            this.groupBox25.Controls.Add(this.label79);
+            this.groupBox25.Controls.Add(this.label78);
+            this.groupBox25.Controls.Add(this.textBoxValeurNote);
+            this.groupBox25.Controls.Add(this.textBoxCheminListeNote);
+            this.groupBox25.Controls.Add(this.label77);
+            this.groupBox25.Controls.Add(this.buttonImportNote);
+            this.groupBox25.Controls.Add(this.buttonExportNote);
+            this.groupBox25.Controls.Add(this.buttonModifierNote);
+            this.groupBox25.Controls.Add(this.buttonAjouterNote);
+            this.groupBox25.Controls.Add(this.buttonRetirerNote);
+            this.groupBox25.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox25.Location = new System.Drawing.Point(3, 247);
+            this.groupBox25.Name = "groupBox25";
+            this.groupBox25.Size = new System.Drawing.Size(888, 213);
+            this.groupBox25.TabIndex = 7;
+            this.groupBox25.TabStop = false;
+            this.groupBox25.Text = "Ajout d\'une note :";
+            // 
+            // buttonRetirerNote
+            // 
+            this.buttonRetirerNote.Location = new System.Drawing.Point(10, 50);
+            this.buttonRetirerNote.Name = "buttonRetirerNote";
+            this.buttonRetirerNote.Size = new System.Drawing.Size(100, 25);
+            this.buttonRetirerNote.TabIndex = 2;
+            this.buttonRetirerNote.Text = "Retirer note";
+            this.buttonRetirerNote.UseVisualStyleBackColor = true;
+            // 
+            // buttonAjouterNote
+            // 
+            this.buttonAjouterNote.Location = new System.Drawing.Point(10, 20);
+            this.buttonAjouterNote.Name = "buttonAjouterNote";
+            this.buttonAjouterNote.Size = new System.Drawing.Size(100, 25);
+            this.buttonAjouterNote.TabIndex = 1;
+            this.buttonAjouterNote.Text = "Ajouter note";
+            this.buttonAjouterNote.UseVisualStyleBackColor = true;
+            this.buttonAjouterNote.Click += new System.EventHandler(this.buttonAjouterNote_Click);
+            // 
+            // buttonModifierNote
+            // 
+            this.buttonModifierNote.Location = new System.Drawing.Point(10, 80);
+            this.buttonModifierNote.Name = "buttonModifierNote";
+            this.buttonModifierNote.Size = new System.Drawing.Size(100, 25);
+            this.buttonModifierNote.TabIndex = 3;
+            this.buttonModifierNote.Text = "Modifier note";
+            this.buttonModifierNote.UseVisualStyleBackColor = true;
+            // 
+            // buttonExportNote
+            // 
+            this.buttonExportNote.Location = new System.Drawing.Point(557, 66);
+            this.buttonExportNote.Name = "buttonExportNote";
+            this.buttonExportNote.Size = new System.Drawing.Size(120, 25);
+            this.buttonExportNote.TabIndex = 10;
+            this.buttonExportNote.Text = "Exporter une liste...";
+            this.buttonExportNote.UseVisualStyleBackColor = true;
+            this.buttonExportNote.Click += new System.EventHandler(this.buttonExportNote_Click);
+            // 
+            // buttonImportNote
+            // 
+            this.buttonImportNote.Location = new System.Drawing.Point(683, 66);
+            this.buttonImportNote.Name = "buttonImportNote";
+            this.buttonImportNote.Size = new System.Drawing.Size(120, 25);
+            this.buttonImportNote.TabIndex = 11;
+            this.buttonImportNote.Text = "Importer une liste ...";
+            this.buttonImportNote.UseVisualStyleBackColor = true;
+            this.buttonImportNote.Click += new System.EventHandler(this.buttonImportNote_Click);
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(388, 74);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(163, 15);
+            this.label77.TabIndex = 6;
+            this.label77.Text = "Chemin vers la liste en cours :";
+            // 
+            // textBoxCheminListeNote
+            // 
+            this.textBoxCheminListeNote.Location = new System.Drawing.Point(388, 91);
+            this.textBoxCheminListeNote.Name = "textBoxCheminListeNote";
+            this.textBoxCheminListeNote.Size = new System.Drawing.Size(500, 23);
+            this.textBoxCheminListeNote.TabIndex = 12;
+            // 
+            // textBoxValeurNote
+            // 
+            this.textBoxValeurNote.Location = new System.Drawing.Point(167, 47);
+            this.textBoxValeurNote.Name = "textBoxValeurNote";
+            this.textBoxValeurNote.Size = new System.Drawing.Size(156, 23);
+            this.textBoxValeurNote.TabIndex = 13;
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(116, 50);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(45, 15);
+            this.label78.TabIndex = 14;
+            this.label78.Text = "Valeur :";
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.Location = new System.Drawing.Point(116, 19);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(72, 15);
+            this.label79.TabIndex = 15;
+            this.label79.Text = "Liste eleves :";
+            // 
+            // comboBoxNoteEleves
+            // 
+            this.comboBoxNoteEleves.FormattingEnabled = true;
+            this.comboBoxNoteEleves.Location = new System.Drawing.Point(194, 16);
+            this.comboBoxNoteEleves.Name = "comboBoxNoteEleves";
+            this.comboBoxNoteEleves.Size = new System.Drawing.Size(129, 23);
+            this.comboBoxNoteEleves.TabIndex = 16;
+            // 
             // label80
             // 
             this.label80.AutoSize = true;
@@ -4951,6 +4006,1005 @@
             this.comboBoxNoteMatiere.Size = new System.Drawing.Size(129, 23);
             this.comboBoxNoteMatiere.TabIndex = 18;
             // 
+            // tabPageNiveau
+            // 
+            this.tabPageNiveau.Controls.Add(this.groupBox8);
+            this.tabPageNiveau.Controls.Add(this.tableLayoutPanel9);
+            this.tabPageNiveau.Location = new System.Drawing.Point(4, 24);
+            this.tabPageNiveau.Name = "tabPageNiveau";
+            this.tabPageNiveau.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageNiveau.Size = new System.Drawing.Size(900, 469);
+            this.tabPageNiveau.TabIndex = 8;
+            this.tabPageNiveau.Text = "Gestion Niveaux";
+            this.tabPageNiveau.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.AutoSize = true;
+            this.tableLayoutPanel9.ColumnCount = 1;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel9.Controls.Add(this.dataGridViewNiveaux, 0, 0);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 2;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.69978F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.30022F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(894, 463);
+            this.tableLayoutPanel9.TabIndex = 7;
+            // 
+            // dataGridViewNiveaux
+            // 
+            this.dataGridViewNiveaux.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewNiveaux.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridViewNiveaux.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewNiveaux.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridViewNiveaux.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewNiveaux.Name = "dataGridViewNiveaux";
+            this.dataGridViewNiveaux.ReadOnly = true;
+            this.dataGridViewNiveaux.RowTemplate.Height = 25;
+            this.dataGridViewNiveaux.Size = new System.Drawing.Size(888, 237);
+            this.dataGridViewNiveaux.TabIndex = 0;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.textBoxCheminListeNiveaux);
+            this.groupBox8.Controls.Add(this.label23);
+            this.groupBox8.Controls.Add(this.buttonImportNiveaux);
+            this.groupBox8.Controls.Add(this.buttonExportNiveaux);
+            this.groupBox8.Controls.Add(this.button31);
+            this.groupBox8.Controls.Add(this.label24);
+            this.groupBox8.Controls.Add(this.textBoxNomNiveau);
+            this.groupBox8.Controls.Add(this.buttonAjouterNiveau);
+            this.groupBox8.Controls.Add(this.button33);
+            this.groupBox8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox8.Location = new System.Drawing.Point(3, 250);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(894, 216);
+            this.groupBox8.TabIndex = 6;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Ajout d\'un niveau (cp , ce1 etc...) :";
+            // 
+            // button33
+            // 
+            this.button33.Location = new System.Drawing.Point(10, 50);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(100, 25);
+            this.button33.TabIndex = 2;
+            this.button33.Text = "Retirer niveau";
+            this.button33.UseVisualStyleBackColor = true;
+            // 
+            // buttonAjouterNiveau
+            // 
+            this.buttonAjouterNiveau.Location = new System.Drawing.Point(10, 20);
+            this.buttonAjouterNiveau.Name = "buttonAjouterNiveau";
+            this.buttonAjouterNiveau.Size = new System.Drawing.Size(100, 25);
+            this.buttonAjouterNiveau.TabIndex = 1;
+            this.buttonAjouterNiveau.Text = "Ajouter niveau";
+            this.buttonAjouterNiveau.UseVisualStyleBackColor = true;
+            this.buttonAjouterNiveau.Click += new System.EventHandler(this.buttonAjouterNiveau_Click);
+            // 
+            // textBoxNomNiveau
+            // 
+            this.textBoxNomNiveau.Location = new System.Drawing.Point(160, 20);
+            this.textBoxNomNiveau.Name = "textBoxNomNiveau";
+            this.textBoxNomNiveau.Size = new System.Drawing.Size(100, 23);
+            this.textBoxNomNiveau.TabIndex = 4;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(120, 25);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(40, 15);
+            this.label24.TabIndex = 5;
+            this.label24.Text = "Nom :";
+            // 
+            // button31
+            // 
+            this.button31.Location = new System.Drawing.Point(10, 80);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(100, 25);
+            this.button31.TabIndex = 3;
+            this.button31.Text = "Modifier niveau";
+            this.button31.UseVisualStyleBackColor = true;
+            // 
+            // buttonExportNiveaux
+            // 
+            this.buttonExportNiveaux.Location = new System.Drawing.Point(557, 66);
+            this.buttonExportNiveaux.Name = "buttonExportNiveaux";
+            this.buttonExportNiveaux.Size = new System.Drawing.Size(120, 25);
+            this.buttonExportNiveaux.TabIndex = 10;
+            this.buttonExportNiveaux.Text = "Exporter une liste...";
+            this.buttonExportNiveaux.UseVisualStyleBackColor = true;
+            this.buttonExportNiveaux.Click += new System.EventHandler(this.buttonExportNiveaux_Click);
+            // 
+            // buttonImportNiveaux
+            // 
+            this.buttonImportNiveaux.Location = new System.Drawing.Point(683, 66);
+            this.buttonImportNiveaux.Name = "buttonImportNiveaux";
+            this.buttonImportNiveaux.Size = new System.Drawing.Size(120, 25);
+            this.buttonImportNiveaux.TabIndex = 11;
+            this.buttonImportNiveaux.Text = "Importer une liste ...";
+            this.buttonImportNiveaux.UseVisualStyleBackColor = true;
+            this.buttonImportNiveaux.Click += new System.EventHandler(this.buttonImportNiveaux_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(388, 74);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(163, 15);
+            this.label23.TabIndex = 6;
+            this.label23.Text = "Chemin vers la liste en cours :";
+            // 
+            // textBoxCheminListeNiveaux
+            // 
+            this.textBoxCheminListeNiveaux.Location = new System.Drawing.Point(388, 91);
+            this.textBoxCheminListeNiveaux.Name = "textBoxCheminListeNiveaux";
+            this.textBoxCheminListeNiveaux.Size = new System.Drawing.Size(500, 23);
+            this.textBoxCheminListeNiveaux.TabIndex = 12;
+            // 
+            // tabPageMatiere
+            // 
+            this.tabPageMatiere.Controls.Add(this.groupBox5);
+            this.tabPageMatiere.Controls.Add(this.tableLayoutPanel6);
+            this.tabPageMatiere.Location = new System.Drawing.Point(4, 24);
+            this.tabPageMatiere.Name = "tabPageMatiere";
+            this.tabPageMatiere.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageMatiere.Size = new System.Drawing.Size(900, 469);
+            this.tabPageMatiere.TabIndex = 6;
+            this.tabPageMatiere.Text = "Gestion Matières";
+            this.tabPageMatiere.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.AutoSize = true;
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Controls.Add(this.dataGridViewMatiere, 0, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 2;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.26782F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.73218F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(894, 463);
+            this.tableLayoutPanel6.TabIndex = 7;
+            // 
+            // dataGridViewMatiere
+            // 
+            this.dataGridViewMatiere.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewMatiere.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridViewMatiere.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMatiere.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridViewMatiere.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewMatiere.Name = "dataGridViewMatiere";
+            this.dataGridViewMatiere.ReadOnly = true;
+            this.dataGridViewMatiere.RowTemplate.Height = 25;
+            this.dataGridViewMatiere.Size = new System.Drawing.Size(888, 236);
+            this.dataGridViewMatiere.TabIndex = 0;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.textBoxCheminListeMatiere);
+            this.groupBox5.Controls.Add(this.label17);
+            this.groupBox5.Controls.Add(this.buttonImportMatieres_Click);
+            this.groupBox5.Controls.Add(this.buttonExportMatiere_Click);
+            this.groupBox5.Controls.Add(this.button23);
+            this.groupBox5.Controls.Add(this.label20);
+            this.groupBox5.Controls.Add(this.textBoxNomMatiere);
+            this.groupBox5.Controls.Add(this.buttonAjouterMatiere);
+            this.groupBox5.Controls.Add(this.button25);
+            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox5.Location = new System.Drawing.Point(3, 248);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(894, 218);
+            this.groupBox5.TabIndex = 6;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Ajout d\'une matière :";
+            // 
+            // button25
+            // 
+            this.button25.Location = new System.Drawing.Point(10, 50);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(100, 25);
+            this.button25.TabIndex = 2;
+            this.button25.Text = "Retirer matière";
+            this.button25.UseVisualStyleBackColor = true;
+            // 
+            // buttonAjouterMatiere
+            // 
+            this.buttonAjouterMatiere.Location = new System.Drawing.Point(10, 20);
+            this.buttonAjouterMatiere.Name = "buttonAjouterMatiere";
+            this.buttonAjouterMatiere.Size = new System.Drawing.Size(100, 25);
+            this.buttonAjouterMatiere.TabIndex = 1;
+            this.buttonAjouterMatiere.Text = "Ajouter matière";
+            this.buttonAjouterMatiere.UseVisualStyleBackColor = true;
+            this.buttonAjouterMatiere.Click += new System.EventHandler(this.buttonAjouterMatiere_Click);
+            // 
+            // textBoxNomMatiere
+            // 
+            this.textBoxNomMatiere.Location = new System.Drawing.Point(160, 20);
+            this.textBoxNomMatiere.Name = "textBoxNomMatiere";
+            this.textBoxNomMatiere.Size = new System.Drawing.Size(100, 23);
+            this.textBoxNomMatiere.TabIndex = 4;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(120, 25);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(40, 15);
+            this.label20.TabIndex = 5;
+            this.label20.Text = "Nom :";
+            // 
+            // button23
+            // 
+            this.button23.Location = new System.Drawing.Point(10, 80);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(100, 25);
+            this.button23.TabIndex = 3;
+            this.button23.Text = "Modifier matière";
+            this.button23.UseVisualStyleBackColor = true;
+            // 
+            // buttonExportMatiere_Click
+            // 
+            this.buttonExportMatiere_Click.Location = new System.Drawing.Point(557, 66);
+            this.buttonExportMatiere_Click.Name = "buttonExportMatiere_Click";
+            this.buttonExportMatiere_Click.Size = new System.Drawing.Size(120, 25);
+            this.buttonExportMatiere_Click.TabIndex = 10;
+            this.buttonExportMatiere_Click.Text = "Exporter une liste...";
+            this.buttonExportMatiere_Click.UseVisualStyleBackColor = true;
+            this.buttonExportMatiere_Click.Click += new System.EventHandler(this.buttonExportMatiere_Click_Click);
+            // 
+            // buttonImportMatieres_Click
+            // 
+            this.buttonImportMatieres_Click.Location = new System.Drawing.Point(683, 66);
+            this.buttonImportMatieres_Click.Name = "buttonImportMatieres_Click";
+            this.buttonImportMatieres_Click.Size = new System.Drawing.Size(120, 25);
+            this.buttonImportMatieres_Click.TabIndex = 11;
+            this.buttonImportMatieres_Click.Text = "Importer une liste ...";
+            this.buttonImportMatieres_Click.UseVisualStyleBackColor = true;
+            this.buttonImportMatieres_Click.Click += new System.EventHandler(this.buttonImportMatieres_Click_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(388, 74);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(163, 15);
+            this.label17.TabIndex = 6;
+            this.label17.Text = "Chemin vers la liste en cours :";
+            // 
+            // textBoxCheminListeMatiere
+            // 
+            this.textBoxCheminListeMatiere.Location = new System.Drawing.Point(388, 91);
+            this.textBoxCheminListeMatiere.Name = "textBoxCheminListeMatiere";
+            this.textBoxCheminListeMatiere.Size = new System.Drawing.Size(500, 23);
+            this.textBoxCheminListeMatiere.TabIndex = 12;
+            // 
+            // tabPageClasse
+            // 
+            this.tabPageClasse.Controls.Add(this.groupBox4);
+            this.tabPageClasse.Controls.Add(this.tableLayoutPanel5);
+            this.tabPageClasse.Location = new System.Drawing.Point(4, 24);
+            this.tabPageClasse.Name = "tabPageClasse";
+            this.tabPageClasse.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageClasse.Size = new System.Drawing.Size(900, 469);
+            this.tabPageClasse.TabIndex = 5;
+            this.tabPageClasse.Text = "Gestion Classe";
+            this.tabPageClasse.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.AutoSize = true;
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.Controls.Add(this.dataGridViewClasse, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.69978F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.30022F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(894, 463);
+            this.tableLayoutPanel5.TabIndex = 7;
+            // 
+            // dataGridViewClasse
+            // 
+            this.dataGridViewClasse.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewClasse.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridViewClasse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewClasse.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridViewClasse.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewClasse.Name = "dataGridViewClasse";
+            this.dataGridViewClasse.ReadOnly = true;
+            this.dataGridViewClasse.RowTemplate.Height = 25;
+            this.dataGridViewClasse.Size = new System.Drawing.Size(888, 237);
+            this.dataGridViewClasse.TabIndex = 0;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.comboBoxClasse);
+            this.groupBox4.Controls.Add(this.label74);
+            this.groupBox4.Controls.Add(this.buttonClasseLierClasse);
+            this.groupBox4.Controls.Add(this.buttonClasseLierProf);
+            this.groupBox4.Controls.Add(this.comboBoxClasseNivea);
+            this.groupBox4.Controls.Add(this.label73);
+            this.groupBox4.Controls.Add(this.comboBoxClasseProf);
+            this.groupBox4.Controls.Add(this.label72);
+            this.groupBox4.Controls.Add(this.textBoxCheminListeClasse);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.buttonImportClasses);
+            this.groupBox4.Controls.Add(this.buttonExportClasses);
+            this.groupBox4.Controls.Add(this.button18);
+            this.groupBox4.Controls.Add(this.label16);
+            this.groupBox4.Controls.Add(this.textBoxNomClasse);
+            this.groupBox4.Controls.Add(this.buttonAjouterClasse);
+            this.groupBox4.Controls.Add(this.button20);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox4.Location = new System.Drawing.Point(3, 250);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(894, 216);
+            this.groupBox4.TabIndex = 6;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Ajout d\'une classe :";
+            // 
+            // button20
+            // 
+            this.button20.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button20.AutoSize = true;
+            this.button20.Location = new System.Drawing.Point(10, 100);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(100, 25);
+            this.button20.TabIndex = 2;
+            this.button20.Text = "Retirer classe";
+            this.button20.UseVisualStyleBackColor = true;
+            // 
+            // buttonAjouterClasse
+            // 
+            this.buttonAjouterClasse.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonAjouterClasse.AutoSize = true;
+            this.buttonAjouterClasse.Location = new System.Drawing.Point(10, 70);
+            this.buttonAjouterClasse.Name = "buttonAjouterClasse";
+            this.buttonAjouterClasse.Size = new System.Drawing.Size(100, 25);
+            this.buttonAjouterClasse.TabIndex = 1;
+            this.buttonAjouterClasse.Text = "Ajouter Classe";
+            this.buttonAjouterClasse.UseVisualStyleBackColor = true;
+            this.buttonAjouterClasse.Click += new System.EventHandler(this.buttonAjouterClasse_Click);
+            // 
+            // textBoxNomClasse
+            // 
+            this.textBoxNomClasse.Location = new System.Drawing.Point(160, 20);
+            this.textBoxNomClasse.Name = "textBoxNomClasse";
+            this.textBoxNomClasse.Size = new System.Drawing.Size(100, 23);
+            this.textBoxNomClasse.TabIndex = 4;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(120, 25);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(40, 15);
+            this.label16.TabIndex = 5;
+            this.label16.Text = "Nom :";
+            // 
+            // button18
+            // 
+            this.button18.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button18.AutoSize = true;
+            this.button18.Location = new System.Drawing.Point(10, 130);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(100, 25);
+            this.button18.TabIndex = 3;
+            this.button18.Text = "Modifier classe";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
+            // buttonExportClasses
+            // 
+            this.buttonExportClasses.Location = new System.Drawing.Point(560, 66);
+            this.buttonExportClasses.Name = "buttonExportClasses";
+            this.buttonExportClasses.Size = new System.Drawing.Size(120, 25);
+            this.buttonExportClasses.TabIndex = 10;
+            this.buttonExportClasses.Text = "Exporter une liste...";
+            this.buttonExportClasses.UseVisualStyleBackColor = true;
+            this.buttonExportClasses.Click += new System.EventHandler(this.buttonExportClasses_Click);
+            // 
+            // buttonImportClasses
+            // 
+            this.buttonImportClasses.Location = new System.Drawing.Point(686, 66);
+            this.buttonImportClasses.Name = "buttonImportClasses";
+            this.buttonImportClasses.Size = new System.Drawing.Size(120, 25);
+            this.buttonImportClasses.TabIndex = 11;
+            this.buttonImportClasses.Text = "Importer une liste ...";
+            this.buttonImportClasses.UseVisualStyleBackColor = true;
+            this.buttonImportClasses.Click += new System.EventHandler(this.buttonImportClasses_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(391, 74);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(163, 15);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Chemin vers la liste en cours :";
+            // 
+            // textBoxCheminListeClasse
+            // 
+            this.textBoxCheminListeClasse.Location = new System.Drawing.Point(389, 91);
+            this.textBoxCheminListeClasse.Name = "textBoxCheminListeClasse";
+            this.textBoxCheminListeClasse.Size = new System.Drawing.Size(500, 23);
+            this.textBoxCheminListeClasse.TabIndex = 12;
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Location = new System.Drawing.Point(613, 15);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(67, 15);
+            this.label72.TabIndex = 13;
+            this.label72.Text = "Liste profs :";
+            // 
+            // comboBoxClasseProf
+            // 
+            this.comboBoxClasseProf.FormattingEnabled = true;
+            this.comboBoxClasseProf.Location = new System.Drawing.Point(686, 12);
+            this.comboBoxClasseProf.Name = "comboBoxClasseProf";
+            this.comboBoxClasseProf.Size = new System.Drawing.Size(129, 23);
+            this.comboBoxClasseProf.TabIndex = 14;
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Location = new System.Drawing.Point(613, 44);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(68, 15);
+            this.label73.TabIndex = 15;
+            this.label73.Text = "Liste nivea :";
+            // 
+            // comboBoxClasseNivea
+            // 
+            this.comboBoxClasseNivea.FormattingEnabled = true;
+            this.comboBoxClasseNivea.Location = new System.Drawing.Point(686, 40);
+            this.comboBoxClasseNivea.Name = "comboBoxClasseNivea";
+            this.comboBoxClasseNivea.Size = new System.Drawing.Size(129, 23);
+            this.comboBoxClasseNivea.TabIndex = 16;
+            // 
+            // buttonClasseLierProf
+            // 
+            this.buttonClasseLierProf.Location = new System.Drawing.Point(816, 11);
+            this.buttonClasseLierProf.Name = "buttonClasseLierProf";
+            this.buttonClasseLierProf.Size = new System.Drawing.Size(75, 23);
+            this.buttonClasseLierProf.TabIndex = 17;
+            this.buttonClasseLierProf.Text = "Lier...";
+            this.buttonClasseLierProf.UseVisualStyleBackColor = true;
+            this.buttonClasseLierProf.Click += new System.EventHandler(this.buttonClasseLierProf_Click);
+            // 
+            // buttonClasseLierClasse
+            // 
+            this.buttonClasseLierClasse.Location = new System.Drawing.Point(816, 36);
+            this.buttonClasseLierClasse.Name = "buttonClasseLierClasse";
+            this.buttonClasseLierClasse.Size = new System.Drawing.Size(75, 23);
+            this.buttonClasseLierClasse.TabIndex = 18;
+            this.buttonClasseLierClasse.Text = "Lier...";
+            this.buttonClasseLierClasse.UseVisualStyleBackColor = true;
+            this.buttonClasseLierClasse.Click += new System.EventHandler(this.buttonClasseLierClasse_Click);
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(389, 15);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(48, 15);
+            this.label74.TabIndex = 19;
+            this.label74.Text = "Classe ?";
+            // 
+            // comboBoxClasse
+            // 
+            this.comboBoxClasse.FormattingEnabled = true;
+            this.comboBoxClasse.Location = new System.Drawing.Point(443, 12);
+            this.comboBoxClasse.Name = "comboBoxClasse";
+            this.comboBoxClasse.Size = new System.Drawing.Size(129, 23);
+            this.comboBoxClasse.TabIndex = 20;
+            // 
+            // tabPageProfesseur
+            // 
+            this.tabPageProfesseur.Controls.Add(this.groupBox3);
+            this.tabPageProfesseur.Controls.Add(this.tableLayoutPanel4);
+            this.tabPageProfesseur.Location = new System.Drawing.Point(4, 24);
+            this.tabPageProfesseur.Name = "tabPageProfesseur";
+            this.tabPageProfesseur.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageProfesseur.Size = new System.Drawing.Size(900, 469);
+            this.tabPageProfesseur.TabIndex = 4;
+            this.tabPageProfesseur.Text = "Gestion Professeurs";
+            this.tabPageProfesseur.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.AutoSize = true;
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Controls.Add(this.dataGridViewProfesseurs, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.69978F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.30022F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(894, 463);
+            this.tableLayoutPanel4.TabIndex = 7;
+            // 
+            // dataGridViewProfesseurs
+            // 
+            this.dataGridViewProfesseurs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewProfesseurs.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridViewProfesseurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewProfesseurs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridViewProfesseurs.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewProfesseurs.Name = "dataGridViewProfesseurs";
+            this.dataGridViewProfesseurs.ReadOnly = true;
+            this.dataGridViewProfesseurs.RowTemplate.Height = 25;
+            this.dataGridViewProfesseurs.Size = new System.Drawing.Size(888, 237);
+            this.dataGridViewProfesseurs.TabIndex = 0;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.buttonRefreshProf);
+            this.groupBox3.Controls.Add(this.comboBoxProfProf);
+            this.groupBox3.Controls.Add(this.label81);
+            this.groupBox3.Controls.Add(this.checkBoxSuperAdmin);
+            this.groupBox3.Controls.Add(this.textBoxMdpProf);
+            this.groupBox3.Controls.Add(this.label1);
+            this.groupBox3.Controls.Add(this.textBoxLoginProf);
+            this.groupBox3.Controls.Add(this.label21);
+            this.groupBox3.Controls.Add(this.textBoxCheminListeProff);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.buttonImportProfs);
+            this.groupBox3.Controls.Add(this.buttonExportProfs);
+            this.groupBox3.Controls.Add(this.button13);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.textBoxPrenomProf);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.textBoxNomProf);
+            this.groupBox3.Controls.Add(this.buttonAjouterProf);
+            this.groupBox3.Controls.Add(this.buttonRetirerProf);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox3.Location = new System.Drawing.Point(3, 250);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(894, 216);
+            this.groupBox3.TabIndex = 6;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Ajout d\'un professeur :";
+            // 
+            // buttonRetirerProf
+            // 
+            this.buttonRetirerProf.Location = new System.Drawing.Point(637, 80);
+            this.buttonRetirerProf.Name = "buttonRetirerProf";
+            this.buttonRetirerProf.Size = new System.Drawing.Size(93, 23);
+            this.buttonRetirerProf.TabIndex = 2;
+            this.buttonRetirerProf.Text = "Retirer prof";
+            this.buttonRetirerProf.UseVisualStyleBackColor = true;
+            this.buttonRetirerProf.Click += new System.EventHandler(this.buttonRetirerProf_Click);
+            // 
+            // buttonAjouterProf
+            // 
+            this.buttonAjouterProf.Location = new System.Drawing.Point(172, 20);
+            this.buttonAjouterProf.Name = "buttonAjouterProf";
+            this.buttonAjouterProf.Size = new System.Drawing.Size(93, 23);
+            this.buttonAjouterProf.TabIndex = 1;
+            this.buttonAjouterProf.Text = "Ajouter prof";
+            this.buttonAjouterProf.UseVisualStyleBackColor = true;
+            this.buttonAjouterProf.Click += new System.EventHandler(this.buttonAjouterProf_Click);
+            // 
+            // textBoxNomProf
+            // 
+            this.textBoxNomProf.Location = new System.Drawing.Point(66, 21);
+            this.textBoxNomProf.Name = "textBoxNomProf";
+            this.textBoxNomProf.Size = new System.Drawing.Size(100, 23);
+            this.textBoxNomProf.TabIndex = 4;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(18, 24);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(40, 15);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "Nom :";
+            // 
+            // textBoxPrenomProf
+            // 
+            this.textBoxPrenomProf.Location = new System.Drawing.Point(66, 47);
+            this.textBoxPrenomProf.Name = "textBoxPrenomProf";
+            this.textBoxPrenomProf.Size = new System.Drawing.Size(100, 23);
+            this.textBoxPrenomProf.TabIndex = 5;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(8, 50);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(55, 15);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Prénom :";
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(172, 50);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(93, 23);
+            this.button13.TabIndex = 3;
+            this.button13.Text = "Modifier prof";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // buttonExportProfs
+            // 
+            this.buttonExportProfs.Location = new System.Drawing.Point(360, 174);
+            this.buttonExportProfs.Name = "buttonExportProfs";
+            this.buttonExportProfs.Size = new System.Drawing.Size(119, 23);
+            this.buttonExportProfs.TabIndex = 10;
+            this.buttonExportProfs.Text = "Exporter une liste...";
+            this.buttonExportProfs.UseVisualStyleBackColor = true;
+            this.buttonExportProfs.Click += new System.EventHandler(this.buttonExportProfs_Click);
+            // 
+            // buttonImportProfs
+            // 
+            this.buttonImportProfs.Location = new System.Drawing.Point(485, 173);
+            this.buttonImportProfs.Name = "buttonImportProfs";
+            this.buttonImportProfs.Size = new System.Drawing.Size(123, 23);
+            this.buttonImportProfs.TabIndex = 11;
+            this.buttonImportProfs.Text = "Importer une liste ...";
+            this.buttonImportProfs.UseVisualStyleBackColor = true;
+            this.buttonImportProfs.Click += new System.EventHandler(this.buttonImportProfs_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 156);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(163, 15);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Chemin vers la liste en cours :";
+            // 
+            // textBoxCheminListeProff
+            // 
+            this.textBoxCheminListeProff.Location = new System.Drawing.Point(3, 174);
+            this.textBoxCheminListeProff.Name = "textBoxCheminListeProff";
+            this.textBoxCheminListeProff.Size = new System.Drawing.Size(351, 23);
+            this.textBoxCheminListeProff.TabIndex = 12;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(13, 79);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(43, 15);
+            this.label21.TabIndex = 13;
+            this.label21.Text = "Login :";
+            // 
+            // textBoxLoginProf
+            // 
+            this.textBoxLoginProf.Location = new System.Drawing.Point(66, 76);
+            this.textBoxLoginProf.Name = "textBoxLoginProf";
+            this.textBoxLoginProf.Size = new System.Drawing.Size(100, 23);
+            this.textBoxLoginProf.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 108);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Mdp :";
+            // 
+            // textBoxMdpProf
+            // 
+            this.textBoxMdpProf.Location = new System.Drawing.Point(66, 105);
+            this.textBoxMdpProf.Name = "textBoxMdpProf";
+            this.textBoxMdpProf.Size = new System.Drawing.Size(100, 23);
+            this.textBoxMdpProf.TabIndex = 16;
+            // 
+            // checkBoxSuperAdmin
+            // 
+            this.checkBoxSuperAdmin.AutoSize = true;
+            this.checkBoxSuperAdmin.Location = new System.Drawing.Point(63, 134);
+            this.checkBoxSuperAdmin.Name = "checkBoxSuperAdmin";
+            this.checkBoxSuperAdmin.Size = new System.Drawing.Size(103, 19);
+            this.checkBoxSuperAdmin.TabIndex = 17;
+            this.checkBoxSuperAdmin.Text = "Super Admin ?";
+            this.checkBoxSuperAdmin.UseVisualStyleBackColor = true;
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Location = new System.Drawing.Point(637, 28);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(131, 15);
+            this.label81.TabIndex = 18;
+            this.label81.Text = "Professeur selectionné :";
+            // 
+            // comboBoxProfProf
+            // 
+            this.comboBoxProfProf.FormattingEnabled = true;
+            this.comboBoxProfProf.Location = new System.Drawing.Point(637, 51);
+            this.comboBoxProfProf.Name = "comboBoxProfProf";
+            this.comboBoxProfProf.Size = new System.Drawing.Size(251, 23);
+            this.comboBoxProfProf.TabIndex = 19;
+            // 
+            // buttonRefreshProf
+            // 
+            this.buttonRefreshProf.Location = new System.Drawing.Point(614, 173);
+            this.buttonRefreshProf.Name = "buttonRefreshProf";
+            this.buttonRefreshProf.Size = new System.Drawing.Size(269, 23);
+            this.buttonRefreshProf.TabIndex = 20;
+            this.buttonRefreshProf.TabStop = false;
+            this.buttonRefreshProf.Text = "Raffraichir";
+            this.buttonRefreshProf.UseVisualStyleBackColor = true;
+            // 
+            // tabPageEleve
+            // 
+            this.tabPageEleve.Controls.Add(this.groupBoxAjoutEleve);
+            this.tabPageEleve.Controls.Add(this.tableLayoutPanelEleve);
+            this.tabPageEleve.Location = new System.Drawing.Point(4, 24);
+            this.tabPageEleve.Name = "tabPageEleve";
+            this.tabPageEleve.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageEleve.Size = new System.Drawing.Size(900, 469);
+            this.tabPageEleve.TabIndex = 0;
+            this.tabPageEleve.Text = "Gestion eleves";
+            this.tabPageEleve.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanelEleve
+            // 
+            this.tableLayoutPanelEleve.AutoSize = true;
+            this.tableLayoutPanelEleve.ColumnCount = 1;
+            this.tableLayoutPanelEleve.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelEleve.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelEleve.Controls.Add(this.dataGridViewEleve, 0, 0);
+            this.tableLayoutPanelEleve.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelEleve.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanelEleve.Name = "tableLayoutPanelEleve";
+            this.tableLayoutPanelEleve.RowCount = 2;
+            this.tableLayoutPanelEleve.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.34773F));
+            this.tableLayoutPanelEleve.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.65227F));
+            this.tableLayoutPanelEleve.Size = new System.Drawing.Size(894, 463);
+            this.tableLayoutPanelEleve.TabIndex = 7;
+            // 
+            // dataGridViewEleve
+            // 
+            this.dataGridViewEleve.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewEleve.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridViewEleve.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEleve.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridViewEleve.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewEleve.Name = "dataGridViewEleve";
+            this.dataGridViewEleve.ReadOnly = true;
+            this.dataGridViewEleve.RowTemplate.Height = 25;
+            this.dataGridViewEleve.Size = new System.Drawing.Size(888, 240);
+            this.dataGridViewEleve.TabIndex = 0;
+            // 
+            // groupBoxAjoutEleve
+            // 
+            this.groupBoxAjoutEleve.Controls.Add(this.buttonEleveRefresh);
+            this.groupBoxAjoutEleve.Controls.Add(this.buttonEleveLierClasse);
+            this.groupBoxAjoutEleve.Controls.Add(this.comboBoxEleveClasses);
+            this.groupBoxAjoutEleve.Controls.Add(this.label76);
+            this.groupBoxAjoutEleve.Controls.Add(this.comboBoxEleves);
+            this.groupBoxAjoutEleve.Controls.Add(this.label75);
+            this.groupBoxAjoutEleve.Controls.Add(this.textBoxCheminListe);
+            this.groupBoxAjoutEleve.Controls.Add(this.labelCheminListeEleve);
+            this.groupBoxAjoutEleve.Controls.Add(this.buttonChargerListeEleve);
+            this.groupBoxAjoutEleve.Controls.Add(this.buttonSauvegarderListeEleve);
+            this.groupBoxAjoutEleve.Controls.Add(this.textBoxEleveAnciennete);
+            this.groupBoxAjoutEleve.Controls.Add(this.labelAncienneteEleve);
+            this.groupBoxAjoutEleve.Controls.Add(this.buttonModifierEleve);
+            this.groupBoxAjoutEleve.Controls.Add(this.labelElevePrenom);
+            this.groupBoxAjoutEleve.Controls.Add(this.textBoxElevePrenom);
+            this.groupBoxAjoutEleve.Controls.Add(this.labelAjoutEleveNom);
+            this.groupBoxAjoutEleve.Controls.Add(this.textBoxEleveNom);
+            this.groupBoxAjoutEleve.Controls.Add(this.buttonAjouterEleve);
+            this.groupBoxAjoutEleve.Controls.Add(this.buttonRetirerEleve);
+            this.groupBoxAjoutEleve.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBoxAjoutEleve.Location = new System.Drawing.Point(3, 253);
+            this.groupBoxAjoutEleve.Name = "groupBoxAjoutEleve";
+            this.groupBoxAjoutEleve.Size = new System.Drawing.Size(894, 213);
+            this.groupBoxAjoutEleve.TabIndex = 6;
+            this.groupBoxAjoutEleve.TabStop = false;
+            this.groupBoxAjoutEleve.Text = "Ajout d\'un eleve :";
+            // 
+            // buttonRetirerEleve
+            // 
+            this.buttonRetirerEleve.Location = new System.Drawing.Point(583, 66);
+            this.buttonRetirerEleve.Name = "buttonRetirerEleve";
+            this.buttonRetirerEleve.Size = new System.Drawing.Size(98, 23);
+            this.buttonRetirerEleve.TabIndex = 0;
+            this.buttonRetirerEleve.TabStop = false;
+            this.buttonRetirerEleve.Text = "Retirer eleve";
+            this.buttonRetirerEleve.UseVisualStyleBackColor = true;
+            this.buttonRetirerEleve.Click += new System.EventHandler(this.buttonRetirerEleve_Click);
+            // 
+            // buttonAjouterEleve
+            // 
+            this.buttonAjouterEleve.Location = new System.Drawing.Point(189, 22);
+            this.buttonAjouterEleve.Name = "buttonAjouterEleve";
+            this.buttonAjouterEleve.Size = new System.Drawing.Size(98, 23);
+            this.buttonAjouterEleve.TabIndex = 4;
+            this.buttonAjouterEleve.Text = "Ajouter eleve";
+            this.buttonAjouterEleve.UseVisualStyleBackColor = true;
+            this.buttonAjouterEleve.Click += new System.EventHandler(this.buttonAjouterEleve_Click);
+            // 
+            // textBoxEleveNom
+            // 
+            this.textBoxEleveNom.Location = new System.Drawing.Point(83, 22);
+            this.textBoxEleveNom.Name = "textBoxEleveNom";
+            this.textBoxEleveNom.Size = new System.Drawing.Size(100, 23);
+            this.textBoxEleveNom.TabIndex = 1;
+            // 
+            // labelAjoutEleveNom
+            // 
+            this.labelAjoutEleveNom.AutoSize = true;
+            this.labelAjoutEleveNom.Location = new System.Drawing.Point(37, 25);
+            this.labelAjoutEleveNom.Name = "labelAjoutEleveNom";
+            this.labelAjoutEleveNom.Size = new System.Drawing.Size(40, 15);
+            this.labelAjoutEleveNom.TabIndex = 5;
+            this.labelAjoutEleveNom.Text = "Nom :";
+            // 
+            // textBoxElevePrenom
+            // 
+            this.textBoxElevePrenom.Location = new System.Drawing.Point(83, 51);
+            this.textBoxElevePrenom.Name = "textBoxElevePrenom";
+            this.textBoxElevePrenom.Size = new System.Drawing.Size(100, 23);
+            this.textBoxElevePrenom.TabIndex = 2;
+            // 
+            // labelElevePrenom
+            // 
+            this.labelElevePrenom.AutoSize = true;
+            this.labelElevePrenom.Location = new System.Drawing.Point(22, 54);
+            this.labelElevePrenom.Name = "labelElevePrenom";
+            this.labelElevePrenom.Size = new System.Drawing.Size(55, 15);
+            this.labelElevePrenom.TabIndex = 6;
+            this.labelElevePrenom.Text = "Prénom :";
+            // 
+            // buttonModifierEleve
+            // 
+            this.buttonModifierEleve.Location = new System.Drawing.Point(189, 51);
+            this.buttonModifierEleve.Name = "buttonModifierEleve";
+            this.buttonModifierEleve.Size = new System.Drawing.Size(98, 23);
+            this.buttonModifierEleve.TabIndex = 3;
+            this.buttonModifierEleve.Text = "Modifier eleve";
+            this.buttonModifierEleve.UseVisualStyleBackColor = true;
+            // 
+            // labelAncienneteEleve
+            // 
+            this.labelAncienneteEleve.AutoSize = true;
+            this.labelAncienneteEleve.Location = new System.Drawing.Point(4, 83);
+            this.labelAncienneteEleve.Name = "labelAncienneteEleve";
+            this.labelAncienneteEleve.Size = new System.Drawing.Size(73, 15);
+            this.labelAncienneteEleve.TabIndex = 8;
+            this.labelAncienneteEleve.Text = "Anciennété :";
+            // 
+            // textBoxEleveAnciennete
+            // 
+            this.textBoxEleveAnciennete.Location = new System.Drawing.Point(83, 80);
+            this.textBoxEleveAnciennete.Name = "textBoxEleveAnciennete";
+            this.textBoxEleveAnciennete.Size = new System.Drawing.Size(100, 23);
+            this.textBoxEleveAnciennete.TabIndex = 3;
+            // 
+            // buttonSauvegarderListeEleve
+            // 
+            this.buttonSauvegarderListeEleve.Location = new System.Drawing.Point(365, 172);
+            this.buttonSauvegarderListeEleve.Name = "buttonSauvegarderListeEleve";
+            this.buttonSauvegarderListeEleve.Size = new System.Drawing.Size(119, 23);
+            this.buttonSauvegarderListeEleve.TabIndex = 0;
+            this.buttonSauvegarderListeEleve.TabStop = false;
+            this.buttonSauvegarderListeEleve.Text = "Exporter une liste...";
+            this.buttonSauvegarderListeEleve.UseVisualStyleBackColor = true;
+            this.buttonSauvegarderListeEleve.Click += new System.EventHandler(this.buttonSauvegarderListeEleve_Click);
+            // 
+            // buttonChargerListeEleve
+            // 
+            this.buttonChargerListeEleve.Location = new System.Drawing.Point(490, 172);
+            this.buttonChargerListeEleve.Name = "buttonChargerListeEleve";
+            this.buttonChargerListeEleve.Size = new System.Drawing.Size(123, 23);
+            this.buttonChargerListeEleve.TabIndex = 0;
+            this.buttonChargerListeEleve.TabStop = false;
+            this.buttonChargerListeEleve.Text = "Importer une liste ...";
+            this.buttonChargerListeEleve.UseVisualStyleBackColor = true;
+            this.buttonChargerListeEleve.Click += new System.EventHandler(this.buttonChargerListeEleve_Click);
+            // 
+            // labelCheminListeEleve
+            // 
+            this.labelCheminListeEleve.AutoSize = true;
+            this.labelCheminListeEleve.Location = new System.Drawing.Point(6, 155);
+            this.labelCheminListeEleve.Name = "labelCheminListeEleve";
+            this.labelCheminListeEleve.Size = new System.Drawing.Size(163, 15);
+            this.labelCheminListeEleve.TabIndex = 6;
+            this.labelCheminListeEleve.Text = "Chemin vers la liste en cours :";
+            // 
+            // textBoxCheminListe
+            // 
+            this.textBoxCheminListe.Location = new System.Drawing.Point(6, 173);
+            this.textBoxCheminListe.Name = "textBoxCheminListe";
+            this.textBoxCheminListe.Size = new System.Drawing.Size(353, 23);
+            this.textBoxCheminListe.TabIndex = 0;
+            this.textBoxCheminListe.TabStop = false;
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Location = new System.Drawing.Point(583, 19);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(110, 15);
+            this.label75.TabIndex = 13;
+            this.label75.Text = "Eleves selectionné ?";
+            // 
+            // comboBoxEleves
+            // 
+            this.comboBoxEleves.FormattingEnabled = true;
+            this.comboBoxEleves.Location = new System.Drawing.Point(583, 37);
+            this.comboBoxEleves.Name = "comboBoxEleves";
+            this.comboBoxEleves.Size = new System.Drawing.Size(170, 23);
+            this.comboBoxEleves.TabIndex = 0;
+            this.comboBoxEleves.TabStop = false;
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Location = new System.Drawing.Point(769, 19);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(122, 15);
+            this.label76.TabIndex = 15;
+            this.label76.Text = "Classes selectionnée ?";
+            // 
+            // comboBoxEleveClasses
+            // 
+            this.comboBoxEleveClasses.FormattingEnabled = true;
+            this.comboBoxEleveClasses.Location = new System.Drawing.Point(770, 37);
+            this.comboBoxEleveClasses.Name = "comboBoxEleveClasses";
+            this.comboBoxEleveClasses.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxEleveClasses.TabIndex = 0;
+            this.comboBoxEleveClasses.TabStop = false;
+            // 
+            // buttonEleveLierClasse
+            // 
+            this.buttonEleveLierClasse.Location = new System.Drawing.Point(769, 66);
+            this.buttonEleveLierClasse.Name = "buttonEleveLierClasse";
+            this.buttonEleveLierClasse.Size = new System.Drawing.Size(75, 23);
+            this.buttonEleveLierClasse.TabIndex = 0;
+            this.buttonEleveLierClasse.TabStop = false;
+            this.buttonEleveLierClasse.Text = "Lier ...";
+            this.buttonEleveLierClasse.UseVisualStyleBackColor = true;
+            this.buttonEleveLierClasse.Click += new System.EventHandler(this.buttonEleveLierClasse_Click);
+            // 
+            // buttonEleveRefresh
+            // 
+            this.buttonEleveRefresh.Location = new System.Drawing.Point(619, 172);
+            this.buttonEleveRefresh.Name = "buttonEleveRefresh";
+            this.buttonEleveRefresh.Size = new System.Drawing.Size(269, 23);
+            this.buttonEleveRefresh.TabIndex = 0;
+            this.buttonEleveRefresh.TabStop = false;
+            this.buttonEleveRefresh.Text = "Raffraichir";
+            this.buttonEleveRefresh.UseVisualStyleBackColor = true;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPageEleve);
+            this.tabControl1.Controls.Add(this.tabPageProfesseur);
+            this.tabControl1.Controls.Add(this.tabPageClasse);
+            this.tabControl1.Controls.Add(this.tabPageMatiere);
+            this.tabControl1.Controls.Add(this.tabPageNiveau);
+            this.tabControl1.Controls.Add(this.tabPage21);
+            this.tabControl1.Location = new System.Drawing.Point(8, 8);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(908, 497);
+            this.tabControl1.TabIndex = 1;
+            // 
             // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -4958,43 +5012,6 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "UserControl1";
             this.Size = new System.Drawing.Size(924, 508);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPageEleve.ResumeLayout(false);
-            this.tabPageEleve.PerformLayout();
-            this.groupBoxAjoutEleve.ResumeLayout(false);
-            this.groupBoxAjoutEleve.PerformLayout();
-            this.tableLayoutPanelEleve.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEleve)).EndInit();
-            this.tabPageProfesseur.ResumeLayout(false);
-            this.tabPageProfesseur.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProfesseurs)).EndInit();
-            this.tabPageClasse.ResumeLayout(false);
-            this.tabPageClasse.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClasse)).EndInit();
-            this.tabPageMatiere.ResumeLayout(false);
-            this.tabPageMatiere.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.tableLayoutPanel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMatiere)).EndInit();
-            this.tabPageNiveau.ResumeLayout(false);
-            this.tabPageNiveau.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
-            this.tableLayoutPanel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNiveaux)).EndInit();
-            this.tabPage21.ResumeLayout(false);
-            this.tabPage21.PerformLayout();
-            this.tableLayoutPanel26.ResumeLayout(false);
-            this.groupBox25.ResumeLayout(false);
-            this.groupBox25.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNotes)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -5110,79 +5127,51 @@
             this.groupBox24.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView22)).EndInit();
             this.tabControl5.ResumeLayout(false);
+            this.tabPage21.ResumeLayout(false);
+            this.tabPage21.PerformLayout();
+            this.tableLayoutPanel26.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNotes)).EndInit();
+            this.groupBox25.ResumeLayout(false);
+            this.groupBox25.PerformLayout();
+            this.tabPageNiveau.ResumeLayout(false);
+            this.tabPageNiveau.PerformLayout();
+            this.tableLayoutPanel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNiveaux)).EndInit();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.tabPageMatiere.ResumeLayout(false);
+            this.tabPageMatiere.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMatiere)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.tabPageClasse.ResumeLayout(false);
+            this.tabPageClasse.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClasse)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.tabPageProfesseur.ResumeLayout(false);
+            this.tabPageProfesseur.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProfesseurs)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.tabPageEleve.ResumeLayout(false);
+            this.tabPageEleve.PerformLayout();
+            this.tableLayoutPanelEleve.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEleve)).EndInit();
+            this.groupBoxAjoutEleve.ResumeLayout(false);
+            this.groupBoxAjoutEleve.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private TabControl tabControl1;
-        private TabPage tabPageEleve;
-        private GroupBox groupBoxAjoutEleve;
-        private TextBox textBoxCheminListe;
-        private Label labelCheminListeEleve;
-        private Button buttonChargerListeEleve;
-        private Button buttonSauvegarderListeEleve;
-        private TextBox textBoxEleveAnciennete;
-        private Label labelAncienneteEleve;
-        private Button buttonModifierEleve;
-        private Label labelElevePrenom;
-        private TextBox textBoxElevePrenom;
-        private Label labelAjoutEleveNom;
-        private TextBox textBoxEleveNom;
-        private Button buttonAjouterEleve;
-        private Button buttonRetirerEleve;
-        private TableLayoutPanel tableLayoutPanelEleve;
-        private DataGridView dataGridViewEleve;
-        private TabPage tabPageProfesseur;
-        private GroupBox groupBox3;
-        private Label label21;
-        private TextBox textBoxCheminListeProff;
-        private Label label9;
-        private Button buttonImportProfs;
-        private Button buttonExportProfs;
-        private Button button13;
-        private Label label11;
-        private TextBox textBoxPrenomProf;
-        private Label label12;
-        private TextBox textBoxNomProf;
-        private Button buttonAjouterProf;
-        private Button button15;
-        private TableLayoutPanel tableLayoutPanel4;
-        private DataGridView dataGridViewProfesseurs;
-        private TabPage tabPageClasse;
-        private GroupBox groupBox4;
-        private TextBox textBoxCheminListeClasse;
-        private Label label13;
-        private Button buttonImportClasses;
-        private Button buttonExportClasses;
-        private Button button18;
-        private Label label16;
-        private TextBox textBoxNomClasse;
-        private Button buttonAjouterClasse;
-        private Button button20;
-        private TableLayoutPanel tableLayoutPanel5;
-        private DataGridView dataGridViewClasse;
-        private TabPage tabPageMatiere;
-        private GroupBox groupBox5;
-        private TextBox textBoxCheminListeMatiere;
-        private Label label17;
-        private Button buttonImportMatieres_Click;
-        private Button buttonExportMatiere_Click;
-        private Button button23;
-        private Label label20;
-        private TextBox textBoxNomMatiere;
-        private Button buttonAjouterMatiere;
-        private Button button25;
-        private TableLayoutPanel tableLayoutPanel6;
-        private DataGridView dataGridViewMatiere;
         private SaveFileDialog saveFileDialog1;
         private OpenFileDialog openFileDialog1;
         private ToolTip toolTip1;
-        private TextBox textBoxLoginProf;
-        private TextBox textBoxMdpProf;
-        private Label label1;
-        private CheckBox checkBoxSuperAdmin;
         private TabPage tabPage1;
         private GroupBox groupBox1;
         private TextBox textBox1;
@@ -5247,19 +5236,6 @@
         private TableLayoutPanel tableLayoutPanel7;
         private DataGridView dataGridView4;
         private TabControl tabControl2;
-        private TabPage tabPageNiveau;
-        private GroupBox groupBox8;
-        private TextBox textBoxCheminListeNiveaux;
-        private Label label23;
-        private Button buttonImportNiveaux;
-        private Button buttonExportNiveaux;
-        private Button button31;
-        private Label label24;
-        private TextBox textBoxNomNiveau;
-        private Button buttonAjouterNiveau;
-        private Button button33;
-        private TableLayoutPanel tableLayoutPanel9;
-        private DataGridView dataGridViewNiveaux;
         private DataGridView dataGridView5;
         private TableLayoutPanel tableLayoutPanel8;
         private TabPage tabPage5;
@@ -5506,22 +5482,15 @@
         private TableLayoutPanel tableLayoutPanel25;
         private DataGridView dataGridView22;
         private TabControl tabControl5;
-        private ComboBox comboBoxClasseProf;
-        private Label label72;
-        private Label label73;
-        private ComboBox comboBoxClasseNivea;
-        private Button buttonClasseLierClasse;
-        private Button buttonClasseLierProf;
-        private ComboBox comboBoxClasse;
-        private Label label74;
-        private Button buttonEleveLierClasse;
-        private ComboBox comboBoxEleveClasses;
-        private Label label76;
-        private ComboBox comboBoxEleves;
-        private Label label75;
         private TabPage tabPage21;
         private TableLayoutPanel tableLayoutPanel26;
         private GroupBox groupBox25;
+        private ComboBox comboBoxNoteMatiere;
+        private Label label80;
+        private ComboBox comboBoxNoteEleves;
+        private Label label79;
+        private Label label78;
+        private TextBox textBoxValeurNote;
         private TextBox textBoxCheminListeNote;
         private Label label77;
         private Button buttonImportNote;
@@ -5530,11 +5499,99 @@
         private Button buttonAjouterNote;
         private Button buttonRetirerNote;
         private DataGridView dataGridViewNotes;
-        private Label label78;
-        private TextBox textBoxValeurNote;
-        private ComboBox comboBoxNoteEleves;
-        private Label label79;
-        private Label label80;
-        private ComboBox comboBoxNoteMatiere;
+        private TabPage tabPageNiveau;
+        private GroupBox groupBox8;
+        private TextBox textBoxCheminListeNiveaux;
+        private Label label23;
+        private Button buttonImportNiveaux;
+        private Button buttonExportNiveaux;
+        private Button button31;
+        private Label label24;
+        private TextBox textBoxNomNiveau;
+        private Button buttonAjouterNiveau;
+        private Button button33;
+        private TableLayoutPanel tableLayoutPanel9;
+        private DataGridView dataGridViewNiveaux;
+        private TabPage tabPageMatiere;
+        private GroupBox groupBox5;
+        private TextBox textBoxCheminListeMatiere;
+        private Label label17;
+        private Button buttonImportMatieres_Click;
+        private Button buttonExportMatiere_Click;
+        private Button button23;
+        private Label label20;
+        private TextBox textBoxNomMatiere;
+        private Button buttonAjouterMatiere;
+        private Button button25;
+        private TableLayoutPanel tableLayoutPanel6;
+        private DataGridView dataGridViewMatiere;
+        private TabPage tabPageClasse;
+        private GroupBox groupBox4;
+        private ComboBox comboBoxClasse;
+        private Label label74;
+        private Button buttonClasseLierClasse;
+        private Button buttonClasseLierProf;
+        private ComboBox comboBoxClasseNivea;
+        private Label label73;
+        private ComboBox comboBoxClasseProf;
+        private Label label72;
+        private TextBox textBoxCheminListeClasse;
+        private Label label13;
+        private Button buttonImportClasses;
+        private Button buttonExportClasses;
+        private Button button18;
+        private Label label16;
+        private TextBox textBoxNomClasse;
+        private Button buttonAjouterClasse;
+        private Button button20;
+        private TableLayoutPanel tableLayoutPanel5;
+        private DataGridView dataGridViewClasse;
+        private TabPage tabPageProfesseur;
+        private GroupBox groupBox3;
+        private Button buttonRefreshProf;
+        private ComboBox comboBoxProfProf;
+        private Label label81;
+        private CheckBox checkBoxSuperAdmin;
+        private TextBox textBoxMdpProf;
+        private Label label1;
+        private TextBox textBoxLoginProf;
+        private Label label21;
+        private TextBox textBoxCheminListeProff;
+        private Label label9;
+        private Button buttonImportProfs;
+        private Button buttonExportProfs;
+        private Button button13;
+        private Label label11;
+        private TextBox textBoxPrenomProf;
+        private Label label12;
+        private TextBox textBoxNomProf;
+        private Button buttonAjouterProf;
+        private Button buttonRetirerProf;
+        private TableLayoutPanel tableLayoutPanel4;
+        private DataGridView dataGridViewProfesseurs;
+        private TabPage tabPageEleve;
+        private GroupBox groupBoxAjoutEleve;
+        private Button buttonEleveRefresh;
+        private Button buttonEleveLierClasse;
+        private ComboBox comboBoxEleveClasses;
+        private Label label76;
+        private ComboBox comboBoxEleves;
+        private Label label75;
+        private TextBox textBoxCheminListe;
+        private Label labelCheminListeEleve;
+        private Button buttonChargerListeEleve;
+        private Button buttonSauvegarderListeEleve;
+        private TextBox textBoxEleveAnciennete;
+        private Label labelAncienneteEleve;
+        private Button buttonModifierEleve;
+        private Label labelElevePrenom;
+        private TextBox textBoxElevePrenom;
+        private Label labelAjoutEleveNom;
+        private TextBox textBoxEleveNom;
+        private Button buttonAjouterEleve;
+        private Button buttonRetirerEleve;
+        private TableLayoutPanel tableLayoutPanelEleve;
+        private DataGridView dataGridViewEleve;
+        private TabControl tabControl1;
     }
 }

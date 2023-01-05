@@ -1,1 +1,22 @@
-[{"label":"CP","id":"e211b93d-afa8-4670-8fa4-47f8194a410c"},{"label":"CE1","id":"3d677984-2109-4bea-b3ef-32fa87dee59d"},{"label":"CE2","id":"57f30d32-b725-49ce-b0cf-71853f7ab083"},{"label":"CM1","id":"1292b07d-31bd-460d-9f58-f0cb2a1d99fa"},{"label":"CM2","id":"bf99bf31-884f-416b-aea2-0658409bc690"}]
+[
+  {
+    "label": "CP",
+    "id": "e211b93d-afa8-4670-8fa4-47f8194a410c"
+  },
+  {
+    "label": "CE1",
+    "id": "3d677984-2109-4bea-b3ef-32fa87dee59d"
+  },
+  {
+    "label": "CE2",
+    "id": "57f30d32-b725-49ce-b0cf-71853f7ab083"
+  },
+  {
+    "label": "CM1",
+    "id": "1292b07d-31bd-460d-9f58-f0cb2a1d99fa"
+  },
+  {
+    "label": "CM2",
+    "id": "bf99bf31-884f-416b-aea2-0658409bc690"
+  }
+]
