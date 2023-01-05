@@ -2,7 +2,7 @@
   {
     "Label": "Voltaire",
     "niveau_id": "niveau_1",
-    "professeur_id": null,
+    "professeur_id": "f8bf9080-39c2-45ff-8963-e316561267b8",
     "Id": "995bf453-9ef1-4bc9-862d-73c18bd21136"
   },
   {
@@ -20,13 +20,13 @@
   {
     "Label": "DeGaulle",
     "niveau_id": "niveau_2",
-    "professeur_id": null,
+    "professeur_id": "a726fb85-cf99-4829-93bd-663a0fb84d5f",
     "Id": "91e29a2a-a50a-4af4-8297-9d2d9d5a1a62"
   },
   {
     "Label": "Mozart",
     "niveau_id": "niveau_3",
-    "professeur_id": null,
+    "professeur_id": "496598e7-6238-4f4b-9f9e-bf5a80486465",
     "Id": "4a2a47a5-2324-46bb-9c98-771962631a9b"
   },
   {
@@ -61,7 +61,7 @@
   },
   {
     "Label": "Zola",
-    "niveau_id": "niveau_1",
+    "niveau_id": "niveau_2",
     "professeur_id": null,
     "Id": "2869c720-ce97-408d-8542-56b94f6ab6b9"
   }

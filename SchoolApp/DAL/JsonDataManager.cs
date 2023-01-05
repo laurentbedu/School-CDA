@@ -37,7 +37,7 @@ namespace SchoolApp.DAL
             return newList;
         }
 
-        public void SaveJsonData(List<T> dataList)
+        public void SaveJsonData()
         {
             string str = typeof(T).Name;
             string fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\"+str+".json";

@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics.Arm;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using SchoolApp.DAL;
 using SchoolApp.Tools;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace SchoolApp.Models
 {
@@ -69,12 +71,13 @@ namespace SchoolApp.Models
 
         public void AddProfesseur(Professeur professeur)
         {
-            if (professeur_id != professeur.Id)
+            if (professeur.Id != professeur_id)
             {
                 professeur_id = professeur.Id;
 
                 if (professeur.Classe != this)
                 {
+                    professeur_id = professeur.Id;
                     professeur.AddClasse(this);
                 }
             }
@@ -82,9 +85,11 @@ namespace SchoolApp.Models
 
         public void RemoveProfesseur(Professeur professeur)
         {
-            if (professeur_id == professeur.Id)
+            if (Professeur == professeur)
             {
+                Professeur = null;
                 professeur_id = null;
+
                 if (professeur.Classe == this)
                 {
                     professeur.RemoveClasse(this);

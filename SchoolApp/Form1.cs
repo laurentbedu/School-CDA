@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Runtime.ConstrainedExecution;
+using System.Runtime.Intrinsics.Arm;
 using System.Text.Json;
 using System.Windows.Forms;
 using SchoolApp.DAL;
@@ -13,8 +14,9 @@ namespace SchoolApp
         public Form1()
         {
             InitializeComponent();
-         
-            MatiereList = new List<Matiere> {
+
+            /*
+            matiereList = new List<Matiere> {
                 new Matiere() {Label = "Mathématique", Id = "matiere_1"},
                 new Matiere() {Label = "Français", Id = "matiere_2"},
                 new Matiere() {Label = "Anglais", Id = "matiere_3"},
@@ -23,44 +25,48 @@ namespace SchoolApp
                 new Matiere() {Label = "Géographie", Id = "matiere_6"}
             };
 
-            NiveauList.Find(e => e.Label == "CP")?.AddMatiere(MatiereList[0], MatiereList[1]);
-            NiveauList.Find(e => e.Label == "CE1")?.AddMatiere(MatiereList[0], MatiereList[1], MatiereList[2]);
-            NiveauList.Find(e => e.Label == "CE2")?.AddMatiere(MatiereList[0], MatiereList[1], MatiereList[2], MatiereList[3]);
-            NiveauList.Find(e => e.Label == "CM1")?.AddMatiere(MatiereList[0], MatiereList[1], MatiereList[2], MatiereList[3], MatiereList[4]);
-            NiveauList.Find(e => e.Label == "CM2")?.AddMatiere(MatiereList.ToArray());
+            niveauList.Find(e => e.Label == "CP")?.AddMatiere(matiereList[0], matiereList[1]);
+            niveauList.Find(e => e.Label == "CE1")?.AddMatiere(matiereList[0], matiereList[1], matiereList[2]);
+            niveauList.Find(e => e.Label == "CE2")?.AddMatiere(matiereList[0], matiereList[1], matiereList[2], matiereList[3]);
+            niveauList.Find(e => e.Label == "CM1")?.AddMatiere(matiereList[0], matiereList[1], matiereList[2], matiereList[3], matiereList[4]);
+            niveauList.Find(e => e.Label == "CM2")?.AddMatiere(matiereList.ToArray());
+            */
 
+            niveauList = niveauJdm.DataList;
+            niveauList = niveauList.OrderBy(e => e.Id).ToList();
+            comboBoxNiveauClasse.DataSource = niveauList;
 
-            var jsonNiveau = new DAL.JsonDataManager<Niveau>();
-            List<Niveau> niveaux = jsonNiveau.DataList;
-            niveaux = niveaux.OrderBy(e => e.Id).ToList();
-            comboBoxNiveauClasse.DataSource = niveaux;
+            classeList = classeJdM.DataList;
+            classeList = classeList.OrderBy(e => e.niveau_id).ToList();
+            comboBoxClasseProf.DataSource = classeList;
+            comboBoxClasseEleve.DataSource = classeList;
 
-            var jsonClasse = new DAL.JsonDataManager<Classe>();
-            List<Classe> classes = jsonClasse.DataList;
-            classes = classes.OrderBy(e => e.niveau_id).ToList();
-            comboBoxClasseProf.DataSource = classes;
-            comboBoxClasseEleve.DataSource = classes;
+            professeurList = professeurJdM.DataList;
+            professeurList = professeurList.OrderBy(e => e.Nom).ToList();
+            comboBoxProfClasse.DataSource = professeurList;
 
-            var jsonProf = new DAL.JsonDataManager<Professeur>();
-            List <Professeur> professeurs = jsonProf.DataList;
-            professeurs = professeurs.OrderBy(e => e.Nom).ToList();
-            comboBoxProfClasse.DataSource = professeurs;
-
-            var jsonEleve = new DAL.JsonDataManager<Eleve>();
-            List<Eleve> eleves = jsonEleve.DataList;
-            eleves = eleves.OrderBy(e => e.Nom).ToList();
-            comboBoxEleveClasse.DataSource = eleves;
+            eleveList = eleveJdm.DataList;
+            eleveList = eleveList.OrderBy(e => e.Nom).ToList();
+            comboBoxEleveClasse.DataSource = eleveList;
         }
 
-        readonly List<Niveau> NiveauList = new();
-        readonly List<Matiere> MatiereList = new();
 
-        List<Professeur> professeurs = new List<Professeur>();
+        List<Niveau> niveauList = new();
+        List<Matiere> matiereList = new();
+        List<Professeur> professeurList = new();
+        List<Eleve> eleveList = new();
+        List<Classe> classeList = new();
+
+        DAL.JsonDataManager<Classe> classeJdM = new DAL.JsonDataManager<Classe>();
+        DAL.JsonDataManager<Professeur> professeurJdM = new DAL.JsonDataManager<Professeur>();
+        DAL.JsonDataManager<Niveau> niveauJdm = new DAL.JsonDataManager<Niveau>();
+        DAL.JsonDataManager<Eleve> eleveJdm = new DAL.JsonDataManager<Eleve>();
+        DAL.JsonDataManager<Matiere> matiereJdm = new DAL.JsonDataManager<Matiere>();
+
         Professeur professeur;
         private void ButtonCreerProf_Click(object sender, EventArgs e)
         {
-            var jsonVar = new DAL.JsonDataManager<Professeur>();
-            professeurs = jsonVar.DataList;
+            professeurList = professeurJdM.DataList;
             string lastname = textBoxPrenomProf.Text;
             string _prenom = char.ToUpper(lastname[0]) + lastname[1..].ToLower();
 
@@ -73,19 +79,17 @@ namespace SchoolApp
                 IsAdmin = checkBoxAdminProf.Checked
             };
 
-            professeurs.Add(professeur);
+            professeurList.Add(professeur);
             MessageBox.Show(professeur+"");
-            professeurs = professeurs.OrderBy(e => e.Nom).ToList();
-            comboBoxProfClasse.DataSource = professeurs;
-            jsonVar.SaveJsonData(professeurs);
+            professeurList = professeurList.OrderBy(e => e.Nom).ToList();
+            comboBoxProfClasse.DataSource = professeurList;
+            professeurJdM.SaveJsonData();
         }
 
-        List<Classe> classes = new List<Classe>();
         Classe classe;
         private void ButtonCreerClasse_Click(object sender, EventArgs e)
         {
-            var jsonVar = new DAL.JsonDataManager<Classe>();
-            classes = jsonVar.DataList;
+            classeList = classeJdM.DataList;
 
             string nom = textBoxNomClasse.Text;
             string _nom = char.ToUpper(nom[0]) + nom[1..].ToLower();
@@ -94,38 +98,38 @@ namespace SchoolApp
                 Label = _nom,
                 Niveau = comboBoxNiveauClasse.SelectedItem as Niveau
             };
-            classes.Add(classe);
+            classeList.Add(classe);
             MessageBox.Show(classe+"");
-            classes = classes.OrderBy(e => e.niveau_id).ToList();
-            comboBoxClasseProf.DataSource = classes;
-            comboBoxClasseEleve.DataSource = classes;
-            jsonVar.SaveJsonData(classes);
+            classeList = classeList.OrderBy(e => e.niveau_id).ToList();
+            comboBoxClasseProf.DataSource = classeList;
+            comboBoxClasseEleve.DataSource = classeList;
+            classeJdM.SaveJsonData();
         }
 
         private void ButtonAddProf_Click(object sender, EventArgs e)
         {
-            var jsonVar = new DAL.JsonDataManager<Classe>();
-            classes = jsonVar.DataList;
-            classe = comboBoxClasseProf.SelectedItem as Classe;
-            classe.AddProfesseur(comboBoxProfClasse.SelectedItem as Professeur);
-            MessageBox.Show(classe.Professeur+"");
-            jsonVar.SaveJsonData(classes);
+            Classe cl = comboBoxClasseProf.SelectedItem as Classe;
+            Professeur prof = comboBoxProfClasse.SelectedItem as Professeur;
+            string classeID = cl.Id;
+            string profID = prof.Id;
+            var cl1 = classeJdM.GetWhere(item => item.Id == classeID);
+            var prof1 = professeurJdM.GetWhere(item => item.Id == profID);
+            cl1[0].AddProfesseur(prof1[0]);
+            classeJdM.SaveJsonData();
+            professeurJdM.SaveJsonData();          
 
         }
 
         private void ButtonRemoveProf_Click(object sender, EventArgs e)
         {
-            classe = comboBoxClasseProf.SelectedItem as Classe;
-            classe.RemoveProfesseur(comboBoxProfClasse.SelectedItem as Professeur);
-            MessageBox.Show(classe.Professeur + "");
+
         }
 
-       List<Eleve> eleves = new List<Eleve>();
-        Eleve eleve;
         private void ButtonCreerEleve_Click(object sender, EventArgs e)
         {
+            Eleve eleve;
             var jsonVar = new DAL.JsonDataManager<Eleve>();
-            eleves = jsonVar.DataList;
+            eleveList = eleveJdm.DataList;
             string lastname = textBoxPrenomEleve.Text;
             string _prenom = char.ToUpper(lastname[0]) + lastname[1..].ToLower();
             eleve = new Eleve()
@@ -134,26 +138,36 @@ namespace SchoolApp
                 Prenom = _prenom,
                 anciennete = Convert.ToInt32(numericUpDownAncienneteEleve.Value)
             };
-            eleves.Add(eleve);
+            eleveList.Add(eleve);
             MessageBox.Show(eleve + "");
-            eleves = eleves.OrderBy(e => e.Nom).ToList();
-            comboBoxEleveClasse.DataSource = eleves;
-            jsonVar.SaveJsonData(eleves);
+            eleveList = eleveList.OrderBy(e => e.Nom).ToList();
+            comboBoxEleveClasse.DataSource = eleveList;
+            eleveJdm.SaveJsonData();
         }
 
         private void ButtonAddEleveClasse_Click(object sender, EventArgs e)
         {
-            eleve = comboBoxEleveClasse.SelectedItem as Eleve;
-            eleve.Classe = comboBoxClasseEleve.SelectedItem as Classe;
-            MessageBox.Show(eleve.Classe + "");
+
         }
 
         private void ButtonRemoveEleveClasse_Click(object sender, EventArgs e)
         {
-            eleve = comboBoxEleveClasse.SelectedItem as Eleve;
-            eleve.Classe = null;
-            MessageBox.Show(eleve.Classe + "");
 
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var jsonDataManager = new DAL.JsonDataManager<Models.Classe>();
+            List<Classe> list = jsonDataManager.DataList;
+            var classeList = jsonDataManager.GetWhere();
+            Classe cl1 = jsonDataManager.GetById("2869c720-ce97-408d-8542-56b94f6ab6b9");
+            Niveau niv = cl1.Niveau;
+
+            var niveauDataManager = new DAL.JsonDataManager<Models.Niveau>();
+            var nivCE1 = niveauDataManager.GetById("niveau_2");
+            cl1.Niveau = nivCE1;
+            jsonDataManager.SaveJsonData();
         }
     }
 }

@@ -1,33 +1,9 @@
 [
   {
     "classe_id": null,
-    "Nom": "A",
-    "Prenom": "Paul",
-    "Id": "b2eee635-9503-42df-ac88-0d7ad058af64"
-  },
-  {
-    "classe_id": null,
-    "Nom": "AAAA",
-    "Prenom": "Jean",
-    "Id": "738bce42-9dda-4027-90c8-5ff75222f62b"
-  },
-  {
-    "classe_id": null,
-    "Nom": "ALAA",
-    "Prenom": "Alain",
-    "Id": "d5547ea9-5fe3-4df9-81a7-6a16a578e0f3"
-  },
-  {
-    "classe_id": null,
     "Nom": "ALAN",
     "Prenom": "David",
     "Id": "1980ce38-5481-4912-b55d-11d6cb2394cb"
-  },
-  {
-    "classe_id": null,
-    "Nom": "B",
-    "Prenom": "Jacques",
-    "Id": "dad91c03-5175-4f50-bce7-d8871c067132"
   },
   {
     "classe_id": null,
