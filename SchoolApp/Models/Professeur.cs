@@ -23,7 +23,7 @@ namespace SchoolApp.Models
             if (Classe != classe)
             {
                 Classe = classe;
-                classeId = classe.Id;
+                //classeId = classe.Id;
                 if (classe.Professeur != this)
                 {
                     classeId = classe.Id;

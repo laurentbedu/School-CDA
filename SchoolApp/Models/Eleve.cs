@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolApp.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -17,8 +18,12 @@ namespace SchoolApp.Models
         [JsonPropertyName("anciennete")] public int? Anciennete { get; set; }
         [JsonIgnore] public List<Note> listeNotes { get; } = new List<Note>();
         [JsonIgnore] public Classe? Classe 
-        { 
-            get => classe; 
+        {
+            get
+            {
+                var jdm = new JsonDataManager<Classe>();
+                return jdm.GetById(classeId);
+            }
             set 
             { 
                 if (classe != value) 
@@ -26,9 +31,12 @@ namespace SchoolApp.Models
                     classe?.RemoveEleve(this);                   
                     classe = value;
                     classe?.AddEleve(this);
+                    classeId = value?.Id;
                 }
             }
         }
+
+
         //public List<Note> ListeNotes { get { return listeNotes; } }
 
         // Methodes :
@@ -64,6 +72,11 @@ namespace SchoolApp.Models
             {
                 return Nom + " " + Prenom + " " + Anciennete + " " + base.Id + " " + "PasDeClasseId";
             }
+        }
+        // ToString Override
+        public override string ToString()
+        {
+            return base.Nom +" "+ base.Prenom;
         }
     }
 }

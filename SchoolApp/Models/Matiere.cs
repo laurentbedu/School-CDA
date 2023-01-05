@@ -11,7 +11,7 @@ namespace SchoolApp.Models
     internal class Matiere : Model
     {
         // Propriétés :
-        public string label { get; set; }
+        [JsonPropertyName("label")] public string label { get; set; }
         [NePasIntegrerDansToString][JsonIgnore] public List<Niveau> ListeNiveaux { get; private set; } = new List<Niveau>();
 
         // Méthodes :
@@ -37,6 +37,12 @@ namespace SchoolApp.Models
                 }
             }
         }
+
+
+
+
+
+
         public override string ToString()
         {
             return label;

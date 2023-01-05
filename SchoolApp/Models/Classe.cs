@@ -43,7 +43,7 @@ namespace SchoolApp.Models
             if (Professeur != professeur)
             {
                 Professeur = professeur;
-                professeurId = professeur.Id;
+                //professeurId = professeur.Id;
                 if (professeur.Classe != this)
                 {
                     professeurId = professeur.Id;
@@ -56,9 +56,11 @@ namespace SchoolApp.Models
             if (Professeur == professeur)
             {
                 Professeur = null;
+                professeurId =null;
                 if (professeur.Classe == this)
                 {
                     professeur.retirerClasse(this);
+                    professeurId = null;
                 }
             }
         }
@@ -68,10 +70,12 @@ namespace SchoolApp.Models
             if (!EleveList.Contains(eleve))
             {
                 EleveList.Add(eleve);
+                eleve.classeId = this.Id;
             }
             if (eleve.Classe != this)
             {
                 eleve.Classe = this;
+                eleve.classeId = this.Id;
             }
 
         }

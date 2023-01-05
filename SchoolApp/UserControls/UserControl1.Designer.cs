@@ -32,6 +32,11 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageEleve = new System.Windows.Forms.TabPage();
             this.groupBoxAjoutEleve = new System.Windows.Forms.GroupBox();
+            this.buttonEleveLierClasse = new System.Windows.Forms.Button();
+            this.comboBoxEleveClasses = new System.Windows.Forms.ComboBox();
+            this.label76 = new System.Windows.Forms.Label();
+            this.comboBoxEleves = new System.Windows.Forms.ComboBox();
+            this.label75 = new System.Windows.Forms.Label();
             this.textBoxCheminListe = new System.Windows.Forms.TextBox();
             this.labelCheminListeEleve = new System.Windows.Forms.Label();
             this.buttonChargerListeEleve = new System.Windows.Forms.Button();
@@ -69,6 +74,10 @@
             this.dataGridViewProfesseurs = new System.Windows.Forms.DataGridView();
             this.tabPageClasse = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.comboBoxClasse = new System.Windows.Forms.ComboBox();
+            this.label74 = new System.Windows.Forms.Label();
+            this.buttonClasseLierClasse = new System.Windows.Forms.Button();
+            this.buttonClasseLierProf = new System.Windows.Forms.Button();
             this.comboBoxClasseNivea = new System.Windows.Forms.ComboBox();
             this.label73 = new System.Windows.Forms.Label();
             this.comboBoxClasseProf = new System.Windows.Forms.ComboBox();
@@ -110,6 +119,21 @@
             this.button33 = new System.Windows.Forms.Button();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridViewNiveaux = new System.Windows.Forms.DataGridView();
+            this.tabPage21 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox25 = new System.Windows.Forms.GroupBox();
+            this.comboBoxNoteEleves = new System.Windows.Forms.ComboBox();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label78 = new System.Windows.Forms.Label();
+            this.textBoxValeurNote = new System.Windows.Forms.TextBox();
+            this.textBoxCheminListeNote = new System.Windows.Forms.TextBox();
+            this.label77 = new System.Windows.Forms.Label();
+            this.buttonImportNote = new System.Windows.Forms.Button();
+            this.buttonExportNote = new System.Windows.Forms.Button();
+            this.buttonModifierNote = new System.Windows.Forms.Button();
+            this.buttonAjouterNote = new System.Windows.Forms.Button();
+            this.buttonRetirerNote = new System.Windows.Forms.Button();
+            this.dataGridViewNotes = new System.Windows.Forms.DataGridView();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -423,10 +447,8 @@
             this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView22 = new System.Windows.Forms.DataGridView();
             this.tabControl5 = new System.Windows.Forms.TabControl();
-            this.buttonClasseLierProf = new System.Windows.Forms.Button();
-            this.buttonClasseLierClasse = new System.Windows.Forms.Button();
-            this.label74 = new System.Windows.Forms.Label();
-            this.comboBoxClasse = new System.Windows.Forms.ComboBox();
+            this.label80 = new System.Windows.Forms.Label();
+            this.comboBoxNoteMatiere = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPageEleve.SuspendLayout();
             this.groupBoxAjoutEleve.SuspendLayout();
@@ -448,6 +470,10 @@
             this.groupBox8.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNiveaux)).BeginInit();
+            this.tabPage21.SuspendLayout();
+            this.tableLayoutPanel26.SuspendLayout();
+            this.groupBox25.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNotes)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -537,6 +563,7 @@
             this.tabControl1.Controls.Add(this.tabPageClasse);
             this.tabControl1.Controls.Add(this.tabPageMatiere);
             this.tabControl1.Controls.Add(this.tabPageNiveau);
+            this.tabControl1.Controls.Add(this.tabPage21);
             this.tabControl1.Location = new System.Drawing.Point(8, 8);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -557,6 +584,11 @@
             // 
             // groupBoxAjoutEleve
             // 
+            this.groupBoxAjoutEleve.Controls.Add(this.buttonEleveLierClasse);
+            this.groupBoxAjoutEleve.Controls.Add(this.comboBoxEleveClasses);
+            this.groupBoxAjoutEleve.Controls.Add(this.label76);
+            this.groupBoxAjoutEleve.Controls.Add(this.comboBoxEleves);
+            this.groupBoxAjoutEleve.Controls.Add(this.label75);
             this.groupBoxAjoutEleve.Controls.Add(this.textBoxCheminListe);
             this.groupBoxAjoutEleve.Controls.Add(this.labelCheminListeEleve);
             this.groupBoxAjoutEleve.Controls.Add(this.buttonChargerListeEleve);
@@ -571,12 +603,56 @@
             this.groupBoxAjoutEleve.Controls.Add(this.buttonAjouterEleve);
             this.groupBoxAjoutEleve.Controls.Add(this.buttonRetirerEleve);
             this.groupBoxAjoutEleve.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBoxAjoutEleve.Location = new System.Drawing.Point(3, 349);
+            this.groupBoxAjoutEleve.Location = new System.Drawing.Point(3, 308);
             this.groupBoxAjoutEleve.Name = "groupBoxAjoutEleve";
-            this.groupBoxAjoutEleve.Size = new System.Drawing.Size(894, 117);
+            this.groupBoxAjoutEleve.Size = new System.Drawing.Size(894, 158);
             this.groupBoxAjoutEleve.TabIndex = 6;
             this.groupBoxAjoutEleve.TabStop = false;
             this.groupBoxAjoutEleve.Text = "Ajout d\'un eleve :";
+            // 
+            // buttonEleveLierClasse
+            // 
+            this.buttonEleveLierClasse.Location = new System.Drawing.Point(813, 0);
+            this.buttonEleveLierClasse.Name = "buttonEleveLierClasse";
+            this.buttonEleveLierClasse.Size = new System.Drawing.Size(75, 23);
+            this.buttonEleveLierClasse.TabIndex = 17;
+            this.buttonEleveLierClasse.Text = "Lier ...";
+            this.buttonEleveLierClasse.UseVisualStyleBackColor = true;
+            this.buttonEleveLierClasse.Click += new System.EventHandler(this.buttonEleveLierClasse_Click);
+            // 
+            // comboBoxEleveClasses
+            // 
+            this.comboBoxEleveClasses.FormattingEnabled = true;
+            this.comboBoxEleveClasses.Location = new System.Drawing.Point(686, 1);
+            this.comboBoxEleveClasses.Name = "comboBoxEleveClasses";
+            this.comboBoxEleveClasses.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxEleveClasses.TabIndex = 16;
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Location = new System.Drawing.Point(627, 4);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(53, 15);
+            this.label76.TabIndex = 15;
+            this.label76.Text = "Classes ?";
+            // 
+            // comboBoxEleves
+            // 
+            this.comboBoxEleves.FormattingEnabled = true;
+            this.comboBoxEleves.Location = new System.Drawing.Point(370, 0);
+            this.comboBoxEleves.Name = "comboBoxEleves";
+            this.comboBoxEleves.Size = new System.Drawing.Size(251, 23);
+            this.comboBoxEleves.TabIndex = 14;
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Location = new System.Drawing.Point(313, 3);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(47, 15);
+            this.label75.TabIndex = 13;
+            this.label75.Text = "Eleves ?";
             // 
             // textBoxCheminListe
             // 
@@ -701,8 +777,8 @@
             this.tableLayoutPanelEleve.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanelEleve.Name = "tableLayoutPanelEleve";
             this.tableLayoutPanelEleve.RowCount = 2;
-            this.tableLayoutPanelEleve.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.79646F));
-            this.tableLayoutPanelEleve.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.20354F));
+            this.tableLayoutPanelEleve.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.0108F));
+            this.tableLayoutPanelEleve.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.9892F));
             this.tableLayoutPanelEleve.Size = new System.Drawing.Size(894, 463);
             this.tableLayoutPanelEleve.TabIndex = 7;
             // 
@@ -716,7 +792,7 @@
             this.dataGridViewEleve.Name = "dataGridViewEleve";
             this.dataGridViewEleve.ReadOnly = true;
             this.dataGridViewEleve.RowTemplate.Height = 25;
-            this.dataGridViewEleve.Size = new System.Drawing.Size(888, 321);
+            this.dataGridViewEleve.Size = new System.Drawing.Size(888, 294);
             this.dataGridViewEleve.TabIndex = 0;
             // 
             // tabPageProfesseur
@@ -962,6 +1038,43 @@
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Ajout d\'une classe :";
+            // 
+            // comboBoxClasse
+            // 
+            this.comboBoxClasse.FormattingEnabled = true;
+            this.comboBoxClasse.Location = new System.Drawing.Point(443, 12);
+            this.comboBoxClasse.Name = "comboBoxClasse";
+            this.comboBoxClasse.Size = new System.Drawing.Size(129, 23);
+            this.comboBoxClasse.TabIndex = 20;
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(389, 15);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(48, 15);
+            this.label74.TabIndex = 19;
+            this.label74.Text = "Classe ?";
+            // 
+            // buttonClasseLierClasse
+            // 
+            this.buttonClasseLierClasse.Location = new System.Drawing.Point(816, 36);
+            this.buttonClasseLierClasse.Name = "buttonClasseLierClasse";
+            this.buttonClasseLierClasse.Size = new System.Drawing.Size(75, 23);
+            this.buttonClasseLierClasse.TabIndex = 18;
+            this.buttonClasseLierClasse.Text = "Lier...";
+            this.buttonClasseLierClasse.UseVisualStyleBackColor = true;
+            this.buttonClasseLierClasse.Click += new System.EventHandler(this.buttonClasseLierClasse_Click);
+            // 
+            // buttonClasseLierProf
+            // 
+            this.buttonClasseLierProf.Location = new System.Drawing.Point(816, 11);
+            this.buttonClasseLierProf.Name = "buttonClasseLierProf";
+            this.buttonClasseLierProf.Size = new System.Drawing.Size(75, 23);
+            this.buttonClasseLierProf.TabIndex = 17;
+            this.buttonClasseLierProf.Text = "Lier...";
+            this.buttonClasseLierProf.UseVisualStyleBackColor = true;
+            this.buttonClasseLierProf.Click += new System.EventHandler(this.buttonClasseLierProf_Click);
             // 
             // comboBoxClasseNivea
             // 
@@ -1391,6 +1504,167 @@
             this.dataGridViewNiveaux.RowTemplate.Height = 25;
             this.dataGridViewNiveaux.Size = new System.Drawing.Size(888, 321);
             this.dataGridViewNiveaux.TabIndex = 0;
+            // 
+            // tabPage21
+            // 
+            this.tabPage21.Controls.Add(this.tableLayoutPanel26);
+            this.tabPage21.Location = new System.Drawing.Point(4, 24);
+            this.tabPage21.Name = "tabPage21";
+            this.tabPage21.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage21.Size = new System.Drawing.Size(900, 469);
+            this.tabPage21.TabIndex = 9;
+            this.tabPage21.Text = "Gestion Notes";
+            this.tabPage21.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel26
+            // 
+            this.tableLayoutPanel26.AutoSize = true;
+            this.tableLayoutPanel26.ColumnCount = 1;
+            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel26.Controls.Add(this.groupBox25, 0, 1);
+            this.tableLayoutPanel26.Controls.Add(this.dataGridViewNotes, 0, 0);
+            this.tableLayoutPanel26.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel26.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel26.Name = "tableLayoutPanel26";
+            this.tableLayoutPanel26.RowCount = 2;
+            this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.79646F));
+            this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.20354F));
+            this.tableLayoutPanel26.Size = new System.Drawing.Size(894, 463);
+            this.tableLayoutPanel26.TabIndex = 8;
+            // 
+            // groupBox25
+            // 
+            this.groupBox25.Controls.Add(this.comboBoxNoteMatiere);
+            this.groupBox25.Controls.Add(this.label80);
+            this.groupBox25.Controls.Add(this.comboBoxNoteEleves);
+            this.groupBox25.Controls.Add(this.label79);
+            this.groupBox25.Controls.Add(this.label78);
+            this.groupBox25.Controls.Add(this.textBoxValeurNote);
+            this.groupBox25.Controls.Add(this.textBoxCheminListeNote);
+            this.groupBox25.Controls.Add(this.label77);
+            this.groupBox25.Controls.Add(this.buttonImportNote);
+            this.groupBox25.Controls.Add(this.buttonExportNote);
+            this.groupBox25.Controls.Add(this.buttonModifierNote);
+            this.groupBox25.Controls.Add(this.buttonAjouterNote);
+            this.groupBox25.Controls.Add(this.buttonRetirerNote);
+            this.groupBox25.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox25.Location = new System.Drawing.Point(3, 343);
+            this.groupBox25.Name = "groupBox25";
+            this.groupBox25.Size = new System.Drawing.Size(888, 117);
+            this.groupBox25.TabIndex = 7;
+            this.groupBox25.TabStop = false;
+            this.groupBox25.Text = "Ajout d\'une note :";
+            // 
+            // comboBoxNoteEleves
+            // 
+            this.comboBoxNoteEleves.FormattingEnabled = true;
+            this.comboBoxNoteEleves.Location = new System.Drawing.Point(194, 16);
+            this.comboBoxNoteEleves.Name = "comboBoxNoteEleves";
+            this.comboBoxNoteEleves.Size = new System.Drawing.Size(129, 23);
+            this.comboBoxNoteEleves.TabIndex = 16;
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.Location = new System.Drawing.Point(116, 19);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(72, 15);
+            this.label79.TabIndex = 15;
+            this.label79.Text = "Liste eleves :";
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(116, 50);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(45, 15);
+            this.label78.TabIndex = 14;
+            this.label78.Text = "Valeur :";
+            // 
+            // textBoxValeurNote
+            // 
+            this.textBoxValeurNote.Location = new System.Drawing.Point(167, 47);
+            this.textBoxValeurNote.Name = "textBoxValeurNote";
+            this.textBoxValeurNote.Size = new System.Drawing.Size(156, 23);
+            this.textBoxValeurNote.TabIndex = 13;
+            // 
+            // textBoxCheminListeNote
+            // 
+            this.textBoxCheminListeNote.Location = new System.Drawing.Point(388, 91);
+            this.textBoxCheminListeNote.Name = "textBoxCheminListeNote";
+            this.textBoxCheminListeNote.Size = new System.Drawing.Size(500, 23);
+            this.textBoxCheminListeNote.TabIndex = 12;
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(388, 74);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(163, 15);
+            this.label77.TabIndex = 6;
+            this.label77.Text = "Chemin vers la liste en cours :";
+            // 
+            // buttonImportNote
+            // 
+            this.buttonImportNote.Location = new System.Drawing.Point(683, 66);
+            this.buttonImportNote.Name = "buttonImportNote";
+            this.buttonImportNote.Size = new System.Drawing.Size(120, 25);
+            this.buttonImportNote.TabIndex = 11;
+            this.buttonImportNote.Text = "Importer une liste ...";
+            this.buttonImportNote.UseVisualStyleBackColor = true;
+            this.buttonImportNote.Click += new System.EventHandler(this.buttonImportNote_Click);
+            // 
+            // buttonExportNote
+            // 
+            this.buttonExportNote.Location = new System.Drawing.Point(557, 66);
+            this.buttonExportNote.Name = "buttonExportNote";
+            this.buttonExportNote.Size = new System.Drawing.Size(120, 25);
+            this.buttonExportNote.TabIndex = 10;
+            this.buttonExportNote.Text = "Exporter une liste...";
+            this.buttonExportNote.UseVisualStyleBackColor = true;
+            this.buttonExportNote.Click += new System.EventHandler(this.buttonExportNote_Click);
+            // 
+            // buttonModifierNote
+            // 
+            this.buttonModifierNote.Location = new System.Drawing.Point(10, 80);
+            this.buttonModifierNote.Name = "buttonModifierNote";
+            this.buttonModifierNote.Size = new System.Drawing.Size(100, 25);
+            this.buttonModifierNote.TabIndex = 3;
+            this.buttonModifierNote.Text = "Modifier note";
+            this.buttonModifierNote.UseVisualStyleBackColor = true;
+            // 
+            // buttonAjouterNote
+            // 
+            this.buttonAjouterNote.Location = new System.Drawing.Point(10, 20);
+            this.buttonAjouterNote.Name = "buttonAjouterNote";
+            this.buttonAjouterNote.Size = new System.Drawing.Size(100, 25);
+            this.buttonAjouterNote.TabIndex = 1;
+            this.buttonAjouterNote.Text = "Ajouter note";
+            this.buttonAjouterNote.UseVisualStyleBackColor = true;
+            this.buttonAjouterNote.Click += new System.EventHandler(this.buttonAjouterNote_Click);
+            // 
+            // buttonRetirerNote
+            // 
+            this.buttonRetirerNote.Location = new System.Drawing.Point(10, 50);
+            this.buttonRetirerNote.Name = "buttonRetirerNote";
+            this.buttonRetirerNote.Size = new System.Drawing.Size(100, 25);
+            this.buttonRetirerNote.TabIndex = 2;
+            this.buttonRetirerNote.Text = "Retirer note";
+            this.buttonRetirerNote.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewNotes
+            // 
+            this.dataGridViewNotes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewNotes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridViewNotes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewNotes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridViewNotes.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewNotes.Name = "dataGridViewNotes";
+            this.dataGridViewNotes.ReadOnly = true;
+            this.dataGridViewNotes.RowTemplate.Height = 25;
+            this.dataGridViewNotes.Size = new System.Drawing.Size(888, 321);
+            this.dataGridViewNotes.TabIndex = 0;
             // 
             // saveFileDialog1
             // 
@@ -4660,42 +4934,22 @@
             this.tabControl5.Size = new System.Drawing.Size(200, 100);
             this.tabControl5.TabIndex = 0;
             // 
-            // buttonClasseLierProf
+            // label80
             // 
-            this.buttonClasseLierProf.Location = new System.Drawing.Point(816, 11);
-            this.buttonClasseLierProf.Name = "buttonClasseLierProf";
-            this.buttonClasseLierProf.Size = new System.Drawing.Size(75, 23);
-            this.buttonClasseLierProf.TabIndex = 17;
-            this.buttonClasseLierProf.Text = "Lier...";
-            this.buttonClasseLierProf.UseVisualStyleBackColor = true;
-            this.buttonClasseLierProf.Click += new System.EventHandler(this.buttonClasseLierProf_Click);
+            this.label80.AutoSize = true;
+            this.label80.Location = new System.Drawing.Point(331, 16);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(85, 15);
+            this.label80.TabIndex = 17;
+            this.label80.Text = "Liste Matières :";
             // 
-            // buttonClasseLierClasse
+            // comboBoxNoteMatiere
             // 
-            this.buttonClasseLierClasse.Location = new System.Drawing.Point(816, 36);
-            this.buttonClasseLierClasse.Name = "buttonClasseLierClasse";
-            this.buttonClasseLierClasse.Size = new System.Drawing.Size(75, 23);
-            this.buttonClasseLierClasse.TabIndex = 18;
-            this.buttonClasseLierClasse.Text = "Lier...";
-            this.buttonClasseLierClasse.UseVisualStyleBackColor = true;
-            this.buttonClasseLierClasse.Click += new System.EventHandler(this.buttonClasseLierClasse_Click);
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(389, 15);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(48, 15);
-            this.label74.TabIndex = 19;
-            this.label74.Text = "Classe ?";
-            // 
-            // comboBoxClasse
-            // 
-            this.comboBoxClasse.FormattingEnabled = true;
-            this.comboBoxClasse.Location = new System.Drawing.Point(443, 12);
-            this.comboBoxClasse.Name = "comboBoxClasse";
-            this.comboBoxClasse.Size = new System.Drawing.Size(129, 23);
-            this.comboBoxClasse.TabIndex = 20;
+            this.comboBoxNoteMatiere.FormattingEnabled = true;
+            this.comboBoxNoteMatiere.Location = new System.Drawing.Point(422, 13);
+            this.comboBoxNoteMatiere.Name = "comboBoxNoteMatiere";
+            this.comboBoxNoteMatiere.Size = new System.Drawing.Size(129, 23);
+            this.comboBoxNoteMatiere.TabIndex = 18;
             // 
             // UserControl1
             // 
@@ -4735,6 +4989,12 @@
             this.groupBox8.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNiveaux)).EndInit();
+            this.tabPage21.ResumeLayout(false);
+            this.tabPage21.PerformLayout();
+            this.tableLayoutPanel26.ResumeLayout(false);
+            this.groupBox25.ResumeLayout(false);
+            this.groupBox25.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNotes)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -5254,5 +5514,27 @@
         private Button buttonClasseLierProf;
         private ComboBox comboBoxClasse;
         private Label label74;
+        private Button buttonEleveLierClasse;
+        private ComboBox comboBoxEleveClasses;
+        private Label label76;
+        private ComboBox comboBoxEleves;
+        private Label label75;
+        private TabPage tabPage21;
+        private TableLayoutPanel tableLayoutPanel26;
+        private GroupBox groupBox25;
+        private TextBox textBoxCheminListeNote;
+        private Label label77;
+        private Button buttonImportNote;
+        private Button buttonExportNote;
+        private Button buttonModifierNote;
+        private Button buttonAjouterNote;
+        private Button buttonRetirerNote;
+        private DataGridView dataGridViewNotes;
+        private Label label78;
+        private TextBox textBoxValeurNote;
+        private ComboBox comboBoxNoteEleves;
+        private Label label79;
+        private Label label80;
+        private ComboBox comboBoxNoteMatiere;
     }
 }

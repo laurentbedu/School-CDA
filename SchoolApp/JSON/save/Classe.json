@@ -1,7 +1,7 @@
 [
   {
     "label": "Alpha",
-    "niveau_id": "1",
+    "niveau_id": null,
     "professeur_id": null,
     "id": "afe5da85-24ed-42bc-ba7d-900eb7990777"
   },
@@ -14,7 +14,7 @@
   {
     "label": "Gamma",
     "niveau_id": null,
-    "professeur_id": "7853764d-c271-46e1-acff-c0879b330160",
+    "professeur_id": null,
     "id": "49f77e9c-c813-4d31-a385-f278b6ebafc9"
   },
   {

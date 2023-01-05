@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolApp.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -11,14 +12,31 @@ namespace SchoolApp.Models
     internal class Note : Model, INotifyPropertyChanged
     {
         // Attributs :
-        private Eleve? eleve;
-
+        [JsonIgnore] private Eleve? eleve;
+        [JsonIgnore] private Matiere? matiere;
         // Propriétés :
-        public double? Valeur { get; set; }
-        [JsonIgnore] public Matiere? Matiere { get; set; }
+        [JsonPropertyName("eleve_id")] public string? eleveId { get; set; }
+        [JsonPropertyName("matiere_id")] public string? matiereId { get; set; }
+        [JsonPropertyName("value")] public double? Valeur { get; set; }
+        [JsonIgnore] public Matiere? Matiere 
+        {
+            get
+            {
+                var jdm = new JsonDataManager<Matiere>();
+                return jdm.GetById(matiereId);
+            }
+            set
+            {
+                matiereId = value?.Id;
+            } 
+        }
         [JsonIgnore] public Eleve? Eleve
         {
-            get => eleve;
+            get
+            {
+                var jdm = new JsonDataManager<Eleve>();
+                return jdm.GetById(eleveId);
+            }
             set
             {
                 if (eleve != value)
@@ -26,14 +44,10 @@ namespace SchoolApp.Models
                     eleve?.supprimerNote(this);
                     eleve = value;
                     eleve?.ajouterNote(this);
+                    eleveId = value?.Id;
                 }
             }
         }
-        // Constructeurs :
-        public Note()
-        {
-
-        }     
 
         event PropertyChangedEventHandler? INotifyPropertyChanged.PropertyChanged
         {
@@ -47,6 +61,10 @@ namespace SchoolApp.Models
                 
             }
         }
-        
+        // ToString Override
+        public override string ToString()
+        {
+            return (Convert.ToString(Valeur)) +"/20.";
+        }
     }
 }
