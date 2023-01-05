@@ -74,10 +74,12 @@ namespace SchoolApp.Models
             if (professeur.Id != professeur_id)
             {
                 professeur_id = professeur.Id;
+                Professeur = professeur;
 
                 if (professeur.Classe != this)
                 {
                     professeur_id = professeur.Id;
+                    Professeur = professeur;
                     professeur.AddClasse(this);
                 }
             }
@@ -85,13 +87,15 @@ namespace SchoolApp.Models
 
         public void RemoveProfesseur(Professeur professeur)
         {
-            if (Professeur == professeur)
+            if (professeur.Id == professeur_id)
             {
-                Professeur = null;
                 professeur_id = null;
+                Professeur = null;
 
-                if (professeur.Classe == this)
+                if (professeur.classe_id == this.Id)
                 {
+                    professeur_id = null;
+                    Professeur = null;
                     professeur.RemoveClasse(this);
                 }
             }

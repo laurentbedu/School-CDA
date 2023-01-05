@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolApp.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -10,19 +11,44 @@ namespace SchoolApp.Models
 {
     internal class Eleve : Personne
     {
-        [JsonIgnore]
         public int anciennete { get; set; }
-        [JsonPropertyName("classe_id")]
-        private Classe? classe;
+        public string? classe_id { get; set; }
+        [JsonIgnore]
         public Classe? Classe
         {
-            get => classe;
+            get
+            {
+                var jdm = new JsonDataManager<Classe>();
+                return jdm.GetById(classe_id);
+            }
             set
             {
-                if (classe != value)
-                {
-                    classe = value;
-                }
+                // equivalent à :
+                //if (value.Id != null)
+                //{
+                //    niveauId = value.Id;
+                //}
+                //else
+                //{
+                //    niveauId = null;
+                //}
+                classe_id = value?.Id;
+            }
+        }
+        public void AddClasse(Classe classe)
+        {
+            if (classe.Id != classe_id)
+            {
+                Classe = classe;
+                classe_id = classe.Id;
+            }
+        }
+        public void RemoveClasse(Classe classe)
+        {
+            if (classe.Id == classe_id)
+            {
+                classe_id = null;
+                Classe = null;
             }
         }
 

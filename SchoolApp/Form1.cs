@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Runtime.ConstrainedExecution;
 using System.Runtime.Intrinsics.Arm;
 using System.Text.Json;
@@ -32,30 +33,30 @@ namespace SchoolApp
             niveauList.Find(e => e.Label == "CM2")?.AddMatiere(matiereList.ToArray());
             */
 
-            niveauList = niveauJdm.DataList;
-            niveauList = niveauList.OrderBy(e => e.Id).ToList();
-            comboBoxNiveauClasse.DataSource = niveauList;
+            NiveauList = niveauJdm.DataList;
+            NiveauList = NiveauList.OrderBy(e => e.Id).ToList();
+            comboBoxNiveauClasse.DataSource = NiveauList;
 
-            classeList = classeJdM.DataList;
-            classeList = classeList.OrderBy(e => e.niveau_id).ToList();
-            comboBoxClasseProf.DataSource = classeList;
-            comboBoxClasseEleve.DataSource = classeList;
+            ClasseList = classeJdM.DataList;
+            ClasseList = ClasseList.OrderBy(e => e.niveau_id).ToList();
+            comboBoxClasseProf.DataSource = ClasseList;
+            comboBoxClasseEleve.DataSource = ClasseList;
 
-            professeurList = professeurJdM.DataList;
-            professeurList = professeurList.OrderBy(e => e.Nom).ToList();
-            comboBoxProfClasse.DataSource = professeurList;
+            ProfesseurList = professeurJdM.DataList;
+            ProfesseurList = ProfesseurList.OrderBy(e => e.Nom).ToList();
+            comboBoxProfClasse.DataSource = ProfesseurList;
 
-            eleveList = eleveJdm.DataList;
-            eleveList = eleveList.OrderBy(e => e.Nom).ToList();
-            comboBoxEleveClasse.DataSource = eleveList;
+            EleveList = eleveJdm.DataList;
+            EleveList = EleveList.OrderBy(e => e.Nom).ToList();
+            comboBoxEleveClasse.DataSource = EleveList;
         }
 
 
-        List<Niveau> niveauList = new();
-        List<Matiere> matiereList = new();
-        List<Professeur> professeurList = new();
-        List<Eleve> eleveList = new();
-        List<Classe> classeList = new();
+        List<Niveau> NiveauList = new();
+        List<Matiere> MatiereList = new();
+        List<Professeur> ProfesseurList = new();
+        List<Eleve> EleveList = new();
+        List<Classe> ClasseList = new();
 
         DAL.JsonDataManager<Classe> classeJdM = new DAL.JsonDataManager<Classe>();
         DAL.JsonDataManager<Professeur> professeurJdM = new DAL.JsonDataManager<Professeur>();
@@ -66,7 +67,7 @@ namespace SchoolApp
         Professeur professeur;
         private void ButtonCreerProf_Click(object sender, EventArgs e)
         {
-            professeurList = professeurJdM.DataList;
+            ProfesseurList = professeurJdM.DataList;
             string lastname = textBoxPrenomProf.Text;
             string _prenom = char.ToUpper(lastname[0]) + lastname[1..].ToLower();
 
@@ -79,17 +80,20 @@ namespace SchoolApp
                 IsAdmin = checkBoxAdminProf.Checked
             };
 
-            professeurList.Add(professeur);
-            MessageBox.Show(professeur+"");
-            professeurList = professeurList.OrderBy(e => e.Nom).ToList();
-            comboBoxProfClasse.DataSource = professeurList;
+            ProfesseurList.Add(professeur);
+            ProfesseurList = ProfesseurList.OrderBy(e => e.Nom).ToList();
+            comboBoxProfClasse.DataSource = ProfesseurList;
             professeurJdM.SaveJsonData();
+
+            var bindingProfesseurList = new BindingList<Professeur>(ProfesseurList);
+            var source = new BindingSource(bindingProfesseurList, null);
+            dataGridView1.DataSource = source;
         }
 
         Classe classe;
         private void ButtonCreerClasse_Click(object sender, EventArgs e)
         {
-            classeList = classeJdM.DataList;
+            ClasseList = classeJdM.DataList;
 
             string nom = textBoxNomClasse.Text;
             string _nom = char.ToUpper(nom[0]) + nom[1..].ToLower();
@@ -98,12 +102,15 @@ namespace SchoolApp
                 Label = _nom,
                 Niveau = comboBoxNiveauClasse.SelectedItem as Niveau
             };
-            classeList.Add(classe);
-            MessageBox.Show(classe+"");
-            classeList = classeList.OrderBy(e => e.niveau_id).ToList();
-            comboBoxClasseProf.DataSource = classeList;
-            comboBoxClasseEleve.DataSource = classeList;
+            ClasseList.Add(classe);
+            ClasseList = ClasseList.OrderBy(e => e.niveau_id).ToList();
+            comboBoxClasseProf.DataSource = ClasseList;
+            comboBoxClasseEleve.DataSource = ClasseList;
             classeJdM.SaveJsonData();
+
+            var bindingClasseList = new BindingList<Classe>(ClasseList);
+            var source = new BindingSource(bindingClasseList, null);
+            dataGridView1.DataSource = source;
         }
 
         private void ButtonAddProf_Click(object sender, EventArgs e)
@@ -116,12 +123,36 @@ namespace SchoolApp
             var prof1 = professeurJdM.GetWhere(item => item.Id == profID);
             cl1[0].AddProfesseur(prof1[0]);
             classeJdM.SaveJsonData();
-            professeurJdM.SaveJsonData();          
+            professeurJdM.SaveJsonData();
+
+            var bindingClasseList = new BindingList<Classe>(ClasseList);
+            var source = new BindingSource(bindingClasseList, null);
+            dataGridView1.DataSource = source;
 
         }
 
         private void ButtonRemoveProf_Click(object sender, EventArgs e)
         {
+            Classe cl = comboBoxClasseProf.SelectedItem as Classe;
+            if (cl.Professeur != null)
+            {
+                string classeID = cl.Id;
+                professeur = cl.Professeur;
+                string profID = professeur.Id;
+                var cl1 = classeJdM.GetWhere(item => item.Id == classeID);
+                var prof1 = professeurJdM.GetWhere(item => item.Id == profID);
+                cl1[0].RemoveProfesseur(prof1[0]);
+                classeJdM.SaveJsonData();
+                professeurJdM.SaveJsonData();
+
+                var bindingClasseList = new BindingList<Classe>(ClasseList);
+                var source = new BindingSource(bindingClasseList, null);
+                dataGridView1.DataSource = source;
+            }
+            else
+            {
+                MessageBox.Show("Aucun prof attribué à " + cl);
+            }
 
         }
 
@@ -129,7 +160,7 @@ namespace SchoolApp
         {
             Eleve eleve;
             var jsonVar = new DAL.JsonDataManager<Eleve>();
-            eleveList = eleveJdm.DataList;
+            EleveList = eleveJdm.DataList;
             string lastname = textBoxPrenomEleve.Text;
             string _prenom = char.ToUpper(lastname[0]) + lastname[1..].ToLower();
             eleve = new Eleve()
@@ -138,36 +169,83 @@ namespace SchoolApp
                 Prenom = _prenom,
                 anciennete = Convert.ToInt32(numericUpDownAncienneteEleve.Value)
             };
-            eleveList.Add(eleve);
-            MessageBox.Show(eleve + "");
-            eleveList = eleveList.OrderBy(e => e.Nom).ToList();
-            comboBoxEleveClasse.DataSource = eleveList;
+            EleveList.Add(eleve);
+            EleveList = EleveList.OrderBy(e => e.Nom).ToList();
+            comboBoxEleveClasse.DataSource = EleveList;
             eleveJdm.SaveJsonData();
+
+            var bindingEleveList = new BindingList<Eleve>(EleveList);
+            var source = new BindingSource(bindingEleveList, null);
+            dataGridView1.DataSource = source;
         }
 
         private void ButtonAddEleveClasse_Click(object sender, EventArgs e)
         {
+            Classe cl = comboBoxClasseEleve.SelectedItem as Classe;
+            Eleve ele = comboBoxEleveClasse.SelectedItem as Eleve;
+            string classeID = cl.Id;
+            string eleID = ele.Id;
+            var cl1 = classeJdM.GetWhere(item => item.Id == classeID);
+            var ele1 = eleveJdm.GetWhere(item => item.Id == eleID);
+            ele1[0].AddClasse(cl1[0]);
+            eleveJdm.SaveJsonData();
+
+            var bindingEleveList = new BindingList<Eleve>(EleveList);
+            var source = new BindingSource(bindingEleveList, null);
+            dataGridView1.DataSource = source;
 
         }
 
         private void ButtonRemoveEleveClasse_Click(object sender, EventArgs e)
         {
+            Eleve ele = comboBoxEleveClasse.SelectedItem as Eleve;
+            if (ele.Classe != null)
+            {
+                string eleID = ele.Id;
+                classe = ele.Classe;
+                string clID = classe.Id;
+                var ele1 = eleveJdm.GetWhere(item => item.Id == eleID);
+                var cl1 = classeJdM.GetWhere(item => item.Id == clID);
+                ele1[0].RemoveClasse(cl1[0]);
+                eleveJdm.SaveJsonData();
+
+                var bindingEleveList = new BindingList<Eleve>(EleveList);
+                var source = new BindingSource(bindingEleveList, null);
+                dataGridView1.DataSource = source;
+            }
+            else
+            {
+                MessageBox.Show("Aucune classe attribué à " + ele);
+            }
 
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonVoirNiveaux_Click(object sender, EventArgs e)
         {
-            var jsonDataManager = new DAL.JsonDataManager<Models.Classe>();
-            List<Classe> list = jsonDataManager.DataList;
-            var classeList = jsonDataManager.GetWhere();
-            Classe cl1 = jsonDataManager.GetById("2869c720-ce97-408d-8542-56b94f6ab6b9");
-            Niveau niv = cl1.Niveau;
-
-            var niveauDataManager = new DAL.JsonDataManager<Models.Niveau>();
-            var nivCE1 = niveauDataManager.GetById("niveau_2");
-            cl1.Niveau = nivCE1;
-            jsonDataManager.SaveJsonData();
+            var bindingNiveauList = new BindingList<Niveau>(NiveauList);
+            var source = new BindingSource(bindingNiveauList, null);
+            dataGridView1.DataSource = source;
         }
+        private void buttonVoirClasses_Click(object sender, EventArgs e)
+        {
+            var bindingClasseList = new BindingList<Classe>(ClasseList);
+            var source = new BindingSource(bindingClasseList, null);
+            dataGridView1.DataSource = source;
+        }
+
+        private void buttonVoirProfs_Click(object sender, EventArgs e)
+        {
+            var bindingProfesseurList = new BindingList<Professeur>(ProfesseurList);
+            var source = new BindingSource(bindingProfesseurList, null);
+            dataGridView1.DataSource = source;
+        }
+        private void buttonVoirEleves_Click(object sender, EventArgs e)
+        {
+            var bindingEleveList = new BindingList<Eleve>(EleveList);
+            var source = new BindingSource(bindingEleveList, null);
+            dataGridView1.DataSource = source;
+        }
+
     }
 }
