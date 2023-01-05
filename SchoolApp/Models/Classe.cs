@@ -16,10 +16,7 @@ namespace SchoolApp.Models
     {
         public string Label { get; set; }
 
-        public Classe()
-        {
-            Id = IdGenerator.Create(this);
-        }
+        public Classe() => Id = IdGenerator.Create(this);
 
         public string? niveau_id { get; set; }
         [JsonIgnore]

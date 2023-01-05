@@ -54,11 +54,11 @@ namespace SchoolApp.Models
 
         List<Note> notes = new();      
 
-        public void addNote(Note note)
+        public void AddNote(Note note)
         {
             notes.Add(note);
         }
-        public void removeNote(Note note)
+        public void RemoveNote(Note note)
         {
             notes.Remove(note);
         }

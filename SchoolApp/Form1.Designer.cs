@@ -346,7 +346,6 @@
             this.textBoxPasswordProf.Name = "textBoxPasswordProf";
             this.textBoxPasswordProf.Size = new System.Drawing.Size(148, 27);
             this.textBoxPasswordProf.TabIndex = 45;
-            this.textBoxPasswordProf.Text = "PasswordDefault";
             // 
             // textBoxLoginProf
             // 
@@ -354,7 +353,6 @@
             this.textBoxLoginProf.Name = "textBoxLoginProf";
             this.textBoxLoginProf.Size = new System.Drawing.Size(148, 27);
             this.textBoxLoginProf.TabIndex = 44;
-            this.textBoxLoginProf.Text = "LoginDefault";
             // 
             // comboBoxEleveClasse
             // 
@@ -410,6 +408,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(1322, 795);
@@ -423,7 +422,7 @@
             this.buttonVoirEleves.TabIndex = 56;
             this.buttonVoirEleves.Text = "Voir la liste des élèves";
             this.buttonVoirEleves.UseVisualStyleBackColor = true;
-            this.buttonVoirEleves.Click += new System.EventHandler(this.buttonVoirEleves_Click);
+            this.buttonVoirEleves.Click += new System.EventHandler(this.ButtonVoirEleves_Click);
             // 
             // buttonVoirClasses
             // 
@@ -433,7 +432,7 @@
             this.buttonVoirClasses.TabIndex = 57;
             this.buttonVoirClasses.Text = "Voir la liste des classes";
             this.buttonVoirClasses.UseVisualStyleBackColor = true;
-            this.buttonVoirClasses.Click += new System.EventHandler(this.buttonVoirClasses_Click);
+            this.buttonVoirClasses.Click += new System.EventHandler(this.ButtonVoirClasses_Click);
             // 
             // buttonVoirProfs
             // 
@@ -443,7 +442,7 @@
             this.buttonVoirProfs.TabIndex = 58;
             this.buttonVoirProfs.Text = "Voir la liste des profs";
             this.buttonVoirProfs.UseVisualStyleBackColor = true;
-            this.buttonVoirProfs.Click += new System.EventHandler(this.buttonVoirProfs_Click);
+            this.buttonVoirProfs.Click += new System.EventHandler(this.ButtonVoirProfs_Click);
             // 
             // buttonVoirNiveaux
             // 
@@ -453,7 +452,7 @@
             this.buttonVoirNiveaux.TabIndex = 59;
             this.buttonVoirNiveaux.Text = "Voir la liste des niveaux";
             this.buttonVoirNiveaux.UseVisualStyleBackColor = true;
-            this.buttonVoirNiveaux.Click += new System.EventHandler(this.buttonVoirNiveaux_Click);
+            this.buttonVoirNiveaux.Click += new System.EventHandler(this.ButtonVoirNiveaux_Click);
             // 
             // tableLayoutPanel1
             // 

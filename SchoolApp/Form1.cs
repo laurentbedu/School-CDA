@@ -51,18 +51,17 @@ namespace SchoolApp
             comboBoxEleveClasse.DataSource = EleveList;
         }
 
-
-        List<Niveau> NiveauList = new();
-        List<Matiere> MatiereList = new();
+        List<Niveau> NiveauList;
+        List<Matiere> MatiereList;
         List<Professeur> ProfesseurList = new();
         List<Eleve> EleveList = new();
         List<Classe> ClasseList = new();
 
-        DAL.JsonDataManager<Classe> classeJdM = new DAL.JsonDataManager<Classe>();
-        DAL.JsonDataManager<Professeur> professeurJdM = new DAL.JsonDataManager<Professeur>();
-        DAL.JsonDataManager<Niveau> niveauJdm = new DAL.JsonDataManager<Niveau>();
-        DAL.JsonDataManager<Eleve> eleveJdm = new DAL.JsonDataManager<Eleve>();
-        DAL.JsonDataManager<Matiere> matiereJdm = new DAL.JsonDataManager<Matiere>();
+        readonly DAL.JsonDataManager<Classe> classeJdM = new();
+        readonly DAL.JsonDataManager<Professeur> professeurJdM = new();
+        readonly DAL.JsonDataManager<Niveau> niveauJdm = new();
+        readonly DAL.JsonDataManager<Eleve> eleveJdm = new();
+        readonly DAL.JsonDataManager<Matiere> matiereJdm = new();
 
         Professeur professeur;
         private void ButtonCreerProf_Click(object sender, EventArgs e)
@@ -221,26 +220,26 @@ namespace SchoolApp
 
         }
 
-        private void buttonVoirNiveaux_Click(object sender, EventArgs e)
+        private void ButtonVoirNiveaux_Click(object sender, EventArgs e)
         {
             var bindingNiveauList = new BindingList<Niveau>(NiveauList);
             var source = new BindingSource(bindingNiveauList, null);
             dataGridView1.DataSource = source;
         }
-        private void buttonVoirClasses_Click(object sender, EventArgs e)
+        private void ButtonVoirClasses_Click(object sender, EventArgs e)
         {
             var bindingClasseList = new BindingList<Classe>(ClasseList);
             var source = new BindingSource(bindingClasseList, null);
             dataGridView1.DataSource = source;
         }
 
-        private void buttonVoirProfs_Click(object sender, EventArgs e)
+        private void ButtonVoirProfs_Click(object sender, EventArgs e)
         {
             var bindingProfesseurList = new BindingList<Professeur>(ProfesseurList);
             var source = new BindingSource(bindingProfesseurList, null);
             dataGridView1.DataSource = source;
         }
-        private void buttonVoirEleves_Click(object sender, EventArgs e)
+        private void ButtonVoirEleves_Click(object sender, EventArgs e)
         {
             var bindingEleveList = new BindingList<Eleve>(EleveList);
             var source = new BindingSource(bindingEleveList, null);

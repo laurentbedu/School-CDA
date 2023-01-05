@@ -32,7 +32,7 @@ namespace SchoolApp.DAL
             string fileName = "C:\\Users\\Nicolas\\Source\\Repos\\laurentbedu\\School-CDA\\SchoolApp\\Json\\" + str + ".json";
 
             string jsonString = File.ReadAllText(fileName);
-            List<T> newList = JsonSerializer.Deserialize<List<T>>(jsonString)!;
+            List<T> newList = JsonSerializer.Deserialize<List<T>>(jsonString);
 
             return newList;
         }
